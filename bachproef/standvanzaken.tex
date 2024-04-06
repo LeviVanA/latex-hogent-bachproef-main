@@ -1,0 +1,153 @@
+\chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}%
+\label{ch:stand-van-zaken}
+
+% Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
+% dit hoofdstuk past binnen het geheel van de bachelorproef. Geef in het
+% bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
+
+% Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
+\section{\IfLanguageName{dutch}{uitleg onderwerp}{explanation subject}}
+\label{sec:uitleg-onderwerp}
+In deze bachelorproef worden penetratietests/pentests binnen verschillende webomgevingen ondezocht. Dit onderzoek richt zich 
+specifiek op drie varianten van webapplicaties: een standaard WordPress applicatie, een WordPress applicatie uitgerbreid met beveiligingsplugins zoals Wordfence, 
+iThemes security... en een op maat gemaakte Laravel applicatie. De kern van dit onderzoek is om een vergelijking te maken tussen diverse pentesting 
+tools binnen deze specifieke omgevingen om te bepalen welke tools meer geschikt zijn voor het testen van een Laravel applicatie in vergelijking met WordPress applicaties.
+Een voorbereidend onderdeel van dit onderzoek is de evaluatie van hoe beveiligingsplugins, zoals Wordfence en iThemes Security, de beveiligingsniveaus van WordPress applicaties 
+kunnen verhogen en hoe deze plugins de prestaties van pentesting tools beïnvloeden. Een interessant onderzoek was gepubliceerd op MDPI, het benadrukt hoe de evaluatie van 
+cybersecurity tools, inclusief pentesting tools, essentieel is voor het verhogen van de veiligheid binnen webomgevingen ~\autocite{Albahar2022}. 
+Dit verduidelijkt het belang van mijn studie naar de interactie tussen beveiligingsplugins en pentesting tools.
+
+Mijn onderzoek omvat ook een analyse om te bepalen of bepaalde pentesting tools, zoals Nmap en OWASP ZAP, unieke bedreigingen kunnen identificeren 
+die anderen niet detecteren. Deze verkenning is cruciaal voor het ontwikkelen van een uitgebreide beveiligingsstrategie voor webapplicaties. Het idee is om een 
+grondig begrip te krijgen van hoe verschillende tools elkaar kunnen aanvullen in de strijd tegen cyberdreigingen.
+
+Na het vergelijken van de pentesting tools zullen de webomgevingen worden geanalyseerd om de impact van beveiligingsplugins op de veiligheid 
+van WordPress applicaties te bepalen. De analyse richt zich op de effectiviteit van de WordPress plugins en bij het afweren van potentiële dreigingen en hoe 
+het Laravel-framework, dat bekend staat om zijn robuuste beveiligingsmaatregelen, zich verhoudt tot deze plugins.
+
+Het boek 'The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws'~\autocite{Stuttard2011} speelt een basis rol in het onderzoek 
+naar methodologieën en tools die gebruikt worden bij het pentesten van webapplicaties. Dit boek is een fundamentele referentie die helpt bij het 
+evalueren van de doeltreffendheid van pentesting methoden gebruikt binnen WordPress en Laravel platforms.
+Bij deze proef word er bekeken wat webapplicaties kwetsbaar maakt en hoeveel effect goed voorbereidend werk heeft. Het doel is om te begrijpen hoe robuust webapplicaties 
+zijn tegen cyberdreigingen en de meest effectieve beveiligingsmaatregelen en tools te identificeren voor verschillende scenario's. Door gebruik te maken van bronnen, 
+zoals het artikel van MDPI en een diepgaand boek over het hacken van webapplicaties, kan er een omvattend en praktisch overzicht geboden worden van 
+hoe webapplicaties effectief beschermd kunnen worden.
+
+\section{\IfLanguageName{dutch}{wat weten we uit de literatuur}{what is known from the literature}}
+\label{sec:wat-weten-we-uit-de-literatuur}
+Beveiliging van webapplicaties is een noodzakelijk onderwerp geworden. Recente onderzoeken en literatuur leveren 
+inzichten in verschillende aspecten van dit vakgebied, waaronder de effectiviteit van penetratietests, het belang van beveiligingsplugins voor WordPress en de verschillen 
+in beveiligingsmaatregelen tussen webapplicatieframeworks zoals Laravel en WordPress. Een overzicht van wat reeds bekend is op dit gebied, ondersteund door een aantal 
+bronnen, toont de huidige kennis en praktijken aan.
+
+Een boeiende studie, uitgebracht op MDPI, verkent de wereld van cybersecurity-instrumenten in webcontexten en beoordeelt de doeltreffendheid van tools voor penetratietests.
+Deze studie benadrukt het belang van een bewuste keuze strategie bij het selecteren van deze tools. Het artikel zegt ook dat 
+een doordachte keuze van penetratietesting tools essentieel is voor het identificeren van kwetsbaarheden in webapplicaties, daarmee de gehele beveiligingshouding 
+verbetered ~\autocite{Albahar2022}.
+
+Daarnaast biedt een analyse, toegankelijk via Google Books, een volledige vergelijking tussen enkele van de meest gekende pentesting tools op de markt, 
+zoals Nmap, Burp Suite, en OWASP ZAP. Deze bron is bijzonder waardevol voor professionals binnen de cybersecurity wereld, omdat het inzicht geeft in de sterke en zwakke 
+punten van elk van deze tools. Door deze tools te vergelijken, kunnen teams betere beslissingen nemen over welke tools het meest geschikt zijn 
+voor hun specifieke beveiligingsbehoeften ~\autocite{Velu2022}.
+
+Het effect van beveiligingsplugins op WordPress is een ander belangrijk onderzoeksgebied. Een artikel gepubliceerd in het International Journal of Grid and Utility Computing 
+schrijft hoe plugins zoals Wordfence en iThemes Security een onmisbare laag van beveiliging toevoegen aan WordPress websites. Deze plugins zijn ontworpen om een brede variëteit 
+aan bedreigingen af te weren, waardoor ze een belangerijk onderdeel vormen van de beveiligingsstrategie voor elke WordPress-site~\autocite{Casola2020}
+
+Een rapport op OpenCourseHub bestudeert de top drie beveiligingsrisico's geïdentificeerd door OWASP en onderzoekt hoe penetratietesting tools ingezet kunnen 
+worden om deze bedreigingen te kunnen onthullen bij websites. Deze analyse is noodzakelijk voor organisaties die streven naar het vertebeteren van hun weerbaarheid tegen 
+de meest voorkomende cyberaanvallen ~\autocite{Sharma2023}
+
+Ten slotte biedt een vergelijkende studie tussen Laravel en WordPress, beschikbaar op GreenIce, inzicht in de beveiligingsvoordelen van het Laravel framework. 
+Deze studie belicht hoe Laravel's architectuur een voorsprong heeft op het gebied van beveiliging Ten opzichte van wordpress. Een factor van groot belang voor 
+ontwikkelaars en bedrijven bij het kiezen van een framework voor hun webapplicaties~\autocite{Lebedeva2023}.
+
+Samenvattend brengen deze studies de kennis die beschikbaar is over de beveiliging van webapplicaties aan licht. Ze benadrukken het belang van een geïnformeerde benadering bij 
+het kiezen van de meest passende pentestingtool. Het is essentieel om inzicht te krijgen in de specifieke beveiligingsproblemen die elk webapplicatieframework met zich meebrengt. Door deze inzichten 
+toe te passen kunnen organisaties hun beveiligingshouding versterken en beter beschermen tegen de voortdurende dreiging van cyberaanvallen.
+
+\section{\IfLanguageName{dutch}{wat weten we nog niet uit de literatuur}{what is not known from the literature}}
+Hoewel de bestaande literatuur een waardevolle kijk biedt op het vlak van webapplicatiebeveiliging en de effectiviteit van penetratietesting, blijven er nog 
+zaken die niet volledig zijn onderzocht. Uit de analyse van twee specifieke bronnen, de conferentieproceedings van CyberCon en een publicatie in het 
+Computer Science and Information Technology (CS and IT) tijdschrift, komen enkele van deze tekorten aan bod.
+
+Een artikel gepresenteerd op de CyberCon-conferentie benadrukt de complexiteit van beveiligingsbedreigingen en stelt vragen bij het ruime assortiment 
+van bestaande pentesting tools en -methoden om deze bedreigingen effectief aan te pakken. Het artikel zegt dat, ondanks de brede toepassing en 
+ontwikkeling van deze tools, er een diepgaander begrip nodig is. Het is cruciaal om te begrijpen hoe nieuwe soorten cyberaanvallen, vooral waarbij 
+geavanceerde kunstmatige intelligentie en machine learning technieken gebruiken, effectief geïdentificeerd kunnen worden.~\autocite{Petrica2022}.
+
+Daarnaast wijst een studie gepubliceerd in het CS and IT tijdschrift op het ontbreken van benchmarks en vergelijkende studies die de prestaties van verschillende 
+beveiligingsplugins en frameworks onder bepaalde omstandigheden beoordelen. Dit gebrek aan vergelijkend onderzoek maakt het voor ontwikkelaars 
+moeilijk om onderbouwde beslissingen te nemen bij de implementatie van beveiligingsmaatregelen binnen hun webapplicaties. De studie benadrukt de noodzaak voor 
+het maken van benchmarks, die van belang zijn bij het vinden van de meest effectieve beveiligingsaanpakken tegen 
+diverse cyberdreigingen ~\autocite{AbuDabaseh2018}.
+
+Beide bronnen tonen het belang van voortdurend onderzoek naar en ontwikkeling van penetratietesting methodologieën, beveiligingsplugins en frameworks om te kunnen 
+blijven voldoen aan de eisen van een voortdurend veranderende omgeving. Ze benadrukken dat, hoewel veel bekend is over de basisprincipes van webapplicatiebeveiliging, 
+de details van het beschermen tegen de nieuwste en meest geavanceerde aanvalstechnieken nog ontdekt moeten worden. Dit duidt op een enorme behoefte aan 
+specifiek onderzoek en praktijkexperimenten om de effectiviteit van bestaande en nieuwe beveiligingsmethoden te verbeteren.
+
+\section{\IfLanguageName{dutch}{relevantie van het onderzoek}{relevance of the study}}
+\subsection{\IfLanguageName{dutch}{theoretische relevantie}{theoretical relevance}}
+De inzichten uit de Pertanika Journals ~\autocite{Jarupunphol2023}, die een bijdrage levert aan het verbreden van de theoretische basis van webapplicatiebeveiliging.
+Dit onderzoek, zoals besproken in de Pertanika Journals, vergelijkt verschillende penetratietesttools binnen een specifieke webomgeving. Het biedt 
+een solide basis voor een diepgaand begrip van hoe deze tools verschillende kwetsbaarheden benaderen en analyseren. Dit draagt bij aan de ontwikkeling 
+van een theoretisch kader dat de verschillende pentesting tools naast elkaar plaatst.
+
+De integratie van beveiligingstechnieken en theoretische concepten, zoals vermeld in het artikel gepubliceerd in IJITEE, is cruciaal. Het speelt een belangerijke rol 
+bij het bijeenbrengen van bestaande theoretische modellen en de praktische uitdagingen van webbeveiliging. Dit onderzoek maakt gebruik van de nieuwste inzichten in cybersecurity 
+om bestaande theoretische kaders te evalueren. Dit draagt bij aan de ontwikkeling van vernieuwde theorieën die de complexe problemen van hedendaagse 
+cyberdreigingen beter weergeven. Door hedendaagse beveiligingsconcepten te koppelen aan de analyse van penetratietesttools binnen specifieke webomgevingen, 
+stimuleert het onderzoek de evolutie van theoretische benaderingen in cybersecurity. Tegelijkertijd levert het essentiële inzichten voor het implementeren van beveiligingsmaatregelen
+die overeenkomen met de realiteit van het huidige digitale computercriminaliteit.
+Dit proces draagt bij aan het verfijnen en versterken van webbeveiligingspraktijken, gericht op het voldoende te beschermen tegen en reageren op moderne 
+cyberdreigingen~\autocite{Nagendran2019}.
+
+\subsection{\IfLanguageName{dutch}{maatschappelijke relevantie}{social relevance}}
+Door inzichten uit geavanceerde onderzoeken te integreren, vergroot dit onderzoek de maatschappelijke relevantie van webapplicatiebeveiliging door te verwijzen naar 
+twee cruciale bronnen: een studie van ArXiv en onderzoek gepubliceerd in het eJournal of ICT van Akademi Telkom Jakarta. Deze bronnen bieden een uitgebreid overzicht 
+van de huidige uitdagingen op het gebied van cybersecurity en de implementatie van geavanceerde beveiligingsmaatregelen en bieden nodige perspectieven die het 
+belang van dit onderzoek aan het licht brengen.
+
+Het ArXiv-document presenteert een gedetailleerde analyse van nieuwe cybersecuritydreigingen en de evolutie van aanvalroutes in de context van webapplicaties. 
+Door deze bevindingen te integreren, beklemtoont dit onderzoek de toenemende complexiteit van cyberdreigingen en de kritieke noodzaak voor webapplicaties om robuuste 
+en dynamische beveiligingsmaatregelen aan te nemen om zich tegen deze evoluerende dreigingen te beschermen. De ArXiv-studie benadrukt het belang van voorop blijven 
+in het cybersecurity-spel door beveiligingsprotocollen steeds bij te werken en te versterken, waardoor de bescherming van gebruikersgegevens tegen de nieuwste 
+cyberdreigingen gewaarborgd wordt~\autocite{Deng2023}.
+
+Tegelijkertijd gaat de studie gepubliceerd in het eJournal of ICT van Akademi Telkom Jakarta in op specifieke beveiligingsmaatregelen en hun effectiviteit in 
+het beschermen van webapplicaties tegen geavanceerde cyberaanvallen. Dit onderzoek draagt bij aan de maatschappelijke impact door praktische kijk te 
+bieden in de implementatie van deze beveiligingsmaatregelen en toont hun doeltreffendheid in real-world scenario's aan. Door succesvolle strategieën voor het 
+verdedigen tegen cyberaanvallen te presenteren, dient deze studie als een waardevolle bron voor ontwikkelaars, beveiligingsprofessionals en organisaties
+die ernaar streven de beveiligingshouding van webapplicaties te versterken ~\autocite{OlivianaZabka2023}.
+
+De maatschappelijke relevantie van dit onderzoek is veelzijdig. Het draagt direct bij aan het verbeteren van de digitale veiligheid en privacy van personen 
+en organisaties die afhankelijk zijn van webapplicaties voor verschillende aspecten van hun dagelijks leven. Bij het overwegen van de huidige situatie waarin 
+digitale dreigingen ernstige economische en sociale gevolgen kunnen hebben, bieden de inzichten uit de ArXiv- en eJournal of ICT-studies waardevolle informatie. Deze strategieën 
+verminderen niet alleen het risico op datalekken en cyberaanvallen, maar bouwen ook vertrouwen op in digitale platforms onder gebruikers.
+
+Samengevat, maatschappelijk levert dit onderzoek een fundamentele bijdrage aan het verbeteren van de digitale veiligheid en het vertrouwen in webapplicaties, die essentieel 
+zijn in het dagelijks leven van zowel individuen als organisaties. Door te concentreren op de meest actuele cybersecurity-uitdagingen en oplossingen, 
+helpt het bij het maken van nieuwe regels en wetten, en roept op tot strengere beveiligingsstandaarden. Het biedt niet alleen strategieën om het risico 
+op datalekken en cyberaanvallen te verminderen, maar versterkt ook het vertrouwen in digitale platforms. Zo draagt het onderzoek bij aan een veiligere 
+digitale omgeving in een tijd waarin de digitale dreigingen significante economische en sociale impact kunnen hebben.
+\section{\IfLanguageName{dutch}{doel van het onderzoek}{goal of the study}}
+
+Het hoofddoel van dit onderzoek is het grondig evalueren van de effectiviteit van verschillende penetratietesttools in twee typen webomgevingen: 
+WordPress sites voorzien van beveiligingsplugins, een wordpress website zonder aanpassingen en een op maat gemaakte Laravel applicatie. Deze evaluatie 
+heeft als doel de sterke en zwakke punten van elke pentest tool te identificeren in hun vermogen om kwetsbaarheden te detecteren en weerstand te bieden 
+tegen cyberdreigingen. Daarnaast wordt ook de invloed van de structuur van de webomgeving op de prestaties van deze tools onderzocht.
+Dit onderzoek maakt gebruik van inzichten uit een recente publicatie in MDPI Electronics, die een uitgebreide analyse van cybersecuritydreigingen en 
+de effectiviteit van verschillende verdedigingsmechanismen binnen webapplicaties biedt. Het doel is om de kennis over hoe webapplicaties beter 
+beschermd kunnen worden tegen geavanceerde cyberaanvallen te verdiepen. Dit artikel benadrukt specifiek het belang van voortdurende vernieuwing 
+in beveiligingsstrategieën om voldoende in te kunnen spelen op de snel evoluerende cyberdreigingen, wat direct gepaard gaat met de doelstellingen van dit 
+onderzoek ~\autocite{Altulaihan2023}.
+%Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+
+%Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
+
+%\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
+
+%Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
+
+%\lipsum[7-20]
