@@ -21,18 +21,51 @@ De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te
 \section{\IfLanguageName{dutch}{Probleemstelling}{Problem Statement}}%
 \label{sec:probleemstelling}
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's'', systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+\begin{figure}
+  \centering
+  \includegraphics[height=0.3\textheight]{image.png}
+  \caption[aantal aanvallen op de wordpress website van 24Flow per dag ]{aantal aanvallen op de wordpress website van 24Flow per dag }
+\end{figure}
+Kleine tot middelgrote IT-servicebedrijven, zoals Sinergio en 24Flow, worden dagelijks geconfronteerd met de uitdaging om hun 
+webapplicaties effectief te beschermen tegen cyberaanvallen. Deze bedrijven maken vaak gebruik van populaire webontwikkelingsplatformen 
+zoals WordPress en Laravel, die elk unieke beveiligingsrisico's en kwetsbaarheden kennen. De bescherming van deze platformen 
+wordt vaak toevertrouwd aan de implementatie van beveiligingsplugins en -tools, waarvan de effectiviteit varieert.
+
+Deze bachelorproef richt zich op het onderzoek naar de effectiviteit van verschillende penetratietesttools, zoals Burp Suite, Nmap en OWASP ZAP, 
+in het identificeren van kwetsbaarheden binnen drie specifieke webomgevingen: een WordPress applicatie zonder beveiligingsplugins,
+een WordPress applicatie met beveiligingsplugins en een afgewerkte Laravel applicatie. Het doel van dit onderzoek is tweeledig: 
+ten eerste het vaststellen van de meest effectieve penetratietesttool(s) voor deze specifieke webomgevingen. Ten tweede het 
+analyseren van de beveiligingsrisico's geassocieerd met elk van deze omgevingen om de vraag te beantwoorden hoe onveilig een 
+WordPress applicatie zonder beveiligingsplugins werkelijk is. Dit wordt vergeleken met een WordPress applicatie met 
+beveiligingsplugins en een Laravel applicatie.
+
+De directe doelgroep voor deze bachelorproef is het bedrijf Sinergio, een kleine IT-serviceprovider die regelmatig 
+werkt met WordPress en Laravel voor het ontwikkelen van webapplicaties voor hun klanten. De resultaten van dit 
+onderzoek bieden Sinergio waardevolle inzichten in de meest effectieve manieren om hun webontwikkelingsprojecten 
+te beveiligen. Dit stelt hen in staat om geïnformeerde beslissingen te nemen over de implementatie van 
+beveiligingsstrategieën en -tools. Bovendien draagt dit onderzoek bij aan een bredere kennisbasis over webapplicatiebeveiliging, 
+wat van belang kan zijn voor andere kleine tot middelgrote IT-bedrijven die vergelijkbare technologieën gebruiken.
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
 \label{sec:onderzoeksvraag}
-
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+Hoe variëren de prestaties van verschillende penetratietesttools bij het identificeren van kwetsbaarheden binnen drie 
+specifieke webomgevingen: een WordPress-website zonder beveiligingsplugins, een WordPress-website met beveiligingsplugins 
+en een volledig ontwikkelde Laravel-applicatie? Welke specifieke kwetsbaarheden detecteren de penetratietesttools in een WordPress-omgeving zonder 
+beveiligingsplugins en hoe verschilt dit van de omgevingen met beveiligingsplugins en de Laravel-applicatie? 
+In hoeverre verbeteren beveiligingsplugins de detectiecapaciteiten van deze tools op een WordPress-site? 
+Tot slot zal je onderzoek de beveiligingsniveaus van een onbeveiligde WordPress-website vergelijken met die 
+van een beveiligde site en een Laravel-applicatie, om zo te bepalen hoe de aanwezigheid van beveiligingsplugins de 
+veiligheid beïnvloedt.
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
 \label{sec:onderzoeksdoelstelling}
-
-Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk. Gaat het bv.\ om een proof-of-concept, een prototype, een verslag met aanbevelingen, een vergelijkende studie, enz.
-
+De doelstelling is het uitvoeren van een vergelijkende studie. Deze studie evalueert de effectiviteit van 
+verschillende penetratietesttools bij het identificeren van kwetsbaarheden in drie specifieke webomgevingen: een WordPress-website 
+zonder beveiligingsplugins, een WordPress-website met beveiligingsplugins en een volledig ontwikkelde Laravel-applicatie.
+Het beoogde resultaat is een verslag met gedetailleerde aanbevelingen over de meest effectieve tools voor elke geteste 
+omgeving. Het succes wordt gemeten aan de hand van de volledigheid van de verzamelde data, de analytische diepgang van de bevindingen, 
+en de duidelijkheid van de vergelijkende analyse tussen de tools en omgevingen. Dit verslag zal essentiële inzichten bieden die 
+bijdragen aan betere beveiligingsstrategieën en -implementaties in webontwikkelingsprojecten.
 \section{\IfLanguageName{dutch}{Opzet van deze bachelorproef}{Structure of this bachelor thesis}}%
 \label{sec:opzet-bachelorproef}
 
@@ -47,5 +80,6 @@ In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand v
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
 % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
+In Hoofdstuk~\ref{ch:resultaten}, bevat de resultaten van het onderzoek.
 
 In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
