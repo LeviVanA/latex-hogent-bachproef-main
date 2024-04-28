@@ -6,32 +6,68 @@
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
-\section{\IfLanguageName{dutch}{uitleg onderwerp}{explanation subject}}
-\label{sec:uitleg-onderwerp}
-In deze bachelorproef worden penetratietests/pentests binnen verschillende webomgevingen ondezocht. Dit onderzoek richt zich 
-specifiek op drie varianten van webapplicaties: een standaard WordPress applicatie, een WordPress applicatie uitgerbreid met beveiligingsplugins zoals Wordfence, 
-iThemes security... en een op maat gemaakte Laravel applicatie. De kern van dit onderzoek is om een vergelijking te maken tussen diverse pentesting 
-tools binnen deze specifieke omgevingen om te bepalen welke tools meer geschikt zijn voor het testen van een Laravel applicatie in vergelijking met WordPress applicaties.
-Een voorbereidend onderdeel van dit onderzoek is de evaluatie van hoe beveiligingsplugins, zoals Wordfence en iThemes Security, de beveiligingsniveaus van WordPress applicaties 
-kunnen verhogen en hoe deze plugins de prestaties van pentesting tools beïnvloeden. Een interessant onderzoek was gepubliceerd op MDPI, het benadrukt hoe de evaluatie van 
-cybersecurity tools, inclusief pentesting tools, essentieel is voor het verhogen van de veiligheid binnen webomgevingen ~\autocite{Albahar2022}. 
-Dit verduidelijkt het belang van mijn studie naar de interactie tussen beveiligingsplugins en pentesting tools.
+\section{\IfLanguageName{dutch}{Pentesting}{Pentesting}}
+\label{sec:pentesting}
+Penetration testing (pentesting) is een cruciaal onderdeel bij het waarborgen van netwerk- en systeembeveiliging. 
+Wetenschappelijke studies tonen aan dat het proces van pentesting verschillende methoden omvat, zoals white box, 
+black box, en grey box, elk met hun eigen aanpak van kwetsbaarheden in een systeem. Het doel van pentesting is om 
+veiligheidszwakheden te identificeren en te exploiteren\footnote{het proces waarbij een tester actief gebruikmaakt 
+van veiligheidszwakheden of kwetsbaarheden in een systeem om te laten zien hoe een kwaadwillende aanvaller deze kan misbruiken.} 
+om organisaties te helpen begrijpen waar hun beveiligingskwestbaarheden zich bevinden ~\autocite{Alhamed2023}.
 
-Mijn onderzoek omvat ook een analyse om te bepalen of bepaalde pentesting tools, zoals Nmap en OWASP ZAP, unieke bedreigingen kunnen identificeren 
-die anderen niet detecteren. Deze verkenning is cruciaal voor het ontwikkelen van een uitgebreide beveiligingsstrategie voor webapplicaties. Het idee is om een 
-grondig begrip te krijgen van hoe verschillende tools elkaar kunnen aanvullen in de strijd tegen cyberdreigingen.
+Een penetratietest bestaat uit drie belangrijke fasen: voorbereiding, uitvoering en analyse. Gedurende deze fasen gebruiken 
+testers diverse tools zoals Nmap, Metasploit en Nessus. Tijdens de voorbereiding worden de scope en doelstellingen vastgesteld. 
+Vervolgens vindt de test plaats, waarbij tools en methoden worden toegepast om kwetsbaarheden te identificeren. 
+Ten slotte worden de resultaten geanalyseerd en gerapporteerd, inclusief aanbevelingen voor het verbeteren van de beveiliging 
+~\autocite{Sarker2023}.
 
-Na het vergelijken van de pentesting tools zullen de webomgevingen worden geanalyseerd om de impact van beveiligingsplugins op de veiligheid 
-van WordPress applicaties te bepalen. De analyse richt zich op de effectiviteit van de WordPress plugins en bij het afweren van potentiële dreigingen en hoe 
-het Laravel-framework, dat bekend staat om zijn robuuste beveiligingsmaatregelen, zich verhoudt tot deze plugins.
+Bij het selecteren van tools en methoden voor penetratietests moet rekening worden gehouden met verschillende factoren, zoals de 
+grootte van het netwerk, het soort infrastructuur en het type kwetsbaarheden dat wordt getest. Wetenschappelijke studies 
+benadrukken het belang van een grondige planning en voorbereiding om ervoor te zorgen dat de test nauwkeurig en doeltreffend 
+wordt uitgevoerd ~\autocite{Alhamed2023}.
 
-Het boek 'The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws'~\autocite{Stuttard2011} speelt een basis rol in het onderzoek 
-naar methodologieën en tools die gebruikt worden bij het pentesten van webapplicaties. Dit boek is een fundamentele referentie die helpt bij het 
-evalueren van de doeltreffendheid van pentesting methoden gebruikt binnen WordPress en Laravel platforms.
-Bij deze proef word er bekeken wat webapplicaties kwetsbaar maakt en hoeveel effect goed voorbereidend werk heeft. Het doel is om te begrijpen hoe robuust webapplicaties 
-zijn tegen cyberdreigingen en de meest effectieve beveiligingsmaatregelen en tools te identificeren voor verschillende scenario's. Door gebruik te maken van bronnen, 
-zoals het artikel van MDPI en een diepgaand boek over het hacken van webapplicaties, kan er een omvattend en praktisch overzicht geboden worden van 
-hoe webapplicaties effectief beschermd kunnen worden.
+Een andere overweging bij penetratietests is het volgen van specifieke normen en richtlijnen, zoals ISO 27000, die ethische 
+aspecten en best practices voor pentesting benadrukken ~\autocite{DalalanaBertoglio2017}. Recente ontwikkelingen in technologie, zoals deep 
+reinforcement learning\footnote{Bij deep reinforcement learning combineren we de patroonherkenning van deep learning en neurale 
+netwerken met het feedback-gebaseerde leren van versterkend leren. Zo kunnen computers intelligente beslissingen nemen en complexe 
+taken uitvoeren door te leren van hun interacties met de omgeving}, bieden geavanceerde benaderingen voor automatische pentesting. 
+Deze nieuwe methoden kunnen de efficiëntie van het proces verhogen en bijdragen aan een betere detectie van kwetsbaarheden 
+~\autocite{Yi2023}.
+
+Voor gedetailleerde informatie en diepgaande analyses van penetratietests in verschillende contexten kunnen wetenschappelijke 
+artikelen en studies worden geraadpleegd, die het onderwerp uitvoerig behandelen ~\autocite{Sarker2023}.
+
+\section{\IfLanguageName{dutch}{Webomgevingen}{Web environments}}
+\label{sec:Webomgevingen}
+
+In de methodologie voor het testen van webomgevingen zoals WordPress en Laravel, speelt het identificeren van veelvoorkomende 
+kwetsbaarheden een belangrijke rol. In WordPress zonder beveiligingsplugins moeten misconfiguraties zoals onbeschermde back-ups 
+en tijdelijke bestanden worden geïdentificeerd, omdat ze gevoelige informatie kunnen lekken. Deze onbeschermde bestanden kunnen 
+ertoe leiden dat een aanvaller toegang krijgt tot gevoelige informatie, zoals database-informatie in het geval van 
+wp-config.php-bestanden\footnote{een bestand dat over zeer belangrijke informatie over een website beschikt} 
+~\autocite{DalalanaBertoglio2017}.
+
+Bij het testen van WordPress met beveiligingsplugin(s) is het belangrijk om de effectiviteit van beveiligingsmaatregelen te 
+evalueren. Kwetsbaarheden zoals SQL-injecties en Cross-Site Scripting (XSS) zijn belangrijke aandachtsgebieden voor pentesters, 
+vooral in WordPress-omgevingen met beveiligingsplugin(s) ~\autocite{Albahar2022}.
+
+Bij Laravel-applicaties is het belangrijk om te letten op backend-logica, authenticatie en sessiebeheer. 
+Mass assignment-kwetsbaarheden moeten zorgvuldig worden onderzocht om ongeautoriseerde gegevenswijzigingen te voorkomen.
+Mass assignment is een techniek binne Eloquent\footnote{ORM van Laravel} waarbij een gebruiker meerdere velden tegelijk kan bijwerken, wat een beveiligingsrisico kan vormen. 
+Daarnaast is het essentieel om te testen op SQL-injecties en te zorgen voor veilige authenticatie in Laravel-applicaties 
+~\autocite{Altulaihan2023}.
+
+Een effectieve methodologie omvat een grondige beoordeling van de infrastructuur, identificatie van kwetsbaarheden, en het 
+testen van beveiligingsmaatregelen met diverse tools zoals Metasploit, Burp Suite en OWASP ZAP ~\autocite{Ravindran2022}. 
+Het uiteindelijke doel is om kwetsbaarheden te ontdekken en effectieve maatregelen te nemen om de beveiliging van webomgevingen 
+te versterken.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{data-breaches-statistics-us.png}
+    \caption[Aantal data breaches in de US ]{Aantal data breaches in de US }
+\end{figure}
+
 
 \section{\IfLanguageName{dutch}{wat weten we uit de literatuur}{what is known from the literature}}
 \label{sec:wat-weten-we-uit-de-literatuur}
