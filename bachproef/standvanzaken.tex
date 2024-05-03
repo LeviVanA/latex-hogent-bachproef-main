@@ -6,9 +6,21 @@
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
+\section{\IfLanguageName{dutch}{doel van het onderzoek}{goal of the study}}
+
+Het hoofddoel van dit onderzoek is het grondig evalueren van de effectiviteit van verschillende penetratietesttools in twee typen webomgevingen: 
+WordPress sites voorzien van beveiligingsplugins, een wordpress website zonder aanpassingen en een op maat gemaakte Laravel applicatie. Deze evaluatie 
+heeft als doel de sterke en zwakke punten van elke pentest tool te identificeren in hun vermogen om kwetsbaarheden te detecteren en weerstand te bieden 
+tegen cyberdreigingen. Daarnaast wordt ook de invloed van de structuur van de webomgeving op de prestaties van deze tools onderzocht.
+Dit onderzoek maakt gebruik van inzichten uit een recente publicatie in MDPI Electronics, die een uitgebreide analyse van cybersecuritydreigingen en 
+de effectiviteit van verschillende verdedigingsmechanismen binnen webapplicaties biedt. Het doel is om de kennis over hoe webapplicaties beter 
+beschermd kunnen worden tegen geavanceerde cyberaanvallen te verdiepen. Dit artikel benadrukt specifiek het belang van voortdurende vernieuwing 
+in beveiligingsstrategieën om voldoende in te kunnen spelen op de snel evoluerende cyberdreigingen, wat direct gepaard gaat met de doelstellingen van dit 
+onderzoek ~\autocite{Altulaihan2023}.
+
 \section{\IfLanguageName{dutch}{Pentesting}{Pentesting}}
 \label{sec:pentesting}
-Penetration testing (pentesting) is een cruciaal onderdeel bij het waarborgen van netwerk- en systeembeveiliging. 
+Penetration testing (pentesting) is een cruciaal onderdeel bij het waarborgen van netwerk-, systeem- en appllicatiebeveiliging. 
 Wetenschappelijke studies tonen aan dat het proces van pentesting verschillende methoden omvat, zoals white box, 
 black box, en grey box, elk met hun eigen aanpak van kwetsbaarheden in een systeem. Het doel van pentesting is om 
 veiligheidszwakheden te identificeren en te exploiteren\footnote{het proces waarbij een tester actief gebruikmaakt 
@@ -40,16 +52,28 @@ artikelen en studies worden geraadpleegd, die het onderwerp uitvoerig behandelen
 \section{\IfLanguageName{dutch}{Webomgevingen}{Web environments}}
 \label{sec:Webomgevingen}
 
-In de methodologie voor het testen van webomgevingen zoals WordPress en Laravel, speelt het identificeren van veelvoorkomende 
-kwetsbaarheden een belangrijke rol. In WordPress zonder beveiligingsplugins moeten misconfiguraties zoals onbeschermde back-ups 
+\subsection{\IfLanguageName{dutch}{Veiligheidskwetsbaarheden in Webapplicaties}{Security vulnerabilities in Web applications}}
+\label{sec:Veiligheidskwetsbaarheden in Webomgevingen}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{wordfence_stopped_attacks.png}
+    \caption[Totaal aantal geblokkeerde aanvallen: Wordfence netwerk]{Totaal aantal geblokkeerde aanvallen: Wordfence netwerk}
+\end{figure}
+
+In de methodologie bij het testen van webomgevingen met name WordPress en Laravel, speelt het identificeren van veelvoorkomende 
+kwetsbaarheden een belangrijke rol. Zoals besproken in vorig hoofdstuk valt het onderzoeken van kwetsbaarheden in webapplicaties onder 
+de fase voorbereiding van een pentest.
+
+In WordPress zonder beveiligingsplugins moeten misconfiguraties zoals onbeschermde back-ups 
 en tijdelijke bestanden worden geïdentificeerd, omdat ze gevoelige informatie kunnen lekken. Deze onbeschermde bestanden kunnen 
 ertoe leiden dat een aanvaller toegang krijgt tot gevoelige informatie, zoals database-informatie in het geval van 
 wp-config.php-bestanden\footnote{een bestand dat over zeer belangrijke informatie over een website beschikt} 
 ~\autocite{DalalanaBertoglio2017}.
 
 Bij het testen van WordPress met beveiligingsplugin(s) is het belangrijk om de effectiviteit van beveiligingsmaatregelen te 
-evalueren. Kwetsbaarheden zoals SQL-injecties en Cross-Site Scripting (XSS) zijn belangrijke aandachtsgebieden voor pentesters, 
-vooral in WordPress-omgevingen met beveiligingsplugin(s) ~\autocite{Albahar2022}.
+evalueren. Op bovenstaande foto kan je zo zien hoeveel aanvallen het wordfence netwerk per dag tegenhoud. Kwetsbaarheden 
+zoals SQL-injecties en Cross-Site Scripting (XSS) zijn belangrijke aandachtsgebieden voor pentesters, vooral in WordPress-omgevingen 
+met beveiligingsplugin(s) ~\autocite{Albahar2022}.
 
 Bij Laravel-applicaties is het belangrijk om te letten op backend-logica, authenticatie en sessiebeheer. 
 Mass assignment-kwetsbaarheden moeten zorgvuldig worden onderzocht om ongeautoriseerde gegevenswijzigingen te voorkomen.
@@ -57,7 +81,7 @@ Mass assignment is een techniek binne Eloquent\footnote{ORM van Laravel} waarbij
 Daarnaast is het essentieel om te testen op SQL-injecties en te zorgen voor veilige authenticatie in Laravel-applicaties 
 ~\autocite{Altulaihan2023}.
 
-Een effectieve methodologie omvat een grondige beoordeling van de infrastructuur, identificatie van kwetsbaarheden, en het 
+Een effectieve methodologie omvat een grondige beoordeling van de infrastructuur, identificatie van kwetsbaarheden en het 
 testen van beveiligingsmaatregelen met diverse tools zoals Metasploit, Burp Suite en OWASP ZAP ~\autocite{Ravindran2022}. 
 Het uiteindelijke doel is om kwetsbaarheden te ontdekken en effectieve maatregelen te nemen om de beveiliging van webomgevingen 
 te versterken.
@@ -68,38 +92,107 @@ te versterken.
     \caption[Aantal data breaches in de US ]{Aantal data breaches in de US }
 \end{figure}
 
+\subsection{\IfLanguageName{dutch}{Security mechanismen in Webapplicaties}{Security mechanisms in Web applications}}
+\label{sec:Security mechanismen in Webomgevingen}
 
-\section{\IfLanguageName{dutch}{wat weten we uit de literatuur}{what is known from the literature}}
-\label{sec:wat-weten-we-uit-de-literatuur}
-Beveiliging van webapplicaties is een noodzakelijk onderwerp geworden. Recente onderzoeken en literatuur leveren 
-inzichten in verschillende aspecten van dit vakgebied, waaronder de effectiviteit van penetratietests, het belang van beveiligingsplugins voor WordPress en de verschillen 
-in beveiligingsmaatregelen tussen webapplicatieframeworks zoals Laravel en WordPress. Een overzicht van wat reeds bekend is op dit gebied, ondersteund door een aantal 
-bronnen, toont de huidige kennis en praktijken aan.
+In dit hoofdstuk worden de security mechanismen van drie verschillende webomgevingen onderzocht: WordPress zonder beveiligingsplugins, 
+WordPress met de Wordfence plugin, en het Laravel framework. Elk platform heeft zijn eigen beveiligingsmaatregelen die bijdragen 
+aan de algehele veiligheid van webapplicaties.
 
-Een boeiende studie, uitgebracht op MDPI, verkent de wereld van cybersecurity-instrumenten in webcontexten en beoordeelt de doeltreffendheid van tools voor penetratietests.
-Deze studie benadrukt het belang van een bewuste keuze strategie bij het selecteren van deze tools. Het artikel zegt ook dat 
-een doordachte keuze van penetratietesting tools essentieel is voor het identificeren van kwetsbaarheden in webapplicaties, daarmee de gehele beveiligingshouding 
-verbetered ~\autocite{Albahar2022}.
+WordPress, een veelgebruikt content management systeem, bevat enkele ingebouwde beveiligingsfuncties zoals gebruikersrollen, beveiligde 
+wachtwoorden en bestandsrechten. Hoewel deze maatregelen helpen bij het beschermen van een website, vooral tegen basisaanvallen, zijn ze 
+mogelijk niet afdoende tegen geavanceerde bedreigingen zoals SQL-injecties en cross-site scripting (XSS). Het gebruik van aanvullende 
+beveiligingsmaatregelen, zoals beveiligingsplugins, wordt daarom aanbevolen, vooral voor websites die gevoelige informatie verwerken 
+of een hoog risico lopen op aanvallen~\autocite{Trunde2015}
 
+Wordfence, een vooraanstaande beveiligingsplugin voor WordPress, biedt een uitgebreide suite van beveiligingsfuncties, waaronder een 
+firewall, malware scanner en DDoS bescherming. Deze plugin is speciaal ontworpen om WordPress-websites te beschermen tegen bekende 
+bedreigingen en om verdachte activiteiten in realtime te monitoren. De effectiviteit van Wordfence in het verdedigen van WordPress-sites 
+tegen een breed scala aan aanvallen is erkend en heeft bijgedragen aan zijn reputatie als een betrouwbare beveiligingsoplossing voor 
+WordPress-gebruikers~\autocite{277144}.
+
+Laravel, een krachtig PHP-framework, geniet bekendheid vanwege zijn geavanceerde beveiligingsfuncties en solide architectuur. Het 
+framework biedt ingebouwde bescherming tegen veelvoorkomende beveiligingskwetsbaarheden, zoals CSRF-aanvallen en SQL-injecties, wat 
+bijdraagt aan de veiligheid van webapplicaties die op Laravel zijn gebouwd. Bovendien biedt Laravel's uitgebreide authenticatie- en 
+autorisatiesysteem ontwikkelaars een gestandaardiseerde en veilige methode om gebruikers te beheren en toegangscontroles toe te passen. 
+Deze functies maken Laravel een populaire keuze voor ontwikkelaars die streven naar veilige en betrouwbare webapplicaties
+~\autocite{Adamu2020}.
+
+Het toevoegen van beveiligingsplugins zoals Wordfence aan WordPress kan de beveiliging aanzienlijk verbeteren, terwijl Laravel van nature een 
+sterke beveiligingslaag biedt. Het kiezen van het juiste platform hangt af van de specifieke behoeften van het project en de nadruk op beveiliging.
+\section{\IfLanguageName{dutch}{Tools}{Tools}}
+\label{sec:Webomgevingen}
+Bij het kiezen van de juiste pentesting tools voor webomgevingen moet, worden overwogen welke functionaliteiten 
+elke tool biedt. Dit is van cruciaal belang, gezien de vele verschillende soorten webapplicaties en de bijbehorende veiligheidsrisico's.
+
+Een van de eerste aspecten waarop moet worden gelet, is of de tool geschikt is voor de specifieke behoeften. Sommige tools 
+zijn specifiek ontworpen voor het testen van websites, terwijl andere meer geschikt zijn voor het evalueren van volledige 
+netwerken. Het is essentieel om een tool te selecteren die aansluit bij de specifieke vereisten van de situatie. Het 
+is logisch om voor verschillende taken verschillende tools te gebruiken~\autocite{Deepikakongara2023}.
+Zoals aangehaalt in het eerste hoofdstuk, is het belangrijk om rekening te houden met de grootte van het netwerk, 
+het soort infrastructuur en het type kwetsbaarheden dat wordt getest.
+
+Gebruiksgemak is ook van belang, vooral wanneer niet alle teamleden experts zijn. Een tool zoals OWASP ZAP, 
+die gebruiksvriendelijk is, kan aanzienlijk veel tijd besparen en de toegankelijkheid voor alle teamleden vergroten.
 Daarnaast biedt een analyse, toegankelijk via Google Books, een volledige vergelijking tussen enkele van de meest gekende pentesting tools op de markt, 
 zoals Nmap, Burp Suite, en OWASP ZAP. Deze bron is bijzonder waardevol voor professionals binnen de cybersecurity wereld, omdat het inzicht geeft in de sterke en zwakke 
 punten van elk van deze tools. Door deze tools te vergelijken, kunnen teams betere beslissingen nemen over welke tools het meest geschikt zijn 
 voor hun specifieke beveiligingsbehoeften ~\autocite{Velu2022}.
 
-Het effect van beveiligingsplugins op WordPress is een ander belangrijk onderzoeksgebied. Een artikel gepubliceerd in het International Journal of Grid and Utility Computing 
-schrijft hoe plugins zoals Wordfence en iThemes Security een onmisbare laag van beveiliging toevoegen aan WordPress websites. Deze plugins zijn ontworpen om een brede variëteit 
-aan bedreigingen af te weren, waardoor ze een belangerijk onderdeel vormen van de beveiligingsstrategie voor elke WordPress-site~\autocite{Casola2020}
+Regelmatige updates zijn van groot belang om ervoor te zorgen dat de tool in staat blijft om nieuwe kwetsbaarheden te 
+identificeren. Het is belangrijk om niet achter te blijven en verouderde bedreigingen te testen terwijl kwaadwillende 
+partijen al nieuwe methoden hebben ontwikkeld.
 
-Een rapport op OpenCourseHub bestudeert de top drie beveiligingsrisico's geïdentificeerd door OWASP en onderzoekt hoe penetratietesting tools ingezet kunnen 
-worden om deze bedreigingen te kunnen onthullen bij websites. Deze analyse is noodzakelijk voor organisaties die streven naar het vertebeteren van hun weerbaarheid tegen 
-de meest voorkomende cyberaanvallen ~\autocite{Sharma2023}
+Natuurlijk speelt budgettaire overweging ook een rol, aangezien tools variëren van gratis tot zeer prijzig. Het 
+is van belang om een tool te vinden die binnen het budget past maar tegelijkertijd voldoet aan de vereiste functionaliteiten.
 
-Ten slotte biedt een vergelijkende studie tussen Laravel en WordPress, beschikbaar op GreenIce, inzicht in de beveiligingsvoordelen van het Laravel framework. 
-Deze studie belicht hoe Laravel's architectuur een voorsprong heeft op het gebied van beveiliging Ten opzichte van wordpress. Een factor van groot belang voor 
-ontwikkelaars en bedrijven bij het kiezen van een framework voor hun webapplicaties~\autocite{Lebedeva2023}.
+Ten slotte moet de tool voldoende diepgaand zijn om zowel oppervlakkige als meer verborgen problemen aan te pakken. 
+Een goede tool kan helpen bij het identificeren en verhelpen van alles, van kleine fouten tot ernstige beveiligingslekken
+~\autocite{Maji2022}.
 
-Samenvattend brengen deze studies de kennis die beschikbaar is over de beveiliging van webapplicaties aan licht. Ze benadrukken het belang van een geïnformeerde benadering bij 
-het kiezen van de meest passende pentestingtool. Het is essentieel om inzicht te krijgen in de specifieke beveiligingsproblemen die elk webapplicatieframework met zich meebrengt. Door deze inzichten 
+Door deze aspecten af te wegen, kunnen de juiste tools worden geselecteerd voor pentestingwerkzaamheden. 
+Dit kan veel bijdragen aan het verbeteren van de veiligheid van webomgevingen en het uitvoeren van effectievere beveiligingstests.
+
+\section{\IfLanguageName{dutch}{wat weten we uit de literatuur}{what is known from the literature}}
+\label{sec:wat-weten-we-uit-de-literatuur}
+Beveiliging van webapplicaties is een noodzakelijk onderwerp geworden. Recente onderzoeken en literatuur leveren 
+inzichten in verschillende aspecten van dit vakgebied, waaronder de effectiviteit van penetratietests, het belang van beveiligingsplugins voor WordPress en de verschillen 
+in beveiligingsmaatregelen tussen webapplicatieframeworks zoals Laravel en WordPress. Een overzicht van wat reeds gekend is op dit gebied, ondersteund door een aantal 
+bronnen, toont de huidige kennis en praktijken aan.
+
+Cybersecurity-instrumenten spelen een cruciale rol, bijvoorbeeld bij penetratietests binnen webomgevingen. Het weloverwogen 
+selecteren van effectieve tools is essentieel, zoals ik in vorig hoofdstuk heb aangehaalt, om kwetsbaarheden in webapplicaties te identificeren en aan te pakken. 
+Deze selectie vereist niet alleen technische kennis, maar ook strategisch inzicht in hoe verschillende tools verschillende 
+soorten beveiligingslekken kunnen identificeren.
+Een doordachte aanpak bij het kiezen van penetratietesttools versterkt niet alleen de beveiligingshouding 
+van organisaties, maar verbetert ook hun vermogen om zich aan te passen aan nieuwe bedreigingen. Het consequent toepassen 
+van deze tools helpt niet alleen bij het identificeren van onmiddellijke dreigingen, maar biedt ook inzichten in potentiële 
+toekomstige kwetsbaarheden ~\autocite{Albahar2022}.
+Daarnaast draagt een effectieve beveiligingsstrategie bij aan het opbouwen van vertrouwen bij klanten en gebruikers, die er 
+zeker van kunnen zijn dat hun gegevens veilig worden beheerd. In het licht van toenemende regelgeving rond gegevensbescherming 
+is het ook van groot belang dat organisaties niet alleen voldoen aan de industrienormen, maar deze zelfs overtreffen.
+Dus, terwijl de technologie blijft evolueren, is het van cruciaal belang dat beveiligingsteams hun tools voortdurend 
+beoordelen en bijwerken, zodat ze voorbereid zijn op zowel de huidige als toekomstige cyberuitdagingen. Dit continue 
+proces van beoordeling en verbetering is essentieel voor het bewaren van een sterke verdediging tegen een breed scala 
+aan internetbedreigingen.
+
+Een belangrijk aspect van onderzoek draait om de impact van beveiligingsplugins op WordPress-websites. Deze plugins, zoals Wordfence en iThemes Security, worden 
+erkend vanwege hun vermogen om een cruciale beveiligingslaag toe te voegen aan WordPress-sites. Ze zijn speciaal ontworpen om een vele bedreigingen af 
+te weren, waardoor ze een belangerijk onderdeel vormen van de beveiligingsstrategie voor elke WordPress-omgeving~\autocite{Casola2020}.
+
+Een rapport dat werd gepresenteerd, onderzoekt de drie belangrijkste beveiligingsrisico's geïdentificeerd door OWASP en verkent hoe penetratietesttools kunnen 
+worden ingezet om deze bedreigingen bij websites op te sporen. Deze analyse is van groot belang voor organisaties die streven naar het verbeteren van hun 
+weerbaarheid tegen veelvoorkomende cyberaanvallen ~\autocite{Sharma2023}.
+
+Ten slotte valt op dat Laravel aanzienlijke beveiligingsvoordelen biedt in vergelijking met WordPress. Deze voordelen worden voornamelijk toegeschreven aan 
+de robuuste architectuur van Laravel, die inherent meer beveiligingslagen biedt. Laravel maakt gebruik van moderne beveiligingspraktijken en heeft ingebouwde 
+functies die helpen bij het beschermen tegen veelvoorkomende bedreigingen zoals SQL-injecties, cross-site scripting (XSS) en cross-site request forgery (CSRF)~\autocite{Lebedeva2023}. Deze focus 
+op beveiliging maakt Laravel een aantrekkelijke keuze voor ontwikkelaars en bedrijven die de veiligheid van hun webapplicaties serieus nemen en zich bewust 
+zijn van de toenemende dreigingen op het internet. De voordelen van Laravel op het gebied van beveiliging zijn dus een belangrijke overweging voor organisaties 
+bij het selecteren van een framework voor hun projecten.
+
+Samenvattend brengen deze studies de kennis die beschikbaar is over de beveiliging van webapplicaties aan licht. 
+Het is essentieel om inzicht te krijgen in de specifieke beveiligingsproblemen die elk webapplicatieframework met zich meebrengt. Door deze inzichten 
 toe te passen kunnen organisaties hun beveiligingshouding versterken en beter beschermen tegen de voortdurende dreiging van cyberaanvallen.
 
 \section{\IfLanguageName{dutch}{wat weten we nog niet uit de literatuur}{what is not known from the literature}}
@@ -129,6 +222,10 @@ De inzichten uit de Pertanika Journals ~\autocite{Jarupunphol2023}, die een bijd
 Dit onderzoek, zoals besproken in de Pertanika Journals, vergelijkt verschillende penetratietesttools binnen een specifieke webomgeving. Het biedt 
 een solide basis voor een diepgaand begrip van hoe deze tools verschillende kwetsbaarheden benaderen en analyseren. Dit draagt bij aan de ontwikkeling 
 van een theoretisch kader dat de verschillende pentesting tools naast elkaar plaatst.
+
+De verkregen inzichten dragen bij aan een breder begrip van webapplicatiebeveiliging. Het vergelijken van verschillende penetratietesttools binnen een specifieke 
+webomgeving biedt waardevolle inzichten in hoe deze tools kwetsbaarheden benaderen en analyseren. Dit draagt bij aan het ontwikkelen van een algeheel begrip van 
+pentesting tools, wat van cruciaal belang is voor professionals in de cybersecurity en webapplicatieontwikkeling om effectieve beveiligingsstrategieën te implementeren.
 
 De integratie van beveiligingstechnieken en theoretische concepten, zoals vermeld in het artikel gepubliceerd in IJITEE, is cruciaal. Het speelt een belangerijke rol 
 bij het bijeenbrengen van bestaande theoretische modellen en de praktische uitdagingen van webbeveiliging. Dit onderzoek maakt gebruik van de nieuwste inzichten in cybersecurity 
@@ -167,17 +264,7 @@ zijn in het dagelijks leven van zowel individuen als organisaties. Door te conce
 helpt het bij het maken van nieuwe regels en wetten, en roept op tot strengere beveiligingsstandaarden. Het biedt niet alleen strategieën om het risico 
 op datalekken en cyberaanvallen te verminderen, maar versterkt ook het vertrouwen in digitale platforms. Zo draagt het onderzoek bij aan een veiligere 
 digitale omgeving in een tijd waarin de digitale dreigingen significante economische en sociale impact kunnen hebben.
-\section{\IfLanguageName{dutch}{doel van het onderzoek}{goal of the study}}
 
-Het hoofddoel van dit onderzoek is het grondig evalueren van de effectiviteit van verschillende penetratietesttools in twee typen webomgevingen: 
-WordPress sites voorzien van beveiligingsplugins, een wordpress website zonder aanpassingen en een op maat gemaakte Laravel applicatie. Deze evaluatie 
-heeft als doel de sterke en zwakke punten van elke pentest tool te identificeren in hun vermogen om kwetsbaarheden te detecteren en weerstand te bieden 
-tegen cyberdreigingen. Daarnaast wordt ook de invloed van de structuur van de webomgeving op de prestaties van deze tools onderzocht.
-Dit onderzoek maakt gebruik van inzichten uit een recente publicatie in MDPI Electronics, die een uitgebreide analyse van cybersecuritydreigingen en 
-de effectiviteit van verschillende verdedigingsmechanismen binnen webapplicaties biedt. Het doel is om de kennis over hoe webapplicaties beter 
-beschermd kunnen worden tegen geavanceerde cyberaanvallen te verdiepen. Dit artikel benadrukt specifiek het belang van voortdurende vernieuwing 
-in beveiligingsstrategieën om voldoende in te kunnen spelen op de snel evoluerende cyberdreigingen, wat direct gepaard gaat met de doelstellingen van dit 
-onderzoek ~\autocite{Altulaihan2023}.
 %Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 
 %Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
