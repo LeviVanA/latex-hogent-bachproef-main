@@ -25,68 +25,90 @@
 %%
 %% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
 %% en geef het een gepaste titel.
+In de initiële fase van mijn onderzoek, de literatuurstudie, heb ik me gericht op het verzamelen van de bestaande 
+kennis en onderzoek op het gebied van webapplicatiebeveiliging, 
+pentesting-tools en frameworks, met een specifieke focus op WordPress en Laravel. Deze fase was van cruciaal 
+belang om een stevige basis te leggen voor mijn onderzoek en om de context en achtergrond van het onderwerp volledig te 
+begrijpen.
+
+Om dit te bereiken, heb ik verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
+en rapporten van bekende instellingen en experts op het gebied van cybersecurity. 
+Ik heb systematische zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
+Google Scholar, om relevante literatuur te op nemen in mijn studie. Deze literatuur heb ik grondig geanalyseerd en 
+samengevat, waarbij ik de nadruk legde op recente ontwikkelingen, trends en mogelijke tekortkomingen in de bestaande kennis.
+
 \section{\IfLanguageName{dutch}{Requirements Analyse}{Requirements analysis}}
-\begin{figure}
-    \centering
-    \includegraphics[height=0.3\textheight]{pentest_tools.jpg}
-    \caption[Meest geavanceerde open source pentesting tools]{Meest geavanceerde open source pentesting tools}
-  \end{figure}
-Doelstelling: Dit hoofdstuk heeft als doel om duidelijk de criteria te definiëren die zullen worden gebruikt om de 
-penetratietesttools te selecteren. Deze criteria zijn cruciaal om te garanderen dat de geselecteerde tools geschikt 
-zijn voor onze specifieke testbehoeften en doelstellingen.
+Deze sectie beschrijft de methoden en technieken die worden toegepast voor het uitvoeren van penetratietests op drie 
+verschillende webomgevingen: een WordPress-applicatie zonder beveiligingsplugins, een WordPress-applicatie met 
+beveiligingsplugins, en een Laravel-applicatie. Het doel van deze tests is om kwetsbaarheden te identificeren, te 
+analyseren en de effectiviteit van de beveiligingsmaatregelen in de verschillende omgevingen te vergelijken.
+Deze 3 webomgevingen worden geselecteerd op basis van hun populariteit en relevantie voor kleine tot middelgrote bedrijven 
+zoals Sinergio wiens ook mijn doelgroep is.
 
-Deliverables:
+Voorafgaand aan de uitvoering van de penetratietests wordt toestemming verkregen van de beheerders van de 
+webomgevingen. Er wordt een veilige testomgeving opgezet om de impact op de live systemen te minimaliseren. 
+Alle tests worden uitgevoerd in overeenstemming met de ethische richtlijnen voor cybersecurity onderzoek, 
+waarbij de integriteit van de geteste systemen voorop staat.
+
+Voor dit onderzoek worden drie verschillende penetratietesttools ingezet, elk geselecteerd vanwege hun 
+specifieke sterktes in het identificeren en exploiteren van bepaalde soorten kwetsbaarheden:
+
 \begin{itemize}
-    \item Een gedetailleerde lijst van functionele en technische vereisten die elke tool moet voldoen.
-    \item Een beoordelingskader dat zal helpen bij het evalueren en vergelijken van de tools op basis van deze vereisten.
+    \item Tool 1 wordt gebruikt voor de eerste webomgeving, een WordPress-applicatie zonder 
+    beveiligingsplugins. Deze tool is bijzonder geschikt voor het detecteren van webgebaseerde kwetsbaarheden 
+    zoals SQL-injecties en cross-site scripting (XSS), waardoor het een uitstekende keuze is voor 
+    een basis WordPress-installatie.
+    \item Tool 2 wordt ingezet voor de tweede webomgeving, een WordPress-applicatie met beveiligingsplugins. 
+    Deze tool excelleert in het omzeilen van beveiligingsmaatregelen en het uitvoeren van geautomatiseerde 
+    aanvallen, waaronder brute force aanvallen. Dit maakt het bijzonder geschikt voor het grondig 
+    testen van beveiligde WordPress-installaties.
+    \item Tool 3 wordt gekozen voor de derde webomgeving, een Laravel-applicatie. Deze tool staat 
+    bekend om zijn vermogen om specifieke framework-kwetsbaarheden te exploiteren en biedt functionaliteiten 
+    die cruciaal zijn voor het testen van complexe applicaties zoals die gebouwd met Laravel.
 \end{itemize}
 
-Methoden:
-\begin{itemize}
-    \item Literatuuronderzoek: Bestudering van bestaande literatuur over penetratietesttools en -methodologieën om een gefundeerde basis van vereisten op te stellen.
-    \item Analyse van Best Practices: Onderzoek naar de standaarden en praktijken in de industrie die de benchmark vormen voor goede penetratietesting.
-\end{itemize}
+Alle resultaten van de tests worden systematisch verzameld en gedocumenteerd. De data wordt geanalyseerd 
+om de ernst en de impact van elke gevonden kwetsbaarheid te bepalen. Deze analyse helpt niet alleen bij 
+het identificeren van de zwakke punten binnen elke webomgeving, maar ook bij het vergelijken van de 
+veiligheid tussen de verschillende systemen.
 
-Verantwoording: De keuze voor deze methoden zorgt voor een grondige en breed onderbouwde set van criteria die niet alleen theoretisch 
-goed gefundeerd zijn maar ook industrieel relevant.
+\section{\IfLanguageName{dutch}{Keuze van Penetratietesttools}{Selection of pentesttools}}
+In het kader van dit onderzoek naar de beveiliging van drie verschillende webomgevingen is de keuze van 
+de juiste penetratietesttools cruciaal. Voor elk van deze omgevingen is een tool geselecteerd die het 
+best past bij de specifieke kenmerken en beveiligingsuitdagingen. De geselecteerde tools zijn 
+Metasploit, Burp Suite en OWASP ZAP. Hieronder volgt een uiteenzetting van waarom deze tools 
+bijzonder geschikt zijn voor dit onderzoek.
 
-\section{\IfLanguageName{dutch}{Selectie van Geschikte Tools}{Selection of fitting tools}}
-Doelstelling: Dit hoofdstuk focust op het proces van het selecteren van de meest geschikte penetratietesttool uit een 
-bredere lijst. De geselecteerde tools worden geëvalueerd op basis van de vastgestelde criteria.
+\subsection{\IfLanguageName{dutch}{Metasploit voor de Laravel-applicatie}{Metasploit for the Laravel application}}
+Metasploit is een van de meest uitgebreide frameworks voor het uitvoeren van penetratietests en 
+staat bekend om zijn robuuste exploit-database en modulaire aanpak. De Laravel-applicatie, bekend 
+om zijn rijke set aan functionaliteiten en complexe architectuur, kan profiteren van Metasploit's 
+vermogen om specifieke exploits te gebruiken die zijn afgestemd op gedetecteerde kwetsbaarheden. 
+De tool biedt geautomatiseerde exploitatie technieken die essentieel zijn voor het identificeren 
+van beveiligingsrisico’s in een geavanceerd framework zoals Laravel. Bovendien ondersteunt 
+Metasploit de ontwikkeling van aangepaste exploits, wat van onschatbare waarde kan zijn bij 
+het testen van maatwerkfuncties binnen de Laravel-applicatie.
 
-Deliverables:
-\begin{itemize}
-    \item een pentest tool die voldoet aan de vastgestelde criteria.
-    \item Een evaluatierapport dat de beslissingsmatrix uitlegt en hoe elke tool zich verhoudt tot de vastgestelde criteria.
-\end{itemize}
+\subsection{\IfLanguageName{dutch}{Burp Suite voor de Laravel-applicatie}{Burp Suite for the Laravel application}}
+Burp Suite, een geïntegreerde platform voor het testen van de beveiliging van webapplicaties, is 
+bijzonder effectief voor het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde web 
+aanvallen. Voor een WordPress-installatie met beveiligingsplugins biedt Burp Suite de noodzakelijke 
+diepgang om de effectiviteit van deze plugins te evalueren. Door zijn vermogen om verzoeken te 
+onderscheppen, te manipuleren en opnieuw te versturen, kunnen testers de robuustheid van 
+beveiligingsmaatregelen zoals firewalls en inbraakdetectiesystemen die door plugins worden 
+geïmplementeerd, nauwkeurig beoordelen. Burp Suite's scanner kan automatisch een breed scala 
+aan kwetsbaarheden identificeren, wat tijd bespaart tijdens de testfase en zorgt voor een 
+grondige evaluatie van de beveiligingsstatus.
 
-Methoden:
-\begin{itemize}
-    \item Vergelijkende Analyse: Evaluatie van elke tool op basis van de vereisten uit de requirements analyse.
-    \item Scoringsmodel: Ontwikkeling van een kwantitatief model dat scores toekent aan elke tool op basis van de mate waarin zij aan de criteria voldoen.
-    \item Feedbacksessies: Overleg met stakeholders en experts om de voorlopige selectie te verfijnen en te valideren.
-\end{itemize}
+\subsection{\IfLanguageName{dutch}{OWASP ZAP voor de Laravel-applicatie}{OWASP ZAP for the Laravel application}}
+OWASP ZAP (Zed Attack Proxy) is een open-source tool voor het automatisch vinden van beveiligingsfouten 
+in webapplicaties tijdens het ontwikkelings- en testproces. Gezien zijn reputatie en uitgebreide 
+ondersteuning door de OWASP-community is ZAP bijzonder geschikt voor het testen van een 
+WordPress-site zonder aanvullende beveiligingsmaatregelen. ZAP's geïntegreerde scanner en 
+intercepting proxy maken het eenvoudig om kwetsbaarheden zoals XSS en SQL-injectie aan te 
+tonen, die voorkomen in basisconfiguraties van WordPress. Daarnaast biedt ZAP dynamische 
+analyse van de applicatie in real-time, wat helpt bij het direct identificeren van beveiligingsproblemen.
 
-Verantwoording: Deze stap zorgt voor een objectieve en transparante keuze van tools, wat essentieel is voor de 
-geloofwaardigheid en bruikbaarheid van de uiteindelijke onderzoeksresultaten.
 
-\section{\IfLanguageName{dutch}{Analyse van resultaten}{Analysis of results}}
-Doelstelling: Analyse van de testresultaten om inzicht te verkrijgen in de effectiviteit van elke geselecteerde tool in het 
-identificeren van kwetsbaarheden binnen de verschillende webomgevingen.
+\section{\IfLanguageName{dutch}{Proof of concept}{Proof of concept}}
 
-Deliverables:
-\begin{itemize}
-    \item Een uitgebreid analyserapport dat gedetailleerde bevindingen bevat over de prestaties van elke tool.
-    \item Grafieken en tabellen die de resultaten visualiseren en vergelijken.
-    \item Aanbevelingen voor de inzet van specifieke tools gebaseerd op de geteste prestaties.
-\end{itemize}
-
-Methoden:
-\begin{itemize}
-    \item Data-analyse: Verwerking en analyse van de verzamelde gegevens met behulp van statistische software om patronen en significante resultaten te identificeren.
-    \item Kwalitatieve Beoordeling: Beoordeling van de aard en ernst van de gedetecteerde kwetsbaarheden door de verschillende tools.
-    \item Vergelijkende Evaluatie: Systematische vergelijking van de resultaten om de relatieve sterktes en zwaktes van elke tool te bepalen.
-\end{itemize}
-
-Verantwoording: Deze analytische aanpak biedt een grondige en diepgaande evaluatie van de verzamelde data, waardoor sterke, 
-data-gedreven aanbevelingen mogelijk zijn die de beveiligingspraktijken binnen de geteste omgevingen kunnen verbeteren.

@@ -4,10 +4,10 @@
 
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
 \label{ch:inleiding}
-Cyberbeveiliging blijft een cruciale rol spelen binnen de bescherming van gevoelige informatie. Het essentieel dat organisaties 
+Cyberbeveiliging speelt een cruciale rol binnen de bescherming van gevoelige informatie. Het is dan ook essentieel dat organisaties 
 effectieve beveiligingstools implementeren om hun webomgevingen te beschermen. Penetratietesten, of pentests, zijn een 
 fundamentele methode om de beveiliging van webapplicaties te beoordelen door ze bloot te stellen aan gesimuleerde 
-cyberaanvallen. Dit onderzoek onderzoekt de kwetsbaarheden van deze omgevingen. Het doel is om te bepalen welke tools 
+cyberaanvallen. Dit onderzoek gaat dieper in op de kwetsbaarheden van deze omgevingen. Het doel is om te bepalen welke tools 
 het meest effectief zijn in specifieke situaties en hoe beveiligingsstrategieën aangepast kunnen worden om optimale 
 bescherming te bieden.
 
@@ -23,22 +23,22 @@ bescherming te bieden.
 \end{figure}
 Kleine tot middelgrote IT-servicebedrijven, zoals Sinergio en 24Flow, worden dagelijks geconfronteerd met de uitdaging om hun 
 webapplicaties effectief te beschermen tegen cyberaanvallen. Deze bedrijven maken vaak gebruik van populaire webontwikkelingsplatformen 
-zoals WordPress en Laravel, die elk unieke beveiligingsrisico's en kwetsbaarheden kennen. De bescherming van deze platformen 
+zoals WordPress en Laravel, die elk unieke en specifieke beveiligingsrisico's en kwetsbaarheden kennen. De bescherming van deze platformen 
 wordt vaak toevertrouwd aan de implementatie van beveiligingsplugins en -tools, waarvan de effectiviteit varieert.
 
 Deze bachelorproef richt zich op het onderzoek naar de effectiviteit van verschillende penetratietesttools, zoals Burp Suite, Vega, OWASP ZAP... 
 in het identificeren van kwetsbaarheden binnen drie specifieke webomgevingen: een WordPress applicatie zonder beveiligingsplugins,
-een WordPress applicatie met beveiligingsplugins en een afgewerkte Laravel applicatie. Het doel van dit onderzoek is tweeledig: 
-ten eerste het vaststellen van de meest effectieve penetratietesttool(s) voor deze specifieke webomgevingen. Ten tweede het 
-analyseren van de beveiligingsrisico's geassocieerd met elk van deze omgevingen om de vraag te beantwoorden hoe onveilig een 
+een WordPress applicatie met beveiligingsplugins en een afgewerkte Laravel applicatie. Het doel van dit onderzoek is tweeledig. 
+Ten eerste, het vaststellen welke de meest effectieve penetratietesttool(s) zijn voor deze specifieke webomgevingen. Ten tweede, 
+een analyse maken van de beveiligingsrisico's geassocieerd met elk van deze omgevingen om de vraag te beantwoorden hoe onveilig een 
 WordPress applicatie zonder beveiligingsplugins werkelijk is. Dit wordt vergeleken met een WordPress applicatie met 
 beveiligingsplugins en een Laravel applicatie.
 
 De directe doelgroep voor deze bachelorproef is het bedrijf Sinergio, een kleine IT-serviceprovider die regelmatig 
 werkt met WordPress en Laravel voor het ontwikkelen van webapplicaties voor hun klanten. De resultaten van dit 
-onderzoek bieden Sinergio waardevolle inzichten in de meest effectieve manieren om hun webontwikkelingsprojecten 
-te beveiligen. Dit stelt hen in staat om geïnformeerde beslissingen te nemen over de implementatie van 
-beveiligingsstrategieën en -tools. Sinergio zal zo weten welke pentesting tool het interessantste is binnen één van hun specifieke omgevingen.
+onderzoek biedt Sinergio waardevolle inzichten in de meest effectieve manieren om hun webontwikkelingsprojecten beter 
+te beveiligen. Dit stelt hen bovendien in staat om geïnformeerde beslissingen te nemen over de implementatie van 
+beveiligingsstrategieën en -tools. Sinergio zal zo kunnen achterhalen welke pentesting tool het interessantste is binnen hun specifieke omgevingen.
 Bovendien draagt dit onderzoek bij aan een bredere kennisbasis over webapplicatiebeveiliging, 
 wat van belang kan zijn voor andere kleine tot middelgrote IT-bedrijven die vergelijkbare technologieën gebruiken.
 
@@ -46,16 +46,16 @@ wat van belang kan zijn voor andere kleine tot middelgrote IT-bedrijven die verg
 \label{sec:onderzoeksvraag}
 Hoe variëren de prestaties van verschillende penetratietesttools bij het identificeren van kwetsbaarheden binnen drie 
 specifieke webomgevingen: een WordPress-website zonder beveiligingsplugins, een WordPress-website met beveiligingsplugins 
-en een volledig ontwikkelde Laravel-applicatie? Welke specifieke kwetsbaarheden detecteren de penetratietesttools in een WordPress-omgeving zonder 
+en een volledig ontwikkelde Laravel-applicatie. Welke specifieke kwetsbaarheden detecteren de penetratietesttools in een WordPress-omgeving zonder 
 beveiligingsplugins en hoe verschilt dit van de omgevingen met beveiligingsplugins en de Laravel-applicatie? 
 In hoeverre verbeteren beveiligingsplugins de detectiecapaciteiten van deze tools op een WordPress-site? 
-Tot slot zal je onderzoek de beveiligingsniveaus van een onbeveiligde WordPress-website vergelijken met die 
+Tot slot zal dit onderzoek de beveiligingsniveaus van een onbeveiligde WordPress-website vergelijken met die 
 van een beveiligde site en een Laravel-applicatie, om zo te bepalen hoe de aanwezigheid van beveiligingsplugins de 
 veiligheid beïnvloedt.
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
 \label{sec:onderzoeksdoelstelling}
-De doelstelling is het uitvoeren van een vergelijkende studie. Deze studie evalueert de effectiviteit van 
+De doelstelling van deze paper is het uitvoeren van een vergelijkende studie. Deze studie evalueert de effectiviteit van 
 verschillende penetratietesttools bij het identificeren van kwetsbaarheden in drie specifieke webomgevingen: een WordPress-website 
 zonder beveiligingsplugins, een WordPress-website met beveiligingsplugins en een volledig ontwikkelde Laravel-applicatie.
 Het beoogde resultaat is een verslag met gedetailleerde aanbevelingen over de meest effectieve tools voor elke geteste 
@@ -69,13 +69,13 @@ bijdragen aan betere beveiligingsstrategieën en -implementaties in webontwikkel
 % geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
 % die je kan aanvullen/aanpassen in functie van je eigen tekst.
 
-De rest van deze bachelorproef is als volgt opgebouwd:
+Het verdere verloop van deze bachelorproef ziet er uit als volgt:
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
+Hoofdstuk~\ref{ch:stand-van-zaken} geeft een overzicht van de stand van zaken binnen het onderzoeksdomein, op basis van een literatuurstudie.
 
-In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
+Hoofdstuk~\ref{ch:methodologie} geeft toelivhting omtrent de methodologie en de gebruikte onderzoekstechnieken die een antwoord te kunnen formuleren op de onderzoeksvragen.
 
 % TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
-In Hoofdstuk~\ref{ch:resultaten}, bevat de resultaten van het onderzoek.
+Hoofdstuk~\ref{ch:resultaten}, bevat de resultaten van het onderzoek.
 
-In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
+Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.

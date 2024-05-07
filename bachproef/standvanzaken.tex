@@ -25,7 +25,7 @@ Wetenschappelijke studies tonen aan dat het proces van pentesting verschillende 
 black box, en grey box, elk met hun eigen aanpak van kwetsbaarheden in een systeem. Het doel van pentesting is om 
 veiligheidszwakheden te identificeren en te exploiteren\footnote{het proces waarbij een tester actief gebruikmaakt 
 van veiligheidszwakheden of kwetsbaarheden in een systeem om te laten zien hoe een kwaadwillende aanvaller deze kan misbruiken.} 
-om organisaties te helpen begrijpen waar hun beveiligingskwestbaarheden zich bevinden ~\autocite{Alhamed2023}.
+om organisaties te helpen begrijpen waar beveiligingskwestbaarheden zich bevinden ~\autocite{Alhamed2023}.
 
 Een penetratietest bestaat uit drie belangrijke fasen: voorbereiding, uitvoering en analyse. Gedurende deze fasen gebruiken 
 testers diverse tools zoals Nmap, Metasploit en Nessus. Tijdens de voorbereiding worden de scope en doelstellingen vastgesteld. 
@@ -34,7 +34,7 @@ Ten slotte worden de resultaten geanalyseerd en gerapporteerd, inclusief aanbeve
 ~\autocite{Sarker2023}.
 
 Bij het selecteren van tools en methoden voor penetratietests moet rekening worden gehouden met verschillende factoren, zoals de 
-grootte van het netwerk, het soort infrastructuur en het type kwetsbaarheden dat wordt getest. Wetenschappelijke studies 
+grootte van het netwerk, het soort infrastructuur en het type kwetsbaarheden die worden getest. Wetenschappelijke studies 
 benadrukken het belang van een grondige planning en voorbereiding om ervoor te zorgen dat de test nauwkeurig en doeltreffend 
 wordt uitgevoerd ~\autocite{Alhamed2023}.
 
@@ -61,7 +61,7 @@ artikelen en studies worden geraadpleegd, die het onderwerp uitvoerig behandelen
 \end{figure}
 
 In de methodologie bij het testen van webomgevingen met name WordPress en Laravel, speelt het identificeren van veelvoorkomende 
-kwetsbaarheden een belangrijke rol. Zoals besproken in vorig hoofdstuk valt het onderzoeken van kwetsbaarheden in webapplicaties onder 
+kwetsbaarheden een belangrijke rol. Zoals hiervoor aangehaald valt het onderzoeken van kwetsbaarheden in webapplicaties onder 
 de fase voorbereiding van een pentest.
 
 In WordPress zonder beveiligingsplugins moeten misconfiguraties zoals onbeschermde back-ups 
@@ -77,7 +77,8 @@ met beveiligingsplugin(s) ~\autocite{Albahar2022}.
 
 Bij Laravel-applicaties is het belangrijk om te letten op backend-logica, authenticatie en sessiebeheer. 
 Mass assignment-kwetsbaarheden moeten zorgvuldig worden onderzocht om ongeautoriseerde gegevenswijzigingen te voorkomen.
-Mass assignment is een techniek binne Eloquent\footnote{ORM van Laravel} waarbij een gebruiker meerdere velden tegelijk kan bijwerken, wat een beveiligingsrisico kan vormen. 
+Mass assignment is een techniek binnen Eloquent de Object-Relational Mapper\footnote{een manier om programmeercode af 
+te stemmen op databasestructuren} (ORM) van Laravel  waarbij een gebruiker meerdere velden tegelijk kan bijwerken, wat een beveiligingsrisico kan vormen. 
 Daarnaast is het essentieel om te testen op SQL-injecties en te zorgen voor veilige authenticatie in Laravel-applicaties 
 ~\autocite{Altulaihan2023}.
 
@@ -85,6 +86,63 @@ Een effectieve methodologie omvat een grondige beoordeling van de infrastructuur
 testen van beveiligingsmaatregelen met diverse tools zoals Metasploit, Burp Suite en OWASP ZAP ~\autocite{Ravindran2022}. 
 Het uiteindelijke doel is om kwetsbaarheden te ontdekken en effectieve maatregelen te nemen om de beveiliging van webomgevingen 
 te versterken.
+
+\subsection{\IfLanguageName{dutch}{Aanvallen op veiligheidskwetsbaarheden in Webapplicaties}{Attacks on Security vulnerabilities in Web applications}}
+\label{sec:Veiligheidskwetsbaarheden in Webomgevingen}
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{sql-injection_schema.png}
+    \caption[Visualistie van een sql-injection aanval]{Visualistie van een sql-injection aanval}
+\end{figure}
+\subsubsection{\IfLanguageName{dutch}{SQL-injectie}{SQL-injection}}
+\label{sec:SQL-injectie}
+
+SQL-injectie is een veelvoorkomende cyberbeveiligingsdreiging waarbij aanvallers schadelijke SQL-code injecteren in webapplicaties om databases te manipuleren. 
+Dit omvat het stelen van gegevens, het wijzigen van records of zelfs het verwijderen van belangrijke informatie. Om dit te bestrijden, wordt inputvalidatie 
+toegepast waarbij alle gebruikersinvoer wordt gecontroleerd en gefilterd om onveilige tekens en SQL-commando's uit te sluiten. Een andere effectieve methode 
+is het gebruik van geparametriseerde queries, die de structuur van een SQL-query scheiden van de daadwerkelijke data, waardoor de kans op een succesvolle 
+injectie wordt verkleind. Inbraakdetectiesystemen spelen ook een cruciale rol; deze systemen monitoren netwerkverkeer op abnormale patronen die wijzen op 
+een inbraakpoging, zoals ongewoon veel databaseverzoeken. Deze technieken samen verhogen de weerbaarheid van systemen tegen SQL-injectie aanvallen, elk 
+aangepast aan de specifieke behoeften van de applicatie ~\autocite{Abdullayev2023}.
+
+\subsubsection{\IfLanguageName{dutch}{Cross-Site Scripting (XSS)}{Cross-Site Scripting (XSS)}}
+\label{sec:Cross-Site Scripting (XSS)}
+
+Cross-Site Scripting (XSS) is een type cyberaanval waarbij aanvallers kwaadaardige scripts op websites plaatsen, die vervolgens worden uitgevoerd door de 
+browsers van gebruikers. Dit kan leiden tot gestolen cookies, waarbij aanvallers toegang krijgen tot opgeslagen sessiegegevens die authenticatie mogelijk 
+maken. Sessiehijacking houdt in dat aanvallers de controle over de gebruikerssessie overnemen. Ook kan er manipulatie van de website-inhoud plaatsvinden, 
+waardoor gebruikers misleidende informatie zien. Content Security Policies (CSP) zijn een cruciale verdedigingsmaatregel die bepaalt welke contentbronnen 
+geldig zijn voor een website, waardoor het laden van ongeautoriseerde scripts wordt beperkt en zo wordt voorkomen dat XSS-aanvallen effectief kunnen zijn. 
+Door het instellen van CSP's kunnen ontwikkelaars specifieke regels definiëren voor waar en hoe bronnen geladen mogen worden, wat een extra laag van beveiliging
+biedt ~\autocite{Weamie2022}.
+
+\subsubsection{\IfLanguageName{dutch}{Broken Access Control (BAC)}{Broken Access Control (BAC)}}
+\label{sec:Broken Access Control (BAC)}
+
+Broken Access Control (BAC) is een kwetsbaarheid in webapplicaties die ontstaat wanneer de toegangscontrolesystemen niet adequaat de gebruikersactiviteiten beperken. 
+Dit kan leiden tot situaties waarbij gebruikers acties kunnen uitvoeren waarvoor ze geen toestemming hebben. Dit omvat toegang tot gevoelige data, het wijzigen 
+van gegevens zonder de juiste autorisatie, of het uitvoeren van functies die hun rechten overschrijden. De beveiliging tegen BAC vereist een zorgvuldige implementatie 
+van toegangsbeleid dat zowel authenticatie als autorisatie controles omvat, waarbij moet worden gezorgd dat deze controles consistent en robuust worden toegepast over 
+alle onderdelen van de applicatie \autocite{Anas2024}.
+
+\subsubsection{\IfLanguageName{dutch}{brute force aanvallen}{brute force attacks}}
+\label{sec:brute force aanvallen}
+Een brute force-aanval is een techniek waarbij aanvallers systematisch alle mogelijke combinaties van wachtwoorden of sleutels uitproberen om toegang te krijgen tot een 
+systeem of account. Deze aanpak kan effectief zijn bij het kraken van zwakke wachtwoorden, vooral als er geen maatregelen zoals accountvergrendeling na meerdere mislukte 
+pogingen zijn toegepast. Mensen voeren deze aanvallen uit met verschillende motieven, waaronder het stelen van persoonlijke of financiële informatie, het uitvoeren van 
+frauduleuze transacties, of het saboteren van systemen. Dit benadrukt het belang van sterke wachtwoordbeleid en beveiligingsmaatregelen om dergelijke aanvallen te weerstaan
+~\autocite{Djukanovic2020}.
+
+\subsubsection{\IfLanguageName{dutch}{Cross-Site Request Forgery (CSRF)}{Cross-Site Request Forgery (CSRF)}}
+\label{sec:brute force aanvallen}
+Cross-Site Request Forgery (CSRF) is een type aanval waarbij een kwaadaardige website ongeautoriseerde acties uitvoert namens een gebruiker die bij een andere website is 
+ingelogd. Deze acties kunnen variëren van het wijzigen van wachtwoorden tot het maken van financiële transacties. CSRF-aanvallen maken misbruik van de manier waarop 
+webbrowsers automatisch inloggegevens, zoals cookies\footnote{Cookies zijn "minibestanden" en kunnen worden geplaatst op uw apparaat dat is verbonden met het internet, 
+zoals een computer, telefoon, tablet of smart TV. Cookies kunnen worden gebruikt om informatie te verzamelen of op te slaan over hoe u zich gedraagt op een website 
+en/of op uw apparaat}, meesturen bij het maken van verzoeken naar een webserver. Om deze aanvallen tegen te gaan, gebruiken ontwikkelaars 
+vaak anti-CSRF tokens, die moeten worden meegezonden met elk verzoek dat een side-effect heeft. Zonder het juiste token wordt het verzoek geweigerd, wat helpt om de 
+gebruiker te beschermen tegen ongewilde acties ~\autocite{B.I.2024}.
 
 \begin{figure}
     \centering
@@ -95,8 +153,7 @@ te versterken.
 \subsection{\IfLanguageName{dutch}{Security mechanismen in Webapplicaties}{Security mechanisms in Web applications}}
 \label{sec:Security mechanismen in Webomgevingen}
 
-In dit hoofdstuk worden de security mechanismen van drie verschillende webomgevingen onderzocht: WordPress zonder beveiligingsplugins, 
-WordPress met de Wordfence plugin, en het Laravel framework. Elk platform heeft zijn eigen beveiligingsmaatregelen die bijdragen 
+In dit hoofdstuk worden de security mechanismen van de drie verschillende webomgevingen onderzocht. Elk platform heeft zijn eigen beveiligingsmaatregelen die bijdragen 
 aan de algehele veiligheid van webapplicaties.
 
 WordPress, een veelgebruikt content management systeem, bevat enkele ingebouwde beveiligingsfuncties zoals gebruikersrollen, beveiligde 
@@ -119,8 +176,8 @@ Deze functies maken Laravel een populaire keuze voor ontwikkelaars die streven n
 ~\autocite{Adamu2020}.
 
 Het toevoegen van beveiligingsplugins zoals Wordfence aan WordPress kan de beveiliging aanzienlijk verbeteren, terwijl Laravel van nature een 
-sterke beveiligingslaag biedt. Het kiezen van het juiste platform hangt af van de specifieke behoeften van het project en de nadruk op beveiliging.
-\section{\IfLanguageName{dutch}{Tools}{Tools}}
+sterke beveiligingslaag biedt. Het kiezen van het juiste platform hangt daarom af van de specifieke behoeften van het project en de nadruk op beveiliging.
+\section{\IfLanguageName{dutch}{Pentesting Tools}{Pentesting Tools}}
 \label{sec:Webomgevingen}
 Bij het kiezen van de juiste pentesting tools voor webomgevingen moet, worden overwogen welke functionaliteiten 
 elke tool biedt. Dit is van cruciaal belang, gezien de vele verschillende soorten webapplicaties en de bijbehorende veiligheidsrisico's.
@@ -129,10 +186,10 @@ Een van de eerste aspecten waarop moet worden gelet, is of de tool geschikt is v
 zijn specifiek ontworpen voor het testen van websites, terwijl andere meer geschikt zijn voor het evalueren van volledige 
 netwerken. Het is essentieel om een tool te selecteren die aansluit bij de specifieke vereisten van de situatie. Het 
 is logisch om voor verschillende taken verschillende tools te gebruiken~\autocite{Deepikakongara2023}.
-Zoals aangehaalt in het eerste hoofdstuk, is het belangrijk om rekening te houden met de grootte van het netwerk, 
+Zoals aangehaald in het eerste hoofdstuk, is het belangrijk om rekening te houden met de grootte van het netwerk, 
 het soort infrastructuur en het type kwetsbaarheden dat wordt getest.
 
-Gebruiksgemak is ook van belang, vooral wanneer niet alle teamleden experts zijn. Een tool zoals OWASP ZAP, 
+Gebruiksgemak is eveneens van belang, vooral wanneer niet alle teamleden experts zijn. Een tool zoals OWASP ZAP, 
 die gebruiksvriendelijk is, kan aanzienlijk veel tijd besparen en de toegankelijkheid voor alle teamleden vergroten.
 Daarnaast biedt een analyse, toegankelijk via Google Books, een volledige vergelijking tussen enkele van de meest gekende pentesting tools op de markt, 
 zoals Nmap, Burp Suite, en OWASP ZAP. Deze bron is bijzonder waardevol voor professionals binnen de cybersecurity wereld, omdat het inzicht geeft in de sterke en zwakke 
@@ -157,7 +214,7 @@ Dit kan veel bijdragen aan het verbeteren van de veiligheid van webomgevingen en
 \label{sec:wat-weten-we-uit-de-literatuur}
 Beveiliging van webapplicaties is een noodzakelijk onderwerp geworden. Recente onderzoeken en literatuur leveren 
 inzichten in verschillende aspecten van dit vakgebied, waaronder de effectiviteit van penetratietests, het belang van beveiligingsplugins voor WordPress en de verschillen 
-in beveiligingsmaatregelen tussen webapplicatieframeworks zoals Laravel en WordPress. Een overzicht van wat reeds gekend is op dit gebied, ondersteund door een aantal 
+in beveiligingsmaatregelen tussen webapplicatieframeworks zoals Laravel. Een overzicht van wat reeds gekend is op dit gebied, ondersteund door een aantal 
 bronnen, toont de huidige kennis en praktijken aan.
 
 Cybersecurity-instrumenten spelen een cruciale rol, bijvoorbeeld bij penetratietests binnen webomgevingen. Het weloverwogen 
@@ -181,8 +238,10 @@ erkend vanwege hun vermogen om een cruciale beveiligingslaag toe te voegen aan W
 te weren, waardoor ze een belangerijk onderdeel vormen van de beveiligingsstrategie voor elke WordPress-omgeving~\autocite{Casola2020}.
 
 Een rapport dat werd gepresenteerd, onderzoekt de drie belangrijkste beveiligingsrisico's geïdentificeerd door OWASP en verkent hoe penetratietesttools kunnen 
-worden ingezet om deze bedreigingen bij websites op te sporen. Deze analyse is van groot belang voor organisaties die streven naar het verbeteren van hun 
-weerbaarheid tegen veelvoorkomende cyberaanvallen ~\autocite{Sharma2023}.
+worden ingezet om deze bedreigingen bij websites op te sporen. OWASP is een non-profitorganisatie die zich richt op het verbeteren van de softwarebeveiliging 
+en is bekend om haar publicaties zoals de OWASP Top 10, een lijst van de meest kritieke webapplicatiebeveiligingsrisico's. Het rapport bespreekt ook hoe 
+penetratietesttools kunnen worden ingezet om deze bedreigingen bij websites op te sporen, wat cruciaal is voor organisaties die hun cyberweerbaarheid willen verbeteren
+~\autocite{Sharma2023}.
 
 Ten slotte valt op dat Laravel aanzienlijke beveiligingsvoordelen biedt in vergelijking met WordPress. Deze voordelen worden voornamelijk toegeschreven aan 
 de robuuste architectuur van Laravel, die inherent meer beveiligingslagen biedt. Laravel maakt gebruik van moderne beveiligingspraktijken en heeft ingebouwde 
@@ -195,21 +254,24 @@ Samenvattend brengen deze studies de kennis die beschikbaar is over de beveiligi
 Het is essentieel om inzicht te krijgen in de specifieke beveiligingsproblemen die elk webapplicatieframework met zich meebrengt. Door deze inzichten 
 toe te passen kunnen organisaties hun beveiligingshouding versterken en beter beschermen tegen de voortdurende dreiging van cyberaanvallen.
 
-\section{\IfLanguageName{dutch}{wat weten we nog niet uit de literatuur}{what is not known from the literature}}
+\section{\IfLanguageName{dutch}{Wat weten we niet uit de literatuur?}{What is not known from the literature?}}
 Hoewel de bestaande literatuur een waardevolle kijk biedt op het vlak van webapplicatiebeveiliging en de effectiviteit van penetratietesting, blijven er nog 
-zaken die niet volledig zijn onderzocht. Uit de analyse van twee specifieke bronnen, de conferentieproceedings van CyberCon en een publicatie in het 
+zaken die niet volledig zijn beantwoord. Uit de analyse van twee specifieke bronnen, de conferentieproceedings van CyberCon en een publicatie in het 
 Computer Science and Information Technology (CS and IT) tijdschrift, komen enkele van deze tekorten aan bod.
 
-Een artikel gepresenteerd op de CyberCon-conferentie benadrukt de complexiteit van beveiligingsbedreigingen en stelt vragen bij het ruime assortiment 
-van bestaande pentesting tools en -methoden om deze bedreigingen effectief aan te pakken. Het artikel zegt dat, ondanks de brede toepassing en 
-ontwikkeling van deze tools, er een diepgaander begrip nodig is. Het is cruciaal om te begrijpen hoe nieuwe soorten cyberaanvallen, vooral waarbij 
-geavanceerde kunstmatige intelligentie en machine learning technieken gebruiken, effectief geïdentificeerd kunnen worden.~\autocite{Petrica2022}.
+Het artikel op de CyberCon-conferentie bespreekt de cybersecurity van WordPress-platformen, specifiek door het gebruik van attack-defense trees. Deze methode helpt 
+bij het analyseren en visualiseren van verschillende aanvals- en verdedigingsscenario's, wat essentieel is voor een diepgaand begrip van mogelijke bedreigingen en 
+effectieve tegenmaatregelen. Dit is bijzonder relevant in het licht van de complexiteit van nieuwe cyberaanvallen die geavanceerde technologieën zoals AI en machine 
+learning gebruiken. Voorbeelden hiervan zijn AI-gestuurde phishing-campagnes zoals chatbots, de chatbots maken zeer goede en overtuigende teksten, die niet als 
+phishing-tekst herkenbaar zijn. Een ander voorbeeld is machine learning methodes die beveiligingspatronen herkennen en exploiteren. Deze nieuwe aanvalstechnieken
+focussen op de pijnpunten binnen de cybersecurity zoals de menselijke factor en de complexiteit van beveiligingsmaatregelen. Menselijke fouten vormen een belangrijk 
+deel van de zwakten van cyberbeveiliging. Het kan bijvoorbeeld enorm moeilijk zijn om de juiste systeemconfiguratie te beheren, ook als daarvoor grote IT-teams worden 
+ingezet ~\autocite{Petrica2022}.
 
 Daarnaast wijst een studie gepubliceerd in het CS and IT tijdschrift op het ontbreken van benchmarks en vergelijkende studies die de prestaties van verschillende 
 beveiligingsplugins en frameworks onder bepaalde omstandigheden beoordelen. Dit gebrek aan vergelijkend onderzoek maakt het voor ontwikkelaars 
 moeilijk om onderbouwde beslissingen te nemen bij de implementatie van beveiligingsmaatregelen binnen hun webapplicaties. De studie benadrukt de noodzaak voor 
-het maken van benchmarks, die van belang zijn bij het vinden van de meest effectieve beveiligingsaanpakken tegen 
-diverse cyberdreigingen ~\autocite{AbuDabaseh2018}.
+het maken van benchmarks, die van belang zijn bij het vinden van de meest effectieve beveiligingsaanpakken tegen diverse cyberdreigingen ~\autocite{AbuDabaseh2018}.
 
 Beide bronnen tonen het belang van voortdurend onderzoek naar en ontwikkeling van penetratietesting methodologieën, beveiligingsplugins en frameworks om te kunnen 
 blijven voldoen aan de eisen van een voortdurend veranderende omgeving. Ze benadrukken dat, hoewel veel bekend is over de basisprincipes van webapplicatiebeveiliging, 
@@ -218,35 +280,38 @@ specifiek onderzoek en praktijkexperimenten om de effectiviteit van bestaande en
 
 \section{\IfLanguageName{dutch}{relevantie van het onderzoek}{relevance of the study}}
 \subsection{\IfLanguageName{dutch}{theoretische relevantie}{theoretical relevance}}
-De inzichten uit de Pertanika Journals ~\autocite{Jarupunphol2023}, die een bijdrage levert aan het verbreden van de theoretische basis van webapplicatiebeveiliging.
-Dit onderzoek, zoals besproken in de Pertanika Journals, vergelijkt verschillende penetratietesttools binnen een specifieke webomgeving. Het biedt 
-een solide basis voor een diepgaand begrip van hoe deze tools verschillende kwetsbaarheden benaderen en analyseren. Dit draagt bij aan de ontwikkeling 
-van een theoretisch kader dat de verschillende pentesting tools naast elkaar plaatst.
+De analyse van penetratietesttools in specifieke webomgevingen speelt een cruciale rol in het versterken van webapplicatiebeveiliging. Door deze tools 
+te evalueren, wordt inzicht verkregen in hoe ze kwetsbaarheden identificeren en aanpakken, wat essentieel is voor het opstellen van robuuste beveiligingsprotocollen. 
+Dit begrip helpt bij het optimaliseren van beveiligingsstrategieën en het anticiperen op mogelijke aanvallen, waardoor organisaties beter voorbereid zijn op het 
+afweren van cyberdreigingen. Dit draagt bij aan een veiligere digitale omgeving, waarbij de focus ligt op preventie en effectieve respons
+~\autocite{Jarupunphol2023}.
 
-De verkregen inzichten dragen bij aan een breder begrip van webapplicatiebeveiliging. Het vergelijken van verschillende penetratietesttools binnen een specifieke 
-webomgeving biedt waardevolle inzichten in hoe deze tools kwetsbaarheden benaderen en analyseren. Dit draagt bij aan het ontwikkelen van een algeheel begrip van 
-pentesting tools, wat van cruciaal belang is voor professionals in de cybersecurity en webapplicatieontwikkeling om effectieve beveiligingsstrategieën te implementeren.
+De verkregen inzichten uit de analyse van verschillende penetratietesttools binnen een specifieke webomgeving zijn zeer waardevol. Ze bieden gedetailleerde informatie 
+over de methoden die deze tools gebruiken om kwetsbaarheden te identificeren en te analyseren. Dit draagt bij aan een breder begrip van de dynamiek van pentesting, wat 
+verwijst naar het begrijpen van de verschillende tactieken, technieken en procedures die pentesters gebruiken om beveiligingslekken te vinden en te verhelpen. Het 
+begrijpen van deze processen is essentieel voor professionals in de cybersecurity en webapplicatieontwikkeling, wat hen helpt bij het implementeren van effectievere 
+beveiligingsstrategieën.
 
-De integratie van beveiligingstechnieken en theoretische concepten, zoals vermeld in het artikel gepubliceerd in IJITEE, is cruciaal. Het speelt een belangerijke rol 
-bij het bijeenbrengen van bestaande theoretische modellen en de praktische uitdagingen van webbeveiliging. Dit onderzoek maakt gebruik van de nieuwste inzichten in cybersecurity 
+De integratie van beveiligingstechnieken en theoretische concepten, zoals vermeld in het artikel gepubliceerd in IJITEE, is cruciaal. Deze spelen een belangrijke rol 
+in het bijeenbrengen van bestaande theoretische modellen en de praktische uitdagingen van webbeveiliging. Dit onderzoek maakt gebruik van de nieuwste inzichten in cybersecurity 
 om bestaande theoretische kaders te evalueren. Dit draagt bij aan de ontwikkeling van vernieuwde theorieën die de complexe problemen van hedendaagse 
 cyberdreigingen beter weergeven. Door hedendaagse beveiligingsconcepten te koppelen aan de analyse van penetratietesttools binnen specifieke webomgevingen, 
 stimuleert het onderzoek de evolutie van theoretische benaderingen in cybersecurity. Tegelijkertijd levert het essentiële inzichten voor het implementeren van beveiligingsmaatregelen
 die overeenkomen met de realiteit van het huidige digitale computercriminaliteit.
-Dit proces draagt bij aan het verfijnen en versterken van webbeveiligingspraktijken, gericht op het voldoende te beschermen tegen en reageren op moderne 
+Dit proces draagt bij aan het verfijnen en versterken van webbeveiligingspraktijken, gericht op het voldoende beschermen tegen en reageren op moderne 
 cyberdreigingen~\autocite{Nagendran2019}.
 
 \subsection{\IfLanguageName{dutch}{maatschappelijke relevantie}{social relevance}}
-Door inzichten uit geavanceerde onderzoeken te integreren, vergroot dit onderzoek de maatschappelijke relevantie van webapplicatiebeveiliging door te verwijzen naar 
-twee cruciale bronnen: een studie van ArXiv en onderzoek gepubliceerd in het eJournal of ICT van Akademi Telkom Jakarta. Deze bronnen bieden een uitgebreid overzicht 
+Door inzichten uit geavanceerde onderzoeken te integreren, vergroot dit onderzoek de maatschappelijke relevantie van webapplicatiebeveiliging. Ik verwijs hiervoor naar 
+twee cruciale bronnen: een studie van ArXiv en een onderzoek gepubliceerd in het eJournal of ICT van Akademi Telkom Jakarta. Deze bronnen bieden een uitgebreid overzicht 
 van de huidige uitdagingen op het gebied van cybersecurity en de implementatie van geavanceerde beveiligingsmaatregelen en bieden nodige perspectieven die het 
 belang van dit onderzoek aan het licht brengen.
 
-Het ArXiv-document presenteert een gedetailleerde analyse van nieuwe cybersecuritydreigingen en de evolutie van aanvalroutes in de context van webapplicaties. 
-Door deze bevindingen te integreren, beklemtoont dit onderzoek de toenemende complexiteit van cyberdreigingen en de kritieke noodzaak voor webapplicaties om robuuste 
-en dynamische beveiligingsmaatregelen aan te nemen om zich tegen deze evoluerende dreigingen te beschermen. De ArXiv-studie benadrukt het belang van voorop blijven 
-in het cybersecurity-spel door beveiligingsprotocollen steeds bij te werken en te versterken, waardoor de bescherming van gebruikersgegevens tegen de nieuwste 
-cyberdreigingen gewaarborgd wordt~\autocite{Deng2023}.
+Het ArXiv-document presenteert een gedetailleerde analyse van nieuwe cybersecuritydreigingen, waaronder aanvallen die gebruikmaken van geavanceerde technologieën zoals 
+kunstmatige intelligentie (AI) en machine learning. Een voorbeeld hiervan is ook eerder aangehaald in deze studie, de geautomatiseerde phishing-aanvallen door middel van chatbots waarbij AI ingezet om 
+gepersonaliseerde en overtuigende phishingberichten te creëren die specifiek zijn afgestemd op het gedrag en de voorkeuren van gebruikers. Deze technologieën worden ingezet om 
+aanvalspatronen te optimaliseren en detectiesystemen te omzeilen, waardoor de dreigingen steeds complexer worden. Dit benadrukt de noodzaak voor webapplicaties om hun 
+beveiligingsmaatregelen voortdurend te updaten en te versterken om effectieve bescherming tegen deze evoluerende dreigingen te bieden ~\autocite{Deng2023}.
 
 Tegelijkertijd gaat de studie gepubliceerd in het eJournal of ICT van Akademi Telkom Jakarta in op specifieke beveiligingsmaatregelen en hun effectiviteit in 
 het beschermen van webapplicaties tegen geavanceerde cyberaanvallen. Dit onderzoek draagt bij aan de maatschappelijke impact door praktische kijk te 
