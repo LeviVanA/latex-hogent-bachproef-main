@@ -33,12 +33,14 @@ begrijpen.
 
 Om dit te bereiken, heb ik verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
 en rapporten van bekende instellingen en experts op het gebied van cybersecurity. 
-Ik heb systematische zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
+Ik heb zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
 Google Scholar, om relevante literatuur te op nemen in mijn studie. Deze literatuur heb ik grondig geanalyseerd en 
 samengevat, waarbij ik de nadruk legde op recente ontwikkelingen, trends en mogelijke tekortkomingen in de bestaande kennis.
+Ook heeft de literatuur het globale aspect van cybersecutiy onder de loep genomen waardoor er een zeer duidelijk begrip is gekomen 
+van wat er moet gebeuren en waarom.
 
 \section{\IfLanguageName{dutch}{Requirements Analyse}{Requirements analysis}}
-Deze sectie beschrijft de methoden en technieken die worden toegepast voor het uitvoeren van penetratietests op drie 
+De requirements analyse beschrijft de methoden en technieken die worden toegepast voor het uitvoeren van penetratietests op drie 
 verschillende webomgevingen: een WordPress-applicatie zonder beveiligingsplugins, een WordPress-applicatie met 
 beveiligingsplugins, en een Laravel-applicatie. Het doel van deze tests is om kwetsbaarheden te identificeren, te 
 analyseren en de effectiviteit van de beveiligingsmaatregelen in de verschillende omgevingen te vergelijken.
@@ -55,7 +57,7 @@ specifieke sterktes in het identificeren en exploiteren van bepaalde soorten kwe
 
 \begin{itemize}
     \item Tool 1 wordt gebruikt voor de eerste webomgeving, een WordPress-applicatie zonder 
-    beveiligingsplugins. Deze tool is bijzonder geschikt voor het detecteren van webgebaseerde kwetsbaarheden 
+    beveiligingsplugins. Deze tool moet bijzonder geschikt voor het detecteren van webgebaseerde kwetsbaarheden 
     zoals SQL-injecties en cross-site scripting (XSS), waardoor het een uitstekende keuze is voor 
     een basis WordPress-installatie.
     \item Tool 2 wordt ingezet voor de tweede webomgeving, een WordPress-applicatie met beveiligingsplugins. 
@@ -67,16 +69,17 @@ specifieke sterktes in het identificeren en exploiteren van bepaalde soorten kwe
     die cruciaal zijn voor het testen van complexe applicaties zoals die gebouwd met Laravel.
 \end{itemize}
 
-Alle resultaten van de tests worden systematisch verzameld en gedocumenteerd. De data wordt geanalyseerd 
+Alle resultaten van de tests worden verzameld en gedocumenteerd. De data wordt geanalyseerd 
 om de ernst en de impact van elke gevonden kwetsbaarheid te bepalen. Deze analyse helpt niet alleen bij 
 het identificeren van de zwakke punten binnen elke webomgeving, maar ook bij het vergelijken van de 
-veiligheid tussen de verschillende systemen.
+veiligheid tussen de verschillende systemen. Ook word er gekeken naar de gebruiksvriendelijkheide en 
+effectiviteit van de testen door een brute force aanval te simuleren op de wordpress applicatie met beveiligingsplugins.
 
 \section{\IfLanguageName{dutch}{Keuze van Penetratietesttools}{Selection of pentesttools}}
 In het kader van dit onderzoek naar de beveiliging van drie verschillende webomgevingen is de keuze van 
 de juiste penetratietesttools cruciaal. Voor elk van deze omgevingen is een tool geselecteerd die het 
 best past bij de specifieke kenmerken en beveiligingsuitdagingen. De geselecteerde tools zijn 
-Metasploit, Burp Suite en OWASP ZAP. Hieronder volgt een uiteenzetting van waarom deze tools 
+Metasploit, Burp Suite en OWASP ZAP. Hieronder volgt een verklaring van waarom deze tools 
 bijzonder geschikt zijn voor dit onderzoek.
 \begin{figure}
     \centering
@@ -89,18 +92,18 @@ staat bekend om zijn robuuste exploit-database en modulaire aanpak. De Laravel-a
 om zijn rijke set aan functionaliteiten en complexe architectuur, kan profiteren van Metasploit's 
 vermogen om specifieke exploits te gebruiken die zijn afgestemd op gedetecteerde kwetsbaarheden. 
 De tool biedt geautomatiseerde exploitatie technieken die essentieel zijn voor het identificeren 
-van beveiligingsrisico’s in een geavanceerd framework zoals Laravel. Bovendien ondersteunt 
-Metasploit de ontwikkeling van aangepaste exploits, wat van onschatbare waarde kan zijn bij 
+van beveiligingsrisico's in een geavanceerd framework zoals Laravel. Bovendien ondersteunt 
+Metasploit de ontwikkeling van aangepaste exploits, wat van grote waarde kan zijn bij 
 het testen van maatwerkfuncties binnen de Laravel-applicatie.
 
 \subsection{\IfLanguageName{dutch}{Burp Suite voor de wordpress applicatie met beveiligings plugins}{Burp Suite for the wordpress application with security plugins}}
-Burp Suite, een geïntegreerde platform voor het testen van de beveiliging van webapplicaties, is 
+Burp Suite, een geïntegreerd platform voor het testen van de beveiliging van webapplicaties, is 
 bijzonder effectief voor het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde web 
 aanvallen. Voor een WordPress-installatie met beveiligingsplugins biedt Burp Suite de noodzakelijke 
 diepgang om de effectiviteit van deze plugins te evalueren. Door zijn vermogen om verzoeken te 
 onderscheppen, te manipuleren en opnieuw te versturen, kunnen testers de robuustheid van 
 beveiligingsmaatregelen zoals firewalls en inbraakdetectiesystemen die door plugins worden 
-geïmplementeerd, nauwkeurig beoordelen. Burp Suite's scanner kan automatisch een breed scala 
+geïmplementeerd, nauwkeurig beoordelen. Burp Suite's scanner (bij de enterprise edition) kan automatisch een breed scala 
 aan kwetsbaarheden identificeren, wat tijd bespaart tijdens de testfase en zorgt voor een 
 grondige evaluatie van de beveiligingsstatus.
 
@@ -116,7 +119,7 @@ analyse van de applicatie in real-time, wat helpt bij het direct identificeren v
 
 \section{\IfLanguageName{dutch}{Proof of Concept: Gebruiksvriendelijkheid en Effectiviteit van Pentesting Tools voor Webapplicaties}{Proof of Concept: Usability and Effectiveness of Pentesting Tools for Web Applications}}
 
-In dit uitgebreide proof of concept testen we drie verschillende webomgevingen met pentesting tools om hun bruikbaarheid en effectiviteit te evalueren. 
+In de proof of concept testen we drie verschillende webomgevingen met pentesting tools om hun bruikbaarheid en effectiviteit te evalueren. 
 Deze benadering is gericht op het vergelijken van de uitkomsten van pentests in elke omgeving, waardoor we kunnen vaststellen hoe de 
 beveiligingsuitdagingen en kwetsbaarheden verschillen.
 
