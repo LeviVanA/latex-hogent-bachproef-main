@@ -15,38 +15,88 @@
 \section{Inleiding}%
 \label{sec:inleiding}
 
-Waarover zal je bachelorproef gaan? Introduceer het thema en zorg dat volgende zaken zeker duidelijk aanwezig zijn:
-
-\begin{itemize}
-  \item kaderen thema
-  \item de doelgroep
-  \item de probleemstelling en centrale onderzoeksvraag
-  \item de onderzoeksdoelstelling
-\end{itemize}
-
-Denk er aan: een typische bachelorproef is \textit{toegepast onderzoek}, wat betekent dat je start vanuit een concrete probleemsituatie in bedrijfscontext, een \textbf{casus}. Het is belangrijk om je onderwerp goed af te bakenen: je gaat voor die \textit{ene specifieke probleemsituatie} op zoek naar een goede oplossing, op basis van de huidige kennis in het vakgebied.
-
-De doelgroep moet ook concreet en duidelijk zijn, dus geen algemene of vaag gedefinieerde groepen zoals \emph{bedrijven}, \emph{developers}, \emph{Vlamingen}, enz. Je richt je in elk geval op it-professionals, een bachelorproef is geen populariserende tekst. Eén specifiek bedrijf (die te maken hebben met een concrete probleemsituatie) is dus beter dan \emph{bedrijven} in het algemeen.
-
-Formuleer duidelijk de onderzoeksvraag! De begeleiders lezen nog steeds te veel voorstellen waarin we geen onderzoeksvraag terugvinden.
-
-Schrijf ook iets over de doelstelling. Wat zie je als het concrete eindresultaat van je onderzoek, naast de uitgeschreven scriptie? Is het een proof-of-concept, een rapport met aanbevelingen, \ldots Met welk eindresultaat kan je je bachelorproef als een succes beschouwen?
-
+De groei van webapplicaties heeft de manier waarop we communiceren, winkelen en informatie delen veranderd. Deze toename in het gebruik
+van webtechnologieën heeft ook nieuwe uitdagingen met zich meegebracht op het gebied van cybersecurity. Het belang van het waarborgen
+van de beveiliging van webapplicaties kan niet worden overschat. Zelfs de kleinste kwetsbaarheid kan leiden tot grote gevolgen, waaronder gegevensdiefstal,
+reputatieschade en financiële verliezen. Om deze reden is het uitvoeren van penetratietesten binnen een webomgeving van cruciaal
+belang om potentiële beveiligingszwakheden te identificeren ~\autocite{Nagendran2019}. Deze bachelorproef richt zich op het verkennen
+van penetratietestmethodologieën binnen een webomgeving. Ook zal er een focus gelegd worden op het begrijpen van het concept van penetratietesten,
+de identificatie van veelvoorkomende beveiligingszwakheden in webapplicaties en de toepassing van praktijkgerichte onderzoeken om
+de beveiliging van webapplicaties te evalueren. Het praktijkgerichte onderzoek zal worden gerealiseerd door middel van een test waarin drie
+verschillende webprojecten onderworpen zullen worden aan penetratietesten. Dit onderzoek heeft als doel inzicht te krijgen in de effectiviteit van de
+toegepaste methodologieën en zo vast te kunnen stellen hoe veilig verschillende soorten webprojecten zijn tegen penetratietesten.
 %---------- Stand van zaken ---------------------------------------------------
 
 \section{Literatuurstudie}%
 \label{sec:literatuurstudie}
 
-Hier beschrijf je de \emph{state-of-the-art} rondom je gekozen onderzoeksdomein, d.w.z.\ een inleidende, doorlopende tekst over het onderzoeksdomein van je bachelorproef. Je steunt daarbij heel sterk op de professionele \emph{vakliteratuur}, en niet zozeer op populariserende teksten voor een breed publiek. Wat is de huidige stand van zaken in dit domein, en wat zijn nog eventuele open vragen (die misschien de aanleiding waren tot je onderzoeksvraag!)?
-
-Je mag de titel van deze sectie ook aanpassen (literatuurstudie, stand van zaken, enz.). Zijn er al gelijkaardige onderzoeken gevoerd? Wat concluderen ze? Wat is het verschil met jouw onderzoek?
-
-Verwijs bij elke introductie van een term of bewering over het domein naar de vakliteratuur, bijvoorbeeld~\autocite{Hykes2013}! Denk zeker goed na welke werken je refereert en waarom.
-
-Draag zorg voor correcte literatuurverwijzingen! Een bronvermelding hoort thuis \emph{binnen} de zin waar je je op die bron baseert, dus niet er buiten! Maak meteen een verwijzing als je gebruik maakt van een bron. Doe dit dus \emph{niet} aan het einde van een lange paragraaf. Baseer nooit teveel aansluitende tekst op eenzelfde bron.
-
-Als je informatie over bronnen verzamelt in JabRef, zorg er dan voor dat alle nodige info aanwezig is om de bron terug te vinden (zoals uitvoerig besproken in de lessen Research Methods).
-
+In de literatuurstudie gaan we dieper in op de
+kernaspecten van penetratietesten binnen webomgevingen.
+We verkennen theoretische concepten,
+bestaande methodologieën en cruciale
+technieken, waarbij er zowel klassieke als recente
+bronnen raadplegen. Het doel is een grondig begrip
+te krijgen van de huidige stand van zaken en
+best practices op het gebied van webapplicatiebeveiliging.
+Een essentieel startpunt is het onderzoeken
+van de fundamentele principes van penetratietesten.
+Hierbij wordt er gekeken naar de rol van
+ethisch hacken en het identificeren van beveiligingszwakheden.
+Werken zoals ”The Web Application
+Hacker’s Handbook”van Dafydd Stuttard
+en Marcus Pinto dienen als goede referentiepunten
+~\autocite{Stuttard2011}. Vervolgens richten
+we ons op het begrijpen van veelvoorkomende
+webgerichte aanvalsmethoden, waaronder SQLinjecties,
+cross-site scripting (XSS), cross-site request
+forgery (CSRF) en andere.
+Een cruciaal aspect van onze literatuurstudie
+richt zich op een kritische evaluatie van diverse
+webapplicatiebeveiligingstools. Het onderzoek
+bevat welgekende tools zoals Burp Suite, OWASP
+ZAP, Nmap... waarbij er een zo grondig mogelijk
+inzicht word verkregen van hun mogelijkheden,
+beperkingen en toepasbaarheid in diverse scenario's. Een specifieke bron die wordt bestudeerd,
+is "An Empirical Comparison of Pen-Testing Tools
+for Detecting Web App Vulnerabilities"~\autocite{Albahar2022}. Deze bron biedt onderbouwde inzichten
+in de prestaties van verschillende pentesttools
+bij het detecteren van kwetsbaarheden
+in webapplicaties. De onderzoekers nemen de resultaten
+van deze vergelijking mee in de evaluatie
+om de praktische relevantie en effectiviteit van de
+besproken tools beter te begrijpen.
+Een opmerkelijke evolutie binnen het domein
+van penetratietesten wordt gevormd door de opkomst
+van geavanceerde automatiseringstools. Een
+voorbeeld van zo'n innovatie is het artikel ”PentestGPT:
+An LLM-empowered Automatic Penetration
+Testing Tool"~\autocite{Deng2023}. Deze publicatie
+schetst de opkomst van een automatisch penetratietestinstrument,
+aangedreven door Large
+Language Model (LLM) technologie, genaamd PentestGPT.
+Dit vooruitstrevende instrument maakt
+gebruik van geavanceerde algoritmes, mogelijk
+gemaakt door Language Models zoals GPT (Generative
+Pre-trained Transformer), om automatisch
+penetratietests uit te voeren binnen webomgevingen.
+Het artikel belicht hoe PentestGPT in
+staat is om potentiële beveiligingszwakheden te
+identificeren, kwetsbaarheden te evalueren en rapporten
+te genereren, waardoor het proces van penetratietesten
+grotendeels wordt gestroomlijnd.
+Een essentieel element van de literatuurstudie
+betreft de integratie van actuele inzichten en
+best practices in de praktijk. Deze bron kijkt naar
+de evolutie van automatische penetratietesten en
+biedt een overzicht van de huidige stand van zaken
+op dit gebied ~\autocite{AbuDabaseh2018}. De onderzoekers analyseren hoe automatische
+penetratietesten zich ontwikkelen als een
+veelbelovende benadering om beveiligingskwetsbaarheden
+te identificeren en het testproces te
+versnellen. De publicatie belicht de voordelen en
+uitdagingen van geautomatiseerde tools, waarbij
+de focus ligt op de integratie van AI-technologieën
+en machine learning in penetratietestprocessen
 % Voor literatuurverwijzingen zijn er twee belangrijke commando's:
 % \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
 %   geen onderdeel is van de zin.
@@ -60,25 +110,121 @@ Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur v
 \section{Methodologie}%
 \label{sec:methodologie}
 
-Hier beschrijf je hoe je van plan bent het onderzoek te voeren. Welke onderzoekstechniek ga je toepassen om elk van je onderzoeksvragen te beantwoorden? Gebruik je hiervoor literatuurstudie, interviews met belanghebbenden (bv.~voor requirements-analyse), experimenten, simulaties, vergelijkende studie, risico-analyse, PoC, \ldots?
-
-Valt je onderwerp onder één van de typische soorten bachelorproeven die besproken zijn in de lessen Research Methods (bv.\ vergelijkende studie of risico-analyse)? Zorg er dan ook voor dat we duidelijk de verschillende stappen terug vinden die we verwachten in dit soort onderzoek!
-
-Vermijd onderzoekstechnieken die geen objectieve, meetbare resultaten kunnen opleveren. Enquêtes, bijvoorbeeld, zijn voor een bachelorproef informatica meestal \textbf{niet geschikt}. De antwoorden zijn eerder meningen dan feiten en in de praktijk blijkt het ook bijzonder moeilijk om voldoende respondenten te vinden. Studenten die een enquête willen voeren, hebben meestal ook geen goede definitie van de populatie, waardoor ook niet kan aangetoond worden dat eventuele resultaten representatief zijn.
-
-Uit dit onderdeel moet duidelijk naar voor komen dat je bachelorproef ook technisch voldoen\-de diepgang zal bevatten. Het zou niet kloppen als een bachelorproef informatica ook door bv.\ een student marketing zou kunnen uitgevoerd worden.
-
-Je beschrijft ook al welke tools (hardware, software, diensten, \ldots) je denkt hiervoor te gebruiken of te ontwikkelen.
-
-Probeer ook een tijdschatting te maken. Hoe lang zal je met elke fase van je onderzoek bezig zijn en wat zijn de concrete \emph{deliverables} in elke fase?
-
+Fase 1: Identificatie van Penetratietesttools(1
+week) Voer een grondige literatuurstudie uit om
+relevante penetratietesttools te identificeren, waaronder
+tools zoals Burp Suite, OWASP ZAP, en Nmap.
+Kies tools die bekend staan om hun effectiviteit bij
+het testen van webapplicaties en die geschikt zijn
+voor verschillende scenario's.
+Fase 2: Selectie van Webapplicaties(1 week)
+Kies drie verschillende types webapplicaties om
+een breed scala aan beveiligingsuitdagingen te
+vertegenwoordigen. Een standaard WordPress
+website zonder aanpassingen. Een voltooide Word-
+Press applicatie met aangepaste functionaliteiten
+en plugins. Een op Laravel gebaseerde PHPapplicatie.
+Fase 3: Configuratie van Testomgeving(2 weken)
+Stel voor elke webapplicatie een afzonderlijke
+testomgeving in, gebruikmakend van replica's
+van de live omgevingen, om realistische testresultaten
+te waarborgen.
+Fase 4: Voorbereiding van Penetratietesttools(1
+week) Configureer elke geselecteerde tool om te
+voldoen aan de specifieke kenmerken van de te
+testen webapplicatie. Zorg ervoor dat de tools zijn
+ingesteld om zowel geautomatiseerde als handmatige
+tests uit te voeren.
+Fase 5: Uitvoering van Penetratietesten(3 weken)
+Voer penetratietesten uit op de drie geselecteerde
+webapplicaties met behulp van de geconfigureerde
+tools. Documenteer gedetailleerde resultaten,
+inclusief geïdentificeerde kwetsbaarheden,
+mogelijke aanvalsscenario's en beveiligingssterkten.
+Fase 6: Vergelijking van Testresultaten(1 week)
+Analyseer de resultaten van de penetratietesten
+per applicatie en per tool. Identificeer consistent
+gedetecteerde kwetsbaarheden en vergelijk de
+nauwkeurigheid en diepgang van de tools in verschillende
+scenario's.
+Fase 7: Selectie van Bestpassende Tool(1 week)
+Overweeg de bevindingen van de vergelijking en
+bepaal welke tool het meest geschikt is voor welk
+type webapplicatie. Houd rekening met factoren
+zoals gebruiksgemak, rapportagefunctionaliteit
+en snelheid van detectie.
+Fase 8: Evaluatie van Geschikte Tool in Praktijktests
+(2 weken) Test de geselecteerde tool opnieuw
+op de drie webapplicaties om de praktische
+toepasbaarheid en effectiviteit te valideren.
+Documenteer eventuele verbeteringen of uitdagingen
+in vergelijking met de initiële testresultaten.
 %---------- Verwachte resultaten ----------------------------------------------
 \section{Verwacht resultaat, conclusie}%
 \label{sec:verwachte_resultaten}
 
-Hier beschrijf je welke resultaten je verwacht. Als je metingen en simulaties uitvoert, kan je hier al mock-ups maken van de grafieken samen met de verwachte conclusies. Benoem zeker al je assen en de onderdelen van de grafiek die je gaat gebruiken. Dit zorgt ervoor dat je concreet weet welk soort data je moet verzamelen en hoe je die moet meten.
-
-Wat heeft de doelgroep van je onderzoek aan het resultaat? Op welke manier zorgt jouw bachelorproef voor een meerwaarde?
-
-Hier beschrijf je wat je verwacht uit je onderzoek, met de motivatie waarom. Het is \textbf{niet} erg indien uit je onderzoek andere resultaten en conclusies vloeien dan dat je hier beschrijft: het is dan juist interessant om te onderzoeken waarom jouw hypothesen niet overeenkomen met de resultaten.
-
+De verwachte resultaten van het onderzoek
+omvatten een uitgebreide vergelijking van de penetratietesttools,
+waarbij zowel de sterke als zwakke
+punten van elke tool worden geïdentificeerd. Deze
+evaluatie richt zich specifiek op de effectiviteit van
+de tools bij het detecteren van kwetsbaarheden
+in diverse webapplicaties en hun vermogen om
+nauwkeurige en informatieve rapporten te genereren.
+Daarnaast worden de kwetsbaarheden binnen
+elke webapplicatie zorgvuldig geanalyseerd. Dit
+omvat een overzicht van de ernst van de geïdentificeerde
+beveiligingszwakheden.
+De selectie van de meest geschikte penetratietesttool
+per webapplicatie wordt uitgevoerd.
+Effectiviteit, nauwkeurigheid en gebruiksgemak
+zijn slechts enkele van de factoren waar rekening
+mee wordt gehouden. Het doel is om niet alleen
+een tool te identificeren die kwetsbaarheden kan
+blootleggen, maar ook om ervoor te zorgen dat
+deze praktisch toepasbaar is in de specifieke context
+van elke webomgeving.
+Na de initiële penetratietesten volgt een fase
+van herhalingstests, waarbij de geselecteerde tool
+opnieuw wordt geëvalueerd in real-world scenario’s.
+Deze praktijkresultaten bieden inzicht in de
+bruikbaarheid van de tool in dynamische omgevingen,
+waarin eventuele verbeteringen of uitdagingen
+worden gedocumenteerd.
+Ten slotte zal het onderzoek resulteren in een
+samenvattend rapport. Dit rapport omvat niet
+alleen een overzicht van de bevindingen en geïdentificeerde
+kwetsbaarheden, maar ook de algehele
+beveiligingsstatus van elke webapplicatie.
+De combinatie van deze uitgebreide resultaten
+geeft waardevolle inzichten voor een doeltreffende
+benadering van webapplicatiebeveiliging.
+Na analyse en uitvoering van de methodologie
+voor het vergelijken en testen van penetratietesttools
+op diverse webapplicaties, komen verschillende
+essentiële conclusies naar voren.
+Allereerst biedt de vergelijking van de penetratietesttools
+een inzicht in hun prestaties en
+mogelijkheden. De identificatie van sterke en
+zwakke punten helpt bij het vormen van een solide
+besluit over welke tools het meest geschikt
+zijn voor specifieke beveiligingsscenario’s.
+De gedetailleerde analyse van kwetsbaarheden
+binnen elke webapplicatie draagt bij aan een
+begrip van de specifieke beveiligingsuitdagingen
+waarmee deze applicaties worden geconfronteerd.
+Dit vormt de basis voor gerichte verbeteringen en
+maatregelen om de algehele beveiliging te versterken.
+In het samenvattend rapport worden niet alleen
+de bevindingen, kwetsbaarheden en de geselecteerde
+penetratietesttools gedocumenteerd,
+maar ook praktische aanbevelingen voor het verbeteren
+van de beveiliging. Deze conclusies en
+aanbevelingen vormen gezamenlijk een waardevolle
+bijdrage aan de ontwikkeling van effectieve
+strategieën voor het waarborgen van de beveiliging
+van diverse webapplicaties. Het onderzoek
+biedt niet alleen inzicht in de huidige beveiligingsstatus,
+maar stelt ook organisaties in staat
+om proactief stappen te ondernemen ter versterking
+van hun beveiligingsinfrastructuur.

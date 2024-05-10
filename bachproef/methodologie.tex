@@ -78,7 +78,11 @@ de juiste penetratietesttools cruciaal. Voor elk van deze omgevingen is een tool
 best past bij de specifieke kenmerken en beveiligingsuitdagingen. De geselecteerde tools zijn 
 Metasploit, Burp Suite en OWASP ZAP. Hieronder volgt een uiteenzetting van waarom deze tools 
 bijzonder geschikt zijn voor dit onderzoek.
-
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{laravel_schema.png}
+    \caption[Laravel ORM schema (Eloquent)]{Laravel ORM shema (Eloquent)}
+\end{figure}
 \subsection{\IfLanguageName{dutch}{Metasploit voor de Laravel-applicatie}{Metasploit for the Laravel application}}
 Metasploit is een van de meest uitgebreide frameworks voor het uitvoeren van penetratietests en 
 staat bekend om zijn robuuste exploit-database en modulaire aanpak. De Laravel-applicatie, bekend 
@@ -89,7 +93,7 @@ van beveiligingsrisico’s in een geavanceerd framework zoals Laravel. Bovendien
 Metasploit de ontwikkeling van aangepaste exploits, wat van onschatbare waarde kan zijn bij 
 het testen van maatwerkfuncties binnen de Laravel-applicatie.
 
-\subsection{\IfLanguageName{dutch}{Burp Suite voor de Laravel-applicatie}{Burp Suite for the Laravel application}}
+\subsection{\IfLanguageName{dutch}{Burp Suite voor de wordpress applicatie met beveiligings plugins}{Burp Suite for the wordpress application with security plugins}}
 Burp Suite, een geïntegreerde platform voor het testen van de beveiliging van webapplicaties, is 
 bijzonder effectief voor het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde web 
 aanvallen. Voor een WordPress-installatie met beveiligingsplugins biedt Burp Suite de noodzakelijke 
@@ -100,7 +104,7 @@ geïmplementeerd, nauwkeurig beoordelen. Burp Suite's scanner kan automatisch ee
 aan kwetsbaarheden identificeren, wat tijd bespaart tijdens de testfase en zorgt voor een 
 grondige evaluatie van de beveiligingsstatus.
 
-\subsection{\IfLanguageName{dutch}{OWASP ZAP voor de Laravel-applicatie}{OWASP ZAP for the Laravel application}}
+\subsection{\IfLanguageName{dutch}{OWASP ZAP voor de wordpress applicatie zonder beveiligings plugins}{OWASP ZAP for the wordpress application without security plugins}}
 OWASP ZAP (Zed Attack Proxy) is een open-source tool voor het automatisch vinden van beveiligingsfouten 
 in webapplicaties tijdens het ontwikkelings- en testproces. Gezien zijn reputatie en uitgebreide 
 ondersteuning door de OWASP-community is ZAP bijzonder geschikt voor het testen van een 
@@ -110,5 +114,36 @@ tonen, die voorkomen in basisconfiguraties van WordPress. Daarnaast biedt ZAP dy
 analyse van de applicatie in real-time, wat helpt bij het direct identificeren van beveiligingsproblemen.
 
 
-\section{\IfLanguageName{dutch}{Proof of concept}{Proof of concept}}
+\section{\IfLanguageName{dutch}{Proof of Concept: Gebruiksvriendelijkheid en Effectiviteit van Pentesting Tools voor Webapplicaties}{Proof of Concept: Usability and Effectiveness of Pentesting Tools for Web Applications}}
 
+In dit uitgebreide proof of concept testen we drie verschillende webomgevingen met pentesting tools om hun bruikbaarheid en effectiviteit te evalueren. 
+Deze benadering is gericht op het vergelijken van de uitkomsten van pentests in elke omgeving, waardoor we kunnen vaststellen hoe de 
+beveiligingsuitdagingen en kwetsbaarheden verschillen.
+
+\subsubsection{\IfLanguageName{dutch}{Omgevingsdiversiteit}{Environmental diversity}}
+De aanpak in deze proof of concept is gebaseerd op een holistische benadering, waarbij een scala aan pentesting tools wordt gebruikt die zijn afgestemd 
+op de unieke kenmerken van elke omgeving. Het team van Sinergio begrijpt dat geen twee webomgevingen hetzelfde zijn, en daarom is het essentieel om een breed scala 
+aan tools in te zetten om alle mogelijke kwetsbaarheden en beveiligingsrisico's aan het licht te brengen.
+
+Door deze diversiteit aan tools kan het team niet alleen de specifieke omgeving testen met de best passende tool, maar ook de algehele robuustheid en 
+weerbaarheid van de systemen maximaliseren. Elke tool heeft zijn eigen sterke punten en specialiteiten, waardoor een uitgebreide evaluatie mogelijk 
+is die verder gaat dan alleen de oppervlakte.
+
+Door te variëren in de gebruikte tools, kan het team verschillende aanvalsscenario's simuleren en de reactie van de systemen daarop beoordelen. Dit 
+stelt hen in staat om een diepgaand inzicht te krijgen in de beveiligingsstatus van elke omgeving en biedt waardevolle informatie voor het verbeteren 
+van de algehele beveiliging.
+
+\subsubsection{\IfLanguageName{dutch}{Focus van pentesttools}{Focus of the pentesttools}}
+De evaluatie van de beveiligingsplugin omvat het gebruik van Burp Suite om de efficiëntie te testen. De focus ligt op het evalueren van de weerstand 
+tegen veelvoorkomende webaanvallen, zoals brute force-aanvallen en SQL-injectie. Ze analyseren hoe de plugin potentiële dreigingen behandelt met 
+behulp van Burp Suite en identificeren eventuele tekortkomingen in de bescherming
+
+OWASP ZAP helpt bij het blootleggen van kwetsbaarheden die een website zonder beveiligingsmaatregelen zou kunnen hebben. De nadruk ligt op het 
+ontdekken van eenvoudig te exploiteren kwetsbaarheden en het bieden van educatie aan nieuwe gebruikers om deze kwetsbaarheden te begrijpen en 
+te leren hoe ze te mitigeren.
+
+Met Metasploit wordt gefocust op geavanceerdere beveiligingsaspecten, zoals routebescherming en authenticatiemechanismen.
+In Laravel is het ook mogelijk om het aantal inlogpogingen instellen voordat een gebruiker tijdelijk wordt geblokkeerd. Dit wordt vaak gedaan 
+als een beveiligingsmaatregel om brute force-aanvallen te voorkomen. Je kunt het aantal inlogpogingen aanpassen door een eigenschap genaamd 
+'maxAttempts' in te stellen in de configuratie van het authenticatiesysteem van Laravel. Deze tests zullen 
+bijdragen aan het inzicht in de robuustheid van de beveiliging en helpen bij het identificeren van potentieel over het hoofd geziene kwetsbaarheden.
