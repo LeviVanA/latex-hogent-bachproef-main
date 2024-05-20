@@ -10,13 +10,13 @@ Binnen de context van webbeveiliging zijn brute force aanvallen een veelvoorkome
 door herhaaldelijk wachtwoorden of andere inloggegevens te raden. Dit type aanval kan bijzonder schadelijk zijn voor systemen zoals WordPress, die veel 
 gebruikt worden voor het bouwen van websites.In dit hoofdstuk onderzoeken we de effectiviteit van verschillende penetratietesttools bij het uitvoeren van 
 brute force aanvallen op een WordPress-omgeving beveiligd met de Wordfence plugin. Het doel is niet om de beveiligingsplugins zelf te testen, maar om de 
-prestaties en de mogelijkheden van de tools Burp Suite, Metasploit en OWASP ZAP met elkaar te vergelijken. Deze analyse zal helpen vaststellen welke tool 
+prestaties, de mogelijkheden en bruikbaarheid van de tools Burp Suite, Metasploit en OWASP ZAP met elkaar te vergelijken. Deze analyse zal helpen vaststellen welke tool 
 het meest effectief en gebruiksvriendelijk is voor het tonen van kwetsbaarheden in een beschermde WordPress-omgeving.
 
 \subsection{\IfLanguageName{dutch}{Resultaat met burp suite}{result with burp suite}}
 \begin{figure}
     \centering
-    \includegraphics[height=0.1\textheight]{burp-suite_bruteforce_wordpressplugins.png}
+    \includegraphics[height=0.1\textheight]{burp-suite_bruteforce_wordpressplugins_blurred.png}
     \caption[Burp suite brute force attack op wordpress applicatie met beveiligingsplugin]{Burp suite brute force attack op wordpress applicatie met beveiligingsplugin}
 \end{figure}
 De brute force attack op de WordPress omgeving met wordfence werd uitgevoerd met behulp van Burp Suite Community Edition. Tijdens de test viel het 
@@ -37,7 +37,7 @@ instrument wordt gezien in de toolkit van veel cybersecurity-professionals.
 
 In een praktische toepassing werd Metasploit gebruikt om een brute force attack uit te voeren op een WordPress-omgeving die beveiligd was met de Wordfence plugin. 
 Voor deze test moest de tool via de terminal bediend worden. Hoewel dit als een beperking kan worden gezien, biedt Metasploit desondanks een uitgebreid scala aan 
-mogelijkheden voor het uitvoeren van penetratietests. De tool stelt gebruikers in staat om diverse aanvalsscenario’s te simuleren en levert een uitgebreide reeks 
+mogelijkheden voor het uitvoeren van penetratietests. De tool stelt gebruikers in staat om diverse aanvalsscenario's te simuleren en levert een uitgebreide reeks 
 modules voor het uitvoeren van verschillende soorten beveiligingstests. Deze flexibiliteit en diepgang maken Metasploit een waardevolle keuze voor professionals die 
 uitgebreide beveiligingstests willen uitvoeren op complexe netwerken en systemen.
 
@@ -54,11 +54,11 @@ Dit maakte OWASP ZAP een aantrekkelijke keuze voor organisaties die op zoek zijn
 
 
 \section{\IfLanguageName{dutch}{Vergelijking van omgevingen}{Comparison of environments}}
-\begin{figure}
-    \centering
-    \includegraphics[height=0.1\textheight]{burp-suite_bruteforce_wordpress.png}
-    \caption[Brute force aanval op een wordpress applicatie zonder beveiligingsplugins]{Brute force aanval op een wordpress site zonder beveiligingsplugins}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics[height=0.1\textheight]{ }
+%    \caption[Brute force aanval op een wordpress applicatie zonder beveiligingsplugins (foto moet nog geblurred worden)]{Brute force aanval op een wordpress site zonder beveiligingsplugins}
+%\end{figure}
 \subsection{\IfLanguageName{dutch}{WordPress Zonder Beveiligingsplugins}{WordPress without securityplugins}}
 De eerste testomgeving was een standaard WordPress-applicatie zonder enige vorm van beveiligingsplugins. De resultaten toonden aan dat deze 
 omgeving bijzonder kwetsbaar was voor brute force aanvallen. Aanvallers zijn in staat om binnen enkele minuten toegang te verkrijgen door middel 
@@ -72,15 +72,46 @@ verdedigingslinie te versterken.
     \caption[SQL-injection aanval op een wordpress applicatie met beveiligingsplugins]{SQL-injection aanval op een wordpress applicatie met beveiligingsplugins}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{WordPress Met Beveiligingsplugins}{WordPress with securityplugins}}
-De tweede omgeving, een WordPress-installatie uitgerust met specifieke beveiligingsplugins, liet een aanzienlijke verbetering zien in beveiliging 
-tegen brute force aanvallen. De plugins die werden getest, bieden functionaliteiten zoals limieten op inlogpogingen, directe accountvergrendeling 
-bij verdachte activiteiten, en real-time monitoring en alerts. Deze maatregelen leidden tot een snelle detectie en blokkering van aanvalspogingen, 
-waardoor de veiligheid van de omgeving aanzienlijk werd verhoogd. Deze resultaten onderstrepen het belang van het toepassen van gespecialiseerde 
-beveiligingsuitbreidingen in populaire CMS-systemen, wat aantoont dat zelfs basale beveiligingsplugins een significante bescherming kunnen bieden.
+De tweede omgeving, een WordPress-installatie uitgerust met specifieke beveiligingsplugins zoals Wordfence, liet een aanzienlijke 
+verbetering zien in beveiliging tegen brute force-aanvallen. De plugins die werden getest, bieden functionaliteiten zoals limieten 
+op inlogpogingen, directe accountvergrendeling bij verdachte activiteiten en real-time monitoring en alerts. Deze maatregelen 
+leidden tot een snelle detectie en blokkering van aanvalspogingen, waardoor de veiligheid van de omgeving aanzienlijk werd verhoogd.
 
 \begin{figure}
     \centering
-    \includegraphics[height=0.2\textheight]{burp-suite_bruteforce_laravel.png}
+    \includegraphics[height=0.2\textheight]{foute_login_mail_blurred.png}
+    \caption[Brute force aanval op een laravel applicatie]{Brute force aanval op een laravel applicatie}
+\end{figure}
+Wanneer een gebruiker bijvoorbeeld het maximum aantal mislukte inlogpogingen overschrijdt, stuurt Wordfence een alert. 
+Een typische melding kan er als volgt uitzien: "A user with IP address 208.109.37.21 has been locked out from signing in or 
+using the password recovery form for the following reason: Exceeded the maximum number of login failures which is: 20. The 
+last username they tried to sign in with was: 'admin'. The duration of the lockout is 5 minutes."
+
+Deze melding bevat belangrijke informatie zoals:
+\begin{itemize}
+    \item IP-adres van de aanvaller: In dit geval 208.109.37.21.
+    \item Hostname: 21.37.109.208.host.secureserver.net.
+    \item Locatie van de gebruiker: United States.
+    \item Gebruikersnaam: De laatste gebruikersnaam waarmee geprobeerd werd in te loggen, bijvoorbeeld 'admin'.
+    \item Reden voor blokkering: Het overschrijden van het maximum aantal mislukte inlogpogingen, hier vastgesteld op 20.
+    \item Duur van de blokkering: In dit geval 5 minuten.
+\end{itemize}
+Daarnaast beperkt Wordfence het aantal keren dat een gebruiker kan proberen in te loggen binnen een bepaalde periode. 
+Als deze limiet is bereikt, ontvang je een vergelijkbare alert met details over de geblokkeerde gebruiker en de 
+blokkeringstijd.
+
+Verder biedt Wordfence ook directe accountvergrendeling bij verdachte activiteiten. Dit blokkeert onmiddellijk een 
+account wanneer bijvoorbeeld een plotseling groot aantal mislukte inlogpogingen wordt gedetecteerd. De alert geeft 
+aan welk account is vergrendeld en de reden voor de vergrendeling.
+
+Wordfence biedt daarnaast real-time monitoring van je website, waarbij verdachte activiteiten direct worden gemeld. 
+Deze alerts kunnen variëren van verdachte inlogpogingen tot pogingen om kwetsbaarheden in plugins of thema's te misbruiken.
+
+Deze resultaten onderstrepen het belang van het toepassen van gespecialiseerde beveiligingsuitbreidingen in populaire 
+CMS-systemen, wat aantoont dat zelfs fundamentele beveiligingsplugins een significante bescherming kunnen bieden.
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{burp-suite_bruteforce_laravel_blurred.png}
     \caption[Brute force aanval op een laravel applicatie]{Brute force aanval op een laravel applicatie}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{Laravel Applicatie}{Laravel Application}}
