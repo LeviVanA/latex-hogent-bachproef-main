@@ -6,7 +6,7 @@
 % bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
-\section{\IfLanguageName{dutch}{doel van het onderzoek}{goal of the study}}
+\section{\IfLanguageName{dutch}{Doel van het onderzoek}{Goal of the study}}
 
 Het hoofddoel van dit onderzoek is een grondige evaluatie van de effectiviteit van verschillende penetratietesttools in twee typen webomgevingen: 
 een wordPress sites en een op maat gemaakte Laravel applicatie. Deze evaluatie 
@@ -57,12 +57,13 @@ artikelen en studies worden geraadpleegd, die het onderwerp uitvoerig behandelen
 \section{\IfLanguageName{dutch}{Webomgevingen}{Web environments}}
 \label{sec:Webomgevingen}
 
-\subsection{\IfLanguageName{dutch}{Veiligheidskwetsbaarheden in Webapplicaties}{Security vulnerabilities in Web applications}}
+\subsection{\IfLanguageName{dutch}{Veiligheidskwetsbaarheden in webapplicaties}{Security vulnerabilities in web applications}}
 \label{sec:Veiligheidskwetsbaarheden in Webomgevingen}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{wordfence_stopped_attacks.png}
     \caption[Totaal aantal geblokkeerde aanvallen: Wordfence netwerk]{Totaal aantal geblokkeerde aanvallen: Wordfence netwerk}
+    \label{fig:stopped_attacks}
 \end{figure}
 
 In de methodologie bij het testen van webomgevingen met name CMS WordPress en php framework Laravel, speelt het identificeren van veelvoorkomende 
@@ -76,7 +77,7 @@ wp-config.php-bestanden\footnote{een bestand dat over zeer belangrijke informati
 ~\autocite{DalalanaBertoglio2017}.
 
 Bij het testen van WordPress met beveiligingsplugin(s) is het belangrijk om de effectiviteit van beveiligingsmaatregelen te 
-evalueren. Op bovenstaande foto kan je verifiëren hoeveel aanvallen het wordfence netwerk per dag tegenhoudt. Kwetsbaarheden 
+evalueren. Op figuur \ref{fig:stopped_attacks} kan er gezien worden hoeveel aanvallen het wordfence netwerk per dag tegenhoudt. Kwetsbaarheden 
 zoals SQL-injecties en Cross-Site Scripting (XSS) zijn belangrijke aandachtsgebieden voor pentesters, vooral in WordPress-omgevingen 
 met up-to-date beveiligingsplugin(s) ~\autocite{Albahar2022}.
 
@@ -92,7 +93,7 @@ testen van beveiligingsmaatregelen met diverse tools zoals Metasploit, Burp Suit
 Het uiteindelijke doel is om kwetsbaarheden te ontdekken en effectieve maatregelen te nemen om de beveiliging van webomgevingen 
 te versterken.
 
-\subsection{\IfLanguageName{dutch}{Aanvallen op veiligheidskwetsbaarheden in Webapplicaties}{Attacks on Security vulnerabilities in Web applications}}
+\subsection{\IfLanguageName{dutch}{Aanvallen op veiligheidskwetsbaarheden in webapplicaties}{Attacks on Security vulnerabilities in web applications}}
 \label{sec:Veiligheidskwetsbaarheden in Webomgevingen}
 In de dynamische wereld van webbeveiliging biedt het Open Web Application Security Project (OWASP) essentiële richtlijnen en hulpmiddelen om te vechten 
 tegen de voortdurende dreiging van cyberaanvallen. OWASP, een internationale non-profit organisatie, speelt een cruciale rol door het bevorderen van 
@@ -142,7 +143,7 @@ van gegevens zonder de juiste autorisatie, of het uitvoeren van functies die hun
 van toegangsbeleid dat zowel authenticatie als autorisatie controles omvat, waarbij moet worden gezorgd dat deze controles consistent en robuust worden toegepast over 
 alle onderdelen van de applicatie \autocite{Anas2024}.
 
-\subsubsection{\IfLanguageName{dutch}{brute force aanvallen}{brute force attacks}}
+\subsubsection{\IfLanguageName{dutch}{Brute force aanvallen}{brute force attacks}}
 \label{sec:brute force aanvallen}
 Een brute force-aanval is een techniek waarbij aanvallers systematisch alle mogelijke combinaties van wachtwoorden of sleutels uitproberen om toegang te krijgen tot een 
 systeem of account. Deze aanpak kan effectief zijn bij het kraken van zwakke wachtwoorden, vooral als er geen maatregelen zoals accountvergrendeling na meerdere mislukte 
@@ -164,9 +165,10 @@ gebruiker te beschermen tegen ongewilde acties ~\autocite{B.I.2024}.
     \centering
     \includegraphics[height=0.3\textheight]{data-breaches-statistics-us.png}
     \caption[Aantal data breaches in de US ]{Aantal data breaches in de US }
+    \label{fig:data-breaches}
 \end{figure}
 
-\subsection{\IfLanguageName{dutch}{Security mechanismen in websites en webapplicaties}{Security mechanisms in websites and Web applications}}
+\subsection{\IfLanguageName{dutch}{Security mechanismen in websites en webapplicaties}{Security mechanisms in websites and web applications}}
 \label{sec:Security mechanismen in Webomgevingen}
 
 In dit hoofdstuk worden de security mechanismen van de drie verschillende webomgevingen onderzocht. Elk platform heeft zijn eigen beveiligingsmaatregelen die bijdragen 
@@ -191,9 +193,16 @@ autorisatiesysteem ontwikkelaars een gestandaardiseerde en veilige methode om ge
 Deze functies maken Laravel een populaire keuze voor ontwikkelaars die streven naar veilige en betrouwbare webapplicaties
 ~\autocite{Adamu2020}.
 
+De piek in datalekken in 2016 die je kan terugvinden op figuur \ref{fig:data-breaches} is grotendeels te danken aan enkele grootschalige datalekken, zoals het Yahoo-datalek waarbij 
+drie miljard gebruikersaccounts werden getroffen. De daling in 2018 daarentegen, kan worden verklaard door verbeterde beveiligingsmaatregelen 
+en de invoering van strengere gegevensbeschermingswetten zoals de AVG in Europa ~\autocite{Petrosyan2024}. Deze gebeurtenissen benadrukken het belang van 
+robuuste security mechanismen. Door te investeren in geavanceerde beveiligingstools en gebruik te maken van veilige 
+frameworks zoals Laravel, kunnen organisaties hun weerbaarheid tegen cyberaanvallen aanzienlijk verhogen en de veiligheid van hun 
+gegevens waarborgen ~\autocite{Petrosyan2024}.
+
 Het toevoegen van beveiligingsplugins zoals Wordfence aan WordPress kan de beveiliging aanzienlijk verbeteren, terwijl Laravel van nature een 
 sterke beveiligingslaag biedt. Het kiezen van het juiste platform hangt daarom af van de specifieke behoeften van het project en de nadruk op beveiliging.
-\section{\IfLanguageName{dutch}{Pentesting Tools}{Pentesting Tools}}
+\section{\IfLanguageName{dutch}{Pentesting tools}{Pentesting tools}}
 \label{sec:Webomgevingen}
 Bij het kiezen van de juiste pentesting tools voor webomgevingen moet worden overwogen welke functionaliteiten 
 elke tool biedt. Dit is van cruciaal belang, gezien de vele verschillende soorten webapplicaties en de bijbehorende veiligheidsrisico's.
@@ -227,15 +236,15 @@ Een goede tool kan helpen bij het identificeren en verhelpen, van kleine fouten 
 Door deze bovenstaande aspecten af te wegen, kunnen de juiste tools worden geselecteerd voor pentestingwerkzaamheden. 
 Dit kan veel bijdragen aan het verbeteren van de veiligheid van webomgevingen en het uitvoeren van effectievere beveiligingstests.
 
-\section{\IfLanguageName{dutch}{wat weten we uit de literatuur}{what is known from the literature}}
+\section{\IfLanguageName{dutch}{Wat weten we uit de literatuur}{What is known from the literature}}
 \label{sec:wat-weten-we-uit-de-literatuur}
 Beveiliging van webapplicaties is een noodzakelijk onderwerp geworden. Recente onderzoeken en literatuur leveren 
 inzichten in verschillende aspecten van dit vakgebied, waaronder de effectiviteit van penetratietests, het belang van beveiligingsplugins voor WordPress en de verschillen 
 in beveiligingsmaatregelen tussen webapplicatieframeworks zoals Laravel. Een overzicht van wat reeds gekend is op dit gebied, ondersteund door een aantal 
 bronnen, toont de huidige kennis en praktijken aan.
 
-Cybersecurity-instrumenten spelen een cruciale rol, bijvoorbeeld bij penetratietests binnen webomgevingen. Het weloverwogen 
-selecteren van effectieve tools is essentieel, zoals in het vorig hoofdstuk heb aangehaald, om kwetsbaarheden in webapplicaties te identificeren en aan te pakken. 
+Cybersecurity-instrumenten spelen een cruciale rol, bijvoorbeeld bij penetratietests binnen webomgevingen. Een weloverwogen keuze bij het
+selecteren van effectieve tools van belang, zoals in het vorig hoofdstuk aangehaald, om kwetsbaarheden in webapplicaties te identificeren en aan te pakken. 
 Deze selectie vereist niet alleen technische kennis, maar ook strategisch inzicht in hoe verschillende tools verschillende 
 soorten beveiligingslekken kunnen identificeren.
 Een doordachte aanpak bij het kiezen van penetratietesttools versterkt niet alleen de beveiligingshouding 
@@ -262,14 +271,14 @@ worden ingezet om deze bedreigingen bij websites op te sporen. Het voornoemde ra
 penetratietesttools kunnen worden ingezet om deze bedreigingen bij websites op te sporen, wat cruciaal is voor organisaties die hun cyberweerbaarheid willen verbeteren
 ~\autocite{Sharma2023}.
 
-Als we het CMS systeem wordpress dan durven vergelijken met het Laravel framework valt op dat deze laatste aanzienlijke beveiligingsvoordelen biedt. Deze voordelen worden voornamelijk toegeschreven aan 
+Als het CMS-systeem WordPress vergelijkt word met het Laravel-framework, valt op dat dit laatste beveiligingsvoordelen biedt. Deze voordelen worden voornamelijk toegeschreven aan 
 de robuuste architectuur van Laravel, die inherent meer beveiligingslagen biedt. Laravel maakt gebruik van moderne beveiligingspraktijken en heeft ingebouwde 
 functies die helpen bij het beschermen tegen veelvoorkomende bedreigingen zoals SQL-injecties, cross-site scripting (XSS) en cross-site request forgery (CSRF)~\autocite{Lebedeva2023}. Deze focus 
 op beveiliging maakt Laravel een aantrekkelijke keuze voor ontwikkelaars en bedrijven die de veiligheid van hun webapplicaties serieus nemen en zich bewust 
 zijn van de toenemende dreigingen op het internet. De voordelen van Laravel op het gebied van beveiliging zijn dus een belangrijke overweging voor organisaties 
 bij het selecteren van een framework voor hun projecten.
 
-Samenvattend brengen deze studies de kennis die beschikbaar is over de beveiliging van webapplicaties aan licht. 
+Samenvattend laten deze studies zien wat er bekend is over de beveiliging van webapplicaties.
 Het is essentieel om inzicht te krijgen in de specifieke beveiligingsproblemen die elk webapplicatieframework met zich meebrengt. Door deze inzichten 
 toe te passen kunnen organisaties hun beveiligingshouding versterken en beter beschermen tegen de voortdurende dreiging van cyberaanvallen.
 
@@ -297,8 +306,8 @@ blijven voldoen aan de eisen van een voortdurend veranderende omgeving. Ze benad
 de details van het beschermen tegen de nieuwste en meest geavanceerde aanvalstechnieken nog ontdekt moeten worden. Dit duidt op een enorme behoefte aan 
 specifiek onderzoek en praktijkexperimenten om de effectiviteit van bestaande en nieuwe beveiligingsmethoden te verbeteren.
 
-\section{\IfLanguageName{dutch}{relevantie van het onderzoek}{relevance of the study}}
-\subsection{\IfLanguageName{dutch}{theoretische relevantie}{theoretical relevance}}
+\section{\IfLanguageName{dutch}{Relevantie van het onderzoek}{Relevance of the study}}
+\subsection{\IfLanguageName{dutch}{Theoretische relevantie}{Theoretical relevance}}
 De analyse van penetratietesttools in specifieke webomgevingen speelt een cruciale rol in het versterken van webapplicatiebeveiliging. Door deze tools 
 te evalueren, wordt inzicht verkregen in hoe ze kwetsbaarheden identificeren en aanpakken, wat essentieel is voor het opstellen van robuuste beveiligingsprotocollen. 
 Een goed begrip ervan helpt bij het optimaliseren van beveiligingsstrategieën en het anticiperen op mogelijke aanvallen, waardoor organisaties beter voorbereid zijn op het 
@@ -306,8 +315,8 @@ afweren van cyberdreigingen. Dit draagt dan op zijn beurt bij aan een veiligere 
 ~\autocite{Jarupunphol2023}.
 
 De verkregen inzichten uit de analyse van verschillende penetratietesttools binnen een specifieke webomgeving zijn zeer waardevol. Ze bieden gedetailleerde informatie 
-over de methoden die deze tools gebruiken om kwetsbaarheden te identificeren en te analyseren. Dit draagt bij tot een breder begrip van de dynamiek van pentesting, 
-waarmee ik bedoel het begrijpen van de verschillende tactieken, technieken en procedures die pentesters gebruiken om beveiligingslekken te vinden en te verhelpen. Het 
+over de methoden die deze tools gebruiken om kwetsbaarheden te identificeren en te analyseren. Dit draagt bij aan een breder begrip van de dynamiek van pentesting, waarmee 
+wordt bedoeld het begrijpen van de verschillende tactieken, technieken en procedures die pentesters gebruiken om beveiligingslekken te vinden en te verhelpen. Het 
 begrijpen van deze processen is trouwens essentieel voor professionals in de cybersecurity en webapplicatieontwikkeling, wat hen helpt bij het implementeren van effectievere 
 beveiligingsstrategieën.
 
@@ -320,8 +329,8 @@ die overeenkomen met de realiteit van de huidige digitale computercriminaliteit.
 Dit proces draagt bij aan het verfijnen en versterken van webbeveiligingspraktijken, gericht op het voldoende beschermen tegen en reageren op moderne 
 cyberdreigingen~\autocite{Nagendran2019}.
 
-\subsection{\IfLanguageName{dutch}{maatschappelijke relevantie}{social relevance}}
-Door inzichten uit geavanceerde onderzoeken te integreren, vergroot dit onderzoek de maatschappelijke relevantie van webapplicatiebeveiliging. Ik verwijs hiervoor naar 
+\subsection{\IfLanguageName{dutch}{Maatschappelijke relevantie}{Social relevance}}
+Door inzichten uit geavanceerde onderzoeken te integreren, vergroot dit onderzoek de maatschappelijke relevantie van webapplicatiebeveiliging. Hiervoor wordt er verwezen naar 
 twee cruciale bronnen: een studie van ArXiv en een onderzoek gepubliceerd in het eJournal of ICT van Akademi Telkom Jakarta. Beide bronnen bieden een uitgebreid overzicht 
 van de huidige uitdagingen op het gebied van cybersecurity en de implementatie van geavanceerde beveiligingsmaatregelen en bieden de nodige perspectieven die het 
 belang van dit onderzoek aan het licht brengen.
