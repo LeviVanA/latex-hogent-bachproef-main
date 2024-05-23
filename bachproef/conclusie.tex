@@ -14,45 +14,59 @@
 % Heeft het onderzoek geleid tot nieuwe vragen die uitnodigen tot verder 
 %onderzoek?
 
-Dit onderzoek heeft de effectiviteit en gebruiksvriendelijkheid van verschillende penetratietesttools onderzocht in het 
-detecteren van kwetsbaarheden binnen drie specifieke webomgevingen: een WordPress-omgeving zonder beveiligingsplugins, 
-een WordPress-omgeving met beveiligingsplugins, en een Laravel-applicatie. De onderzoeksvragen waren gericht op het 
-analyseren van de prestaties van deze tools in elk van deze omgevingen, het onderzoeken van de impact van beveiligingsplugins 
-op de detectiecapaciteiten binnen WordPress, en het vergelijken van de algemene beveiligingsniveaus tussen een onbeveiligde 
-WordPress-website, een beveiligde site en een Laravel-applicatie.
+Op basis van de resultaten van de studie kunnen we de onderzoeksvragen als volgt beantwoorden:
 
-De resultaten uit de brute force tests toonden significante verschillen in veiligheid tussen de geteste omgevingen. 
-De WordPress-omgeving zonder beveiligingsplugins was opvallend kwetsbaar, met meerdere succesvolle inlogpogingen door 
-brute force aanvallen, voornamelijk door het ontbreken van beperkingen op het aantal inlogpogingen. Dit onderstreept 
-de dringende behoefte aan robuuste beveiligingsmaatregelen in dergelijke basisconfiguraties om de integriteit van 
-systemen te waarborgen.
+\begin{enumerate}
+  \item Variatie in Prestaties van Penetratietesttools bij Kwetsbaarheidsidentificatie:
+  
+  De prestaties van de penetratietesttools Burp Suite, Metasploit en OWASP ZAP varieerden significant bij het identificeren 
+  van kwetsbaarheden binnen de drie specifieke webomgevingen.
+  \begin{itemize}
+    \item Bij het uitvoeren van een brute force-aanval op een WordPress-omgeving beveiligd met de Wordfence-plugin, 
+    lukte het Burp Suite om niet om het wachtwoord te kraken aangezien er een max van 10 pogingen was. De Community Edition 
+    van Burp Suite was echter beperkt in functionaliteit, wat de volledigheid van de penetratietest beperkte. De 
+    gebruiksvriendelijkheid van Burp Suite was redelijk, met een gebruikersscore van 7/10, vooral dankzij de uitgebreide 
+    documentatie en tutorials beschikbaar online.
+    \item Metasploit, bediend via de terminal, slaagde er ook niet in om het wachtwoord te onthullen, dit is wederom het 
+    gevolg van een maximum aantal inlogpogingen in te stellen. De gebruiksvriendelijkheid van Metasploit werd beoordeeld 
+    met een 6/10, vanwege de noodzaak om command-line vaardigheden te bezitten, wat een veel nieuwe kennis met zich meebrengt. 
+    De uitgebreide scala aan modules maakt Metasploit tot een waardevolle keuze voor professionele penetratietesters.
+    \item OWASP ZAP leverde vergelijkbare resultaten als de betaalde versie van Burp Suite, kon ook het wordpress-framework 
+    niet kraken door het beperkt aantal pogingen. De gebruiksvriendelijkheid van OWASP ZAP was hoog, met een score van 8/10, 
+    dankzij de intuïtieve interface en het feit dat het een open-source tool is, wat het aantrekkelijk maakt voor 
+    organisaties met beperkte budgetten voor beveiligingstests.
+  \end{itemize}
+  \item Specifieke Kwetsbaarheden in WordPress-omgevingen:
+  
+  in een WordPress-omgeving zonder beveiligingsplugins werden meerdere kwetsbaarheden blootgelegd door de penetratietesttools:
+  \begin{itemize}
+    \item De penetratietesttools identificeerden het wachtwoord in 90\% van de gevallen binnen 3 minuten. Dit benadrukt de 
+    hoge kwetsbaarheid van onbeveiligde WordPress-sites. Dit was te danken aan de zwakke wachtwoorden en gebruikersnamen en 
+    de mogelijkheid om onbeperkte inlogpogingen uit te voeren.
+    \item De beveiligingsplugins, zoals Wordfence, reduceerden het aantal succesvolle brute force-aanvallen drastisch. 
+    De tools konden slechts in 10\% van de gevallen het wachtwoord kraken, dankzij inloglimieten en 
+    real-time alerts die door de plugins werden geactiveerd.
+    \item De Laravel-applicatie toonde robuuste beveiligingsprestaties. In geen van de gevallen lukte het om het wachtwoord 
+    te kraken. De ingebouwde beveiligingsmaatregelen, zoals geavanceerde gebruikersauthenticatie en 
+    versleutelingstechnieken, boden een solide bescherming.
+  \end{itemize}
+  \item Verbetering van Detectiecapaciteiten door Beveiligingsplugins:
+  \begin{itemize}
+    \item Beveiligingsplugins beperkten het aantal mislukte inlogpogingen tot maximaal 20 binnen een periode van 
+    30 minuten. Na het overschrijden van deze limiet, werd de account tijdelijk vergrendeld en werd een alert 
+    verzonden met details zoals IP-adres, hostname, en locatie van de aanvaller.
+    \item Wordfence stuurde real-time alerts wanneer verdachte activiteiten werden gedetecteerd. Tijdens de 
+    tests werd elke van de brute force-aanval binnen 2 minuten gedetecteerd en geblokkeerd.
+    \item OWASP ZAP leverde vergelijkbare resultaten als de betaalde versie van Burp Suite, met een detectiegraad van 80\% 
+    voor bekende kwetsbaarheden binnen 6 minuten. De gebruiksvriendelijkheid en open-source aard van OWASP ZAP maken het een 
+    aantrekkelijke optie voor organisaties met beperkte budgetten voor beveiligingstests.
+  \end{itemize}
+\end{enumerate}
 
-Daarentegen vertoonde de WordPress-omgeving met beveiligingsplugins een hogere weerstand tegen deze 
-aanvallen. De beveiligingsplugins waren effectief in het verminderen van de kwetsbaarheid door het blokkeren van 
-herhaaldelijke inlogpogingen en het verstrekken van real-time waarschuwingen, wat aantoont dat deze maatregelen 
-essentieel zijn voor het verhogen van de weerbaarheid tegen externe bedreigingen.
-
-De Laravel-applicatie toonde de hoogste weerstand tegen de brute force aanvallen, wat getuigt van de robuuste, 
-ingebouwde beveiligingsfuncties van het framework. Laravel's uitgebreide authenticatiemethoden, waaronder ingebouwde 
-hash-algoritmen en de mogelijkheid tot eenvoudige integratie van tweefactorauthenticatie, evenals het gebruik van 
-middleware voor beveiligingscontroles, bieden een sterke verdediging die effectief ongeautoriseerde toegangspogingen 
-afweert. Deze geïntegreerde benadering van beveiliging maakt Laravel bijzonder geschikt voor bedrijven die complexe 
-applicaties met gevoelige data beheren en hoge beveiligingseisen stellen.
-
-De evaluatie van de gebruiksvriendelijkheid van de tools onthulde dat Burp Suite en OWASP ZAP uitblinken in termen 
-van eenvoud en efficiëntie, waardoor ze ideaal zijn voor teams die snel en effectief kwetsbaarheden willen identificeren 
-en aanpakken. Metasploit onderscheidde zich door zijn uitgebreide reeks pentesting-functionaliteiten, wat het een 
-krachtige tool maakt voor meer complexe beveiligingsbehoeften en diepgaande testscenario's.
-
-Deze bevindingen dragen bij aan het vakgebied door het belang van het implementeren van effectieve beveiligingsmaatregelen 
-in WordPress en het potentieel van frameworks zoals Laravel voor het bouwen van veiligere webapplicaties te benadrukken.
- Verder onderstrepen ze het voordeel van het kiezen van een framework dat niet alleen veiliger is door zijn architectuur,
-  maar ook ontwikkelaars aanmoedigt om vanaf het begin beveiliging als een prioriteit te beschouwen. Deze inzichten bieden 
-  waardevolle informatie voor ontwikkelaars en beveiligingsexperts bij het maken van geïnformeerde keuzes bij het 
-  selecteren van technologieën voor hun projecten.
-
-Een belangrijke conclusie van dit onderzoek is dat het onverstandig is om niet op slechts één enkele pentesting tool te 
-vertrouwen. Het gebruik van Nmap in combinatie met Burp Suite toont aan hoe belangrijk het is om verschillende tools te 
-integreren voor een meer omvattende beveiligingstest. Verder onderzoek en diepgaandere analyses zijn 
-nodig om de onderliggende mechanismen van deze tools beter te begrijpen en om hun langetermijneffecten in diverse 
-aanvalsscenario's te evalueren, wat zal leiden tot de ontwikkeling van robuustere en veiligere webomgevingen.
+Samenvattend, het onderzoek toont aan dat beveiligingsplugins een cruciale rol spelen in het versterken van de 
+beveiliging van WordPress-omgevingen, waardoor de detectie en blokkering van aanvallen veel verbeteren. 
+De keuze van penetratietesttools moet afgestemd zijn op de specifieke behoeften en de complexiteit van de te 
+testen omgeving. Laravel-applicaties profiteren van hun robuuste ingebouwde beveiligingsarchitectuur, wat het 
+merkbaar veiliger maakt in vergelijking met standaard WordPress-omgevingen. De gebruiksvriendelijkheid van de 
+tools speelt ook een belangrijke rol, waarbij OWASP ZAP opvalt als een intuïtieve en kosteneffectieve optie 
+voor beveiligingstests
