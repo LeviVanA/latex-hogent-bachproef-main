@@ -24,6 +24,10 @@ op dat enkele functionaliteiten beperkt waren vanwege de beperkingen van de Comm
 pentest, maar het voordeel van Burp Suite is dat er veel documentatie en tutorials beschikbaar zijn op het internet, wat nuttig kan zijn bij het oplossen van 
 eventuele problemen tijdens het gebruik van de tool.
 
+Naast de brute force attack werd er ook een SQL-injectie pentest uitgevoerd met Burp Suite. In de WordPress-omgeving met beveiligingsplugins werd de SQL-injectie aanval 
+effectief gedetecteerd en geblokkeerd door de beveiligingsmaatregelen van Wordfence. Dit toont aan dat de plugins niet alleen bescherming bieden tegen brute force 
+aanvallen, maar ook tegen SQL-injecties, wat cruciaal is voor de algehele beveiliging van de applicatie
+
 \subsection{\IfLanguageName{dutch}{Resultaat met metasploit}{result with metasploit}}
 \begin{figure}
     \centering
@@ -31,8 +35,8 @@ eventuele problemen tijdens het gebruik van de tool.
     \caption[Metasploit brute force attack op wordpress applicatie met beveiligingsplugin]{Metasploit brute force attack op wordpress applicatie met beveiligingsplugin}
 \end{figure}
 Metasploit is een populair open-source framework voor beveiligingstests, dat vooral wordt ingezet voor het ontwikkelen en implementeren van exploit-codes. 
-Dit framework maakt het mogelijk om systemen te evalueren op veiligheid door kwetsbaarheden actief te benutten, te identificeren 
-en te verifiëren. Metasploit beschikt over honderden exploit-modules die een breed scala aan bekende kwetsbaarheden dekken, waardoor het als een belangrijk 
+Met dit framework kunnen systemen worden beoordeeld op veiligheid door actief kwetsbaarheden te exploiteren en te identificeren. 
+Metasploit beschikt over honderden exploit-modules die een breed scala aan bekende kwetsbaarheden dekken, waardoor het als een belangrijk 
 instrument kan worden gezien in de toolkit van veel cybersecurity-professionals.
 
 In een praktische toepassing werd Metasploit gebruikt om een brute force attack uit te voeren op een WordPress-omgeving die beveiligd was met de Wordfence plugin. 
@@ -52,6 +56,9 @@ Voor de brute force attack op de WordPress omgeving met wordfence werd OWASP ZAP
 Wat opviel bij het gebruik van OWASP ZAP was dat de resultaten van de testen vergelijkbaar waren als bij de betalende Burp Suite, maar dan met een open source alternatief. 
 Dit maakt van OWASP ZAP een aantrekkelijke keuze voor organisaties die op zoek zijn naar een kosteneffectieve oplossing voor het uitvoeren van beveiligingstests.
 
+Daarnaast werd met OWASP ZAP ook een SQL-injectie pentest uitgevoerd. De beveiligingsplugin van WordPress detecteerde en blokkeerde de SQL-injectie aanval effectief, 
+wat wederom de betrouwbaarheid van de beveiligingsmaatregelen aantoont. OWASP ZAP's intuïtieve interface en effectieve testresultaten maken het een sterke concurrent 
+voor andere penetratietesttools. Een voorbeeld van deze pentest kan hier worden teruggevonden \ref{fig:sql-injection}.
 
 \section{\IfLanguageName{dutch}{Vergelijking van omgevingen}{Comparison of environments}}
 %\begin{figure}
@@ -70,17 +77,19 @@ beveiliging te verstevigen.
     \centering
     \includegraphics[height=0.2\textheight]{zap_sql-injection_wordpressplugin.png}
     \caption[SQL-injection aanval op een wordpress applicatie met beveiligingsplugins]{SQL-injection aanval op een wordpress applicatie met beveiligingsplugins}
+    \label{fig:sql-injection}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{WordPress Met Beveiligingsplugins}{WordPress with securityplugins}}
 De tweede test-omgeving, een WordPress-installatie uitgerust met specifieke beveiligingsplugins zoals Wordfence, liet een aanzienlijke 
 verbetering zien in beveiliging tegen brute force-aanvallen. De plugins die werden getest, bieden functionaliteiten zoals limieten 
 op inlogpogingen, directe accountvergrendeling bij verdachte activiteiten en real-time monitoring en alerts. Deze maatregelen 
-leidden tot een snelle detectie en blokkering van aanvalspogingen, waardoor de veiligheid van de omgeving aanzienlijk werd verhoogd.
+leiden tot een snelle detectie en blokkering van aanvalspogingen, waardoor de veiligheid van de omgeving aanzienlijk werd verhoogd.
 
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{foute_login_mail_blurred.png}
     \caption[E-mail over geblokkeerde inlog poging]{E-mail over geblokkeerde inlog poging}
+    \label{fig:geblokkeerde-login}
 \end{figure}
 Wanneer een gebruiker bijvoorbeeld het maximum aantal mislukte inlogpogingen overschrijdt, stuurt Wordfence een alert. 
 Een typische melding kan er als volgt uitzien: "A user with IP address 208.109.37.21 has been locked out from signing in or 
@@ -96,7 +105,6 @@ Deze melding bevat belangrijke informatie zoals:
     \item Reden voor blokkering: Het overschrijden van het maximum aantal mislukte inlogpogingen, hier vastgesteld op 20.
     \item Duur van de blokkering: In dit geval 5 minuten.
 \end{itemize}
-Daarnaast beperkt Wordfence het aantal keren dat een gebruiker kan proberen in te loggen binnen een bepaalde periode. 
 Als deze limiet is bereikt, ontvang je een vergelijkbare alert met details over de geblokkeerde gebruiker en de 
 blokkeringstijd.
 
@@ -106,6 +114,7 @@ aan welk account is vergrendeld en de reden voor de vergrendeling.
 
 Wordfence biedt daarnaast real-time monitoring van je website, waarbij verdachte activiteiten direct worden gemeld. 
 Deze alerts kunnen variëren van verdachte inlogpogingen tot pogingen om kwetsbaarheden in plugins of thema's te misbruiken.
+Een voorbeeld van een dergelijke alert kan je hier zien \ref{fig:geblokkeerde-login}. 
 
 Deze resultaten onderstrepen het belang van het toepassen van gespecialiseerde beveiligingsuitbreidingen in populaire 
 CMS-systemen, wat aantoont dat zelfs fundamentele beveiligingsplugins een significante bescherming kunnen bieden.
@@ -113,10 +122,18 @@ CMS-systemen, wat aantoont dat zelfs fundamentele beveiligingsplugins een signif
     \centering
     \includegraphics[height=0.2\textheight]{burp-suite_bruteforce_laravel_blurred.png}
     \caption[Brute force aanval op een laravel applicatie]{Brute force aanval op een laravel applicatie}
+    \label{fig:laravel-brute-force}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{Laravel Applicatie}{Laravel Application}}
-De Laravel-applicatie, bekend om zijn robuuste beveiligingsarchitectuur, vertoonde uitmuntende prestaties tijdens de brute force test. De 
-ingebouwde beveiligingsmaatregelen van Laravel, zoals geavanceerde gebruikersauthenticatie en automatische beveiliging tegen veelvoorkomende 
-kwetsbaarheden, boden een solide bescherming. De applicatie was niet alleen bestand tegen brute force pogingen, maar implementeerde ook 
-standaard versleutelingstechnieken die de integriteit en vertrouwelijkheid van gebruikersgegevens garanderen. Deze bevindingen illustreren 
-hoe een framework met ingebouwde beveiliging kan dienen als een effectieve basis voor het ontwikkelen van veilige webapplicaties.
+Na de aanval analyseerden we de resultaten. Er werden geen succesvolle inlogpogingen gedetecteerd zoals je kan zien op foto \ref{fig:laravel-brute-force}, wat erop wijst dat de 
+gebruikersnamen en wachtwoorden sterk genoeg waren om brute force aanvallen te weerstaan. Bovendien reageerde het systeem 
+effectief op de aanvalspogingen door IP-adressen te blokkeren en CAPTCHA's te tonen. Een CAPTCHA is zijn een reactietest 
+die in de gegevensverwerking wordt gebruikt om te bepalen of er al dan niet sprake is van een menselijke gebruiker. Dit toont aan dat er goede 
+beveiligingsmaatregelen zoals account lockout policies en rate limiting waren geïmplementeerd.
+
+In ons gedetailleerde rapport beschreven we de methodologie, de gebruikte tools, de configuraties, en de uitkomsten van de 
+test. Hoewel de brute force aanval niet succesvol was, benadrukten we het belang van continue beveiligingsmonitoring en 
+periodieke tests om de beveiliging up-to-date te houden. We gaven aanbevelingen zoals het blijven versterken van het 
+wachtwoordbeleid, het implementeren van multi-factor authenticatie (MFA) voor extra beveiligingslagen, en het gebruik 
+van intrusion detection en prevention systems (IDPS) om ongeautoriseerde toegangspogingen vroegtijdig te detecteren en 
+te stoppen.

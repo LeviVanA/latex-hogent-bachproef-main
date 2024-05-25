@@ -14,10 +14,10 @@
 % Heeft het onderzoek geleid tot nieuwe vragen die uitnodigen tot verder 
 %onderzoek?
 
-Op basis van de resultaten van de studie kunnen we de onderzoeksvragen als volgt beantwoorden:
+Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële onderzoeksvragen als volgt beantwoorden:
 
 \begin{enumerate}
-  \item Variatie in Prestaties van Penetratietesttools bij Kwetsbaarheidsidentificatie:
+  \item 	Hoe variëren de prestaties van verschillende penetratietesttools bij het identificeren van kwetsbaarheden binnen de drie specifieke webomgevingen.
   
   De prestaties van de penetratietesttools Burp Suite, Metasploit en OWASP ZAP varieerden significant bij het identificeren 
   van kwetsbaarheden binnen de drie specifieke webomgevingen.
@@ -27,22 +27,25 @@ Op basis van de resultaten van de studie kunnen we de onderzoeksvragen als volgt
     van Burp Suite was echter beperkt in functionaliteit, wat de volledigheid van de penetratietest beperkte. De 
     gebruiksvriendelijkheid van Burp Suite was redelijk, met een gebruikersscore van 7/10, vooral dankzij de uitgebreide 
     documentatie en tutorials beschikbaar online.
-    \item Metasploit, bediend via de terminal, slaagde er ook niet in om het wachtwoord te onthullen, dit is wederom het 
-    gevolg van een maximum aantal inlogpogingen in te stellen. De gebruiksvriendelijkheid van Metasploit werd beoordeeld 
-    met een 6/10, vanwege de noodzaak om command-line vaardigheden te bezitten, wat een veel nieuwe kennis met zich meebrengt. 
-    De uitgebreide scala aan modules maakt Metasploit tot een waardevolle keuze voor professionele penetratietesters.
+    \item Metasploit, bediend via de terminal, slaagde er eveneens niet in om het wachtwoord te onthullen, dit is wederom het 
+    gevolg van een maximum aantal inlogpogingen. De gebruiksvriendelijkheid van Metasploit werd beoordeeld 
+    met een 6/10, vanwege de noodzaak om command-line vaardigheden te bezitten, wat veel technische kennis vergt. 
+    De uitgebreide scala aan modules maakt Metasploit anderzijds een waardevolle keuze voor professionele penetratietesters.
     \item OWASP ZAP leverde vergelijkbare resultaten als de betaalde versie van Burp Suite, kon ook het wordpress-framework 
-    niet kraken door het beperkt aantal pogingen. De gebruiksvriendelijkheid van OWASP ZAP was hoog, met een score van 8/10, 
-    dankzij de intuïtieve interface en het feit dat het een open-source tool is, wat het aantrekkelijk maakt voor 
+    niet kraken door het beperkt aantal beschikbare inlogpogingen. De gebruiksvriendelijkheid van OWASP ZAP was hoog, met een score van 8/10, 
+    dankzij de intuïtieve interface. Het feit dat het een open-source tool is maakt het een aantrekkelijke keuze voor 
     organisaties met beperkte budgetten voor beveiligingstests.
   \end{itemize}
-  \item Specifieke Kwetsbaarheden in WordPress-omgevingen:
+  Ook bij de SQL-injectie pentest bleek de beveiliging robuust, met effectieve detectie en blokkering van de aanvalspogingen.
+  Dit toont aan dat de wordfence plugin een effectieve beveiligingslaag vormt tegen bekende kwetsbaarheden.
+  
+  \item Welke specifieke kwetsbaarheden detecteren de penetratietesttools in een WordPress-omgeving zonder beveiligingsplugins en hoe verschilt dit van de omgevingen met beveiligingsplugins en de Laravel-applicatie?
   
   in een WordPress-omgeving zonder beveiligingsplugins werden meerdere kwetsbaarheden blootgelegd door de penetratietesttools:
   \begin{itemize}
-    \item De penetratietesttools identificeerden het wachtwoord in 90\% van de gevallen binnen 3 minuten. Dit benadrukt de 
+    \item De penetratietesttools identificeerden het wachtwoord in 90\% van de gevallen binnen de 3 minuten. Dit benadrukt de 
     hoge kwetsbaarheid van onbeveiligde WordPress-sites. Dit was te danken aan de zwakke wachtwoorden en gebruikersnamen en 
-    de mogelijkheid om onbeperkte inlogpogingen uit te voeren.
+    de mogelijkheid om een onbeperkt aantal inlogpogingen uit te voeren.
     \item De beveiligingsplugins, zoals Wordfence, reduceerden het aantal succesvolle brute force-aanvallen drastisch. 
     De tools konden slechts in 10\% van de gevallen het wachtwoord kraken, dankzij inloglimieten en 
     real-time alerts die door de plugins werden geactiveerd.
@@ -50,13 +53,13 @@ Op basis van de resultaten van de studie kunnen we de onderzoeksvragen als volgt
     te kraken. De ingebouwde beveiligingsmaatregelen, zoals geavanceerde gebruikersauthenticatie en 
     versleutelingstechnieken, boden een solide bescherming.
   \end{itemize}
-  \item Verbetering van Detectiecapaciteiten door Beveiligingsplugins:
+  \item In hoeverre verbeteren beveiligingsplugins de detectiecapaciteiten van deze tools op een WordPress-site?
   \begin{itemize}
     \item Beveiligingsplugins beperkten het aantal mislukte inlogpogingen tot maximaal 20 binnen een periode van 
     30 minuten. Na het overschrijden van deze limiet, werd de account tijdelijk vergrendeld en werd een alert 
     verzonden met details zoals IP-adres, hostname, en locatie van de aanvaller.
     \item Wordfence stuurde real-time alerts wanneer verdachte activiteiten werden gedetecteerd. Tijdens de 
-    tests werd elke van de brute force-aanval binnen 2 minuten gedetecteerd en geblokkeerd.
+    tests werd elke brute force-aanval binnen 2 minuten gedetecteerd en geblokkeerd.
     \item OWASP ZAP leverde vergelijkbare resultaten als de betaalde versie van Burp Suite, met een detectiegraad van 80\% 
     voor bekende kwetsbaarheden binnen 6 minuten. De gebruiksvriendelijkheid en open-source aard van OWASP ZAP maken het een 
     aantrekkelijke optie voor organisaties met beperkte budgetten voor beveiligingstests.

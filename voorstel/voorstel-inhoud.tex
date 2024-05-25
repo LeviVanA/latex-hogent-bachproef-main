@@ -19,7 +19,9 @@ De groei van webapplicaties heeft de manier waarop we communiceren, winkelen en 
 van webtechnologieën heeft ook nieuwe uitdagingen met zich meegebracht op het gebied van cybersecurity. Het belang van het waarborgen
 van de beveiliging van webapplicaties kan niet worden overschat. Zelfs de kleinste kwetsbaarheid kan leiden tot grote gevolgen, waaronder gegevensdiefstal,
 reputatieschade en financiële verliezen. Om deze reden is het uitvoeren van penetratietesten binnen een webomgeving van cruciaal
-belang om potentiële beveiligingszwakheden te identificeren ~\autocite{Nagendran2019}. Deze bachelorproef richt zich op het verkennen
+belang om potentiële beveiligingszwakheden te identificeren ~\autocite{Nagendran2019}. 
+
+Deze bachelorproef richt zich op het verkennen
 van penetratietestmethodologieën binnen een webomgeving. Ook zal er een focus gelegd worden op het begrijpen van het concept van penetratietesten,
 de identificatie van veelvoorkomende beveiligingszwakheden in webapplicaties en de toepassing van praktijkgerichte onderzoeken om
 de beveiliging van webapplicaties te evalueren. Het praktijkgerichte onderzoek zal worden gerealiseerd door middel van een test waarin drie
@@ -50,6 +52,7 @@ we ons op het begrijpen van veelvoorkomende
 webgerichte aanvalsmethoden, waaronder SQLinjecties,
 cross-site scripting (XSS), cross-site request
 forgery (CSRF) en andere.
+
 Een cruciaal aspect van onze literatuurstudie
 richt zich op een kritische evaluatie van diverse
 webapplicatiebeveiligingstools. Het onderzoek
@@ -65,6 +68,7 @@ in webapplicaties. De onderzoekers nemen de resultaten
 van deze vergelijking mee in de evaluatie
 om de praktische relevantie en effectiviteit van de
 besproken tools beter te begrijpen.
+
 Een opmerkelijke evolutie binnen het domein
 van penetratietesten wordt gevormd door de opkomst
 van geavanceerde automatiseringstools. Een
@@ -84,6 +88,7 @@ staat is om potentiële beveiligingszwakheden te
 identificeren, kwetsbaarheden te evalueren en rapporten
 te genereren, waardoor het proces van penetratietesten
 grotendeels wordt gestroomlijnd.
+
 Een essentieel element van de literatuurstudie
 betreft de integratie van actuele inzichten en
 best practices in de praktijk. Deze bron kijkt naar
@@ -104,8 +109,6 @@ en machine learning in penetratietestprocessen
 %   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
 %   ...'')
 
-Je mag deze sectie nog verder onderverdelen in subsecties als dit de structuur van de tekst kan verduidelijken.
-
 %---------- Methodologie ------------------------------------------------------
 \section{Methodologie}%
 \label{sec:methodologie}
@@ -117,6 +120,7 @@ tools zoals Burp Suite, OWASP ZAP, en Nmap.
 Kies tools die bekend staan om hun effectiviteit bij
 het testen van webapplicaties en die geschikt zijn
 voor verschillende scenario's.
+
 Fase 2: Selectie van Webapplicaties(1 week)
 Kies drie verschillende types webapplicaties om
 een breed scala aan beveiligingsuitdagingen te
@@ -124,35 +128,41 @@ vertegenwoordigen. Een standaard WordPress
 website zonder aanpassingen. Een voltooide Word-
 Press applicatie met aangepaste functionaliteiten
 en plugins. Een op Laravel gebaseerde PHPapplicatie.
+
 Fase 3: Configuratie van Testomgeving(2 weken)
 Stel voor elke webapplicatie een afzonderlijke
 testomgeving in, gebruikmakend van replica's
 van de live omgevingen, om realistische testresultaten
 te waarborgen.
+
 Fase 4: Voorbereiding van Penetratietesttools(1
 week) Configureer elke geselecteerde tool om te
 voldoen aan de specifieke kenmerken van de te
 testen webapplicatie. Zorg ervoor dat de tools zijn
 ingesteld om zowel geautomatiseerde als handmatige
 tests uit te voeren.
+
 Fase 5: Uitvoering van Penetratietesten(3 weken)
 Voer penetratietesten uit op de drie geselecteerde
 webapplicaties met behulp van de geconfigureerde
 tools. Documenteer gedetailleerde resultaten,
 inclusief geïdentificeerde kwetsbaarheden,
 mogelijke aanvalsscenario's en beveiligingssterkten.
+
 Fase 6: Vergelijking van Testresultaten(1 week)
 Analyseer de resultaten van de penetratietesten
 per applicatie en per tool. Identificeer consistent
 gedetecteerde kwetsbaarheden en vergelijk de
 nauwkeurigheid en diepgang van de tools in verschillende
 scenario's.
+
 Fase 7: Selectie van Bestpassende Tool(1 week)
 Overweeg de bevindingen van de vergelijking en
 bepaal welke tool het meest geschikt is voor welk
 type webapplicatie. Houd rekening met factoren
 zoals gebruiksgemak, rapportagefunctionaliteit
 en snelheid van detectie.
+
 Fase 8: Evaluatie van Geschikte Tool in Praktijktests
 (2 weken) Test de geselecteerde tool opnieuw
 op de drie webapplicaties om de praktische
@@ -175,6 +185,7 @@ Daarnaast worden de kwetsbaarheden binnen
 elke webapplicatie zorgvuldig geanalyseerd. Dit
 omvat een overzicht van de ernst van de geïdentificeerde
 beveiligingszwakheden.
+
 De selectie van de meest geschikte penetratietesttool
 per webapplicatie wordt uitgevoerd.
 Effectiviteit, nauwkeurigheid en gebruiksgemak
@@ -184,13 +195,15 @@ een tool te identificeren die kwetsbaarheden kan
 blootleggen, maar ook om ervoor te zorgen dat
 deze praktisch toepasbaar is in de specifieke context
 van elke webomgeving.
+
 Na de initiële penetratietesten volgt een fase
 van herhalingstests, waarbij de geselecteerde tool
-opnieuw wordt geëvalueerd in real-world scenario’s.
+opnieuw wordt geëvalueerd in real-world scenario's.
 Deze praktijkresultaten bieden inzicht in de
 bruikbaarheid van de tool in dynamische omgevingen,
 waarin eventuele verbeteringen of uitdagingen
 worden gedocumenteerd.
+
 Ten slotte zal het onderzoek resulteren in een
 samenvattend rapport. Dit rapport omvat niet
 alleen een overzicht van de bevindingen en geïdentificeerde
@@ -203,23 +216,27 @@ Na analyse en uitvoering van de methodologie
 voor het vergelijken en testen van penetratietesttools
 op diverse webapplicaties, komen verschillende
 essentiële conclusies naar voren.
+
 Allereerst biedt de vergelijking van de penetratietesttools
 een inzicht in hun prestaties en
 mogelijkheden. De identificatie van sterke en
 zwakke punten helpt bij het vormen van een solide
 besluit over welke tools het meest geschikt
-zijn voor specifieke beveiligingsscenario’s.
+zijn voor specifieke beveiligingsscenario's.
 De gedetailleerde analyse van kwetsbaarheden
 binnen elke webapplicatie draagt bij aan een
 begrip van de specifieke beveiligingsuitdagingen
 waarmee deze applicaties worden geconfronteerd.
 Dit vormt de basis voor gerichte verbeteringen en
 maatregelen om de algehele beveiliging te versterken.
+
 In het samenvattend rapport worden niet alleen
 de bevindingen, kwetsbaarheden en de geselecteerde
 penetratietesttools gedocumenteerd,
 maar ook praktische aanbevelingen voor het verbeteren
-van de beveiliging. Deze conclusies en
+van de beveiliging. 
+
+Deze conclusies en
 aanbevelingen vormen gezamenlijk een waardevolle
 bijdrage aan de ontwikkeling van effectieve
 strategieën voor het waarborgen van de beveiliging
