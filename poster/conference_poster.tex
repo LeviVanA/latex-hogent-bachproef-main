@@ -9,78 +9,116 @@
 % Info over de opleiding
 \course{Bachelorproef}
 \studyprogramme{toegepaste informatica}
-\academicyear{2022-2023}
+\academicyear{2023-2024}
 \institution{Hogeschool Gent, Valentin Vaerwyckweg 1, 9000 Gent}
 
 % Info over de bachelorproef
-\title{Titel van uw bachelorproef}
-\subtitle{Ondertitel (eventueel)}
-\author{Voornaam Naam}
-\email{voornaam.familienaam@student.hogent.be}
-\supervisor{Voornaam Naam}
-\cosupervisor{Voornaam Naam (Bedrijf)}
+\title{Onderzoek naar pentesting binnen specifieke webomgevingen}
+\author{Levi Van Achter}
+\email{levi.vanachter@student.hogent.be}
+\supervisor{Benjamin Vertonghen }
+\cosupervisor{Stijn D'Hollander (Sinergio)}
 
 % Indien ingevuld, wordt deze informatie toegevoegd aan het einde van de
 % abstract. Zet in commentaar als je dit niet wilt.
-\specialisation{Systeem- en Netwerkbeheer}
-\keywords{Lambda-calculus, Scheme}
-\projectrepo{https://github.com/user/repo}
+\specialisation{Mobile & Enterprise developmen}
+\keywords{Penetratietesten, Webapplicaties, Beveiliging, Ethical Hacking, Cybersecurity}
+%\projectrepo{https://github.com/user/repo}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-It's only a model.
-You don't vote for kings. Who's that then? We found them. Ni! Ni! Ni! Ni!
-The nose? On second thoughts, let's not go there. It is a silly place. Bloody Peasant! And the hat. She's a witch! Where'd you get the coconuts?
+  Dit onderzoek richt zich specifiek op penetratietesten binnen een webomgeving, waarbij de focus ligt op het
+  identificeren en beveiligen van kwetsbaarheden in webapplicaties. Het omvat een grondige verkenning van
+  methodologieën en technieken die worden toegepast bij het testen van de beveiliging van webapplicaties. Het
+  onderzoek analyseert populaire webgerichte aanvalsvectoren zoals SQL-injecties, cross-site scripting (XSS) en
+  cross-site request forgery (CSRF). Daarnaast wordt een vergelijkende studie uitgevoerd om de effectiviteit van
+  de testen op meten bij 3 verschillende we applicaties
 \end{abstract}
 
 \begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
 
 \section{Introductie}
 
-Be quiet! Found them? In Mercia?! The coconut's tropical! But you are dressed as one… Well, what do you want? Knights of Ni, we are but simple travelers who seek the enchanter who lives beyond these woods.
+Cybersecurity is een cruciaal, maar vaak onderbelicht aspect binnen softwareontwikkeling. Deze bachelorproef onderzoekt 
+de effectiviteit en gebruiksvriendelijkheid van verschillende penetratietesttools in drie specifieke webomgevingen: een 
+WordPress-omgeving zonder beveiligingsplugins, een WordPress-omgeving met beveiligingsplugins, en een Laravel-applicatie.
 
-Well, what do you want? It's only a model. Camelot! We found them. We shall say `Ni' again to you, if you do not appease us.
+Door gestructureerde penetratietests met tools zoals Burp Suite, OWASP ZAP en Metasploit, worden kwetsbaarheden in elke 
+omgeving geanalyseerd en de gebruiksvriendelijkheid van deze tools beoordeeld. De resultaten tonen aan dat de WordPress-
+omgeving zonder beveiligingsplugins het meest kwetsbaar is, terwijl de Laravel-applicatie de hoogste weerstand biedt 
+dankzij geavanceerde beveiligingsmaatregelen.
 
-The nose? Shut up! Burn her! I am your king. You don't vote for kings.
-
-You can't expect to wield supreme power just `cause some watery tart threw a sword at you! Well, we did do the nose. I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
-
-Why do you think that she is a witch? We want a shrubbery!! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave before I am forced to taunt you a second time!
+Daarnaast blijken Burp Suite en OWASP ZAP zeer gebruiksvriendelijk te zijn, terwijl Metasploit uitblinkt in diepgaande 
+testmogelijkheden. Dit onderzoek benadrukt de noodzaak van effectieve beveiligingsstrategieën en biedt praktische 
+aanbevelingen voor de selectie en implementatie van penetratietesttools in softwareprojecten.
 
 \section{Experimenten}
 
-A newt? Camelot! Why? No, no, no! Yes, yes. A bit. But she's got a wart.
+In dit hoofdstuk worden de experimenten beschreven die zijn uitgevoerd met drie penetratietesttools: Burp Suite, OWASP 
+ZAP, en Metasploit. Deze tools zijn toegepast op een WordPress-omgeving met beveiligingsplugins. Voor Burp Suite zijn 
+daarnaast testen uitgevoerd in drie verschillende webomgevingen: een WordPress-omgeving zonder beveiligingsplugins, 
+een WordPress-omgeving met beveiligingsplugins, en een Laravel-applicatie.
 
-Shut up! I dunno. Must be a king. Who's that then? Look, my liege! On second thoughts, let's not go there. It is a silly place.
+De eerste reeks experimenten betrof het gebruik van Burp Suite in de WordPress-omgeving met beveiligingsplugins. 
+Hierbij werden twee specifieke aanvallen uitgevoerd: een brute force attack en een SQL-injectie. Deze tests waren 
+gericht op het identificeren van kwetsbaarheden ondanks de aanwezigheid van beveiligingsplugins.
 
-Shut up! Will you shut up?! No, no, no! Yes, yes. A bit. But she's got a wart. He hasn't got shit all over him. It's only a model. It's only a model.
+OWASP ZAP werd eveneens ingezet in de WordPress-omgeving met beveiligingsplugins, waarbij ook brute force attacks 
+en SQL-injecties werden uitgevoerd. Het doel was om te beoordelen hoe effectief de beveiligingsplugins deze aanvallen 
+konden blokkeren en om de gebruiksvriendelijkheid van de tool te evalueren.
 
-Bring her forward! I don't want to talk to you no more, you empty-headed animal food trough water! I fart in your general direction! Your mother was a hamster and your father smelt of elderberries! Now leave 
+Metasploit werd gebruikt om diepgaandere aanvalsscenario's te simuleren in dezelfde omgeving. Hierbij werd eveneens een
+brute force attack uitgevoerd om te bepalen hoe goed de beveiligingsplugins in staat waren om deze  aanvallen 
+te weerstaan.
 
-\section{Sectie met figuur}
+ook werd er telkens gekeken naar de gebruiksvriendelijkheid van de tools dit werd bepaald aan de hand van hoeveel 
+tijd het in beslag nam voor er getest kon worden. Ook werd dit bepaald op basis van hoeveel kennis er nodig was om 
+de tool te gebruiken.
 
-De {\LaTeX} figure-omgeving bepaalt zelf waar een afbeelding komt en dat is meestal niet op de plek in de tekst waar de figure-omgeving gedefinieerd wordt. Als je wilt forceren dat afbeeldingen toch in de flow van de tekst blijven, dan kan je dat zoals hieronder:
+Daarnaast werd Burp Suite afzonderlijk getest in drie verschillende webomgevingen. In de WordPress-omgeving zonder 
+beveiligingsplugins werden brute force attacks uitgevoerd om te zien hoe kwetsbaar de site was zonder 
+extra beveiligingsmaatregelen. In de WordPress-omgeving met beveiligingsplugins werd dezelfde aanval uitgevoerd om 
+de effectiviteit van de plugins te beoordelen. Ten slotte werd Burp Suite gebruikt om de Laravel-applicatie te testen met 
+brute force attacks, waarbij werd gekeken naar de ingebouwde beveiligingsmaatregelen van het framework.
+
+Door deze gestructureerde aanpak kon de effectiviteit en gebruiksvriendelijkheid van de penetratietesttools in 
+verschillende webomgevingen grondig worden geëvalueerd.
 
 \begin{center}
   \captionsetup{type=figure}
-  \includegraphics[width=1.0\linewidth]{grail}
-  \captionof{figure}{He hasn't got shit all over him. The nose? Where'd you get the coconuts? What do you mean? We shall say `Ni' again to you, if you do not appease us}
+  \includegraphics[width=1.0\linewidth]{tools_2}
+  \captionof{figure}{gebruikvriendelijkheid per tool op 10}
 \end{center}
 
 Let er wel op dat dit tot problemen met bladschikking kan leiden.
 
 \section{Conclusies}
+De prestaties van Burp Suite, Metasploit en OWASP ZAP varieerden niet veel bij het identificeren van kwetsbaarheden in de 
+drie specifieke webomgevingen. Bij brute force-aanvallen op een WordPress-omgeving beveiligd met de Wordfence-plugin 
+slaagden geen van de tools erin het wachtwoord te kraken vanwege de limiet van inlogpogingen. De gebruiksvriendelijkheid 
+varieerde: Burp Suite scoorde 7/10, Metasploit 6/10, en OWASP ZAP 8/10
 
-Don't underestimate the Force. Oh God, my uncle. How am I ever gonna explain this? I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force.
+In een WordPress-omgeving zonder beveiligingsplugins werden door de tools meerdere kwetsbaarheden blootgelegd. De tools 
+konden het wachtwoord in 90\% van de gevallen binnen 3 minuten kraken, wat de hoge kwetsbaarheid van onbeveiligde 
+WordPress-sites benadrukt. Beveiligingsplugins zoals Wordfence reduceerden het aantal succesvolle brute force-aanvallen 
+drastisch. De Laravel-applicatie toonde robuuste beveiliging, waarbij geen enkele tool het wachtwoord kon kraken.
+
+Beveiligingsplugins verbeterden de detectiecapaciteiten van de tools aanzienlijk. Ze beperkten het aantal inlogpogingen, 
+vergrendelden accounts na overschrijding van de limiet, en stuurden real-time alerts bij verdachte activiteiten. OWASP ZAP 
+en de betaalde versie van Burp Suite detecteerden bekende kwetsbaarheden met hoge efficiëntie.
 
 \section{Toekomstig onderzoek}
 
-I care. So, what do you think of her, Han? No! Alderaan is peaceful. We have no weapons. You can't possibly… I have traced the Rebel spies to her. Now she is my only link to finding their secret base.
+Voor toekomstig onderzoek zijn er verschillende interessante mogelijkheden om de bevindingen van deze studie verder uit te 
+breiden. Een belangrijk aspect dat nog nader onderzocht kan worden, is het gebruik van de Burp Suite Professional Edition. 
+Deze versie biedt uitgebreidere functionaliteiten en diepgaandere analyseopties dan de Community Edition, waardoor een extra 
+vergelijking kan worden gemaakt met andere penetratietesttools zoals Metasploit en OWASP ZAP.
 
-Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. There's no mystical energy field that controls my destiny. It's all a lot of simple tricks and nonsense. You are a part of the Rebel Alliance and a traitor! Take her away! 
-
+Daarnaast kunnen toekomstige studies zich richten op het testen van nieuwe beveiligingsplugins en updates binnen de 
+WordPress- en Laravel-omgevingen. Het is essentieel om te evalueren hoe deze verbeteringen de effectiviteit van bestaande 
+beveiligingsmaatregelen beïnvloeden en of ze nieuwe kwetsbaarheden introduceren.
 \end{multicols}
 \end{document}
