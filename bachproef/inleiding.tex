@@ -5,9 +5,9 @@
 \chapter{\IfLanguageName{dutch}{Inleiding}{Introduction}}%
 \label{ch:inleiding}
 Cyberbeveiliging speelt een cruciale rol binnen de bescherming van gevoelige informatie. Het is dan ook essentieel dat organisaties 
-effectieve beveiligingstools implementeren om hun webomgevingen te beschermen. Penetratietesten, of pentests, zijn een 
-fundamentele methode om de beveiliging van webapplicaties te beoordelen door ze bloot te stellen aan gesimuleerde 
-cyberaanvallen. Dit onderzoek gaat dieper in op de kwetsbaarheden van deze omgevingen. Het doel is om te bepalen welke tools 
+effectieve beveiligingstools implementeren om hun webomgevingen te beschermen. Penetratietesten of pentests, zijn een 
+soorten methoden om de beveiliging van webapplicaties te beoordelen door ze bloot te stellen aan gesimuleerde 
+cyberaanvallen die zich focussen op het onthullen van kwetsbaarheden. Dit onderzoek gaat dieper in op de kwetsbaarheden van deze omgevingen. Het doel is om te bepalen welke tools 
 het meest effectief zijn in specifieke situaties en hoe beveiligingsstrategieën aangepast kunnen worden om optimale 
 bescherming te bieden.
 
@@ -22,43 +22,44 @@ bescherming te bieden.
   \caption[aantal foutieve logins op de wordpress website van 24Flow per dag ]{aantal foutieve logins op de wordpress website van 24Flow per dag }
 \end{figure}
 Kleine tot middelgrote IT-servicebedrijven, zoals Sinergio en 24Flow, worden dagelijks geconfronteerd met de uitdaging om hun 
-webapplicaties effectief te beschermen tegen cyberaanvallen. Deze bedrijven maken vaak gebruik van populaire webontwikkelingsplatformen 
+webapplicaties als maar beter te beschermen tegen cyberaanvallen. Deze bedrijven maken vaak gebruik van populaire webontwikkelingsplatformen 
 zoals WordPress en Laravel, die elk unieke en specifieke beveiligingsrisico's en kwetsbaarheden kennen. De bescherming van deze platformen 
 wordt vaak toevertrouwd aan de implementatie van beveiligingsplugins en -tools, waarvan de effectiviteit varieert.
 
-Deze bachelorproef richt zich op het onderzoek naar de effectiviteit van verschillende penetratietesttools, zoals Burp Suite, Vega, OWASP ZAP... 
-in het identificeren van kwetsbaarheden binnen drie specifieke webomgevingen: een WordPress applicatie zonder beveiligingsplugins,
+Deze bachelorproef focust zich voornamelijk op het onderzoek naar de effectiviteit van verschillende penetratietesttools  
+bij het identificeren van kwetsbaarheden binnen drie specifieke webomgevingen: een WordPress applicatie zonder beveiligingsplugins,
 een WordPress applicatie met beveiligingsplugins en een afgewerkte Laravel applicatie. Het doel van dit onderzoek is tweeledig. 
-Ten eerste, het vaststellen welke de meest effectieve penetratietesttool(s) zijn voor deze specifieke webomgevingen. Ten tweede, 
+Ten eerste, het vaststellen welke penetratietesttool(s) het meest functioneel zijn aan de hand van objectieve criteria binnen het kader van deze webomgevingen. Ten tweede, 
 een analyse maken van de beveiligingsrisico's geassocieerd met elk van deze omgevingen om de vraag te beantwoorden hoe onveilig een 
 WordPress applicatie zonder beveiligingsplugins werkelijk is. Dit wordt vergeleken met een WordPress applicatie met 
 beveiligingsplugins en een Laravel applicatie.
 
 De directe doelgroep voor deze bachelorproef is het bedrijf Sinergio, een kleine IT-serviceprovider die regelmatig 
-werkt met WordPress en Laravel voor het ontwikkelen van webapplicaties voor hun klanten. De resultaten van dit 
-onderzoek biedt Sinergio waardevolle inzichten in de meest effectieve manieren om hun webontwikkelingsprojecten beter 
-te beveiligen. Dit stelt hen bovendien in staat om geïnformeerde beslissingen te nemen over de implementatie van 
-beveiligingsstrategieën en -tools. Sinergio zal zo kunnen achterhalen welke pentesting tool het interessantst is binnen hun specifieke omgevingen.
+werkt met WordPress en Laravel bij het ontwikkelen van webapplicaties voor hun klanten. De resultaten van dit 
+onderzoek biedt Sinergio waardevolle inzichten in de meest doeltreffende manieren om hun webontwikkelingsprojecten beter 
+te beveiligen en geeft hun een idee van hoe belangerijk het is om beveiligingsplugins te integreren binnen wordpress-applicaties. 
+Dit stelt hen bovendien in staat om geïnformeerde beslissingen te nemen over het gebruik van 
+beveiligingsstrategieën en -tools. Sinergio zal zo kunnen achterhalen welke pentesting tool het interessantst is 
+binnen hun specifieke omgevingen en zal hierdoor in de toekomst dit aspect niet meer moeten onderzoeken.
 Bovendien draagt dit onderzoek bij aan een bredere kennisbasis over webapplicatiebeveiliging, 
 wat van belang kan zijn voor andere kleine tot middelgrote IT-bedrijven die vergelijkbare technologieën gebruiken.
 
 \section{\IfLanguageName{dutch}{Onderzoeksvraag}{Research question}}%
 \label{sec:onderzoeksvraag}
 \begin{enumerate}
-  \item Hoe variëren de prestaties van verschillende penetratietesttools bij het identificeren van kwetsbaarheden binnen de drie specifieke webomgevingen. 
+  \item Welke penetratietesttool(s) zijn volgens de vooraf bepaalde criteria het meest effectief/efficiënt in het identificeren van kwetsbaarheden in de drie specifieke webomgevingen?
   \item Welke specifieke kwetsbaarheden detecteren de penetratietesttools in een WordPress-omgeving zonder beveiligingsplugins en hoe verschilt dit van de omgevingen met beveiligingsplugins en de Laravel-applicatie? 
-  \item In hoeverre verbeteren beveiligingsplugins de detectiecapaciteiten van deze tools op een WordPress-site? 
 \end{enumerate}
-Deze onderzoeksvragen vormen een duidelijke basis om de effectiviteit en gebruiksvriendelijkheid van 
-verschillende penetratietesttools in diverse webomgevingen te evalueren. Door de prestaties van de 
-tools te beoordelen op zowel hun vermogen om brute force attacks te weerstaan als hun gebruiksgemak, 
+Deze onderzoeksvragen vormen een duidelijke basis om de werking van de verschillende penetratietesttools te kunnen evalueren 
+en om de webomgevingen op een gestrucureerde menier naast elkaar te kunnen vergelijken. Door de prestaties van de 
+tools te beoordelen op vlak van efficientie, functionaliteit, kosten en ondersteuning van de community te weerstaan als hun gebruiksgemak, 
 kan dit onderzoek waardevolle inzichten bieden
 
 \section{\IfLanguageName{dutch}{Onderzoeksdoelstelling}{Research objective}}%
 \label{sec:onderzoeksdoelstelling}
 De doelstelling van deze paper is het uitvoeren van een vergelijkende studie. Deze studie evalueert de effectiviteit van 
 verschillende penetratietesttools bij het identificeren van kwetsbaarheden in de drie specifieke webomgevingen.
-Het beoogde resultaat is een verslag met gedetailleerde aanbevelingen over de meest effectieve tools voor elke geteste 
+Het beoogde resultaat is een verslag met gedetailleerde aanbevelingen over de meest gebruikelijke tools voor elke geteste 
 omgeving. Het succes wordt gemeten aan de hand van de volledigheid van de verzamelde data, de analytische diepgang van de bevindingen, 
 en de duidelijkheid van de vergelijkende analyse tussen de tools en omgevingen. Dit verslag zal interessante inzichten bieden die 
 bijdragen aan betere beveiligingsstrategieën en -implementaties in webontwikkelingsprojecten.

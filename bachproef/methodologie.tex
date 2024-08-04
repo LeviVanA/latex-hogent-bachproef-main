@@ -32,61 +32,126 @@ WordPress en Laravel. Deze fase was van cruciaal
 belang om een stevige basis te leggen voor mijn onderzoek en om de context en achtergrond van het onderwerp volledig te 
 begrijpen.
 
-Om dit te bereiken, heb ik verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
+Om dit te bereiken, zijn er verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
 en rapporten van bekende instellingen en experts op het gebied van cybersecurity. 
-Ik heb zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
-Google Scholar, om relevante literatuur te op nemen in mijn studie. Deze literatuur heb ik grondig geanalyseerd en 
-samengevat, waarbij ik de nadruk heb gelegd op recente ontwikkelingen, trends en mogelijke tekortkomingen in de bestaande markt.
+Ook werden er zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
+Google Scholar, om relevante literatuur te op nemen in de studie. Deze literatuur is grondig geanalyseerd en 
+samengevat, waarbij de nadruk werd gelegd op recente ontwikkelingen, trends en mogelijke tekortkomingen in de bestaande markt.
 Ook werd in dit deel het globale aspect van cybersecutiy onder de loep genomen waardoor er een zeer duidelijk begrip 
 is van de noden en hoe hierop een antwoord wordt gegeven.
 
 \section{\IfLanguageName{dutch}{Requirements Analyse}{Requirements analysis}}
 De requirements analyse vormt een cruciaal luik en beschrijft de methoden en technieken die worden toegepast 
-voor het uitvoeren van penetratietests. In deze studie worden deze toegepast op drie 
-verschillende webomgevingen met name een WordPress CMS-framework zonder beveiligingsplugins, een WordPress-framework met 
-beveiligingsplugins, en een Laravel-applicatie. Het doel van deze tests is om kwetsbaarheden te identificeren, te 
-analyseren en de effectiviteit van de beveiligingsmaatregelen in de verschillende omgevingen te vergelijken.
-Deze 3 webomgevingen worden geselecteerd op basis van hun populariteit en relevantie voor kleine tot middelgrote bedrijven 
+voor het uitvoeren van penetratietests. In deze studie worden deze toegepast op twee 
+verschillende webomgevingen met name een WordPress CMS-framework en een Laravel-applicatie. Het doel van deze tests is om kwetsbaarheden te identificeren, te 
+analyseren en de effectiviteit van de beveiligingsmaatregelen en aanvalstrategieën in de verschillende omgevingen te vergelijken.
+Deze twee webomgevingen zijn geselecteerd op basis van hun populariteit en relevantie voor kleine tot middelgrote bedrijven 
 zoals webdevelopment firma Sinergio, die de partner en co-promotor is in dit onderzoek.
 
-Voorafgaand aan de uitvoering van de penetratietests wordt toestemming verkregen van de beheerders van deze 
-webomgevingen. Er wordt een identieke testomgeving opgezet om de impact op de live systemen te minimaliseren. 
-Alle tests worden uitgevoerd in overeenstemming met de ethische richtlijnen voor cybersecurity onderzoek, 
-waarbij de integriteit van de geteste systemen voorop staat.
+Voor de start van deze studie worden eerst de nodige keuzes en methodieken uitgelegd en verantwoord. De manier waarop deze keuzes zijn gemaakt, wordt eveneens 
+besproken, zodat dit in een latere fase van het onderzoek kan worden uitgevoerd.
 
-Voor dit onderzoek worden drie verschillende penetratietesttools ingezet, elk geselecteerd vanwege hun 
-specifieke sterktes in het identificeren en exploiteren van bepaalde soorten kwetsbaarheden:
+Dit onderzoek is opgesplits in twee delen waarbij er in de initiële fase gefocust wordt op de keuze van de meest passende pentesting tool 
+aan de hand van vooropgestelde criteria. Hierop gebaseerd worden drie pentestingtools gekozen die op hun beurt worden vergeleken met elkaar 
+zodat er in de tweede fase van het onderzoek op een solide basis kan worden verder gebouwt. In de secundaire fase zal met de vastgelegde 
+tool dertien pentests worden afgenomen op de omgevingen waarbij er binnen de testen op een wordpress applicatie nog onderscheid zal worden gemaakt 
+tussen een applicatie met en zonder beveiligingsplugin. Zo is er de mogelijkheid om concretere conclusies te trekken.
 
+\subsection{\IfLanguageName{dutch}{Keuze van pentesttools}{choice of pentesttools}}
+De keuze van pentesting-tools voor deze studie is gebaseerd op vooraf opgestelde richtlijnen. Voor het onderzoek is het van 
+belang dat er tools worden gebruikt met vergelijkbare functionaliteiten, maar met verschillende factoren om te bepalen welke 
+tool het meest geschikt is binnen een bepaald scenario. Er is daarom gezocht naar pentesting-tools die specifiek gericht zijn 
+op het testen van webapplicaties. Pentesting-tools zoals Nmap of Wireshark zijn tools die zich richten op het testen van netwerken en  
+zijn daarom niet van toepassing. Binnen het kader van deze proef is het belangrijk dat er voldoende onderscheid is tussen de tools 
+die worden vergeleken, zodat in de conclusie duidelijk wordt welke pentest-tool het meest geschikt is en waarom het toepasselijk is in deze context. Er 
+wordt onderscheid gemaakt tussen de tools door één tool te kiezen die niet open-source is, waarbij de gratis versie wordt 
+verkozen. Aangezien de pentesttool kost efficiënt dient te zijn is het de voornaamste optie een open-source tool te gebruiken, daarom 
+is dit een factor waarop vergeleken wordt door de vergelijking op te stellen tussen een gratis versie van een pentesting tool en een open-source tool. 
+Ook wordt één tool waarbij de pentesting-capaciteiten verder gaan dan alleen het testen van webapplicaties, met een 
+uitgebreider scala aan mogelijkheden. Zodat duidelijk wordt of een groter scala aan mogelijkheden de doeltreffendheid van de pentesten aantast.
+
+Na het onderzoek kwamen drie pentesting-tools aan bod die aan deze voorwaarden voldeden:
 \begin{itemize}
-    \item Tool 1 wordt gebruikt voor de eerste webomgeving, een WordPress-applicatie zonder 
-    beveiligingsplugins. Deze tool moet bijzonder geschikt voor het detecteren van webgebaseerde kwetsbaarheden 
-    zoals SQL-injecties en cross-site scripting (XSS), waardoor het een uitstekende keuze is voor 
-    een basis WordPress-installatie.
-    \item Tool 2 wordt ingezet voor de tweede webomgeving, een WordPress-applicatie met beveiligingsplugins. 
-    Deze tool excelleert in het omzeilen van beveiligingsmaatregelen en het uitvoeren van geautomatiseerde 
-    aanvallen, waaronder brute force aanvallen. Dit maakt het bijzonder geschikt voor het grondig 
-    testen van beveiligde WordPress-installaties.
-    \item Tool 3 wordt gekozen voor de derde webomgeving, een Laravel-applicatie. Deze tool staat 
-    bekend om zijn vermogen om specifieke framework-kwetsbaarheden te exploiteren en biedt functionaliteiten 
-    die cruciaal zijn voor het testen van complexe applicaties zoals die gebouwd met Laravel.
+    \item Metasploit, open-source en een uitgebreider scala aan functionaliteiten die niet alleen voor web applicatie testing zijn.
+    \item Burp suite, niet open-source en is alleen gemaakt voor het testen van web applicaties.
+    \item OWASP ZAP, open-source en is alleen gemaakt voor het testen van web applicaties.
 \end{itemize}
 
-Alle resultaten van de tests worden verzameld en gedocumenteerd. De data wordt geanalyseerd 
+
+De keuze tussen de drie pentesttools is eveneens gebaseerd op vooraf vastgestelde globale criteria, waarbij de nadruk ligt op welke tool het meest 
+geschikt is voor het testen van de omgevingen. Deze criteria omvatten:
+\begin{itemize}
+    \item De omvang van het scala aan capaciteiten en functionaliteiten voor het testen van webapplicaties.
+    \item Resourcegebruik met name CPU-, geheugen- en netwerkgebruik.
+    \item Ondersteuning door de community, door de gemiddelde antwoordtijd van reacties van 20 laatste openstaande issues te vergelijken.
+\end{itemize}
+
+Bij de keuze van de pentesting-tool wordt eerst gekeken naar hoe de tool zich objectief verhoudt ten opzichte van een 
+gebruiker. Nadat er een conclusie is getrokken op basis van de opgegeven richtlijnen, wordt deze vergeleken met de ervaringen 
+van anderen door deze conclusie naast die van het internet te leggen. Dit gebeurt aan de hand van beoordelingen en reviews van 
+verschillende gebruikers, waarbij ook de pro's en contra's die de personen vermelden in overweging word genomen. De vergelijking 
+met beoordelingen en reviews van andere experts wordt in overweging genomen, aangezien het niet haalbaar is om een volledig framework 
+zelfstandig te evalueren. Daarom is het van groot belang om ook de conclusies van externe partijen mee te nemen, die mogelijk andere 
+aspecten hebben waargenomen. Op basis van 
+deze laatste vergelijking zal worden geconcludeerd welke pentesting-tool het meest geschikt is voor gebruik in deze context.
+
+\subsection{\IfLanguageName{dutch}{Aanpak van web omgevingen}{Use of web enviroments}}
+Voorafgaand aan de uitvoering van de penetratietests worden er door de partner van deze bachelorproef, Sinergio, drie 
+webapplicaties opgezet waarop de tests later worden uitgevoerd. Vervolgens is de testomgeving ingericht voor de drie 
+webapplicaties om de impact op de live systemen te minimaliseren. Alle tests worden uitgevoerd in overeenstemming met de ethische 
+richtlijnen voor cybersecurityonderzoek, waarbij de integriteit van de geteste systemen vooropstaat. De te testen 
+webapplicaties zijn als volgt:
+
+\begin{itemize}
+    \item Wordpress applicatie met beveiligingsplugins: \url{http://testlevi.abako.be/}
+    \item Wordpress applicatie zonder beveiligingsplugins: \url{http://testlevi.abako.be/}
+    \item Laravel applicatie: \url{http://testlevi.abako.be/}
+\end{itemize}
+
+Binnen het onderzoek wordt voornamelijk gekeken naar welke omgeving het meest robuust is tegen verschillende pentestaanvallen. 
+Het is daarom belangrijk om de juiste kwetsbaarheden te testen, zodat er een correcte en volledige conclusie kan worden 
+getrokken. De geselecteerde kwetsbaarheden zijn gebaseerd op de OWASP Top 10, een lijst van de tien belangrijkste 
+kwetsbaarheden binnen de cybersecuritywereld. Niet alle kwetsbaarheden uit deze lijst kunnen echter worden getest met de 
+gekozen pentesting-tool. Om deze reden is ervoor gekozen om ook onderzoek te doen naar externe aanvallen die momenteel veel 
+aandacht krijgen. Dit heeft geleid tot de volgende uitgevoerde pentests:
+
+\begin{itemize}
+    \item SQL injection aanval
+    \item Brute force aanval
+    \item Broken authentication
+    \item Sensitive data exposure
+    \item Broken access control
+    \item Security misconfiguration
+    \item Cross site scripting
+    \item Insecure deserialization
+    \item Using components with known vulnerabilities
+    \item Insufficient logging \& monitoring 
+    \item client side logica
+\end{itemize}
+
+\begin{tabular}{ | c | c | c | c |}
+    \hline			
+    webapplicatie & gelukte pentests & mislukte pentests & percentage gelukt \\
+    \hline  
+    wordpress zonder plugin & & & \\
+    wordpress met plugin & & & \\
+    laravel &  &  & \\
+\end{tabular}
+Alle resultaten van de tests worden verzameld en gedocumenteerd aan de hand van bovenstaande tabel. De data wordt geanalyseerd 
 om de ernst en de impact van elke gevonden kwetsbaarheid te bepalen. Deze analyse helpt niet alleen bij 
 het identificeren van de zwakke punten binnen elke webomgeving, maar ook bij het vergelijken van de 
-veiligheid tussen de verschillende systemen. Ook wordt er gekeken naar de gebruiksvriendelijkheide en 
-effectiviteit van de testen door een brute force aanval te simuleren op de wordpress applicatie met beveiligingsplugins.
+veiligheid tussen de verschillende systemen.
 
 \section{\IfLanguageName{dutch}{Keuze van Penetratietesttools}{Selection of pentesttools}}
 In het kader van dit onderzoek naar de beveiliging van de drie verschillende webomgevingen is de keuze van 
 de juiste penetratietesttools cruciaal. Voor elk van deze omgevingen is een tool geselecteerd die het 
 best past bij de specifieke kenmerken en beveiligingsuitdagingen. De geselecteerde tools zijn 
 Metasploit, Burp Suite en OWASP ZAP, waarbij hierna wordt toegelicht wat hen bijzonder geschikt maken voor dit onderzoek.
-\begin{figure}
-    \centering
-    \includegraphics[height=0.2\textheight]{laravel_schema.png}
-    \caption[Laravel ORM schema (Eloquent)]{Laravel ORM shema (Eloquent)}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \includegraphics[height=0.2\textheight]{laravel_schema.png}
+%    \caption[Laravel ORM schema (Eloquent)]{Laravel ORM shema (Eloquent)}
+%\end{figure}
 \subsection{\IfLanguageName{dutch}{Metasploit voor de Laravel-applicatie}{Metasploit for the Laravel application}}
 Metasploit is een van de meest uitgebreide security frameworks voor het uitvoeren van penetratietests en 
 staat bekend om zijn robuuste exploit-database en modulaire aanpak zoals ik heb vermeld in het hoofdstuk 
