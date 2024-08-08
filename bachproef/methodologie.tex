@@ -26,18 +26,18 @@
 %% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
 %% en geef het een gepaste titel.
 
-In de initiële fase van dit onderzoek, de literatuurstudie, werd de focus gelegd op het verzamelen van bestaande kennis 
+In de initiële fase van dit onderzoek, de literatuurstudie, wordt de focus gelegd op het verzamelen van bestaande kennis 
 en onderzoek op het gebied van webapplicatiebeveiliging, pentesting-tools en frameworks, met een specifieke nadruk op 
-WordPress en Laravel. Deze fase was van cruciaal 
+WordPress en Laravel. Deze fase is van cruciaal 
 belang om een stevige basis te leggen voor mijn onderzoek en om de context en achtergrond van het onderwerp volledig te 
 begrijpen.
 
-Om dit te bereiken, zijn er verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
+Om dit te bereiken, worden verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
 en rapporten van bekende instellingen en experts op het gebied van cybersecurity. 
-Ook werden er zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
-Google Scholar, om relevante literatuur te op nemen in de studie. Deze literatuur is grondig geanalyseerd en 
+Ook worden zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
+Google Scholar om relevante en onderbouwde literatuur op te nemen in de studie. Deze literatuur is grondig geanalyseerd en 
 samengevat, waarbij de nadruk werd gelegd op recente ontwikkelingen, trends en mogelijke tekortkomingen in de bestaande markt.
-Ook werd in dit deel het globale aspect van cybersecutiy onder de loep genomen waardoor er een zeer duidelijk begrip 
+Ook wordt in dit deel het globale aspect van cybersecutiy onder de loep genomen waardoor er een zeer duidelijk begrip 
 is van de noden en hoe hierop een antwoord wordt gegeven.
 
 \section{\IfLanguageName{dutch}{Requirements Analyse}{Requirements analysis}}
@@ -48,64 +48,63 @@ analyseren en de effectiviteit van de beveiligingsmaatregelen en aanvalstrategie
 Deze twee webomgevingen zijn geselecteerd op basis van hun populariteit en relevantie voor kleine tot middelgrote bedrijven 
 zoals webdevelopment firma Sinergio, die de partner en co-promotor is in dit onderzoek.
 
-Voor de start van deze studie worden eerst de nodige keuzes en methodieken uitgelegd en verantwoord. De manier waarop deze keuzes zijn gemaakt, wordt eveneens 
+Voor de start van deze studie worden eerst de nodige keuzes en methodieken verklaard en verantwoord. De manier waarop deze keuzes zijn gemaakt, wordt eveneens 
 besproken, zodat dit in een latere fase van het onderzoek kan worden uitgevoerd.
 
-Dit onderzoek is opgesplits in twee delen waarbij er in de initiële fase gefocust wordt op de keuze van de meest passende pentesting tool 
+Dit onderzoek is opgesplitst in twee delen waarbij in de initiële fase gefocust wordt op de keuze van de meest passende pentesting tool 
 aan de hand van vooropgestelde criteria. Hierop gebaseerd worden drie pentestingtools gekozen die op hun beurt worden vergeleken met elkaar 
-zodat er in de tweede fase van het onderzoek op een solide basis kan worden verder gebouwt. In de secundaire fase zal met de vastgelegde 
-tool dertien pentests worden afgenomen op de omgevingen waarbij er binnen de testen op een wordpress applicatie nog onderscheid zal worden gemaakt 
-tussen een applicatie met en zonder beveiligingsplugin. Zo is er de mogelijkheid om concretere conclusies te trekken.
+zodat er in de tweede fase van het onderzoek op een solide basis kan worden verder gebouwd. In deze fase zal met de geselecteerde 
+tool dertien pentests worden afgenomen op de omgevingen waarbij er binnen de testen op een wordpress CMS systeem nog onderscheid zal worden gemaakt 
+tussen een versie met en een versie zonder beveiligingsplugin.
 
 \subsection{\IfLanguageName{dutch}{Keuze van pentesttools}{choice of pentesttools}}
-De keuze van pentesting-tools voor deze studie is gebaseerd op vooraf opgestelde richtlijnen. Voor het onderzoek is het van 
-belang dat er tools worden gebruikt met vergelijkbare functionaliteiten, maar met verschillende factoren om te bepalen welke 
-tool het meest geschikt is binnen een bepaald scenario. Er is daarom gezocht naar pentesting-tools die specifiek gericht zijn 
-op het testen van webapplicaties. Pentesting-tools zoals Nmap of Wireshark zijn tools die zich richten op het testen van netwerken en  
-zijn daarom niet van toepassing. Binnen het kader van deze proef is het belangrijk dat er voldoende onderscheid is tussen de tools 
-die worden vergeleken, zodat in de conclusie duidelijk wordt welke pentest-tool het meest geschikt is en waarom het toepasselijk is in deze context. Er 
-wordt onderscheid gemaakt tussen de tools door één tool te kiezen die niet open-source is, waarbij de gratis versie wordt 
+Voor dit onderzoek is het van 
+belang dat tools worden gebruikt met vergelijkbare functionaliteiten, maar met verschillende intrinsieke accenten om te bepalen welke 
+tool het meest geschikt is binnen de hiervoor besproken scenarios. In het kader van deze proef is het belangrijk dat er voldoende onderscheid is tussen de tools 
+die worden vergeleken, zodat in de conclusie duidelijk wordt welke pentest-tool het meest geschikt en toepasselijk is in deze context. 
+Pentesting-tools zoals Nmap of Wireshark zijn vooral gericht op het testen van netwerken en  zijn daarom minder van toepassing. Er 
+gediversifieerd in de selectie van de beschikbare tools door één te selecteren in de open source omgeving en minstens één die niet open-source is, waarbij de gratis versie wordt 
 verkozen. Aangezien de pentesttool kost efficiënt dient te zijn is het de voornaamste optie een open-source tool te gebruiken, daarom 
 is dit een factor waarop vergeleken wordt door de vergelijking op te stellen tussen een gratis versie van een pentesting tool en een open-source tool. 
-Ook wordt één tool waarbij de pentesting-capaciteiten verder gaan dan alleen het testen van webapplicaties, met een 
-uitgebreider scala aan mogelijkheden. Zodat duidelijk wordt of een groter scala aan mogelijkheden de doeltreffendheid van de pentesten aantast.
+Tevens wordt één tool geselecteerd waarbij de pentesting-capaciteiten verder gaan dan alleen het testen van webapplicaties, met een 
+uitgebreider scala aan mogelijkheden zoals het testen van netwerken of mobiele applicaties. Zodat duidelijk wordt dat dit de
+de doeltreffendheid van de pentesten bevordert.
 
-Na het onderzoek kwamen drie pentesting-tools aan bod die aan deze voorwaarden voldeden:
+Op basis van deze criteria worden onderstaande pentest toepassingen weerhouden:
 \begin{itemize}
-    \item Metasploit, open-source en een uitgebreider scala aan functionaliteiten die niet alleen voor web applicatie testing zijn.
-    \item Burp suite, niet open-source en is alleen gemaakt voor het testen van web applicaties.
-    \item OWASP ZAP, open-source en is alleen gemaakt voor het testen van web applicaties.
+    \item Metasploit: open-source software met en een uitgebreider scala aan functionaliteiten die niet enkel voor web applicatie testing dienen.
+    \item Burp suite: geen open-source software die is alleen dient voor het testen van web applicaties.
+    \item OWASP ZAP: open-source software die alleen gebruikt wordt voor het testen van web applicaties.
 \end{itemize}
 
 
-De keuze tussen de drie pentesttools is eveneens gebaseerd op vooraf vastgestelde globale criteria, waarbij de nadruk ligt op welke tool het meest 
-geschikt is voor het testen van de omgevingen. Deze criteria omvatten:
+De daaropvolgende keuze tussen de drie weerhouden pentesttools is gebaseerd op vooraf vastgestelde globale criteria, waarbij de nadruk ligt op welke tool het meest 
+geschikt is voor het testen van de opgezette omgevingen (wordpress CMS en Laravel applicatie). Deze criteria omvatten:
 \begin{itemize}
     \item De omvang van het scala aan capaciteiten en functionaliteiten voor het testen van webapplicaties.
     \item Resourcegebruik met name CPU-, geheugen- en netwerkgebruik.
     \item Ondersteuning door de community, door de gemiddelde antwoordtijd van reacties van 20 laatste openstaande issues te vergelijken.
 \end{itemize}
 
-Bij de keuze van de pentesting-tool wordt eerst gekeken naar hoe de tool zich objectief verhoudt ten opzichte van een 
-gebruiker. Nadat er een conclusie is getrokken op basis van de opgegeven richtlijnen, wordt deze vergeleken met de ervaringen 
-van anderen door deze conclusie naast die van het internet te leggen. Dit gebeurt aan de hand van beoordelingen en reviews van 
-verschillende gebruikers, waarbij ook de pro's en contra's die de personen vermelden in overweging word genomen. De vergelijking 
-met beoordelingen en reviews van andere experts wordt in overweging genomen, aangezien het niet haalbaar is om een volledig framework 
-zelfstandig te evalueren. Daarom is het van groot belang om ook de conclusies van externe partijen mee te nemen, die mogelijk andere 
+Bij de selectie van de te weerhouden pentesting-tool voor dit onderzoek wordt eerst een eigen analyse gemaakt op basis van deze bovenstaande criteria. 
+Nadien wordt een analyse gemaakt van gebruikerservaringen van derden. Dit gebeurt aan de hand van beoordelingen en recenties van 
+verschillende gebruikers, waarbij de pro's en contra's die de reviewers vermelden in overweging word genomen. De vergelijking 
+van derden is belangerijk, aangezien het niet haalbaar is om een volledig framework 
+autonoom te evalueren zonder rekening te houden met de mening van anderen. Daarom is het van groot belang om ook de conclusies van externe partijen mee te nemen, die mogelijk andere 
 aspecten hebben waargenomen. Op basis van 
-deze laatste vergelijking zal worden geconcludeerd welke pentesting-tool het meest geschikt is voor gebruik in deze context.
+deze laatste analyse zal worden geconcludeerd welke pentesting-tool het meest geschikt is voor gebruik in deze context.
 
 \subsection{\IfLanguageName{dutch}{Aanpak van web omgevingen}{Use of web enviroments}}
-Voorafgaand aan de uitvoering van de penetratietests worden er door de partner van deze bachelorproef, Sinergio, drie 
-webapplicaties opgezet waarop de tests later worden uitgevoerd. Vervolgens is de testomgeving ingericht voor de drie 
-webapplicaties om de impact op de live systemen te minimaliseren. Alle tests worden uitgevoerd in overeenstemming met de ethische 
+Voorafgaand aan de uitvoering van de penetratietests worden in samenspraak met de partner van deze bachelorproef, Sinergio, drie 
+webapplicaties opgezet waarop de tests later worden uitgevoerd. Om de business impact minimaal te houden wordt hiertoe een 
+aparte test-server opgezet. Alle tests worden overigens uitgevoerd in overeenstemming met de ethische 
 richtlijnen voor cybersecurityonderzoek, waarbij de integriteit van de geteste systemen vooropstaat. De te testen 
-webapplicaties zijn als volgt:
+webapplicaties zijn de onderstaande en bereikbaar via de link:
 
 \begin{itemize}
     \item Wordpress applicatie met beveiligingsplugins: \url{http://testlevi.abako.be/}
     \item Wordpress applicatie zonder beveiligingsplugins: \url{http://testlevi.abako.be/}
-    \item Laravel applicatie: \url{http://testlevi.abako.be/}
+    \item Laravel applicatie: \url{https://solfo.abako.be/}
 \end{itemize}
 
 Binnen het onderzoek wordt voornamelijk gekeken naar welke omgeving het meest robuust is tegen verschillende pentestaanvallen. 
@@ -144,46 +143,131 @@ veiligheid tussen de verschillende systemen.
 
 \section{\IfLanguageName{dutch}{Keuze van Penetratietesttools}{Selection of pentesttools}}
 In het kader van dit onderzoek naar de beveiliging van de drie verschillende webomgevingen is de keuze van 
-de juiste penetratietesttools cruciaal. Voor elk van deze omgevingen is een tool geselecteerd die het 
-best past bij de specifieke kenmerken en beveiligingsuitdagingen. De geselecteerde tools zijn 
+de juiste penetratietesttools cruciaal. De geselecteerde tools zijn 
 Metasploit, Burp Suite en OWASP ZAP, waarbij hierna wordt toegelicht wat hen bijzonder geschikt maken voor dit onderzoek.
-%\begin{figure}
-%    \centering
-%    \includegraphics[height=0.2\textheight]{laravel_schema.png}
-%    \caption[Laravel ORM schema (Eloquent)]{Laravel ORM shema (Eloquent)}
-%\end{figure}
-\subsection{\IfLanguageName{dutch}{Metasploit voor de Laravel-applicatie}{Metasploit for the Laravel application}}
-Metasploit is een van de meest uitgebreide security frameworks voor het uitvoeren van penetratietests en 
-staat bekend om zijn robuuste exploit-database en modulaire aanpak zoals ik heb vermeld in het hoofdstuk 
-\nameref{sec:Webomgevingen} van de literatuurstudie. De Laravel-applicatie, bekend 
-om zijn rijke set aan functionaliteiten en complexe architectuur, kan profiteren van Metasploit's 
-vermogen om specifieke exploits te gebruiken die zijn afgestemd op gedetecteerde kwetsbaarheden. 
-De tool biedt geautomatiseerde exploitatie technieken die essentieel zijn voor het identificeren 
-van beveiligingsrisico's in een geavanceerd framework zoals Laravel. Bovendien ondersteunt 
-Metasploit de ontwikkeling van aangepaste exploits, wat van grote waarde kan zijn bij 
-het testen van functies binnen de te testen Laravel-applicatie.
+\begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{metasploit_exploit_db.png}
+    \caption[exploitation database van metasploit]{exploitation database van metasploit}
+\end{figure}
+\subsection{\IfLanguageName{dutch}{Metasploit}{Metasploit}}
+Metasploit is een van de meest uitgebreide security frameworks voor het uitvoeren van penetratietests en staat bekend om 
+zijn robuuste exploit-database, waarvan een deel te zien is op de bovenstaande foto en zoals vermeld is in het hoofdstuk \nameref{sec:Webomgevingen} van de 
+literatuurstudie. Het framework biedt het vermogen om specifieke exploits te gebruiken die zijn afgestemd op gedetecteerde 
+kwetsbaarheden. Metasploit biedt bovendien geautomatiseerde exploitatie-technieken, die essentieel zijn voor het identificeren 
+van beveiligingsrisico's in geavanceerde frameworks zoals Laravel. Daarnaast ondersteunt Metasploit de ontwikkeling van 
+aangepaste exploits en biedt het integratie met andere tools zoals Nmap en Wireshark, wat de veelzijdigheid en het 
+gebruiksgemak verder vergroot. Een andere belangrijke functie is de mogelijkheid om uitgebreide rapportages te genereren, 
+wat cruciaal is voor het documenteren van bevindingen en het communiceren van resultaten naar Sinergio en stakeholders. Dankzij de grote 
+community en voortdurende updates blijft Metasploit relevant en actueel, wat het tot een essentieel hulpmiddel maakt in het 
+testen van web applicaties.
 
-\subsection{\IfLanguageName{dutch}{Burp Suite voor de wordpress applicatie met beveiligings plugins}{Burp Suite for the wordpress application with security plugins}}
-Burp Suite is een geïntegreerd platform voor het testen van de beveiliging van webapplicaties en is 
-bijzonder effectief voor het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde web 
-aanvallen. Zoals besproken in het hoofdstuk \nameref{sec:Webomgevingen} binnen de literatuurstudie 
-biedt Burp Suite uitgebreide functionaliteiten die van belang zijn voor een grondige beveiligingsanalyse 
-van webomgevingen. Voor een WordPress-installatie met beveiligingsplugins biedt Burp Suite daarom de noodzakelijke 
-diepgang om de effectiviteit van de plugins te evalueren. Door zijn vermogen om verzoeken te 
-onderscheppen, te manipuleren en opnieuw te versturen, kunnen testers de robuustheid van 
-beveiligingsmaatregelen zoals firewalls en inbraakdetectiesystemen die door plugins worden 
-geïmplementeerd, nauwkeurig beoordelen. Burp Suite's scanner, die vervat zit in de enterprise edition kan automatisch een breed scala 
-aan kwetsbaarheden identificeren, wat tijd bespaart tijdens de testfase en zorgt voor een 
-grondige evaluatie van de beveiligingsstatus.
+\subsection{\IfLanguageName{dutch}{Burp Suite}{Burp Suite}}
+Burp Suite is een platform voor het testen van de beveiliging van webapplicaties en is bijzonder effectief voor 
+het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde webaanvallen. Zoals besproken in het hoofdstuk \nameref{sec:Webomgevingen} 
+van de literatuurstudie, biedt Burp Suite uitgebreide functionaliteiten die essentieel zijn voor een grondige beveiligingsanalyse 
+van webomgevingen. Dankzij zijn vermogen om verzoeken te onderscheppen, te manipuleren en opnieuw te versturen, kunnen 
+testers nauwkeurig de robuustheid beoordelen van beveiligingsmaatregelen zoals firewalls en inbraakdetectiesystemen die via 
+plugins worden geïmplementeerd. 
 
-\subsection{\IfLanguageName{dutch}{OWASP ZAP voor de wordpress applicatie zonder beveiligings plugins}{OWASP ZAP for the wordpress application without security plugins}}
-OWASP ZAP (Zed Attack Proxy) is een open-source tool voor het automatisch detecteren van beveiligingsfouten 
-in webapplicaties tijdens het ontwikkelings- en testproces. Gezien zijn goede reputatie en uitgebreide 
-ondersteuning door de OWASP-community is ZAP bijzonder geschikt voor het testen van een 
-WordPress-site zonder aanvullende beveiligingsmaatregelen. ZAP's geïntegreerde scanner en 
-intercepting proxy maken het eenvoudig om kwetsbaarheden zoals XSS en SQL-injectie aan te 
-tonen, die voorkomen in basisconfiguraties van WordPress. Daarnaast biedt ZAP dynamische 
-analyse van de applicatie in real-time, wat helpt bij het direct identificeren van beveiligingsproblemen.
+De Community Edition van Burp Suite biedt basisfunctionaliteiten, zoals de proxy en repeater, 
+waarmee handmatige testactiviteiten kunnen worden uitgevoerd.Met de Proxy kunnen testers bijvoorbeeld HTTP(S)-verkeer 
+onderscheppen en manipuleren voordat het de server bereikt, wat hen in staat stelt om kwetsbaarheden zoals injection flaws 
+te ontdekken door bijvoorbeeld SQL-commando's in te voegen in velden die normaal gesproken niet kwetsbaar lijken. Testers 
+kunnen ook cookies en headers inspecteren en aanpassen, wat helpt bij het ontdekken van session hijacking of cookie 
+manipulation kwetsbaarheden.
+
+De Repeater stelt testers in staat om specifieke HTTP-verzoeken meerdere keren handmatig te versturen, waarbij elke keer 
+kleine wijzigingen kunnen worden aangebracht. Dit is bijzonder nuttig voor het testen van de robuustheid van 
+input-validatiesystemen en het verfijnen van aanvallen zoals Cross-Site Scripting (XSS) of Brute force attack. Door 
+herhaaldelijk verzoeken met variaties te versturen, kunnen testers de reacties van de server analyseren en mogelijke 
+kwetsbaarheden identificeren.
+
+Hoewel de Community Edition beperkingen heeft ten opzichte van de 
+commerciële edities, is het nog steeds een krachtig hulpmiddel voor basisbeveiligingsanalyses en een waardevolle aanvulling 
+voor beginnende testers. De scanner in de Enterprise Edition van Burp Suite kan automatisch een breed scala aan kwetsbaarheden 
+identificeren, wat tijd bespaart tijdens de testfase en zorgt voor een grondige evaluatie van de beveiligingsstatus.
+
+\subsection{\IfLanguageName{dutch}{OWASP ZAP}{OWASP ZAP}}
+OWASP ZAP (Zed Attack Proxy) is een open-source tool die zich richt op het automatisch detecteren van beveiligingsfouten in 
+webapplicaties tijdens het ontwikkelings- en testproces. Met ZAP's geïntegreerde scanner en intercepting proxy kunnen 
+kwetsbaarheden zoals Cross-Site Scripting (XSS) en SQL-injectie eenvoudig worden opgespoord. ZAP biedt 
+daarnaast dynamische analyse van applicaties in real-time, waardoor beveiligingsproblemen direct kunnen worden geïdentificeerd 
+en aangepakt. De tool is bijzonder nuttig voor zowel ontwikkelaars als beveiligingsexperts, doordat het hen in staat stelt 
+om continue beveiligingstesten uit te voeren tijdens de gehele levenscyclus van een webapplicatie. Dit zorgt ervoor dat 
+OWASP ZAP een zeer aantrekkenlijke keuze is voor het ontwikkel team van Sinergio.
+\begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{ZAP_report.png}
+    \caption[voorbeeld rapportage van vanuit OWASP ZAP]{voorbeeld rapportage van vanuit OWASP ZAP}
+\end{figure}
+ZAP is bovendien sterk uitbreidbaar dankzij zijn robuuste add-on marktplaats, waarmee gebruikers extra functionaliteiten 
+kunnen toevoegen voor specifieke beveiligingstests. Een ander belangrijk aspect is de actieve en ondersteunende community 
+rond OWASP ZAP, die regelmatig updates en nieuwe functies uitbrengt, waardoor de tool up-to-date blijft met de nieuwste 
+beveiligingstrends en bedreigingen. ZAP biedt ook geautomatiseerde rapportagefuncties die gedetailleerde inzichten geven 
+in de gevonden kwetsbaarheden zoals op bovenstaande foto. Dit is essentieel voor het documenteren van testresultaten en het verbeteren van de beveiliging 
+van webapplicaties. 
+
+\section{\IfLanguageName{dutch}{ Verkozen webomgevingen }{ chosen webenviroments }}
+Voor de tests wordt gebruikgemaakt van het WordPress CMS-framework en Laravel. Deze frameworks zijn gekozen vanwege hun 
+populariteit bij KMO's en middelgrote bedrijven zoals Sinergio. Binnen Sinergio wordt WordPress voornamelijk verkozen vanwege 
+zijn grote populariteit, gebruiksvriendelijkheid en het feit dat het open-source is. Het brede scala aan plug-ins en de 
+blijvende ondersteuning vanuit de community hebben Sinergio mede overtuigd om te kiezen voor het WordPress CMS-framework. 
+Laravel daarentegen is door Sinergio gekozen vanwege de eenvoud bij upgrades. Het is bijvoorbeeld mogelijk om websites 
+te upgraden naar een nieuwere versie van Laravel zonder dat er gegevens verloren gaan. De kennis in verband met Laravel was 
+reeds aanwezig binnen Sinergio waardoor de keuze voor dit framework snel gemaakt was.
+
+\subsection{\IfLanguageName{dutch}{Sinergio}{Sinergio}}
+Sinergio is een KMO dat be
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{CWP_server.png}
+    \caption[voorbeeld rapportage van vanuit OWASP ZAP]{voorbeeld rapportage van vanuit OWASP ZAP}
+\end{figure}
+\subsection{\IfLanguageName{dutch}{Server}{Server}}
+De tests worden uitgevoerd op een server die wordt gehost door Sinergio. De server draait op CentOS 7, waarbij bepaalde 
+beveiligingsfunctionaliteiten tijdelijk zijn uitgeschakeld om de tests correct te kunnen uitvoeren. Zo is er op de server 
+geen firewall actief en is ModSecurity ook uitgeschakeld zoals je kan zien op bovenstaande foto. Dit is gedaan om te voorkomen dat het IP-adres van de tester wordt 
+geblokkeerd tijdens het simuleren van een brute force-aanval.
+
+ModSecurity is een open-source webapplicatie firewall (WAF) die bescherming biedt tegen verschillende soorten aanvallen door 
+verdachte HTTP-verzoeken te filteren en blokkeren. Het wordt vaak gebruikt om applicaties te beschermen tegen bedreigingen 
+zoals SQL-injecties, XSS-aanvallen en brute force-aanvallen. Door ModSecurity tijdelijk uit te schakelen, kunnen de testen 
+worden uitgevoerd zonder dat de ingebouwde beveiligingsmaatregelen onbedoeld interfereren met de testresultaten.
+
+Bovenop de CentOs 7 server is er een Control Web Panel (CWP) geïnstalleerd. Dit is een gratis webhosting controlepaneel dat
+een grafische interface biedt voor het beheren van webhosting servers. CWP biedt een breed scala aan functies zoals
+servermonitoring, bestandsbeheer en e-mailbeheer, waardoor het een handige tool is voor het beheren van webhostingomgevingen.
+CentOs word bij Sinergio gebruikt als development server, waarbij de server wordt gebruikt voor het testen van webapplicaties 
+voor ze naar producrie worden overgeplaatst. De andere servers worden ondersteund door Linux 8, waarbij de server wordt 
+gebruikt voor het hosten van productieomgevingen.
+
+\subsection{\IfLanguageName{dutch}{Wordpress}{Wordpress}}
+WordPress is een veelzijdig contentmanagementsysteem (CMS) dat wereldwijd wordt gebruikt door miljoenen websites, variërend van 
+eenvoudige blogs tot uitgebreide e-commerceplatforms. De aantrekkingskracht van WordPress ligt in de gebruiksvriendelijke 
+interface en de enorme flexibiliteit die het biedt. Gebruikers kunnen kiezen uit duizenden thema's en plug-ins om hun site 
+naar wens aan te passen, zonder dat er programmeerkennis nodig is. Bovendien is WordPress open-source, wat betekent dat de 
+gemeenschap voortdurend bijdraagt aan de verbetering en veiligheid van het platform. Dankzij de combinatie van gebruiksgemak, 
+aanpasbaarheid, en de brede ondersteuning door de gemeenschap blijft WordPress de voorkeur genieten van zowel beginnende als 
+ervaren webontwikkelaars.
+
+Een belangrijke aanvulling op WordPress is de Wordfence-plug-in, een populaire beveiligingstool die specifiek is ontworpen 
+voor WordPress-websites. Wordfence biedt uitgebreide bescherming tegen malware, brute force-aanvallen, en andere online 
+bedreigingen die websites kunnen treffen. Met functies zoals firewallregels, malware-scanning, en inlogbeveiliging helpt 
+Wordfence gebruikers om hun sites veilig en betrouwbaar te houden. Door de integratie van deze beveiligingslagen kunnen 
+website-eigenaren zich richten op het creëren van content en het beheren van hun online aanwezigheid, terwijl ze gerust 
+kunnen zijn over de beveiliging van hun website.
+
+\subsection{\IfLanguageName{dutch}{Laravel}{Laravel}}
+Laravel is een krachtig en veelzijdig PHP-framework dat populair is onder ontwikkelaars voor het bouwen van robuuste 
+webapplicaties. Het staat bekend om zijn elegantie en eenvoud, waardoor het zowel beginners als ervaren ontwikkelaars 
+aanspreekt. Laravel biedt een rijke set aan tools en bibliotheken die het ontwikkelen van complexe toepassingen eenvoudiger 
+maken, zoals ingebouwde authenticatie, routing, en een intuïtief templating-systeem. Het framework volgt de MVC-architectuur 
+(Model-View-Controller), wat zorgt voor een gestructureerde en onderhoudbare codebase. Bovendien stimuleert Laravel het 
+gebruik van best practices in webontwikkeling, zoals beveiligde codering en testen, waardoor het een betrouwbare keuze is 
+voor het bouwen van veilige en schaalbare applicaties. Dankzij de uitgebreide documentatie en een actieve gemeenschap, kunnen 
+ontwikkelaars snel aan de slag en blijven ze ondersteund tijdens het ontwikkelproces.
 
 
 \section{\IfLanguageName{dutch}{Proof of Concept: Gebruiksvriendelijkheid en Effectiviteit van Pentesting Tools voor Webapplicaties}{Proof of Concept: Usability and Effectiveness of Pentesting Tools for Web Applications}}
