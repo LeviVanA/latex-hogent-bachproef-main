@@ -61,9 +61,9 @@ tussen een versie met en een versie zonder beveiligingsplugin.
 Voor dit onderzoek is het van 
 belang dat tools worden gebruikt met vergelijkbare functionaliteiten, maar met verschillende intrinsieke accenten om te bepalen welke 
 tool het meest geschikt is binnen de hiervoor besproken scenarios. In het kader van deze proef is het belangrijk dat er voldoende onderscheid is tussen de tools 
-die worden vergeleken, zodat in de conclusie duidelijk wordt welke pentest-tool het meest geschikt en toepasselijk is in deze context. 
-Pentesting-tools zoals Nmap of Wireshark zijn vooral gericht op het testen van netwerken en  zijn daarom minder van toepassing. Er 
-gediversifieerd in de selectie van de beschikbare tools door één te selecteren in de open source omgeving en minstens één die niet open-source is, waarbij de gratis versie wordt 
+die worden vergeleken, zodat in de conclusie duidelijk wordt welke pentesttool het meest geschikt en toepasselijk is in deze context. 
+Pentesting-tools zoals Nmap of Wireshark zijn vooral gericht op het testen van netwerken en  zijn daarom minder van toepassing. Er wordt
+gediversifieerd in de selectie van de beschikbare tools door te selecteren in de open source omgeving en minstens één die niet open-source is, waarbij de gratis versie wordt 
 verkozen. Aangezien de pentesttool kost efficiënt dient te zijn is het de voornaamste optie een open-source tool te gebruiken, daarom 
 is dit een factor waarop vergeleken wordt door de vergelijking op te stellen tussen een gratis versie van een pentesting tool en een open-source tool. 
 Tevens wordt één tool geselecteerd waarbij de pentesting-capaciteiten verder gaan dan alleen het testen van webapplicaties, met een 
@@ -111,7 +111,7 @@ Binnen het onderzoek wordt voornamelijk gekeken naar welke omgeving het meest ro
 Het is daarom belangrijk om de juiste kwetsbaarheden te testen, zodat er een correcte en volledige conclusie kan worden 
 getrokken. De geselecteerde kwetsbaarheden zijn gebaseerd op de OWASP Top 10, een lijst van de tien belangrijkste 
 kwetsbaarheden binnen de cybersecuritywereld. Niet alle kwetsbaarheden uit deze lijst kunnen echter worden getest met de 
-gekozen pentesting-tool. Om deze reden is ervoor gekozen om ook onderzoek te doen naar externe aanvallen die momenteel veel 
+gekozen pentesting-tool. Om deze reden is ervoor gekozen om ook onderzoek uit te voeren naar externe aanvallen die momenteel veel 
 aandacht krijgen. Dit heeft geleid tot de volgende uitgevoerde pentests:
 
 \begin{itemize}
@@ -135,7 +135,9 @@ aandacht krijgen. Dit heeft geleid tot de volgende uitgevoerde pentests:
     wordpress zonder plugin & & & \\
     wordpress met plugin & & & \\
     laravel &  &  & \\
+    \hline
 \end{tabular}
+
 Alle resultaten van de tests worden verzameld en gedocumenteerd aan de hand van bovenstaande tabel. De data wordt geanalyseerd 
 om de ernst en de impact van elke gevonden kwetsbaarheid te bepalen. Deze analyse helpt niet alleen bij 
 het identificeren van de zwakke punten binnen elke webomgeving, maar ook bij het vergelijken van de 
@@ -149,10 +151,11 @@ Metasploit, Burp Suite en OWASP ZAP, waarbij hierna wordt toegelicht wat hen bij
     \centering
     \includegraphics[height=0.3\textheight]{metasploit_exploit_db.png}
     \caption[exploitation database van metasploit]{exploitation database van metasploit}
+    \label{fig:exploitatie_db}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{Metasploit}{Metasploit}}
 Metasploit is een van de meest uitgebreide security frameworks voor het uitvoeren van penetratietests en staat bekend om 
-zijn robuuste exploit-database, waarvan een deel te zien is op de bovenstaande foto en zoals vermeld is in het hoofdstuk \nameref{sec:Webomgevingen} van de 
+zijn robuuste exploit-database, waarvan een deel te zien is op de bovenstaande foto \ref{fig:exploitatie_db} en zoals vermeld is in het hoofdstuk \nameref{sec:Pentesting tools} van de 
 literatuurstudie. Het framework biedt het vermogen om specifieke exploits te gebruiken die zijn afgestemd op gedetecteerde 
 kwetsbaarheden. Metasploit biedt bovendien geautomatiseerde exploitatie-technieken, die essentieel zijn voor het identificeren 
 van beveiligingsrisico's in geavanceerde frameworks zoals Laravel. Daarnaast ondersteunt Metasploit de ontwikkeling van 
@@ -164,14 +167,14 @@ testen van web applicaties.
 
 \subsection{\IfLanguageName{dutch}{Burp Suite}{Burp Suite}}
 Burp Suite is een platform voor het testen van de beveiliging van webapplicaties en is bijzonder effectief voor 
-het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde webaanvallen. Zoals besproken in het hoofdstuk \nameref{sec:Webomgevingen} 
+het analyseren van HTTP-verkeer en het uitvoeren van geavanceerde webaanvallen. Zoals besproken in het hoofdstuk \nameref{sec:Pentesting tools} 
 van de literatuurstudie, biedt Burp Suite uitgebreide functionaliteiten die essentieel zijn voor een grondige beveiligingsanalyse 
 van webomgevingen. Dankzij zijn vermogen om verzoeken te onderscheppen, te manipuleren en opnieuw te versturen, kunnen 
 testers nauwkeurig de robuustheid beoordelen van beveiligingsmaatregelen zoals firewalls en inbraakdetectiesystemen die via 
 plugins worden geïmplementeerd. 
 
 De Community Edition van Burp Suite biedt basisfunctionaliteiten, zoals de proxy en repeater, 
-waarmee handmatige testactiviteiten kunnen worden uitgevoerd.Met de Proxy kunnen testers bijvoorbeeld HTTP(S)-verkeer 
+waarmee handmatige testactiviteiten kunnen worden uitgevoerd. Met de Proxy kunnen testers bijvoorbeeld HTTP(S)-verkeer 
 onderscheppen en manipuleren voordat het de server bereikt, wat hen in staat stelt om kwetsbaarheden zoals injection flaws 
 te ontdekken door bijvoorbeeld SQL-commando's in te voegen in velden die normaal gesproken niet kwetsbaar lijken. Testers 
 kunnen ook cookies en headers inspecteren en aanpassen, wat helpt bij het ontdekken van session hijacking of cookie 
@@ -200,22 +203,24 @@ OWASP ZAP een zeer aantrekkenlijke keuze is voor het ontwikkel team van Sinergio
     \centering
     \includegraphics[height=0.3\textheight]{ZAP_report.png}
     \caption[voorbeeld rapportage van vanuit OWASP ZAP]{voorbeeld rapportage van vanuit OWASP ZAP}
+    \label{fig:zap_report}
 \end{figure}
 ZAP is bovendien sterk uitbreidbaar dankzij zijn robuuste add-on marktplaats, waarmee gebruikers extra functionaliteiten 
 kunnen toevoegen voor specifieke beveiligingstests. Een ander belangrijk aspect is de actieve en ondersteunende community 
 rond OWASP ZAP, die regelmatig updates en nieuwe functies uitbrengt, waardoor de tool up-to-date blijft met de nieuwste 
 beveiligingstrends en bedreigingen. ZAP biedt ook geautomatiseerde rapportagefuncties die gedetailleerde inzichten geven 
-in de gevonden kwetsbaarheden zoals op bovenstaande foto. Dit is essentieel voor het documenteren van testresultaten en het verbeteren van de beveiliging 
+in de gevonden kwetsbaarheden zoals op bovenstaande foto \ref{fig:zap_report}. Dit is essentieel voor het documenteren van testresultaten en het verbeteren van de beveiliging 
 van webapplicaties. 
 
 \section{\IfLanguageName{dutch}{ Verkozen webomgevingen }{ chosen webenviroments }}
 Voor de tests wordt gebruikgemaakt van het WordPress CMS-framework en Laravel. Deze frameworks zijn gekozen vanwege hun 
 populariteit bij KMO's en middelgrote bedrijven zoals Sinergio. Binnen Sinergio wordt WordPress voornamelijk verkozen vanwege 
-zijn grote populariteit, gebruiksvriendelijkheid en het feit dat het open-source is. Het brede scala aan plug-ins en de 
-blijvende ondersteuning vanuit de community hebben Sinergio mede overtuigd om te kiezen voor het WordPress CMS-framework. 
+zijn grote populariteit, gebruiksvriendelijkheid en het feit dat het open-source is. Het brede scala aan plugins en de 
+blijvende ondersteuning vanuit de community hebben Sinergio mede overtuigd om te kiezen voor WordPress. 
 Laravel daarentegen is door Sinergio gekozen vanwege de eenvoud bij upgrades. Het is bijvoorbeeld mogelijk om websites 
 te upgraden naar een nieuwere versie van Laravel zonder dat er gegevens verloren gaan. De kennis in verband met Laravel was 
-reeds aanwezig binnen Sinergio waardoor de keuze voor dit framework snel gemaakt was.
+reeds aanwezig binnen Sinergio waardoor de keuze voor dit framework snel gemaakt was. Ook de ingebouwde beveiligingsmaatregelen 
+van Laravel, zoals de Eloquent ORM (hier word later op terug gekomen), hebben bijgedragen aan de keuze voor dit framework.
 
 \subsection{\IfLanguageName{dutch}{Sinergio}{Sinergio}}
 Sinergio is een KMO dat be
@@ -223,13 +228,14 @@ Sinergio is een KMO dat be
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{CWP_server.png}
-    \caption[voorbeeld rapportage van vanuit OWASP ZAP]{voorbeeld rapportage van vanuit OWASP ZAP}
+    \caption[CWP van CentOs development server]{CWP van CentOs development server}
+    \label{fig:centos_server}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{Server}{Server}}
 De tests worden uitgevoerd op een server die wordt gehost door Sinergio. De server draait op CentOS 7, waarbij bepaalde 
 beveiligingsfunctionaliteiten tijdelijk zijn uitgeschakeld om de tests correct te kunnen uitvoeren. Zo is er op de server 
-geen firewall actief en is ModSecurity ook uitgeschakeld zoals je kan zien op bovenstaande foto. Dit is gedaan om te voorkomen dat het IP-adres van de tester wordt 
-geblokkeerd tijdens het simuleren van een brute force-aanval.
+geen firewall actief en is ModSecurity ook uitgeschakeld zoals je kan zien op deze foto \ref{fig:centos_server}. Dit is gedaan om te voorkomen dat het IP-adres van de tester wordt 
+geblokkeerd tijdens het simuleren van een brute force-aanval bijvoorbeeld.
 
 ModSecurity is een open-source webapplicatie firewall (WAF) die bescherming biedt tegen verschillende soorten aanvallen door 
 verdachte HTTP-verzoeken te filteren en blokkeren. Het wordt vaak gebruikt om applicaties te beschermen tegen bedreigingen 
@@ -239,35 +245,49 @@ worden uitgevoerd zonder dat de ingebouwde beveiligingsmaatregelen onbedoeld int
 Bovenop de CentOs 7 server is er een Control Web Panel (CWP) geïnstalleerd. Dit is een gratis webhosting controlepaneel dat
 een grafische interface biedt voor het beheren van webhosting servers. CWP biedt een breed scala aan functies zoals
 servermonitoring, bestandsbeheer en e-mailbeheer, waardoor het een handige tool is voor het beheren van webhostingomgevingen.
-CentOs word bij Sinergio gebruikt als development server, waarbij de server wordt gebruikt voor het testen van webapplicaties 
-voor ze naar producrie worden overgeplaatst. De andere servers worden ondersteund door Linux 8, waarbij de server wordt 
+CentOs wordt bij Sinergio gebruikt als development server, waarbij de server wordt gebruikt voor het testen van webapplicaties 
+voor ze naar productie worden overgeplaatst. De andere servers worden ondersteund door Linux 8, waarbij de server wordt 
 gebruikt voor het hosten van productieomgevingen.
 
 \subsection{\IfLanguageName{dutch}{Wordpress}{Wordpress}}
 WordPress is een veelzijdig contentmanagementsysteem (CMS) dat wereldwijd wordt gebruikt door miljoenen websites, variërend van 
 eenvoudige blogs tot uitgebreide e-commerceplatforms. De aantrekkingskracht van WordPress ligt in de gebruiksvriendelijke 
-interface en de enorme flexibiliteit die het biedt. Gebruikers kunnen kiezen uit duizenden thema's en plug-ins om hun site 
+interface en de enorme flexibiliteit die het biedt. Gebruikers kunnen kiezen uit duizenden thema's en plugins om hun site 
 naar wens aan te passen, zonder dat er programmeerkennis nodig is. Bovendien is WordPress open-source, wat betekent dat de 
 gemeenschap voortdurend bijdraagt aan de verbetering en veiligheid van het platform. Dankzij de combinatie van gebruiksgemak, 
-aanpasbaarheid, en de brede ondersteuning door de gemeenschap blijft WordPress de voorkeur genieten van zowel beginnende als 
+aanpasbaarheid en de brede ondersteuning door de gemeenschap blijft WordPress de voorkeur genieten van zowel beginnende als 
 ervaren webontwikkelaars.
 
-Een belangrijke aanvulling op WordPress is de Wordfence-plug-in, een populaire beveiligingstool die specifiek is ontworpen 
-voor WordPress-websites. Wordfence biedt uitgebreide bescherming tegen malware, brute force-aanvallen, en andere online 
-bedreigingen die websites kunnen treffen. Met functies zoals firewallregels, malware-scanning, en inlogbeveiliging helpt 
+Een belangrijke aanvulling op WordPress is de Wordfence-plugin, een populaire beveiligingstool die specifiek is ontworpen 
+voor WordPress-websites. Wordfence biedt uitgebreide bescherming tegen malware, brute force-aanvallen en andere online 
+bedreigingen die websites kunnen treffen. Met functies zoals firewallregels, malware-scanning en inlogbeveiliging helpt 
 Wordfence gebruikers om hun sites veilig en betrouwbaar te houden. Door de integratie van deze beveiligingslagen kunnen 
 website-eigenaren zich richten op het creëren van content en het beheren van hun online aanwezigheid, terwijl ze gerust 
 kunnen zijn over de beveiliging van hun website.
 
 \subsection{\IfLanguageName{dutch}{Laravel}{Laravel}}
 Laravel is een krachtig en veelzijdig PHP-framework dat populair is onder ontwikkelaars voor het bouwen van robuuste 
-webapplicaties. Het staat bekend om zijn elegantie en eenvoud, waardoor het zowel beginners als ervaren ontwikkelaars 
+webapplicaties. Het staat bekend om zijn elegantie en eenvoud, zoals beschreven wordt in \nameref{sec:Webomgevingen} 
+uit de literatuurstudie, waardoor het zowel beginners als ervaren ontwikkelaars 
 aanspreekt. Laravel biedt een rijke set aan tools en bibliotheken die het ontwikkelen van complexe toepassingen eenvoudiger 
-maken, zoals ingebouwde authenticatie, routing, en een intuïtief templating-systeem. Het framework volgt de MVC-architectuur 
+maken, zoals ingebouwde authenticatie, routing en een intuïtief templating-systeem. Het framework volgt de MVC-architectuur 
 (Model-View-Controller), wat zorgt voor een gestructureerde en onderhoudbare codebase. Bovendien stimuleert Laravel het 
 gebruik van best practices in webontwikkeling, zoals beveiligde codering en testen, waardoor het een betrouwbare keuze is 
 voor het bouwen van veilige en schaalbare applicaties. Dankzij de uitgebreide documentatie en een actieve gemeenschap, kunnen 
 ontwikkelaars snel aan de slag en blijven ze ondersteund tijdens het ontwikkelproces.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{laravel_schema.png}
+    \caption[Laravel schema]{Laravel schema}
+    \label{fig:laravel_schema}
+\end{figure}
+
+Ook het ORM (Object Relational Mapping) systeem van Laravel is een belangrijke troef. Dit systeem maakt het mogelijk om 
+om het systeem te beschermen van SQL-injectie via de Eloquent ORM. Dit gebeurt door middel van PDO (PHP Database Objects) binding, waarbij de
+gebruiker geen directe SQL queries kan uitvoeren, doordat Eloquent de SQL commando's eerst opslaagt en de onveilige opslaagt 
+als tekst. Dit is een belangrijke beveiligingsmaatregel die Laravel biedt om de veiligheid van de applicatie te garanderen.
+Het schema van Laravel is te zien op deze foto \ref{fig:laravel_schema}.
 
 
 \section{\IfLanguageName{dutch}{Proof of Concept: Gebruiksvriendelijkheid en Effectiviteit van Pentesting Tools voor Webapplicaties}{Proof of Concept: Usability and Effectiveness of Pentesting Tools for Web Applications}}
