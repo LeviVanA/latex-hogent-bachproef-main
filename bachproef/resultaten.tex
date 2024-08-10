@@ -6,13 +6,116 @@
 \label{ch:resultaten}
 
 \section{\IfLanguageName{dutch}{Selectie van pentesting-tool}{Selection of pentesting-tool}}
+Na het analyseren van de benodigdheden en het opstellen van een plan van aanpak kunnen de resultaten worden aangekaart. Er is 
+reeds besloten welke pentesting-tools met elkaar vergeleken worden. Zo is er gekozen voor Burp Suite, Metasploit en 
+OWASP ZAP op basis van vooraf opgestelde criteria. Deze pentesting-tools worden eerst vergeleken aan de hand van richtlijnen 
+die voor elke gebruiker belangrijk zijn bij het kiezen van een pentesting-tool.
+
+Nadat deze resultaten zijn onderzocht, zal er worden overgegaan naar de tweede fase. Hierbij worden de resultaten vergeleken 
+met bevindingen van derden, waarna een uitgebreide vergelijking wordt gemaakt. Deze resultaten zullen worden gebruikt om de 
+pentesting-tool te identificeren die het beste past binnen het kader van deze proef.
+
 \subsection{\IfLanguageName{dutch}{Resultaat volgens eigen criteria}{Result with own criteria}}
+De drie geselecteerde pentesting-tools worden met elkaar vergeleken op het gebied van capaciteiten en functionaliteiten die 
+ze aanbieden. Hierbij worden de tools grondig geëvalueerd, en worden de functionaliteiten van elk afzonderlijk getest. Het 
+resourcegebruik wordt vergeleken op basis van CPU- en geheugengebruik. Ten slotte wordt ook de ondersteuning door de 
+community beoordeeld, waarbij de gemiddelde responstijd op gemelde issues als maatstaf dient.
+
+\subsubsection{\IfLanguageName{dutch}{Scala aan capaciteiten en functionaliteiten}{Scala aan capaciteiten en functionaliteiten}}
+Burp Suite biedt het grootste aantal pentesting mogelijkheden wanneer men beschikt over de Professional Edition. Deze 
+versie bevat geavanceerde functies zoals actieve scanning en geautomatiseerde aanvallen, die niet beschikbaar zijn in de 
+gratis Community Edition. De Community Edition biedt echter wel essentiële tools zoals spidering waarmee alle endpoints 
+en functies binnen een dynamische webapplicatiegedetecteerd kunnen worden, maar zonder ondersteuning 
+voor AJAX (Asynchronous JavaScript and XML) spidering. Met AJAX spidering heb je de mogelijkheid om de content van de pagina 
+te laten zonder de pagina volledig te vernieuwen. De proxyfunctionaliteit van Burp Suite stelt gebruikers in staat om webverkeer te onderscheppen en te 
+analyseren. Dit is vooral handig bij het identificeren van kwetsbaarheden in dynamische webapplicaties. Gebruikers kunnen de 
+host die ze willen spideren selecteren via de Target-tab en met een eenvoudige rechtermuisklik kiezen voor "Spider this host."
+
+OWASP ZAP (Zed Attack Proxy) biedt daarentegen het breedste scala aan functionaliteiten in zijn gratis versie, waardoor het 
+een aantrekkelijke keuze is voor organisaties die niet beschikken over een budget voor een commerciële tool. ZAP ondersteunt zowel 
+passieve als actieve scanning, waarbij passieve scanners kwetsbaarheden detecteren door alleen het verkeer te analyseren en 
+actieve scanners proberen potentiële kwetsbaarheden te exploiteren door actief verkeer te genereren. Bovendien biedt ZAP AJAX 
+spidering, waarmee inhoud kan worden geladen zonder dat de hele pagina hoeft te worden vernieuwd, wat cruciaal is voor 
+moderne en dynamische webapplicaties.
+
+Metasploit richt zich voornamelijk op netwerkexploitatie en biedt uitgebreide mogelijkheden voor het uitvoeren van netwerkgerichte 
+aanvallen en exploits. Hoewel het minder functies biedt op het gebied van webapplicatietests, zoals spidering en scanning, 
+heeft Metasploit modules zoals http\_directory, http\_link\_scanner en http\_version die nuttig kunnen zijn voor het verzamelen 
+van informatie over webservers en specifieke directories. Het ontbreken van een ingebouwde proxy en geavanceerde 
+webscanningfunctionaliteiten maakt Metasploit echter minder geschikt voor gedetailleerde webapplicatietests in vergelijking 
+met Burp Suite en OWASP ZAP.
+
+Wanneer we de functionaliteiten van deze tools vergelijken, blijkt dat OWASP ZAP over het algemeen het meest bruikbaar is voor 
+webapplicatietests, tenzij men toegang heeft tot de Burp Suite Professional Edition.
+\subsubsection{\IfLanguageName{dutch}{Resourcegebruik}{Resourcegebruik}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.1\textheight]{Burp_suite_rust.jpg}
+    \caption[Resource gebruik van Burp suite in rust]{Resource gebruik van Burp suite in rust}
+    \label{fig:burp_suite_rust}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.1\textheight]{burp_suite_in_actie.png}
+    \caption[Resource gebruik van Burp suite tijdens het uitvoeren van een actie]{Resource gebruik van Burp suite tijdens het uitvoeren van een actie}
+    \label{fig:burp_suite_actie}
+\end{figure}
+Om het resourcegebruik van de drie pentesting-tools te vergelijken, wordt zowel het verbruik in rust als tijdens het 
+uitvoeren van een actie gemeten. De eerste tool waarvan het resourcegebruik is gemeten is Burp Suite. Hierbij zijn zowel de 
+prestaties in rust als tijdens actieve taken geregistreerd. De resultaten van deze metingen zijn te zien in de afbeeldingen. 
+Dit is in rust \ref{fig:burp_suite_rust} en dit is tijdens het uitvoeren van een actie \ref{fig:burp_suite_actie}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.025\textheight]{Metasploit_rust.png}
+    \caption[Resource gebruik van Metasploit in rust]{Resource gebruik van Metasploit in rust}
+    \label{fig:metasploit_rust}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.02\textheight]{Metasploit_in_actie.png}
+    \caption[Resource gebruik van Metasploit tijdens het uitvoeren van een actie]{Resource gebruik van Metasploit tijdens het uitvoeren van een actie}
+    \label{fig:metasploit_actie}
+\end{figure}
+Voor het vergelijken van het resourcegebruik is ook Metasploit onderworpen aan metingen in zowel rust als tijdens actieve 
+penetratietests. Metasploit wordt uitgevoerd in de terminal, daarom zijn de resource resultaten te zien onder de terminal tab 
+in taakbeheer. Deze metingen geven inzicht in de efficiëntie van Metasploit onder verschillende omstandigheden. De 
+resultaten van het resourcegebruik in rust zijn te vinden in figuur \ref{fig:metasploit_rust}, terwijl het verbruik tijdens 
+actieve testen wordt weergegeven in figuur \ref{fig:metasploit_actie}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.05\textheight]{OWASP_ZAP_rust.png}
+    \caption[Resource gebruik van OWASP ZAP in rust]{Resource gebruik van OWASP ZAP in rust}
+    \label{fig:owasp_rust}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.05\textheight]{OWASP_ZAP_in_actie.png}
+    \caption[Resource gebruik van OWASP ZAP tijdens het uitvoeren van een actie]{Resource gebruik van OWASP ZAP tijdens het uitvoeren van een actie}
+    \label{fig:owasp_actie}
+\end{figure}
+OWASP ZAP is eveneens geanalyseerd op zijn resourcegebruik, zowel in rust als tijdens het uitvoeren van beveiligingstests. 
+Deze metingen helpen bij het bepalen van de belasting die ZAP op het systeem legt onder verschillende operationele scenario's. 
+De resultaten van het resourcegebruik van OWASP ZAP in rust zijn weergegeven in figuur \ref{fig:owasp_rust}, en tijdens het 
+uitvoeren van acties in figuur \ref{fig:owasp_actie}.
+
+\subsubsection{\IfLanguageName{dutch}{Ondersteuning van de community }{Ondersteuning van de community}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.3\textheight]{grafiek_respons_resultaten.jpg}
+    \caption[Grafiek van 19 willekeurige issues bij de pentesttools en de tijd hoe lang het duurt om te repliceren]{Grafiek van 19 willekeurige issues bij de pentesttools en de tijd hoe lang het duurt om te repliceren}
+    \label{fig:respons_grafiek}
+\end{figure}
+
 \subsection{\IfLanguageName{dutch}{Resultaat volgens derden}{Result with third parties}}
 
 \section{\IfLanguageName{dutch}{Resultaten van webomgevingen}{Results of web environments}}
 \subsection{\IfLanguageName{dutch}{Wordpress CMS-framework resultaten}{Wordpress CMS-framework results}}
 \subsection{\IfLanguageName{dutch}{Laravel resultataten}{Laravel results}}
 
+
+\begin{comment}
 \section{\IfLanguageName{dutch}{Brute Force Attack op WordPress Omgevingen met Beveiligingsplugins}{Brute Force Attack on WordPress enviroment with securityplugins}}
 Binnen de context van webbeveiliging zijn brute force aanvallen een veelvoorkomende methode waarbij aanvallers trachten toegang te krijgen tot een systeem 
 door herhaaldelijk logins of wachtwoorden te raden. Dit type aanval kan bijzonder schadelijk zijn voor systemen zoals WordPress, die veel 
@@ -145,3 +248,4 @@ periodieke tests om de beveiliging up-to-date te houden. We gaven aanbevelingen 
 wachtwoordbeleid, het implementeren van multi-factor authenticatie (MFA) voor extra beveiligingslagen, en het gebruik 
 van intrusion detection en prevention systems (IDPS) om ongeautoriseerde toegangspogingen vroegtijdig te detecteren en 
 te stoppen.
+\end{comment}
