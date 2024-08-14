@@ -7,13 +7,13 @@
 
 \section{\IfLanguageName{dutch}{Selectie van pentesting-tool}{Selection of pentesting-tool}}
 Na het analyseren van de benodigdheden en het opstellen van een plan van aanpak kunnen de resultaten worden aangekaart. Er is 
-reeds besloten welke pentesting-tools met elkaar vergeleken worden. Zo is er gekozen voor Burp Suite, Metasploit en 
+hiervoor reeds besloten welke pentesting-tools met elkaar vergeleken worden. Zo is er gekozen voor Burp Suite, Metasploit en 
 OWASP ZAP op basis van vooraf opgestelde criteria. Deze pentesting-tools worden eerst vergeleken aan de hand van richtlijnen 
 die voor elke gebruiker belangrijk zijn bij het kiezen van een pentesting-tool.
 
-Nadat deze resultaten zijn onderzocht, zal er worden overgegaan naar de tweede fase. Hierbij worden de resultaten vergeleken 
-met bevindingen van derden, waarna een uitgebreide vergelijking wordt gemaakt. Deze resultaten zullen worden gebruikt om de 
-pentesting-tool te identificeren die het beste past binnen het kader van deze proef.
+Nadat deze resultaten zijn onderzocht in verband met de keuze van de de pentesttool, zal er worden overgegaan naar een tweede 
+fase, waarbij de resultaten worden vergeleken met bevindingen van derden. Deze uitgebreidere resultaten zullen worden gebruikt 
+om een pentesting-tool te identificeren die het beste past binnen het kader van deze proef.
 
 \subsection{\IfLanguageName{dutch}{Resultaat volgens eigen criteria}{Result with own criteria}}
 De drie geselecteerde pentesting-tools worden met elkaar vergeleken op het gebied van capaciteiten en functionaliteiten die 
@@ -28,7 +28,7 @@ gratis Community Edition. De Community Edition biedt echter wel essentiële tool
 en functies binnen een dynamische webapplicatiegedetecteerd kunnen worden, maar zonder ondersteuning 
 voor AJAX (Asynchronous JavaScript and XML) spidering. Met AJAX spidering heb je de mogelijkheid om de content van de pagina 
 te laten zonder de pagina volledig te vernieuwen. De proxyfunctionaliteit van Burp Suite stelt gebruikers in staat om webverkeer te onderscheppen en te 
-analyseren. Dit is vooral handig bij het identificeren van kwetsbaarheden in dynamische webapplicaties. Gebruikers kunnen de 
+analyseren. Dit is vooral handig bij het identificeren van kwetsbaarheden in dynamische webapplicaties. Gebruikers kunnen bij de 
 host die ze willen spideren selecteren via de Target-tab en met een eenvoudige rechtermuisklik kiezen voor "Spider this host."
 
 OWASP ZAP (Zed Attack Proxy) biedt daarentegen het breedste scala aan functionaliteiten in zijn gratis versie, waardoor het 
@@ -84,7 +84,7 @@ webapplicatietests, tenzij men toegang heeft tot de Burp Suite Professional Edit
     \caption[Resource gebruik van OWASP ZAP tijdens het uitvoeren van een actie]{Resource gebruik van OWASP ZAP tijdens het uitvoeren van een actie}
     \label{fig:owasp_actie}
 \end{figure}
-Om het resourcegebruik van de drie pentesting-tools te vergelijken, wordt zowel het verbruik in rust als tijdens het 
+Om het resourcegebruik van de drie pentesting-tools te vergelijken, wordt zowel het verbruik in rust als het verbruik tijdens het 
 uitvoeren van een actie gemeten. De eerste tool waarvan het resourcegebruik is gemeten is Burp Suite. Hierbij zijn zowel de 
 prestaties in rust als tijdens actieve taken geregistreerd. De resultaten van deze metingen zijn te zien in de afbeeldingen. 
 Dit is in rust \ref{fig:burp_suite_rust} en dit is tijdens het uitvoeren van een actie \ref{fig:burp_suite_actie}. 
@@ -107,9 +107,9 @@ uitvoeren van acties in figuur \ref{fig:owasp_actie}.
     \caption[Grafiek van 19 willekeurige issues bij de pentesttools en de tijd hoe lang het duurt om te repliceren]{Grafiek van 19 willekeurige issues bij de pentesttools en de tijd hoe lang het duurt om te repliceren}
     \label{fig:respons_grafiek}
 \end{figure}
-De ondersteuning van de community is een belangrijke factor bij het kiezen van een pentesting-tool. Om de ondersteuning van
-de community te evalueren, zijn 19 willekeurige issues gemeld bij de drie pentesting-tools. De tijd die nodig is om op deze
-issues te repliceren, is vastgelegd en geanalyseerd. De resultaten van deze analyse zijn te zien in de
+De ondersteuning van de developers of de community is een belangrijke factor bij het kiezen van een pentesting-tool. Om de ondersteuning 
+te evalueren, zijn 19 willekeurige issues gemeld bij de drie pentesting-tools. De tijd die nodig is om deze
+vragen te beantwoorden, is vastgelegd en geanalyseerd. De resultaten van deze analyse zijn te zien in de
 grafiek \ref{fig:respons_grafiek}. Hieruit blijkt dat OWASP ZAP de snelste responstijd heeft, gevolgd door Metasploit en
 Burp Suite. Dit zijn de gemiddelde response tijden van de 19 issues die zijn gemeld bij de drie pentesting-tools.
 \begin{itemize}
@@ -121,23 +121,41 @@ Burp Suite. Dit zijn de gemiddelde response tijden van de 19 issues die zijn gem
 Aangezien OWASP ZAP en Metasploit open-source tools zijn, zijn de issues te vinden op github en is de community actief
 betrokken bij het oplossen van problemen. Burp Suite is een commerciële tool en heeft een eigen support team dat 
 verantwoordelijk is voor het oplossen van problemen. In tegenstelling tot Metasploit en OWASP ZAP worden de issues niet 
-op github gepost, maar op een apart platform genaamd, portswigger. Dit kan de responstijd beïnvloeden, 
-aangezien de issues eerst opgevat moeten worden door het support team.
+op github gepost, maar op een apart platform portswigger. Dit kan de responstijd beïnvloeden, 
+aangezien de issues eerst opgepakt moeten worden door het support team.
+
+\subsubsection{\IfLanguageName{dutch}{Globale resultaten}{Global results}}
+Na het analyseren van de capaciteiten en functionaliteiten, het resourcegebruik en de ondersteuning van de community,
+kunnen de resultaten van de drie pentesting-tools worden samengevat. De vergelijking van de drie tools toont aan dat
+OWASP ZAP de meest uitgebreide functionaliteiten biedt voor het testen van webapplicaties, gevolgd door Burp Suite 
+community edition en Metasploit. 
+
+De resultaten van de resource metingen tonen aan dat Metasploit het minste 
+geheugen en CPU verbruikt in vergelijking met Burp Suite en OWASP ZAP. Het verbruik van OWASP ZAP ligt iets hoger dan 
+Burp Suite, maar is nog steeds acceptabel voor de meeste systemen. 
+
+De responstijd van de community is het snelst bij OWASP ZAP, 
+gevolgd door Metasploit en Burp Suite. Dit toont aan dat OWASP ZAP de meest actieve community heeft die snel reageert op 
+gemelde problemen.
+
+Deze resultaten bieden een overzicht van de prestaties van de drie pentesting-tools en helpen bij het bepalen van de 
+meest geschikte tool voor het uitvoeren van beveiligingstests op webapplicaties. Op basis van deze resultaten kan een 
+definitieve conclusie worden getrokken over welke tool het meest geschikt is voor de tests. Volgens de eigen criteria 
+lijkt OWASP ZAP de beste keuze te zijn voor het uitvoeren van beveiligingstests op webapplicaties, gevolgd door Burp Suite 
+community edition en Metasploit. 
 
 \subsection{\IfLanguageName{dutch}{Resultaat volgens derden}{Result with third parties}}
 Na de vergelijking van de drie pentesting-tools volgens de eigen criteria, worden de resultaten getoetst aan bevindingen van 
-derden. Op basis van de eerdere resultaten blijkt OWASP ZAP de meest geschikte tool te zijn voor het uitvoeren van 
-beveiligingstests op webapplicaties. Deze bevindingen worden vergeleken met externe bronnen om de betrouwbaarheid van deze 
-conclusie te verifiëren.
+derden.
 
-De resultaten van externe gebruikers worden bepaald door drie factoren te analyseren: de voordelen, de nadelen en de algemene 
-beoordeling van de tool. Deze factoren bieden een goed inzicht in de ervaringen van andere gebruikers met de pentesting-tools. 
-Deze bevindingen worden gebruikt om de betrouwbaarheid van de eigen resultaten te bevestigen en om een definitieve conclusie 
-te trekken.
+De resultaten van externe gebruikers worden bepaald door drie factoren te analyseren: voordelen, nadelen en een algemene 
+beoordeling van elke tool. Deze factoren trachten inziecht te bieden in de ervaringen van andere gebruikers met de drie pentesting-tools. 
+De bevindingen van derden worden gebruikt om de betrouwbaarheid van de eigen resultaten al dan niet te bevestigen en een definitieve conclusie 
+te trekken om één tool te weerhouden voor de tests.
 
-De voordelen van Burp Suite zijn onder andere het gebruiksgemak en de gebruiksvriendelijke interface. De nadelen zijn echter 
+De voordelen van Burp Suite betreffen het gebruiksgemak en de gebruiksvriendelijke interface. De nadelen zijn echter 
 de hoge kosten van de Professional Edition, de beperkte functionaliteiten in de Community Edition en de trage prestaties. De 
-algemene beoordeling van Burp Suite komt uit op 4,8/5.
+algemene beoordeling van Burp Suite community edition komt uit op 4,8/5.
 
 OWASP ZAP wordt gewaardeerd om zijn gebruiksvriendelijkheid, uitgebreide automatiseringsmogelijkheden en efficiëntie. Aan de 
 andere kant zijn de nadelen de beperkte documentatie en de gelimiteerde scope van de tool. De algemene beoordeling van OWASP 
@@ -147,8 +165,9 @@ Metasploit staat bekend om zijn efficiëntie en kwalitatieve resultaten. Echter,
 heeft een steile leercurve, wat een uitdaging kan zijn voor minder ervaren gebruikers. De algemene beoordeling van Metasploit 
 is 4,6/5.
 
+\subsection{\IfLanguageName{dutch}{Definitieve pentesttool}{}}
 Na het analyseren van de resultaten van derden en de opgestelde criteria, blijkt dat OWASP ZAP de best passende tool is voor het uitvoeren van 
-beveiligingstests op webapplicaties. De tool biedt een uitgebreide reeks functionaliteiten en is gebruiksvriendelijk, wat 
+beveiligingstests op webapplicaties binnen de context van een KMO webdeveloper zoals Sinergio. De tool biedt een uitgebreide reeks functionaliteiten en is gebruiksvriendelijk, wat 
 het een aantrekkelijke keuze maakt voor organisaties die op zoek zijn naar een kosteneffectieve oplossing voor het uitvoeren 
 van beveiligingstests. Ook de automatiseringsmogelijkheden en efficiëntie van OWASP ZAP dragen bij aan de positieve 
 beoordeling van de tool.

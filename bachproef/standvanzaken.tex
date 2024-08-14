@@ -9,9 +9,9 @@
 \section{\IfLanguageName{dutch}{Doel van het onderzoek}{Goal of the study}}
 
 Het hoofddoel van dit onderzoek is een grondige evaluatie van de effectiviteit van verschillende penetratietesttools in twee typen webomgevingen: 
-een wordPress sites en een op maat gemaakte Laravel applicatie. Deze evaluatie 
-heeft tot doel de sterke en zwakke punten van elke pentest tool te identificeren in hun vermogen om kwetsbaarheden te detecteren en weerstand te bieden 
-tegen cyberdreigingen. Daarnaast wordt ook de invloed van de structuur van de webomgeving op de prestaties van deze tools onderzocht.
+een wordPress sites en een op maat gemaakte Laravel applicatie. Deze evaluatie heeft tot doel de sterke en zwakke punten van 
+elke pentest tool te identificeren in hun vermogen om kwetsbaarheden te detecteren en weerstand te bieden 
+tegen cyberdreigingen.
 Dit onderzoek maakt gebruik van inzichten uit een recente publicatie in MDPI Electronics, die een uitgebreide analyse van cybersecuritydreigingen en 
 de effectiviteit van verschillende verdedigingsmechanismen binnen webapplicaties biedt. Een bijkomend doel is dan ook om de kennis over hoe webapplicaties beter 
 beschermd kunnen worden tegen geavanceerde cyberaanvallen uit te diepen. Dit artikel benadrukt specifiek het belang van voortdurende vernieuwing 
@@ -22,18 +22,18 @@ onderzoek ~\autocite{Altulaihan2023}.
 \label{sec:pentesting}
 Penetration testing (pentesting) vormt een cruciaal onderdeel bij het waarborgen van netwerk-, systeem- en applicatiebeveiliging. 
 Wetenschappelijke studies tonen aan dat het proces van pentesting verschillende methodieken omvat, zoals white box, 
-black box, en grey box, elk met hun eigen aanpak van kwetsbaarheden in een systeem. Het doel van pentesting is om 
+black box en grey box, elk met hun eigen aanpak van kwetsbaarheden in een systeem. Het doel van pentesting is om 
 veiligheidszwakheden te identificeren en te exploiteren\footnote{het proces waarbij een tester actief gebruikmaakt 
 van veiligheidszwakheden of kwetsbaarheden in een systeem om te laten zien hoe een kwaadwillende aanvaller deze kan misbruiken.} 
 om organisaties te helpen begrijpen waar beveiligingskwestbaarheden zich bevinden ~\autocite{Alhamed2023}.
 
-Tijdens de voorbereidingsfase wordt Nmap gebruikt om de netwerkstructuren te verkennen en de actieve hosts en 
+Tijdens de voorbereidingsfase wordt Nmap (een pentesttool) gebruikt om de netwerkstructuren te verkennen en de actieve hosts en 
 services te identificeren. Dit helpt bij het vaststellen van de scope en de doelstellingen van de penetratietest 
 door het aanvalsoppervlak duidelijk te maken. Vervolgens vindt in de uitvoeringsfase de test plaats, waarbij tools en methoden worden 
-toegepast om kwetsbaarheden te identificeren. Nessus wordt ingezet om diepgaande scans uit te voeren en 
-bekende kwetsbaarheden in het netwerk en op systemen te vinden. Metasploit wordt vervolgens gebruikt om deze 
+toegepast om kwetsbaarheden te identificeren. Nessus (een andere soort pentesttool) wordt ingezet om diepgaande scans uit te voeren en 
+bekende kwetsbaarheden in het netwerk en op systemen te vinden. Metasploit (nog andere soort pentesttool) wordt vervolgens gebruikt om deze 
 kwetsbaarheden te exploiteren. Hiermee testen de testers of ze daadwerkelijk toegang kunnen krijgen tot 
-systemen of data, en bepalen ze de impact van mogelijke beveiligingslekken. Ten slotte worden in de analyse-fase de resultaten 
+systemen of data en bepalen ze de impact van mogelijke beveiligingslekken. Ten slotte worden in de analyse-fase de resultaten 
 geanalyseerd en gerapporteerd, inclusief aanbevelingen voor het verbeteren van de beveiliging. De 
 informatie verzameld met Metasploit en Nessus speelt een cruciale rol in het begrijpen van de ernst en de 
 exploitatie van de geïdentificeerde kwetsbaarheden ~\autocite{Sarker2023}.
@@ -99,13 +99,15 @@ In de dynamische wereld van webbeveiliging biedt het Open Web Application Securi
 tegen de voortdurende dreiging van cyberaanvallen. OWASP, een internationale non-profit organisatie, speelt een cruciale rol door het bevorderen van 
 veiligere softwarepraktijken. Ze zijn het meest bekend voor hun publicatie van de OWASP Top 10, een lijst die de tien meest kritieke veiligheidsrisico's 
 voor webapplicaties benadrukt. Deze lijst wordt breed erkend en gerespecteerd in de cybersecurity gemeenschap en dient als een fundamentele leidraad 
-voor ontwikkelaars en beveiligingsexperts wereldwijd. Door de complexiteit van moderne webapplicaties te adresseren en praktische adviezen voor 
-beperkingen en preventie te bieden, helpt OWASP organisaties om hun digitale assets effectiever te beschermen tegen bedreigingen zoals SQL-injectie, 
-Cross-Site Scripting (XSS), en andere gevaarlijke kwetsbaarheden ~\autocite{Priyawati2022}.
+voor ontwikkelaars en beveiligingsexperts wereldwijd. OWASP helpt organisaties bij het effectief beschermen van hun digitale 
+assets door de complexiteit van moderne webapplicaties aan te pakken. Daarnaast biedt het praktische adviezen voor het 
+beperken en voorkomen van bedreigingen zoals SQL-injectie, Cross-Site Scripting (XSS) en andere gevaarlijke kwetsbaarheden 
+~\autocite{Priyawati2022}.
+
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql-injection_schema.png}
-    \caption[Visualisatie van een sql-injection aanval]{Visualistie van een sql-injection aanval}
+    \caption[Visualisatie van een sql-injection aanval]{Visualistie van een sql-injection aanval ~\autocite{Biswas2023}}
 \end{figure}
 \subsubsection{\IfLanguageName{dutch}{SQL-injectie}{SQL-injection}}
 \label{sec:SQL-injectie}
@@ -139,7 +141,7 @@ biedt ~\autocite{Weamie2022}.
 
 Broken Access Control (BAC) is een kwetsbaarheid in webapplicaties die ontstaat wanneer de toegangscontrolesystemen niet effectief de gebruikersactiviteiten beperken. 
 Dit kan leiden tot situaties waarbij gebruikers acties kunnen uitvoeren waarvoor ze geen toestemming hebben. Dit omvat toegang tot gevoelige data, het wijzigen 
-van gegevens zonder de juiste autorisatie, of het uitvoeren van functies die hun rechten overschrijden. De beveiliging tegen BAC vereist een zorgvuldige implementatie 
+van gegevens zonder de juiste autorisatie of het uitvoeren van functies die hun rechten overschrijden. De beveiliging tegen BAC vereist een zorgvuldige implementatie 
 van toegangsbeleid dat zowel authenticatie als autorisatie controles omvat, waarbij moet worden gezorgd dat deze controles consistent en robuust worden toegepast over 
 alle onderdelen van de applicatie \autocite{Anas2024}.
 
@@ -148,7 +150,7 @@ alle onderdelen van de applicatie \autocite{Anas2024}.
 Een brute force-aanval is een techniek waarbij aanvallers systematisch alle mogelijke combinaties van wachtwoorden of sleutels uitproberen om toegang te krijgen tot een 
 systeem of account. Deze aanpak kan effectief zijn bij het kraken van zwakke wachtwoorden, vooral als er geen maatregelen zoals accountvergrendeling na meerdere mislukte 
 pogingen zijn toegepast. Mensen voeren deze aanvallen uit met verschillende motieven, waaronder het stelen van persoonlijke of financiële informatie, het uitvoeren van 
-frauduleuze transacties, of het saboteren van systemen. Dit benadrukt het belang van sterke wachtwoordbeleid en beveiligingsmaatregelen om dergelijke aanvallen te weerstaan
+frauduleuze transacties of het saboteren van systemen. Dit benadrukt het belang van sterke wachtwoordbeleid en beveiligingsmaatregelen om dergelijke aanvallen te weerstaan
 ~\autocite{Djukanovic2020}.
 
 \subsubsection{\IfLanguageName{dutch}{Cross-Site Request Forgery (CSRF)}{Cross-Site Request Forgery (CSRF)}}
@@ -195,10 +197,10 @@ Deze functies maken Laravel een populaire keuze voor ontwikkelaars die streven n
 
 De piek in datalekken in 2016 die je kan terugvinden op figuur \ref{fig:data-breaches} is grotendeels te danken aan enkele grootschalige datalekken, zoals het Yahoo-datalek waarbij 
 drie miljard gebruikersaccounts werden getroffen. De daling in 2018 daarentegen, kan worden verklaard door verbeterde beveiligingsmaatregelen 
-en de invoering van strengere gegevensbeschermingswetten zoals de AVG in Europa ~\autocite{Petrosyan2024}. Deze gebeurtenissen benadrukken het belang van 
-robuuste security mechanismen. Door te investeren in geavanceerde beveiligingstools en gebruik te maken van veilige 
-frameworks zoals Laravel, kunnen organisaties hun weerbaarheid tegen cyberaanvallen aanzienlijk verhogen en de veiligheid van hun 
-gegevens waarborgen ~\autocite{Petrosyan2024}.
+en de invoering van strengere gegevensbeschermingswetten zoals de AVG (algemene verordening gegevensbescherming) in Europa 
+~\autocite{Petrosyan2024}. Deze gebeurtenissen benadrukken het belang van robuuste security mechanismen. Door te investeren 
+in geavanceerde beveiligingstools en gebruik te maken van veilige frameworks zoals Laravel, kunnen organisaties hun 
+weerbaarheid tegen cyberaanvallen aanzienlijk verhogen en de veiligheid van hun gegevens waarborgen ~\autocite{Petrosyan2024}.
 
 Het toevoegen van beveiligingsplugins zoals Wordfence aan WordPress kan de beveiliging aanzienlijk verbeteren, terwijl Laravel van nature een 
 sterke beveiligingslaag biedt. Het kiezen van het juiste platform hangt daarom af van de specifieke behoeften van het project en de nadruk op beveiliging.
@@ -211,7 +213,7 @@ Een van de eerste aspecten waarop moet worden gelet, is of de tool geschikt is v
 zijn specifiek ontworpen voor het testen van websites, terwijl andere meer geschikt zijn voor het evalueren van volledige 
 netwerken. Het is essentieel om een tool te selecteren die aansluit bij de specifieke vereisten van de situatie. Het 
 is dan ook logisch om voor verschillende taken verschillende tools te gebruiken~\autocite{Deepikakongara2023}.
-Zoals aangehaald in het eerste hoofdstuk, is het belangrijk om rekening te houden met de grootte van het netwerk, 
+Zoals aangehaald in het eerste hoofdstuk \nameref{sec:pentesting}, is het belangrijk om rekening te houden met de grootte van het netwerk, 
 het soort infrastructuur en het type kwetsbaarheden dat wordt getest.
 
 Gebruiksgemak in de keuze van de juiste tool is eveneens van belang, vooral wanneer niet alle teamleden experts zijn. Een tool zoals OWASP ZAP, 
