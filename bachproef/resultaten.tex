@@ -237,19 +237,19 @@ beveiligingsmaatregelen die zijn genomen.
 \subsection{\IfLanguageName{dutch}{SQL injectie}{SQL injection}}
 \begin{figure}
     \centering
-    \includegraphics[height=0.3\textheight]{sql_injectie_laravel.png}
+    \includegraphics[height=0.2\textheight]{sql_injectie_laravel.png}
     \caption[SQL injectie aanval op laravel applicatie]{SQL injectie aanval op laravel applicatie}
     \label{fig:injectie_laravel}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[height=0.3\textheight]{sql_injectie_met_plugin.png}
+    \includegraphics[height=0.2\textheight]{sql_injectie_met_plugin.png}
     \caption[SQL injectie aanval op wordpress applicatie met beveiligingsplugins]{SQL injectie aanval op wordpress applicatie met beveiligingsplugins}
     \label{fig:injectie_zonder}
 \end{figure}
 \begin{figure}
     \centering
-    \includegraphics[height=0.3\textheight]{sql_injectie_zonder_plugin.png}
+    \includegraphics[height=0.2\textheight]{sql_injectie_zonder_plugin.png}
     \caption[SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins]{SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins}
     \label{fig:injectie_met}
 \end{figure}
@@ -267,9 +267,144 @@ de wordpress applicatie zonder beveiligingsplugins het meest kwetsbaar is. De wo
 biedt bescherming tegen SQL-injectie aanvallen, wat aantoont dat de beveiligingsplugins effectief zijn in het voorkomen van 
 de meest voorkomende scripts. 
 
+\subsection{\IfLanguageName{dutch}{Security misconfiguratie}{Security misconfiguration}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{fout_pass_laravel.png}
+    \caption[SQL injectie aanval op laravel applicatie]{SQL injectie aanval op laravel applicatie}
+    \label{fig:sec_mis_laravel}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{fout_pass_met.png}
+    \caption[SQL injectie aanval op wordpress applicatie met beveiligingsplugins]{SQL injectie aanval op wordpress applicatie met beveiligingsplugins}
+    \label{fig:sec_mis_met}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{fout_pass_zonder.png}
+    \caption[SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins]{SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins}
+    \label{fig:sec_mis_zonder}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.1\textheight]{verouderde_plugins.png}
+    \caption[SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins]{SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins}
+    \label{fig:verouderde_plugins}
+\end{figure}
+Een andere veelvoorkomende kwetsbaarheid in webapplicaties is security misconfiguratie. Om deze vulnerabilitie te vergelijken 
+bij de webapplicaties werd er gekeken naar welke melding getoond word na het ingeven van een foutief wachtwoord
+en correcte gebruikersnaam. De resultaten hiervan zijn te zien in de afbeeldingen. Zo is te zien dat bij de laravel 
+applicatie een foutmelding wordt getoond die door de developer zelf is ingested \ref{fig:sec_mis_laravel}. Bij de wordpress applicatie zonder 
+beveiligingsplugins wordt er een foutmelding getoond die aangeeft dat het wachtwoord fout is bij de opgegeven gebruikersnaam 
+\ref{fig:sec_mis_met}. Bij de wordpress applicatie met beveiligingsplugins wordt er een foutmelding getoond die aangeeft dat de gebruikersnaam of
+wachtwoord fout is \ref{fig:sec_mis_zonder}.
 
-\subsection{\IfLanguageName{dutch}{Laravel resultataten}{Laravel results}}
-zgheefeever
+Een andere vorm van security misconfiguratie is het gebruik van verouderde plugins. Dit kan leiden tot kwetsbaarheden in 
+de webapplicatie. Om dit te testen werd er gekeken naar de versie van de plugins die gebruikt worden in de wordpress 
+applicatie. De resultaten hiervan zijn te zien in de afbeelding \ref{fig:verouderde_plugins}. Hieruit blijkt dat de wordfence plugin aangeeft welke 
+plugins verouderde versie hebben in tegenstelling tot de wordpress applicatie zonder beveiligingsplugins. Bij de wordpress
+applicatie zonder beveiligingsplugins is het niet duidelijk welke plugins verouderd zijn en kan dit leiden tot kwetsbaarheden 
+in de webapplicatie.
+
+\subsection{\IfLanguageName{dutch}{sensitive data exposure}{sensitive data exposure}}
+Sensitive data exposure is een kwetsbaarheid waarbij gevoelige informatie, zoals wachtwoorden en persoonlijke gegevens, wordt 
+blootgesteld aan ongeautoriseerde gebruikers. Om deze kwetsbaarheid te testen, werd onderzocht hoe wachtwoorden worden 
+opgeslagen in de database van de webapplicaties. Ook werd gekeken naar de manier waarop de informatie via het netwerk wordt 
+verzonden. Dit werd onderzocht door de ingestelde regels op de server te beoordelen, die ervoor zorgen dat websites op 
+accountniveau niet via HTTP kunnen worden bezocht en dat er geen niet-versleutelde gegevens tussen server en applicatie 
+worden verzonden.
+
+De wachtwoorden in dit geval zijn opgeslagen aan de hand van een hash en een salt in de database. Dit betekent dat de 
+wachtwoorden niet in plain text worden opgeslagen en dat de wachtwoorden niet zichtbaar zijn voor ongeautoriseerde gebruikers. 
+De gegevens worden ook versleuteld verzonden via HTTPS, wat betekent dat de gegevens veilig zijn tijdens het transport tussen 
+server en applicatie. Voorbeelden van hoe de wachtwoorden worden opgeslagen en verzonden zijn te zien in de afbeelding 
+......., ook de rules die ingesteld zijn op de server zijn te zien op deze foto ...... .
+
+
+\subsection{\IfLanguageName{dutch}{Cross site scripting (XSS)}{Cross site scripting (XSS)}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{mislukte_XSS.png}
+    \caption[Een mislukte reflected XSS test]{Een mislukte reflected XSS test}
+    \label{fig:mislukte_XSS}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{I_frame_met.png}
+    \caption[Een voorbeeld van een opgezette I-frame]{Een voorbeeld van een opgezette I-frame}
+    \label{fig:i_frame_met}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{headers_htaccess.png}
+    \caption[.htaccess lijnen die te maken hebben met het mogelijkmaken om een I-frame te nemen]{.htaccess lijnen die te maken hebben met het mogelijkmaken om een I-frame te nemen}
+    \label{fig:headers_htaccess}
+\end{figure}
+
+Cross-Site Scripting (XSS) is een kwetsbaarheid waarbij kwaadwillende scripts worden geïnjecteerd in webpagina's die door 
+gebruikers worden bezocht. Om deze kwetsbaarheid te testen, is een XSS-aanval uitgevoerd op de webapplicaties. De resultaten 
+van de aanval werden geverifieerd door te controleren of er een alert-box op de webpagina verscheen. De uitkomst van de 
+XSS-aanval is weergegeven in afbeelding \ref{fig:mislukte_XSS}. Hieruit blijkt dat de XSS-aanval is mislukt en dat de webapplicaties
+bescherming bieden tegen XSS-aanvallen.
+
+Een ander voorbeeld van een XSS-aanval betreft het uit zetten van de X-Frame-Options op de server. Deze optie bepaalt of 
+elementen van jouw website mogen worden ingeladen via een frame. Als deze optie niet is ingesteld, kan de webapplicatie in 
+een iframe op een andere website worden ingeladen, wat kan leiden tot clickjacking en andere vormen van aanvallen. Om dit te 
+testen, is gekeken naar de ingestelde headers op de server. De resultaten hiervan zijn te zien in afbeelding \ref{fig:i_frame_met}. 
+Hieruit blijkt dat de X-Frame-Options niet zijn ingesteld op de server, waardoor de webapplicatie kan worden ingeladen in een 
+iframe op een andere website. Dit kan ertoe leiden dat, wanneer een gebruiker zijn gebruikersnaam en wachtwoord
+invoert, deze informatie wordt gelogd op de server van de aanvaller.
+
+Om dit risico te beperken, zijn er headers ingesteld op de server om te voorkomen dat de webapplicatie in een iframe op een 
+andere website kan worden ingeladen. De ingestelde headers zijn weergegeven in afbeelding \ref{fig:headers_htaccess}. De 
+headers kunnen aangepast worden in de .htaccess file op de server, dit is een configuratie bestand gebruikt door apache 
+gebaseerde web servers.
+
+\subsection{\IfLanguageName{dutch}{Onvoldoende logging en monitoring}{Insufficient logging and monitoring}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{server_logging.png}
+    \caption[de error log van de server tijdens het uitvoern van een actieve scan]{de error log van de server tijdens het uitvoern van een actieve scan}
+    \label{fig:server_logging}
+\end{figure}
+Insufficient logging and monitoring is een kwetsbaarheid waarbij onvoldoende logging en monitoring worden toegepast op de 
+webapplicatie. Om deze kwetsbaarheid te testen, is de error log van de server gecontroleerd tijdens het uitvoeren van een 
+actieve scan op de webapplicaties. De resultaten van de error log zijn te zien in afbeelding \ref{fig:server_logging}. 
+Hieruit blijkt dat de serverlogging actief is en dat er geen tekortkomingen waren tijdens de uitvoering van de actieve scan. 
+Dit betekent dat de webapplicatie over voldoende logging en monitoring beschikt om verdachte activiteiten te detecteren en te 
+rapporteren.
+
+In de error log van de server werd bijvoorbeeld weergegeven dat er op dat moment een AJAX-spider elke mogelijke pagina aan 
+het bezoeken was. In de logs is ook zichtbaar vanaf welk IP-adres de verzoeken afkomstig zijn en welke pagina's de spider 
+probeert te vinden op de betreffende website. Deze informatie wordt gelogd in de error log van de server en kan worden 
+gebruikt om verdachte activiteiten te detecteren en te rapporteren.
+
+\subsection{\IfLanguageName{dutch}{Brute force}{Brute force}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{brute_force_met.png}
+    \caption[Brute force aanval op wordpress applicatie met beveiligingsplugins]{Brute force aanval op wordpress applicatie met beveiligingsplugins}
+    \label{fig:brute_force_met}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{brute_force_zonder.png}
+    \caption[Brute force aanval op wordpress applicatie zonder beveiligingsplugins]{Brute force aanval op wordpress applicatie zonder beveiligingsplugins}
+    \label{fig:brute_force_zonder}
+\end{figure}
+
+Brute force is een kwetsbaarheid waarbij aanvallers proberen toegang te krijgen tot een systeem door herhaaldelijk gebruikersnamen 
+of wachtwoorden te raden. Om deze kwetsbaarheid te testen, is een brute force-aanval uitgevoerd op de webapplicaties. De 
+resultaten van deze aanval zijn weergegeven in afbeelding\ref{fig:brute_force_met} en \ref{fig:brute_force_zonder}. 
+
+Uit de resultaten blijkt duidelijk dat de WordPress-applicatie met beveiligingsplugins bescherming biedt tegen brute 
+force-aanvallen door na vijf mislukte pogingen verdere inlogpogingen te blokkeren. Daarentegen is het bij de 
+WordPress-applicatie zonder beveiligingsplugins mogelijk om onbeperkt inlogpogingen te doen zonder consequenties. Dit toont 
+aan dat de beveiligingsplugins effectief zijn in het voorkomen van brute force-aanvallen.
+
+Ook bij de Laravel-applicatie is het niet mogelijk om een brute force-aanval uit te voeren, aangezien de applicatie na vijf 
+mislukte pogingen de gebruiker eveneens zal blokkeren ..... .
 
 \begin{comment}
 \section{\IfLanguageName{dutch}{Brute Force Attack op WordPress Omgevingen met Beveiligingsplugins}{Brute Force Attack on WordPress enviroment with securityplugins}}
