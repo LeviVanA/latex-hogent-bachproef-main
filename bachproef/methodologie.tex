@@ -26,51 +26,53 @@
 %% Maak voor elke fase (behalve het literatuuronderzoek) een NIEUW HOOFDSTUK aan
 %% en geef het een gepaste titel.
 
-In de initiële fase van dit onderzoek, de literatuurstudie, wordt de focus gelegd op het verzamelen van bestaande kennis 
+In de initiële fase van dit onderzoek, de literatuurstudie, werdt de focus gelegd op het verzamelen van bestaande kennis 
 en onderzoek op het gebied van webapplicatiebeveiliging, pentesting-tools en frameworks, met een specifieke nadruk op 
-WordPress en Laravel. Deze fase is van cruciaal 
-belang om een stevige basis te leggen voor mijn onderzoek en om de context en achtergrond van het onderwerp volledig te 
+WordPress en Laravel. Deze fase was van cruciaal 
+belang om een stevige basis te leggen voor dit onderzoek en om de context en achtergrond van het onderwerp volledig te 
 begrijpen.
 
-Om dit te bereiken, worden verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
+Om dit te bereiken, werden verschillende bronnen geraadpleegd, waaronder wetenschappelijke artikelen, boeken  
 en rapporten van bekende instellingen en experts op het gebied van cybersecurity. 
-Ook worden zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
+Ook werden zoekopdrachten uitgevoerd in diverse academische databases, zoals PubMed, research gate en 
 Google Scholar om relevante en onderbouwde literatuur op te nemen in de studie. Deze literatuur is grondig geanalyseerd en 
 samengevat, waarbij de nadruk werd gelegd op recente ontwikkelingen, trends en mogelijke tekortkomingen in de bestaande markt.
-Ook wordt in dit deel het globale aspect van cybersecutiy onder de loep genomen waardoor er een zeer duidelijk begrip 
-is van de noden en hoe hierop een antwoord wordt gegeven.
+Ook werdt in dit deel het globale aspect van cybersecutiy onder de loep genomen waardoor er een zeer duidelijk begrip 
+is van de noden en hoe hierop een antwoord werdt gegeven.
 
 \section{\IfLanguageName{dutch}{Requirements Analyse}{Requirements analysis}}
-De requirements analyse vormt een cruciaal luik en beschrijft de methoden en technieken die worden toegepast 
-voor het uitvoeren van penetratietests. In deze studie worden deze toegepast op twee 
+De requirements analyse vormt een cruciaal luik en beschrijft de methoden en technieken die werden toegepast 
+voor het uitvoeren van penetratietests. In deze studie werden deze toegepast op twee 
 verschillende webomgevingen met name een WordPress CMS-framework en een Laravel-applicatie. Het doel van deze tests is om kwetsbaarheden te identificeren, te 
 analyseren en de effectiviteit van de beveiligingsmaatregelen en aanvalstrategieën in de verschillende omgevingen te vergelijken.
 Deze twee webomgevingen zijn geselecteerd op basis van hun populariteit en relevantie voor kleine tot middelgrote bedrijven 
 zoals webdevelopment firma Sinergio, die de partner en co-promotor is in dit onderzoek.
 
-Bij de start van deze studie worden eerst de nodige keuzes en methodieken verklaard en verantwoord. De manier waarop deze keuzes zijn gemaakt, wordt eveneens 
+Bij de start van deze studie werden eerst de nodige keuzes en methodieken verklaard en verantwoord. De manier waarop deze keuzes zijn gemaakt, werdt eveneens 
 besproken, zodat dit in een latere fase van het onderzoek kan worden uitgevoerd.
 
-Dit onderzoek is opgesplitst in twee delen waarbij in de initiële fase gefocust wordt op de keuze van de meest passende pentesting tool 
-aan de hand van vooropgestelde criteria. Hierop gebaseerd worden drie pentestingtools gekozen die op hun beurt worden vergeleken met elkaar 
+Dit onderzoek is opgesplitst in twee delen waarbij in de initiële fase gefocust werdt op de keuze van de meest passende pentesting tool 
+aan de hand van vooropgestelde criteria. Hierop gebaseerd werden drie pentestingtools gekozen die op hun beurt werden vergeleken met elkaar 
 zodat er in de tweede fase van het onderzoek op een solide basis kan worden verder gebouwd. In deze fase zal met één geselecteerde 
 tool dertien pentests worden afgenomen op de omgevingen waarbij er binnen de testen op een wordpress CMS systeem nog onderscheid zal worden gemaakt 
 tussen een versie met en een versie zonder beveiligingsplugin.
 
 \subsection{\IfLanguageName{dutch}{Keuze van pentesttools}{choice of pentesttools}}
 Voor dit onderzoek is het van 
-belang dat tools worden gebruikt met vergelijkbare functionaliteiten, maar met verschillende intrinsieke accenten om te bepalen welke 
+belang dat tools werden gebruikt met vergelijkbare functionaliteiten, maar met verschillende intrinsieke accenten om te bepalen welke 
 tool het meest geschikt is binnen de hiervoor besproken scenarios. In het kader van deze proef is het belangrijk dat er voldoende onderscheid is tussen de tools 
-die worden vergeleken, zodat in de conclusie duidelijk wordt welke pentesttool het meest geschikt en toepasselijk is in deze context. 
-Pentesting-tools zoals Nmap of Wireshark zijn bijvoorbeeld vooral gericht op het testen van netwerken en  zijn daarom minder van toepassing. Er wordt
-gediversifieerd door te selecteren in de open source omgeving en de niet open source omgeving, waarbij in dit laatste geval de gratis versie wordt 
-verkozen. Aangezien de pentesttool kost efficiënt dient te zijn het voor de hand liggend om een open-source tool te gebruiken. Precies daarom 
+die werden vergeleken, zodat in de conclusie duidelijk wordt welke pentesttool het meest geschikt en toepasselijk is in deze context. 
+Pentesting-tools zoals Nmap of Wireshark zijn bijvoorbeeld vooral gericht op het testen van netwerken en  zijn daarom minder van toepassing. Er werdt
+gediversifieerd door te selecteren in de open source omgeving en de niet open source omgeving, waarbij in dit laatste geval de gratis versie werdt 
+verkozen. 
+
+Aangezien de pentesttool kost efficiënt dient te zijn het voor de hand liggend om een open-source tool te gebruiken. Precies daarom 
 is dit een factor waarop vergeleken wordt tussen een gratis versie van een pentesting tool en een open-source tool. 
-Tevens wordt één tool geselecteerd waarbij de pentesting-capaciteiten verder gaan dan alleen het testen van webapplicaties, met een 
-uitgebreider scala aan mogelijkheden zoals het testen van netwerken of mobiele applicaties. Op die manier wordt duidelijk dat dit 
+Tevens werdt één tool geselecteerd waarbij de pentesting-capaciteiten verder gaan dan alleen het testen van webapplicaties, met een 
+uitgebreider scala aan mogelijkheden zoals het testen van netwerken of mobiele applicaties. Op die manier werdt duidelijk dat dit 
 de doeltreffendheid van de pentesten bevordert.
 
-Op basis van de bovenstaande criteria worden de volgende pentest toepassingen weerhouden:
+Op basis van de bovenstaande criteria werden de volgende pentest toepassingen weerhouden:
 \begin{itemize}
     \item Metasploit: open-source software met en een uitgebreider scala aan functionaliteiten die niet enkel beperken tot web applicatie testings.
     \item Burp suite: geen open-source software die bovendien alleen ingezet wordt voor het testen van web applicaties.
@@ -86,8 +88,8 @@ geschikt is voor het testen van de opgezette omgevingen (wordpress CMS en Larave
     \item Ondersteuning door de community, door de gemiddelde antwoordtijd van reacties van 20 laatste openstaande issues te vergelijken.
 \end{itemize}
 
-Bij de selectie van de te weerhouden pentesting-tool voor dit onderzoek wordt eerst een eigen analyse gemaakt op basis van deze bovenstaande criteria. 
-Nadien wordt een analyse gemaakt van gebruikerservaringen van derden. Dit gebeurt aan de hand van beoordelingen en recenties van 
+Bij de selectie van de te weerhouden pentesting-tool voor dit onderzoek werdt eerst een eigen analyse gemaakt op basis van deze bovenstaande criteria. 
+Nadien werdt een analyse gemaakt van gebruikerservaringen van derden. Dit gebeurt aan de hand van beoordelingen en recenties van 
 verschillende gebruikers, waarbij de pro's en contra's die de reviewers vermelden in overweging word genomen. 
 
 
@@ -98,23 +100,27 @@ van pentesttools aan de hand van gebruiker-bepaalde pro's en contra's volgens tr
 Deze vergelijking van derden is belangerijk, aangezien het niet haalbaar is om een volledig framework 
 autonoom te evalueren zonder rekening te houden met de mening van anderen. Daarom is het van groot belang om ook de 
 conclusies van externe partijen mee te nemen, die mogelijk andere 
-aspecten hebben waargenomen. Op basis van deze laatste analyse zal worden geconcludeerd welke pentesting-tool het meest 
+aspecten hebben waargenomen. Op basis van deze laatste analyse werdt geconcludeerd welke pentesting-tool het meest 
 geschikt is voor gebruik in deze context.
 
 \subsection{\IfLanguageName{dutch}{Aanpak van web omgevingen}{Use of web enviroments}}
-Voorafgaand aan de uitvoering van de penetratietests worden in samenspraak met de partner van deze bachelorproef, Sinergio, drie 
-webapplicaties opgezet waarop de tests later worden uitgevoerd. Om de business impact minimaal te houden wordt hiertoe een 
-aparte test-server opgezet. Alle tests worden overigens uitgevoerd in overeenstemming met de ethische 
+Voorafgaand aan de uitvoering van de penetratietests werden in samenspraak met de partner van deze bachelorproef, Sinergio, drie 
+webapplicaties opgezet waarop de tests later werden uitgevoerd. Om de business impact minimaal te houden werdt hiertoe een 
+aparte test-server opgezet. Alle tests werden overigens uitgevoerd in overeenstemming met de ethische 
 richtlijnen voor cybersecurityonderzoek, waarbij de integriteit van de geteste systemen vooropstaat. De te testen 
 webapplicaties zijn de onderstaande en bereikbaar via de link:
 
 \begin{itemize}
-    \item Wordpress applicatie met beveiligingsplugins: \url{https://testlevi.abako.be/}
-    \item Wordpress applicatie zonder beveiligingsplugins: \url{https://testlevi2.abako.be/}
+    \item WordPress-applicatie met beveiligingsplugins: Deze applicatie maakt gebruik van WordPress versie 6.5.5 en wordt 
+    beschermd door de Wordfence-plugin. Bijkomende plugins die op de omgeving zijn geïnstalleerd, zijn Elementor, dat wordt 
+    gebruikt als page builder en theme builder voor WordPress, en Forminator, voor het aanmaken van eenvoudige formulieren. 
+    De website is toegankelijk via: \url{https://testlevi.abako.be/}
+    \item WordPress-applicatie zonder beveiligingsplugins: Deze website heeft gelijkaardige instellingen als de bovenstaande, 
+    met als enige verschil het ontbreken van de Wordfence-plugin: \url{https://testlevi2.abako.be/}
     \item Laravel applicatie: \url{https://testlevi3.abako.be/}
 \end{itemize}
 
-Binnen het onderzoek wordt voornamelijk gekeken naar welke omgeving het meest robuust is tegen verschillende pentestaanvallen. 
+Binnen het onderzoek werdt voornamelijk gekeken naar welke omgeving het meest robuust is tegen verschillende pentestaanvallen. 
 Het is daarom belangrijk om de juiste kwetsbaarheden te testen, zodat een correcte en volledige conclusie kan worden 
 getrokken. De geselecteerde kwetsbaarheden zijn gebaseerd op de OWASP Top 10, een lijst van de tien belangrijkste 
 kwetsbaarheden binnen de cybersecuritywereld. Niet alle kwetsbaarheden uit deze lijst kunnen echter worden getest met de 
@@ -145,7 +151,7 @@ aandacht krijgen. Dit heeft geleid tot de volgende uitgevoerde pentests:
     \hline
 \end{tabular}
 
-Alle resultaten van de tests worden verzameld en gedocumenteerd aan de hand van bovenstaande tabel. De data wordt geanalyseerd 
+Alle resultaten van de tests werden verzameld en gedocumenteerd aan de hand van bovenstaande tabel. De data werdt geanalyseerd 
 om de ernst en de impact van elke gevonden kwetsbaarheid te bepalen. Deze analyse helpt niet alleen bij 
 het identificeren van de zwakke punten binnen elke webomgeving, maar ook bij het vergelijken van de 
 veiligheid tussen de verschillende systemen.
@@ -240,7 +246,10 @@ reeds aanwezig binnen Sinergio waardoor de keuze voor dit framework snel gemaakt
 van Laravel, zoals de Eloquent ORM (hier word later op terug gekomen), hebben bijgedragen aan de keuze voor dit framework.
 
 \subsection{\IfLanguageName{dutch}{Sinergio}{Sinergio}}
-Sinergio is een KMO dat be
+Sinergio is een bedrijf met een passie voor het ontwerpen van websites of webshops en blinkt 
+uit in het maken van krachtige cloud-applicaties. Met een team van 6 medewerkers is Sinergio een kleine KMO op de markt 
+die zich voornamelijk richt op het ontwikkelen van webapplicaties en websites voor KMO's en middelgrote bedrijven. De focus 
+van Sinergio ligt op het ontwikkelen van kwalitatieve maatwerkoplossingen die aansluiten bij de behoeften van hun klanten.
 
 \begin{figure}
     \centering
@@ -253,8 +262,7 @@ De tests worden uitgevoerd op een server die wordt gehost door Sinergio. De serv
 beveiligingsfunctionaliteiten tijdelijk zijn uitgeschakeld om de tests correct te kunnen uitvoeren op de applicaties. Zo is er op de server 
 geen firewall actief en is ModSecurity ook uitgeschakeld zoals je kan zien op deze foto \ref{fig:centos_server}. Dit is 
 zo ingesteld om te voorkomen dat het IP-adres van de tester zou worden geblokkeerd tijdens het simuleren van een brute 
-force-aanval.
-
+force-aanval.\break
 ModSecurity is een open-source webapplicatie firewall (WAF) die bescherming biedt tegen verschillende soorten aanvallen door 
 verdachte HTTP-verzoeken te filteren en blokkeren. Het wordt vaak gebruikt om applicaties te beschermen tegen bedreigingen 
 zoals SQL-injecties, XSS-aanvallen en brute force-aanvallen. Door ModSecurity tijdelijk uit te schakelen, kunnen de testen 
