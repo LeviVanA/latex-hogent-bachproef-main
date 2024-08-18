@@ -79,7 +79,6 @@ Op basis van de bovenstaande criteria werden de volgende pentest toepassingen we
     \item OWASP ZAP: open-source software die eveneens enkel gebruikt wordt voor het testen van web applicaties.
 \end{itemize}
 
-
 De daaropvolgende keuze tussen de drie weerhouden pentesttools is gebaseerd op vooraf vastgestelde globale criteria, waarbij de nadruk ligt op welke tool het meest 
 geschikt is voor het testen van de opgezette omgevingen (wordpress CMS en Laravel applicatie). Deze criteria omvatten:
 \begin{itemize}
@@ -90,8 +89,7 @@ geschikt is voor het testen van de opgezette omgevingen (wordpress CMS en Larave
 
 Bij de selectie van de te weerhouden pentesting-tool voor dit onderzoek werdt eerst een eigen analyse gemaakt op basis van deze bovenstaande criteria. 
 Nadien werdt een analyse gemaakt van gebruikerservaringen van derden. Dit gebeurt aan de hand van beoordelingen en recenties van 
-verschillende gebruikers, waarbij de pro's en contra's die de reviewers vermelden in overweging word genomen. 
-
+verschillende gebruikers, waarbij de pro's en contra's die de reviewers vermelden in overweging werd genomen. 
 
 Op g2.com en peerspot.com bestaat de 
 mogelijkheid om reviews van deze tools naast elkaar te leggen. Dit zijn twee betrouwbare platformen voor het beoordelen 
@@ -104,7 +102,7 @@ aspecten hebben waargenomen. Op basis van deze laatste analyse werdt geconcludee
 geschikt is voor gebruik in deze context.
 
 \subsection{\IfLanguageName{dutch}{Aanpak van web omgevingen}{Use of web enviroments}}
-Voorafgaand aan de uitvoering van de penetratietests werden in samenspraak met de partner van deze bachelorproef, Sinergio, drie 
+Voorafgaand aan de uitvoering van de penetratietests werdt in samenspraak met de partner van deze bachelorproef, Sinergio, drie 
 webapplicaties opgezet waarop de tests later werden uitgevoerd. Om de business impact minimaal te houden werdt hiertoe een 
 aparte test-server opgezet. Alle tests werden overigens uitgevoerd in overeenstemming met de ethische 
 richtlijnen voor cybersecurityonderzoek, waarbij de integriteit van de geteste systemen vooropstaat. De te testen 
@@ -117,41 +115,26 @@ webapplicaties zijn de onderstaande en bereikbaar via de link:
     De website is toegankelijk via: \url{https://testlevi.abako.be/}
     \item WordPress-applicatie zonder beveiligingsplugins: Deze website heeft gelijkaardige instellingen als de bovenstaande, 
     met als enige verschil het ontbreken van de Wordfence-plugin: \url{https://testlevi2.abako.be/}
-    \item Laravel applicatie: \url{https://testlevi3.abako.be/}
+    \item Laravel applicatie: De web omgeving maakt gebruik van Laravel versie 10.10 \url{https://testlevi3.abako.be/}
 \end{itemize}
 
 Binnen het onderzoek werdt voornamelijk gekeken naar welke omgeving het meest robuust is tegen verschillende pentestaanvallen. 
 Het is daarom belangrijk om de juiste kwetsbaarheden te testen, zodat een correcte en volledige conclusie kan worden 
 getrokken. De geselecteerde kwetsbaarheden zijn gebaseerd op de OWASP Top 10, een lijst van de tien belangrijkste 
 kwetsbaarheden binnen de cybersecuritywereld. Niet alle kwetsbaarheden uit deze lijst kunnen echter worden getest met de 
-gekozen pentesting-tool. Om deze reden is ervoor gekozen om ook onderzoek uit te voeren naar externe aanvallen die momenteel veel 
-aandacht krijgen. Dit heeft geleid tot de volgende uitgevoerde pentests:
+gekozen pentesting-tool. Dit heeft geleid tot de volgende uitgevoerde pentests:
 
 \begin{itemize}
     \item SQL injection aanval
     \item Brute force aanval
-    \item Broken authentication
     \item Sensitive data exposure
-    \item Broken access control
     \item Security misconfiguration
     \item Cross site scripting
     \item Insecure deserialization
-    \item Using components with known vulnerabilities
     \item Insufficient logging \& monitoring 
-    \item client side logica
 \end{itemize}
 
-\begin{tabular}{ | c | c | c | c |}
-    \hline			
-    webapplicatie & gelukte pentests & mislukte pentests & percentage gelukt \\
-    \hline  
-    wordpress zonder plugin & & & \\
-    wordpress met plugin & & & \\
-    laravel &  &  & \\
-    \hline
-\end{tabular}
-
-Alle resultaten van de tests werden verzameld en gedocumenteerd aan de hand van bovenstaande tabel. De data werdt geanalyseerd 
+Alle resultaten van de tests werden verzameld en gedocumenteerd. De data werdt geanalyseerd 
 om de ernst en de impact van elke gevonden kwetsbaarheid te bepalen. Deze analyse helpt niet alleen bij 
 het identificeren van de zwakke punten binnen elke webomgeving, maar ook bij het vergelijken van de 
 veiligheid tussen de verschillende systemen.
