@@ -399,6 +399,12 @@ gebruikt om verdachte activiteiten te detecteren.
 \subsection{\IfLanguageName{dutch}{Brute force}{Brute force}}
 \begin{figure}
     \centering
+    \includegraphics[height=0.2\textheight]{brute_force_laravel.png}
+    \caption[Brute force aanval op laravel applicatie]{Brute force aanval op laravel applicatie}
+    \label{fig:brute_force_laravel}
+\end{figure}
+\begin{figure}
+    \centering
     \includegraphics[height=0.2\textheight]{brute_force_met.png}
     \caption[Brute force aanval op wordpress applicatie met beveiligingsplugins]{Brute force aanval op wordpress applicatie met beveiligingsplugins}
     \label{fig:brute_force_met}
@@ -419,5 +425,5 @@ force-aanvallen door na vijf mislukte pogingen verdere inlogpogingen te blokkere
 WordPress-applicatie zonder beveiligingsplugins mogelijk om onbeperkt inlogpogingen te doen zonder consequenties. Dit toont 
 aan dat de beveiligingsplugins effectief zijn in het voorkomen van brute force-aanvallen.
 
-Ook bij de Laravel-applicatie is het niet mogelijk om een brute force-aanval uit te voeren, aangezien de applicatie na vijf 
-mislukte pogingen de gebruiker eveneens zal blokkeren zoals te zien is op de foto ..... .
+Ook bij de Laravel-applicatie is het niet mogelijk om een brute force-aanval uit te voeren, aangezien de applicatie na vier 
+mislukte pogingen de gebruiker eveneens zal blokkeren zoals te zien is op de foto \ref{fig:brute_force_laravel}.
