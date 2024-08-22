@@ -161,7 +161,7 @@ selecteren.
 
 \subsubsection{\IfLanguageName{dutch}{G2}{G2}}
 De voordelen van Burp Suite betreffen het gebruiksgemak en de gebruiksvriendelijke interface. De nadelen zijn echter 
-de hoge kosten van de Professional Edition, de beperkte functionaliteiten in de Community Edition en de trage prestaties. De 
+de hoge kosten van de Professional Edition, de beperkte functionaliteiten in de Community Edition en de tragere prestaties. De 
 algemene beoordeling van Burp Suite community edition komt uit op 4,8/5.
 
 OWASP ZAP wordt gewaardeerd om zijn gebruiksvriendelijkheid, uitgebreide automatiseringsmogelijkheden en efficiëntie. 
@@ -175,9 +175,9 @@ is 4,6/5.
 
 \subsubsection{\IfLanguageName{dutch}{Peerspot}{Peerspot}}
 De resultaten van Peerspot tonen aan dat Burp Suite wordt gewaardeerd om zijn gebruiksvriendelijkheid en extensies die zeer 
-nuttig zijn voor het uitvoeren van beveiligingstests. De tool wordt echter ook als duur ervaren en heeft het vermogen om foutieve 
+nuttig zijn voor het uitvoeren van beveiligingstests. De tool wordt echter ook hier als duur ervaren en heeft het vermogen om foutieve 
 positieven te genereren bij het scannen van grote applicaties. Met foutieve positieve wordt bedoeld dat de uitslag van een 
-test/experiment die ten onrechte positief is. De algemene beoordeling van Burp Suite is 4,3/5.
+test/experiment ten onrechte positief wordt geëvalueerd. De algemene beoordeling van Burp Suite is 4,3/5.
 
 OWASP ZAP wordt geprezen om zijn uitgebreide functionaliteiten en gebruiksgemak. Het biedt de mogelijkheid om kwetsbaarheden 
 te detecteren die andere tools mogelijk missen en beschikt over een breed scala aan automatiseringsopties, zoals automatische, 
@@ -192,76 +192,77 @@ aanzienlijk aantal verouderde exploits. De algemene beoordeling van Metasploit i
 
 \subsection{\IfLanguageName{dutch}{Definitieve pentesttool}{}}
 \label{sec:Definitieve_pentesttool}
-Na het analyseren van de resultaten van derden en de opgestelde criteria, blijkt dat OWASP ZAP de best passende tool is voor het uitvoeren van 
-beveiligingstests op webapplicaties binnen de context van een KMO webdeveloper zoals Sinergio. De tool biedt een uitgebreide reeks functionaliteiten en is gebruiksvriendelijk, wat 
+Op basis van de combinatie van de evaluatie van derden en de eigen opgestelde criteria, werd OWASP ZAP weerhouden als de best passende tool voor het uitvoeren van 
+beveiligingstests op webapplicaties in de context van deze proef voor webdeveloper Sinergio. De tool biedt een uitgebreide reeks functionaliteiten en is gebruiksvriendelijk, wat 
 het een aantrekkelijke keuze maakt voor organisaties die op zoek zijn naar een kosteneffectieve oplossing voor het uitvoeren 
-van beveiligingstests. Ook de automatiseringsmogelijkheden en efficiëntie van OWASP ZAP dragen bij aan de positieve 
+van de nodige beveiligingstests. Ook de automatiseringsmogelijkheden en efficiëntie van OWASP ZAP dragen bij aan de positieve 
 beoordeling van de tool.
 
-\section{\IfLanguageName{dutch}{Resultaten van webomgevingen}{Results of web environments}}
+\section{\IfLanguageName{dutch}{Resultaten van webomgevingen via OWASP ZAP}{Results of web environments via OWASP ZAP}}
 \subsection{\IfLanguageName{dutch}{Algemene waarschuwingen na scan}{Algemene waarschuwingen na scan}}
 
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_laravel.png}
-    \caption[Alle waarschuwingen die gedetecteert zijn na een actieve scan en ajax spider in owasp zap bij de laravel applicatie]
-    {Alle waarschuwingen die gedetecteert zijn na een actieve scan en ajax spider in owasp zap bij de laravel applicatie}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de laravel applicatie]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de laravel applicatie}
     \label{fig:waarschuwingen_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_zonder_plugin.png}
-    \caption[Alle waarschuwingen die gedetecteert zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie zonder beveiligingsplugins]
-    {Alle waarschuwingen die gedetecteert zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie zonder beveiligingsplugins}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie zonder beveiligingsplugins]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie zonder beveiligingsplugins}
     \label{fig:waarschuwingen_zonder}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_met_plugin.png}
-    \caption[Alle waarschuwingen die gedetecteert zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie met beveiligingsplugins]
-    {Alle waarschuwingen die gedetecteert zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie met beveiligingsplugins}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie met beveiligingsplugins]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie met beveiligingsplugins}
     \label{fig:waarschuwingen_met}
 \end{figure}
 
-Voor de resultaten van de webomgevingen onderzocht werden, werden de waarschuwingen die gedetecteerd zijn na een actieve scan en AJAX spider in OWASP ZAP 
-geanalyseerd. De waarschuwingen geven inzicht in de kwetsbaarheden van de webapplicaties en helpen bij het identificeren van 
-mogelijke beveiligingsrisico's. De resultaten van de waarschuwingen zijn te zien op de afbeeldingen. Zo is te zien dat er bij de 
-laravel applicatie 17 waarschuwingen zijn gedetecteerd \ref{fig:waarschuwingen_laravel}. Bij de wordpress applicatie zonder 
-beveiligingsplugins zijn er 15 waarschuwingen gedetecteerd \ref{fig:waarschuwingen_zonder}. Bij de wordpress 
-applicatie met beveiligingsplugins zijn er 18 waarschuwingen gedetecteerd \ref{fig:waarschuwingen_met}.
+Voor de resultaten van de webomgevingen dieper onderzocht werden, werden de waarschuwingen die gedetecteerd zijn na een actieve scan en AJAX spider in OWASP ZAP 
+geanalyseerd. Deze waarschuwingen geven een eerste inzicht in de kwetsbaarheden van de webapplicaties en helpen bij het identificeren van 
+mogelijke beveiligingsrisico's. De resultaten van de waarschuwingen zijn te zien op de afbeeldingen. Zo is op te merken dat er bij de 
+laravel applicatie 17 waarschuwingen zijn gedetecteerd op figuur \ref{fig:waarschuwingen_laravel}. Bij de wordpress applicatie zonder 
+beveiligingsplugins zijn er 15 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_zonder}. Bij de wordpress 
+applicatie met beveiligingsplugins zijn er 18 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_met}.
 
-Deze uitkomst geeft een beeld van alle mogelijke kwestbaarheden binnen de webapplicaties, maar geeft geen inzicht in de 
+Deze lijst geeft een beeld van alle mogelijke kwetsbaarheden binnen de webapplicaties, maar geeft onvoldoende inzicht in de 
 ernst van de kwetsbaarheden. Om de ernst van de kwetsbaarheden te bepalen, werden de waarschuwingen verder geanalyseerd. 
-Deze waarschuwingen verschillen van applicatie tot applicatie aan de hand van de gebruikte technologieën en de 
+Deze verschillen van applicatie tot applicatie aan de hand van de gebruikte technologieën en de 
 beveiligingsmaatregelen die zijn genomen.
 
-\subsection{\IfLanguageName{dutch}{SQL injectie}{SQL injection}}
+\subsection{\IfLanguageName{dutch}{SQL-injectie}{SQL-injection}}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_laravel.png}
-    \caption[SQL injectie aanval op laravel applicatie]{SQL injectie aanval op laravel applicatie}
+    \caption[SQL-injectie aanval op laravel applicatie]{SQL-injectie aanval op laravel applicatie}
     \label{fig:injectie_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_met_plugin.png}
-    \caption[SQL injectie aanval op wordpress applicatie met beveiligingsplugins]{SQL injectie aanval op wordpress applicatie met beveiligingsplugins}
+    \caption[SQL-injectie aanval op wordpress applicatie met beveiligingsplugins]{SQL-injectie aanval op wordpress applicatie met beveiligingsplugins}
     \label{fig:injectie_zonder}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_zonder_plugin.png}
-    \caption[SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins]{SQL injectie aanval op wordpress applicatie zonder beveiligingsplugins}
+    \caption[SQL-injectie aanval op wordpress applicatie zonder beveiligingsplugins]{SQL-injectie aanval op wordpress applicatie zonder beveiligingsplugins}
     \label{fig:injectie_met}
 \end{figure}
 
 
 Een van de meest voorkomende kwetsbaarheden in webapplicaties, op basis van de OWASP top 10, is SQL-injectie. Om de 
 kwetsbaarheid van de webapplicaties 
-te testen, werd een SQL-injectie aanval uitgevoerd op de laravel applicatie \ref{fig:injectie_laravel} en de 
-wordpress applicatie met en zonder beveiligingsplugins \ref{fig:injectie_zonder}, \ref{fig:injectie_met}. 
+te testen, werd een SQL-injectie aanval uitgevoerd op de laravel applicatie (zie figuur \ref{fig:injectie_laravel}) en de 
+wordpress applicatie met en zonder beveiligingsplugins (figuur \ref{fig:injectie_zonder}, figuur \ref{fig:injectie_met}). 
 
-Wanneer een SQL-script als kwetsbaar wordt beschouwd, zal dit worden weergegeven in het outputvenster met gereflecteerd ernaast. 
+Wanneer een SQL-script als kwetsbaar wordt beschouwd, zal dit worden weergegeven in het outputvenster met gereflecteerd ernaast 
+zoals te zien is op bovenstaande foto's. 
 Dit betekent niet dat de SQL-injectie succesvol is uitgevoerd, maar dat er een mogelijkheid bestaat om een SQL-injectie te laten 
 slagen. 
 
@@ -274,19 +275,19 @@ voorkomen van de meeste scripts.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{fout_pass_laravel.png}
-    \caption[foutief password met correcte gebruikersnaam melding bij laravel]{foutief password met correcte gebruikersnaam melding bij laravel}
+    \caption[Foutief password met correcte gebruikersnaam melding bij laravel]{Foutief password met correcte gebruikersnaam melding bij laravel}
     \label{fig:sec_mis_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{fout_pass_met.png}
-    \caption[foutief password met correcte gebruikersnaam melding met wordfence]{foutief password met correcte gebruikersnaam melding met wordfence}
+    \caption[Foutief password met correcte gebruikersnaam melding met wordfence]{Foutief password met correcte gebruikersnaam melding met wordfence}
     \label{fig:sec_mis_met}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{fout_pass_zonder.png}
-    \caption[foutief password met correcte gebruikersnaam melding zonder wordefence]{foutief password met correcte gebruikersnaam melding zonder wordfence}
+    \caption[Foutief password met correcte gebruikersnaam melding zonder wordefence]{Foutief password met correcte gebruikersnaam melding zonder wordfence}
     \label{fig:sec_mis_zonder}
 \end{figure}
 \begin{figure}
@@ -301,13 +302,13 @@ voorkomen van de meeste scripts.
     \caption[Versie gebruik van de laravel applicatie]{Versie gebruik van de laravel applicatie}
     \label{fig:versie_laravel}
 \end{figure}
-Een andere veelvoorkomende kwetsbaarheid in webapplicaties is security misconfiguratie. Om deze vulnerabilitie te vergelijken 
-bij de webapplicaties werdt er gekeken naar welke melding weergegeven word na het ingeven van een foutief wachtwoord
+Een andere veelvoorkomende kwetsbaarheid in webapplicaties is security misconfiguratie. Om deze vulnerability te vergelijken 
+bij de webapplicaties werd er gekeken naar welke melding weergegeven wordt na het ingeven van een foutief wachtwoord
 en correcte gebruikersnaam. De resultaten hiervan zijn te zien in de afbeeldingen. Zo is te zien dat bij de laravel 
-applicatie een foutmelding wordt getoond die door de developer zelf is ingested \ref{fig:sec_mis_laravel}. Bij de wordpress 
+applicatie een foutmelding wordt getoond die door de developer zelf is ingesteld (figuur \ref{fig:sec_mis_laravel}). Bij de wordpress 
 applicatie zonder beveiligingsplugins wordt er een foutmelding getoond die aangeeft dat het wachtwoord fout is in combinatie 
-met de opgegeven gebruikersnaam \ref{fig:sec_mis_zonder}. Bij de wordpress applicatie met beveiligingsplugins wordt er een 
-foutmelding getoond die aangeeft dat de gebruikersnaam of wachtwoord fout is \ref{fig:sec_mis_met}.
+met de opgegeven gebruikersnaam (figuur \ref{fig:sec_mis_zonder}). Bij de wordpress applicatie met beveiligingsplugins wordt er een 
+foutmelding getoond die aangeeft dat de gebruikersnaam of wachtwoord fout is (figuur \ref{fig:sec_mis_met}).
 
 Een andere vorm van security misconfiguratie is het gebruik van verouderde plugins. Dit kan leiden tot kwetsbaarheden in 
 de webapplicatie. Om dit te testen werd er gekeken naar de versie van de plugins die gebruikt worden in de wordpress 
@@ -316,14 +317,14 @@ plugin aangeeft welke plugins verouderde versie hebben in tegenstelling tot de w
 Bij de wordpress applicatie zonder beveiligingsplugins is het niet duidelijk welke plugins verouderd zijn en kan dit leiden 
 tot kwetsbaarheden in de webapplicatie.
 
-Hetzelde geldt voor de laravel applicatie, voor de eigenaar van de website is het gewoonlijk niet duidelijk welke versie van 
-het laravel framework gebruikt wordt. De versie van laravel wordt gebruikelijk geüpdate door de developer, maar het is 
+Hetzelfde geldt voor de laravel applicatie. Voor de eigenaar van de website is het gewoonlijk niet duidelijk welke versie van 
+het laravel framework gebruikt wordt. De versie van laravel wordt gebruikelijk up-to-date gehouden door de developer, maar het is 
 belangrijk om te weten welke versie van laravel gebruikt wordt om kwetsbaarheden te voorkomen. Op bovenstaande afbeelding is 
-te zien dat de versie van laravel verouderd is en dat er een update beschikbaar is \ref{fig:versie_laravel}. Dit kan leiden 
-tot kwetsbaarheden in de webapplicatie. 
+te zien dat de versie van laravel verouderd is en dat er een update beschikbaar is (figuur \ref{fig:versie_laravel}). 
+onvoldoende updates uitvoeren kan leiden tot kwetsbaarheden in de webapplicatie. 
 
 
-\subsection{\IfLanguageName{dutch}{sensitive data exposure}{sensitive data exposure}}
+\subsection{\IfLanguageName{dutch}{Sensitive data exposure}{Sensitive data exposure}}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{saved_password_db.png}
@@ -339,11 +340,11 @@ tot kwetsbaarheden in de webapplicatie.
 Sensitive data exposure is een kwetsbaarheid waarbij gevoelige informatie, zoals wachtwoorden en persoonlijke gegevens, wordt 
 blootgesteld aan ongeautoriseerde gebruikers. Om deze kwetsbaarheid te testen werd onderzocht hoe wachtwoorden worden 
 opgeslagen in de database van de webapplicaties. Ook werd gekeken naar de manier waarop de informatie via het netwerk wordt 
-verzonden. Dit werd onderzocht door de serverconfiguratie te beoordelen. Hierbij zijn specifieke regels ingesteld om ervoor 
+verzonden. Dit werd onderzocht door de serverconfiguratie te beoordelen. Hierbij zijn specifieke regels ingesteld om er voor 
 te zorgen dat websites op accountniveau niet via HTTP toegankelijk zijn en dat er geen niet-versleutelde gegevens tussen de 
 server en de applicatie worden verzonden.
 
-De wachtwoorden in dit geval zijn opgeslagen aan de hand van een hash en een salt in de database. Dit betekent dat de 
+De wachtwoorden zijn in dit geval opgeslagen aan de hand van een hash en een salt in de database. Dit betekent dat de 
 wachtwoorden niet in plain text worden opgeslagen en dat de wachtwoorden niet zichtbaar zijn voor ongeautoriseerde gebruikers. 
 De gegevens worden ook versleuteld verzonden via HTTPS, wat betekent dat de gegevens veilig zijn tijdens het transport tussen 
 server en applicatie. Voorbeelden van hoe de wachtwoorden worden opgeslagen en verzonden zijn te zien in de afbeelding 
@@ -366,44 +367,45 @@ server en applicatie. Voorbeelden van hoe de wachtwoorden worden opgeslagen en v
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{headers_htaccess.png}
-    \caption[.htaccess lijnen die te maken hebben met het mogelijkmaken om een I-frame te nemen]{.htaccess lijnen die te maken hebben met het mogelijkmaken om een I-frame te nemen}
+    \caption[.htaccess lijnen die te maken hebben met het mogelijk maken om een I-frame te nemen]{.htaccess lijnen die te maken hebben met het mogelijk maken om een I-frame te nemen}
     \label{fig:headers_htaccess}
 \end{figure}
 
-Cross-Site Scripting (XSS) is een kwetsbaarheid waarbij kwaadwillende scripts worden geïnjecteerd in webpagina's die door 
+Cross-Site Scripting (XSS) is een kwetsbaarheid waarbij kwaadwillige scripts worden geïnjecteerd in webpagina's die door 
 gebruikers worden bezocht. Om deze kwetsbaarheid te testen, is een XSS-aanval uitgevoerd op de webapplicaties. De resultaten 
 van de aanval werden geverifieerd door te controleren of er een alert-box op de webpagina verscheen. De uitkomst van de 
 XSS-aanval is weergegeven in afbeelding \ref{fig:mislukte_XSS}. Hieruit blijkt dat de XSS-aanval is mislukt en dat de webapplicaties
 bescherming bieden tegen XSS-aanvallen.
 
-Een ander voorbeeld van een XSS-aanval betreft het uit zetten van de X-Frame-Options op de server. Deze optie bepaalt of 
+Een ander voorbeeld van een XSS-aanval betreft het uitzetten van de X-Frame-Options op de server. Deze optie bepaalt of 
 elementen van jouw website mogen worden ingeladen via een frame. Als deze optie niet is ingesteld, kan de webapplicatie in 
 een iframe op een andere website worden ingeladen, wat kan leiden tot clickjacking en andere vormen van aanvallen. Om dit te 
-testen, is gekeken naar de ingestelde headers op de server. De resultaten hiervan zijn te zien in afbeelding \ref{fig:i_frame_met}. 
+testen, is gekeken naar de ingestelde headers op de server. De resultaten zijn te zien in afbeelding \ref{fig:i_frame_met}.
+
 Hieruit blijkt dat de X-Frame-Options niet zijn ingesteld op de server, waardoor de webapplicatie kan worden ingeladen in een 
 iframe op een andere website. Dit kan ertoe leiden dat, wanneer een gebruiker zijn gebruikersnaam en wachtwoord
 invoert, deze informatie wordt gelogd op de server van de aanvaller.
 
-Om dit risico te beperken, zijn er headers ingesteld op de server om te voorkomen dat de webapplicatie in een iframe op een 
+Om dit risico te beperken, worden headers ingesteld op de server om te voorkomen dat de webapplicatie in een iframe op een 
 andere website kan worden ingeladen. De ingestelde headers zijn weergegeven in afbeelding \ref{fig:headers_htaccess}. De 
-headers kunnen aangepast worden in de .htaccess file op de server, dit is een configuratie bestand gebruikt door apache 
-gebaseerde web servers.
+headers kunnen aangepast worden in de .htaccess file op de server, dat een configuratie bestand is en gebruikt door apache 
+gebaseerde webservers.
 
 \subsection{\IfLanguageName{dutch}{Onvoldoende logging en monitoring}{Insufficient logging and monitoring}}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{server_logging.png}
-    \caption[de error log van de server tijdens het uitvoern van een actieve scan]{de error log van de server tijdens het uitvoern van een actieve scan}
+    \caption[De error log van de server tijdens het uitvoern van een actieve scan]{De error log van de server tijdens het uitvoern van een actieve scan}
     \label{fig:server_logging}
 \end{figure}
-Insufficient logging and monitoring is een kwetsbaarheid waarbij onvoldoende logging en monitoring worden toegepast op de 
-webapplicatie. Om deze kwetsbaarheid te testen, is de error log van de server gecontroleerd tijdens het uitvoeren van een 
+Insufficient logging and monitoring is een kwetsbaarheid waarbij onvoldoende logging en monitoring worden geëvalueerd op de 
+webapplicatie en server. Om deze kwetsbaarheid te testen, is de error log van de server gecontroleerd tijdens het uitvoeren van een 
 actieve scan op de webapplicaties. De resultaten van de error log zijn te zien in afbeelding \ref{fig:server_logging}. 
 Hieruit blijkt dat de serverlogging actief is en dat er geen tekortkomingen waren tijdens de uitvoering van de actieve scan. 
 Dit betekent dat de webapplicatie over voldoende logging en monitoring beschikt om verdachte activiteiten te detecteren en te 
 rapporteren.
 
-In de error log van de server werd bijvoorbeeld weergegeven dat er op dat moment een AJAX-spider elke mogelijke pagina aan 
+In de error log van de server werd bijvoorbeeld weergegeven dat er op hetzelfde moment een AJAX-spider elke mogelijke pagina aan 
 het bezoeken was. In de logs is ook zichtbaar vanaf welk IP-adres de verzoeken afkomstig zijn en welke pagina's de spider 
 probeert te vinden op de betreffende website. Deze informatie wordt gelogd in de error log van de server en kan worden 
 gebruikt om verdachte activiteiten te detecteren.
@@ -428,13 +430,13 @@ gebruikt om verdachte activiteiten te detecteren.
     \label{fig:brute_force_zonder}
 \end{figure}
 
-Brute force is een kwetsbaarheid waarbij aanvallers proberen toegang te krijgen tot een systeem door herhaaldelijk gebruikersnamen 
+Brute force is een kwetsbaarheid waarbij aanvallers proberen toegang te verkrijgen tot een systeem door herhaaldelijk gebruikersnamen 
 of wachtwoorden te raden. Om deze kwetsbaarheid te testen, is een brute force-aanval uitgevoerd op de webapplicaties met OWASP ZAP. De 
-resultaten van deze aanval zijn weergegeven in afbeelding\ref{fig:brute_force_met} en \ref{fig:brute_force_zonder}. 
+resultaten van deze aanval zijn weergegeven in afbeeldingen \ref{fig:brute_force_met} en \ref{fig:brute_force_zonder}. 
 
 Uit de resultaten blijkt duidelijk dat de WordPress-applicatie met beveiligingsplugins bescherming biedt tegen brute 
 force-aanvallen door na vijf mislukte pogingen verdere inlogpogingen te blokkeren. Daarentegen is het bij de 
-WordPress-applicatie zonder beveiligingsplugins mogelijk om onbeperkt inlogpogingen te doen zonder consequenties. Dit toont 
+WordPress-applicatie zonder beveiligingsplugins mogelijk om onbeperkt inlogpogingen te simuleren zonder consequenties. Dit toont 
 aan dat de beveiligingsplugins effectief zijn in het voorkomen van brute force-aanvallen.
 
 Ook bij de Laravel-applicatie is het niet mogelijk om een brute force-aanval uit te voeren, aangezien de applicatie na vier 

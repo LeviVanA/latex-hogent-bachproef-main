@@ -14,26 +14,26 @@
 % Heeft het onderzoek geleid tot nieuwe vragen die uitnodigen tot verder 
 %onderzoek?
 
-Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële onderzoeksvragen als volgt beantwoorden:
+Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële onderzoeksvragen beantwoorden in de 
+conclusies van deze proef.
 
-\section{\IfLanguageName{dutch}{Resultaten van webomgevingen}{Results of web environments}}
-  Welke penetratietesttool(s) zijn volgens de vooraf bepaalde criteria het meest effectief/efficiënt in het 
-  identificeren van kwetsbaarheden in de drie specifieke webomgevingen?
-  
+\section{\IfLanguageName{dutch}{Conclusie van pentesttools}{conclusion of pentesttools}}
+  Welke penetratietesttool(s) zijn volgens de vooraf bepaalde criteria het meest effectief en efficiënt in het 
+  identificeren van kwetsbaarheden in de drie specifieke webomgevingen.  
   De prestaties van de penetratietesttools Burp Suite, Metasploit en OWASP ZAP varieerden bij het onderzoeken van de 
-  meest effectieve tool voor het identificeren van kwetsbaarheden in de drie specifieke webomgevingen.
+  meest effectieve tool voor het identificeren van kwetsbaarheden in de drie geselecteerde webomgevingen.
 
-  Bij het bepalen van de effectivivteit van de tools was OWASP ZAP de meest gepaste keuze op basis van de richtlijnen 
-  die vooraf zijn opgesteld in deze studie. OWASP ZAP scoorde hoog op het gebied van scala aan functionaliteiten, 
+  Bij het bepalen van de effectivivteit van de tools kwam OWASP ZAP naar boven als meest gepaste keuze op basis van de richtlijnen 
+  die vooraf werden opgesteld in deze studie. OWASP ZAP scoorde tevens hoog op het gebied van scala aan functionaliteiten, 
   ondersteuning van de community en gebruiksvriendelijkheid. De open-source aard van OWASP ZAP maakt het een aantrekkelijke 
   keuze voor organisaties met beperkte budgetten voor beveiligingstests. Burp Suite en Metasploit scoorden respectievelijk 
   lager op het gebied van gebruiksvriendelijkheid en kosten en bieden een minder uitgebreide reeks van functionaliteiten en 
   ondersteuning van de community. Deze conclusie is ook terug te vinden in de resultaten van de penetratietest tools 
   \nameref{sec:Definitieve_pentesttool}.
 
-  \section{\IfLanguageName{dutch}{Conclusie pentesttools}{Conclusion pentesttools}}  
+  \section{\IfLanguageName{dutch}{Conclusie van webomgevingen}{Conclusion of web environments}}  
    Welke specifieke kwetsbaarheden detecteren de penetratietesttools in een WordPress-omgeving zonder beveiligingsplugins en 
-   hoe verschilt dit van de omgevingen met beveiligingsplugins en de Laravel-applicatie?
+   hoe verschillen deze van testen op de omgevingen met beveiligingsplugins en de Laravel-applicatie.
   
   In een WordPress-omgeving zonder beveiligingsplugins werden meerdere kwetsbaarheden blootgelegd door penetratietests en 
   externe onderzoeken. De meest voorkomende kwetsbaarheden waren gerelateerd aan zwakke wachtwoorden, onbeperkte 
@@ -42,7 +42,7 @@ Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële
   gebruikersauthenticatie en versleutelingstechnieken, boden een solide bescherming.
 
   Uit de uitgevoerde tests bleek dat de voornaamste kwetsbaarheden vaak samenhangen met de manier waarop een omgeving is 
-  ingesteld. Bij het opzetten van een omgeving moet er een afweging worden gemaakt tussen zichtbaarheid/bruikbaarheid op het 
+  ingesteld. Bij het opzetten van een omgeving moet er een afweging worden gemaakt tussen zichtbaarheid en bruikbaarheid op het 
   internet en veiligheid. Het is daarom belangrijk om duidelijk te bepalen waarvoor een webomgeving wordt gebruikt en welke 
   gegevens erin worden opgeslagen.
 
@@ -56,7 +56,7 @@ Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële
   ingesteld. In tegenstelling tot WordPress, waarbij de beveiliging voornamelijk wordt bepaald door de beveiligingsplugins 
   die worden geïnstalleerd door de eigenaar van de website.
 
-  \section{\IfLanguageName{dutch}{conslusie van webomgevingen}{conslusie of web environments}}  
+  \section{\IfLanguageName{dutch}{scores van pentests op webomgevingen}{scores of pentests on web environments}}  
   \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{wordfence_regels.png}
@@ -80,12 +80,12 @@ Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële
     \end{enumerate}
     \item Sensitive data exposure: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door de 
           externe testen in verband met de server en database. De conclusie hierbij is voor elke tool hetzelfde.
-    \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerabilitie de keuze van een instelling in de 
+    \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerability de optie van een instelling in de 
           server. De conclusie hierbij is voor elke tool hetzelfde, maar bij wordperss omgeving met beveiligingsplugins 
           zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er aditionele regels zij n ingesteld 
           via de wordfence plugin \ref{fig:wordfence_regels}.
     \item Onvoldoende logging en monitoring: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door 
-          de externe testen in verband met de server. De conclusie hierbij is voor elke tool hetzelfde.
+          externe testen op de server. De conclusie hierbij is voor elke tool hetzelfde.
     \item Brute force aanvallen:
     \begin{enumerate}
       \item Laravel: na 4 pogingen wordt de account tijdelijk geblokkeerd
