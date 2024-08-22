@@ -54,7 +54,7 @@ besproken, zodat dit in een latere fase van het onderzoek kan worden uitgevoerd.
 Dit onderzoek is opgesplitst in twee delen waarbij in de initiële fase gefocust werd op de keuze van de meest passende pentesting tool 
 aan de hand van vooropgestelde criteria. Hierop gebaseerd werden drie pentestingtools gekozen die op hun beurt werden vergeleken met elkaar 
 zodat er in de tweede fase van het onderzoek op een solide basis kan worden verder gebouwd. In deze fase werd met één geselecteerde 
-tool zeven pentests afgenomen op de omgevingen waarbij er binnen de testen op een wordpress CMS systeem nog onderscheid werd gemaakt 
+tool zeven pentests afgenomen op de omgevingen waarbij er binnen de testen op een Wordpress CMS nog onderscheid werd gemaakt 
 tussen een versie met en een versie zonder beveiligingsplugin.
 
 \subsection{\IfLanguageName{dutch}{Keuze van pentesttools}{choice of pentesttools}}
@@ -80,7 +80,7 @@ Op basis van de bovenstaande criteria werden de volgende pentest toepassingen we
 \end{itemize}
 
 De daaropvolgende keuze tussen de drie weerhouden pentesttools is gebaseerd op vooraf vastgestelde globale criteria, waarbij de nadruk ligt op welke tool het meest 
-geschikt is voor het testen van de opgezette omgevingen (wordpress CMS en Laravel applicatie). Deze criteria omvatten:
+geschikt is voor het testen van de opgezette omgevingen (Wordpress CMS en Laravel applicatie). Deze criteria omvatten:
 \begin{itemize}
     \item De omvang van het scala aan capaciteiten en functionaliteiten voor het testen van webapplicaties.
     \item Resourcegebruik met name CPU-, geheugen- en netwerkgebruik.
@@ -227,7 +227,7 @@ blijvende ondersteuning vanuit de community hebben Sinergio mede overtuigd om te
 Laravel daarentegen is door Sinergio gekozen vanwege de eenvoud bij upgrades. Het is bijvoorbeeld mogelijk om ontwikkelde webtoepassingen 
 te upgraden naar een nieuwere versie van Laravel zonder dat gegevens verloren gaan. De kennis van Laravel was 
 reeds aanwezig binnen Sinergio waardoor de keuze voor dit framework snel gemaakt was. Ook de ingebouwde beveiligingsmaatregelen 
-van Laravel, zoals de Eloquent ORM (hier word later op terug gekomen), hebben bijgedragen aan de keuze voor dit framework.
+van Laravel, zoals de Eloquent ORM (hier wordt later op terug gekomen), hebben bijgedragen aan de keuze voor dit framework.
 
 \subsection{\IfLanguageName{dutch}{Sinergio}{Sinergio}}
 Sinergio is een bedrijf met een passie voor het ontwerpen van websites of webshops en blinkt 
@@ -253,12 +253,12 @@ verdachte HTTP-verzoeken te filteren en blokkeren. Het wordt vaak gebruikt om ap
 zoals SQL-injecties, XSS-aanvallen en brute force-aanvallen. Door ModSecurity tijdelijk uit te schakelen, kunnen de testen 
 worden uitgevoerd zonder dat de ingebouwde beveiligingsmaatregelen op serverniveau onbedoeld interfereren met de testresultaten.
 
-Bovenop de CentOs 7 server is een Control Web Panel (CWP) geïnstalleerd. Dit is een webhosting controlepaneel dat
+Boven op de CentOs 7 server is een Control Web Panel (CWP) geïnstalleerd. Dit is een webhosting controlepaneel dat
 een grafische interface biedt voor het beheren van webhosting servers. CWP biedt een breed scala aan functies zoals
 servermonitoring, bestandsbeheer en e-mailbeheer, waardoor het een handige tool is voor het beheren van webhostingomgevingen.
 
 De CentOs server wordt bij Sinergio gebruikt als development- of test server, waardoor het kan worden gehanteerd voor het 
-testen van webapplicaties voor ze naar productie worden overgeplaatst. De productie servers daarentegen worden ondersteund 
+testen van webapplicaties voor ze naar productie worden overgeplaatst. De productieservers daarentegen worden ondersteund 
 door Linux 8.
 
 \subsection{\IfLanguageName{dutch}{Wordpress}{Wordpress}}
@@ -277,9 +277,9 @@ voor WordPress-websites. Wordfence biedt uitgebreide bescherming tegen malware, 
 bedreigingen die websites kunnen treffen. Met functies zoals firewallregels, malware-scanning en inlogbeveiliging helpt 
 Wordfence gebruikers om hun sites veilig en betrouwbaar te houden. Door de integratie van deze beveiligingslagen kunnen 
 website-eigenaars zich richten op het creëren van content en het beheren van hun online aanwezigheid, terwijl ze gerust 
-kunnen zijn over de beveiliging van hun website.
+kunnen zijn over de beveiliging van hun website, zoals aangehaald in het hoofdstuk \ref{fig:Webomgevingen}.
 
-In het verdere verloop van deze studie werden de testen zowel uitgevoerd op een wordpress omgeving met als zonder 
+In het verdere verloop van deze studie werden de testen zowel uitgevoerd op een Wordpress omgeving met als zonder 
 beveiligingsplugin.
 
 \subsection{\IfLanguageName{dutch}{Laravel}{Laravel}}
@@ -305,5 +305,5 @@ ontwikkelaars snel aan de slag en blijven ze ondersteund tijdens het ontwikkelpr
 
 Ook het ORM (Object Relational Mapping) systeem van Laravel is een belangrijke troef. Dit systeem maakt het mogelijk om 
 het systeem te beschermen van SQL-injectie via de Eloquent ORM. Dit gebeurt door middel van PDO (PHP Database Objects) binding, waarbij de
-gebruiker geen directe SQL queries kan uitvoeren. Eloquent slaat de SQL commando's eerst op en zet de onveilige code om 
+gebruiker geen directe SQL queries kan uitvoeren. Eloquent slaat de SQL-commando's eerst op en zet de onveilige code om 
 naar tekst. Het schema van Laravel is te zien op deze foto \ref{fig:laravel_schema}.

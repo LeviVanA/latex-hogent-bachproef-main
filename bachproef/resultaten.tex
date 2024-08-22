@@ -204,30 +204,30 @@ beoordeling van de tool.
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_laravel.png}
-    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de laravel applicatie]
-    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de laravel applicatie}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Laravel applicatie]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Laravel applicatie}
     \label{fig:waarschuwingen_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_zonder_plugin.png}
-    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie zonder beveiligingsplugins]
-    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie zonder beveiligingsplugins}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie zonder beveiligingsplugins]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie zonder beveiligingsplugins}
     \label{fig:waarschuwingen_zonder}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_met_plugin.png}
-    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie met beveiligingsplugins]
-    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de wordpress applicatie met beveiligingsplugins}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie met beveiligingsplugins]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie met beveiligingsplugins}
     \label{fig:waarschuwingen_met}
 \end{figure}
 
 Voor de resultaten van de webomgevingen dieper onderzocht werden, werden de waarschuwingen die gedetecteerd zijn na een actieve scan en AJAX spider in OWASP ZAP 
 geanalyseerd. Deze waarschuwingen geven een eerste inzicht in de kwetsbaarheden van de webapplicaties en helpen bij het identificeren van 
 mogelijke beveiligingsrisico's. De resultaten van de waarschuwingen zijn te zien op de afbeeldingen. Zo is op te merken dat er bij de 
-laravel applicatie 17 waarschuwingen zijn gedetecteerd op figuur \ref{fig:waarschuwingen_laravel}. Bij de wordpress applicatie zonder 
-beveiligingsplugins zijn er 15 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_zonder}. Bij de wordpress 
+Laravel applicatie 17 waarschuwingen zijn gedetecteerd op figuur \ref{fig:waarschuwingen_laravel}. Bij de Wordpress applicatie zonder 
+beveiligingsplugins zijn er 15 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_zonder}. Bij de Wordpress 
 applicatie met beveiligingsplugins zijn er 18 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_met}.
 
 Deze lijst geeft een beeld van alle mogelijke kwetsbaarheden binnen de webapplicaties, maar geeft onvoldoende inzicht in de 
@@ -239,35 +239,35 @@ beveiligingsmaatregelen die zijn genomen.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_laravel.png}
-    \caption[SQL-injectie aanval op laravel applicatie]{SQL-injectie aanval op laravel applicatie}
+    \caption[SQL-injectie aanval op Laravel applicatie]{SQL-injectie aanval op Laravel applicatie}
     \label{fig:injectie_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_met_plugin.png}
-    \caption[SQL-injectie aanval op wordpress applicatie met beveiligingsplugins]{SQL-injectie aanval op wordpress applicatie met beveiligingsplugins}
+    \caption[SQL-injectie aanval op Wordpress applicatie met beveiligingsplugins]{SQL-injectie aanval op Wordpress applicatie met beveiligingsplugins}
     \label{fig:injectie_zonder}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_zonder_plugin.png}
-    \caption[SQL-injectie aanval op wordpress applicatie zonder beveiligingsplugins]{SQL-injectie aanval op wordpress applicatie zonder beveiligingsplugins}
+    \caption[SQL-injectie aanval op Wordpress applicatie zonder beveiligingsplugins]{SQL-injectie aanval op Wordpress applicatie zonder beveiligingsplugins}
     \label{fig:injectie_met}
 \end{figure}
 
 
 Een van de meest voorkomende kwetsbaarheden in webapplicaties, op basis van de OWASP top 10, is SQL-injectie. Om de 
 kwetsbaarheid van de webapplicaties 
-te testen, werd een SQL-injectie aanval uitgevoerd op de laravel applicatie (zie figuur \ref{fig:injectie_laravel}) en de 
-wordpress applicatie met en zonder beveiligingsplugins (figuur \ref{fig:injectie_zonder}, figuur \ref{fig:injectie_met}). 
+te testen, werd een SQL-injectie aanval uitgevoerd op de Laravel applicatie (zie figuur \ref{fig:injectie_laravel}) en de 
+Wordpress applicatie met en zonder beveiligingsplugins (figuur \ref{fig:injectie_zonder}, figuur \ref{fig:injectie_met}). 
 
 Wanneer een SQL-script als kwetsbaar wordt beschouwd, werd dit weergegeven in het outputvenster met gereflecteerd ernaast 
 zoals te zien is op bovenstaande foto's. 
 Dit betekent niet dat de SQL-injectie succesvol is uitgevoerd, maar dat er een mogelijkheid bestaat om een SQL-injectie te laten 
 slagen. 
 
-De resultaten van de SQL-injectie aanval tonen aan dat de laravel applicatie het minst kwetsbaar is voor SQL-injectie, terwijl 
-de wordpress applicatie zonder beveiligingsplugins het meest kwetsbaar is. De wordpress applicatie met beveiligingsplugins 
+De resultaten van de SQL-injectie aanval tonen aan dat de Laravel applicatie het minst kwetsbaar is voor SQL-injectie, terwijl 
+de Wordpress applicatie zonder beveiligingsplugins het meest kwetsbaar is. De Wordpress applicatie met beveiligingsplugins 
 biedt een gemiddelde bescherming tegen SQL-injectie aanvallen, wat aantoont dat de beveiligingsplugins effectief zijn in het 
 voorkomen van de meeste scripts. 
 
@@ -275,7 +275,7 @@ voorkomen van de meeste scripts.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{fout_pass_laravel.png}
-    \caption[Foutief wachtwoord met correcte gebruikersnaam melding bij laravel]{Foutief wachtwoord met correcte gebruikersnaam melding bij laravel}
+    \caption[Foutief wachtwoord met correcte gebruikersnaam melding bij Laravel]{Foutief wachtwoord met correcte gebruikersnaam melding bij Laravel}
     \label{fig:sec_mis_laravel}
 \end{figure}
 \begin{figure}
@@ -299,29 +299,29 @@ voorkomen van de meeste scripts.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{versie_laravel.png}
-    \caption[Versie gebruik van de laravel applicatie]{Versie gebruik van de laravel applicatie}
+    \caption[Versie gebruik van de Laravel applicatie]{Versie gebruik van de Laravel applicatie}
     \label{fig:versie_laravel}
 \end{figure}
 Een andere veelvoorkomende kwetsbaarheid in webapplicaties is security misconfiguratie. Om deze vulnerability te vergelijken 
 bij de webapplicaties werd er gekeken naar welke melding weergegeven wordt na het ingeven van een foutief wachtwoord
-en correcte gebruikersnaam. De resultaten hiervan zijn te zien in de afbeeldingen. Zo is te zien dat bij de laravel 
-applicatie een foutmelding werd getoond die door de developer zelf is ingesteld (figuur \ref{fig:sec_mis_laravel}). Bij de wordpress 
+en correcte gebruikersnaam. De resultaten hiervan zijn te zien in de afbeeldingen. Zo is te zien dat bij de Laravel 
+applicatie een foutmelding werd getoond die door de developer zelf is ingesteld (figuur \ref{fig:sec_mis_laravel}). Bij de Wordpress 
 applicatie zonder beveiligingsplugins werd er een foutmelding getoond die aangeeft dat het wachtwoord fout is in combinatie 
-met de opgegeven gebruikersnaam (figuur \ref{fig:sec_mis_zonder}). Bij de wordpress applicatie met beveiligingsplugins werd er een 
+met de opgegeven gebruikersnaam (figuur \ref{fig:sec_mis_zonder}). Bij de Wordpress applicatie met beveiligingsplugins werd er een 
 foutmelding getoond die aangeeft dat de gebruikersnaam of wachtwoord fout is (figuur \ref{fig:sec_mis_met}).
 
 Een andere vorm van security misconfiguratie is het gebruik van verouderde plugins. Dit kan leiden tot kwetsbaarheden in 
-de webapplicatie. Om dit te testen werd er gekeken naar de versie van de plugins die gebruikt werden in de wordpress 
+de webapplicatie. Om dit te testen werd er gekeken naar de versie van de plugins die gebruikt werden in de Wordpress 
 applicatie. De resultaten hiervan zijn te zien in de afbeelding \ref{fig:verouderde_plugins}. Hieruit blijkt dat de wordfence 
-plugin aangeeft welke plugins verouderde versie hebben in tegenstelling tot de wordpress applicatie zonder beveiligingsplugins. 
-Bij de wordpress applicatie zonder beveiligingsplugins is het niet duidelijk welke plugins verouderd zijn en kan dit leiden 
+plugin aangeeft welke plugins verouderde versie hebben in tegenstelling tot de Wordpress applicatie zonder beveiligingsplugins. 
+Bij de Wordpress applicatie zonder beveiligingsplugins is het niet duidelijk welke plugins verouderd zijn en kan dit leiden 
 tot kwetsbaarheden in de webapplicatie.
 
-Hetzelfde geldt voor de laravel applicatie. Voor de eigenaar van de website is het gewoonlijk niet duidelijk welke versie van 
-het laravel framework gebruikt wordt. De versie van laravel wordt gebruikelijk up-to-date gehouden door de developer, maar het is 
-belangrijk om te weten welke versie van laravel gebruikt wordt om kwetsbaarheden te voorkomen. Op bovenstaande afbeelding is 
-te zien dat de versie van laravel verouderd is en dat er een update beschikbaar is (figuur \ref{fig:versie_laravel}). 
-onvoldoende updates uitvoeren kan leiden tot kwetsbaarheden in de webapplicatie. 
+Hetzelfde geldt voor de Laravel applicatie. Voor de eigenaar van de website is het gewoonlijk niet duidelijk welke versie van 
+het Laravel framework gebruikt wordt. De versie van Laravel wordt gebruikelijk up-to-date gehouden door de developer, maar het is 
+belangrijk om te weten welke versie van Laravel gebruikt wordt om kwetsbaarheden te voorkomen. Op bovenstaande afbeelding is 
+te zien dat de versie van Laravel verouderd is en dat er een update beschikbaar is (figuur \ref{fig:versie_laravel}). 
+Onvoldoende updates uitvoeren kan leiden tot kwetsbaarheden in de webapplicatie. 
 
 
 \subsection{\IfLanguageName{dutch}{Sensitive data exposure}{Sensitive data exposure}}
@@ -414,19 +414,19 @@ gebruikt om verdachte activiteiten te detecteren.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{brute_force_laravel.png}
-    \caption[Brute force aanval op laravel applicatie]{Brute force aanval op laravel applicatie}
+    \caption[Brute force aanval op Laravel applicatie]{Brute force aanval op Laravel applicatie}
     \label{fig:brute_force_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{brute_force_met.png}
-    \caption[Brute force aanval op wordpress applicatie met beveiligingsplugins]{Brute force aanval op wordpress applicatie met beveiligingsplugins}
+    \caption[Brute force aanval op Wordpress applicatie met beveiligingsplugins]{Brute force aanval op Wordpress applicatie met beveiligingsplugins}
     \label{fig:brute_force_met}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{brute_force_zonder.png}
-    \caption[Brute force aanval op wordpress applicatie zonder beveiligingsplugins]{Brute force aanval op wordpress applicatie zonder beveiligingsplugins}
+    \caption[Brute force aanval op Wordpress applicatie zonder beveiligingsplugins]{Brute force aanval op Wordpress applicatie zonder beveiligingsplugins}
     \label{fig:brute_force_zonder}
 \end{figure}
 

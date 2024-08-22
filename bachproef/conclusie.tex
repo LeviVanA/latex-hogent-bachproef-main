@@ -19,11 +19,12 @@ conclusies van deze proef.
 
 \section{\IfLanguageName{dutch}{Conclusie van pentesttools}{conclusion of pentesttools}}
   Welke penetratietesttool(s) zijn volgens de vooraf bepaalde criteria het meest effectief en efficiënt in het 
-  identificeren van kwetsbaarheden in de drie specifieke webomgevingen.  
+  identificeren van kwetsbaarheden in de drie specifieke webomgevingen?
+
   De prestaties van de penetratietesttools Burp Suite, Metasploit en OWASP ZAP varieerden bij het onderzoeken van de 
   meest effectieve tool voor het identificeren van kwetsbaarheden in de drie geselecteerde webomgevingen.
 
-  Bij het bepalen van de effectivivteit van de tools kwam OWASP ZAP naar boven als meest gepaste keuze op basis van de richtlijnen 
+  Bij het bepalen van de effectiviteit van de tools kwam OWASP ZAP naar boven als meest gepaste keuze op basis van de richtlijnen 
   die vooraf werden opgesteld in deze studie. OWASP ZAP scoorde tevens hoog op het gebied van scala aan functionaliteiten, 
   ondersteuning van de community en gebruiksvriendelijkheid. De open-source aard van OWASP ZAP maakt het een aantrekkelijke 
   keuze voor organisaties met beperkte budgetten voor beveiligingstests. Burp Suite en Metasploit scoorden respectievelijk 
@@ -56,7 +57,7 @@ conclusies van deze proef.
   ingesteld. In tegenstelling tot WordPress, waarbij de beveiliging voornamelijk wordt bepaald door de beveiligingsplugins 
   die worden geïnstalleerd door de eigenaar van de website.
 
-  \section{\IfLanguageName{dutch}{scores van pentests op webomgevingen}{scores of pentests on web environments}}  
+  \section{\IfLanguageName{dutch}{Scores van pentests op webomgevingen}{Scores of pentests on web environments}}  
   \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{wordfence_regels.png}
@@ -65,11 +66,11 @@ conclusies van deze proef.
   \end{figure}
 
   \begin{itemize}
-    \item Conslusie SQL-injectie:
+    \item Conclusie SQL-injectie:
     \begin{enumerate}
-      \item Laravel: 0/15 mogelijke kwetsbaarheden
-      \item WordPress met beveiligingsplugins: 4/15 mogelijke kwetsbaarheden
-      \item Wordpress zonder beveiligingsplugins: 15/15 mogelijke kwetsbaarheden
+      \item Laravel: 0/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
+      \item WordPress met beveiligingsplugins: 4/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
+      \item Wordpress zonder beveiligingsplugins: 15/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
     \end{enumerate}
     \item Security misconfiguration:
     \begin{enumerate}
@@ -82,7 +83,7 @@ conclusies van deze proef.
           externe testen in verband met de server en database. De conclusie hierbij is voor elke tool hetzelfde, doordat dit 
           regels zijn die ingetseld werden op de server.
     \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerability de optie van een instelling in de 
-          server. De conclusie hierbij is voor elke tool hetzelfde, maar bij wordperss omgeving met beveiligingsplugins 
+          server. De conclusie hierbij is voor elke tool hetzelfde, doordat dit ook op serverniveau ingesteld is, maar bij wordperss omgeving met beveiligingsplugins 
           zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er aditionele regels zijn ingesteld 
           via de wordfence plugin \ref{fig:wordfence_regels}.
     \item Onvoldoende logging en monitoring: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door 
