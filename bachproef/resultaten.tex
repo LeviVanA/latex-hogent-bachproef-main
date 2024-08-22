@@ -45,7 +45,7 @@ van informatie over webservers en specifieke directories. Het ontbreken van een 
 webscanning functionaliteiten maakt Metasploit echter minder geschikt voor gedetailleerde webapplicatietests in vergelijking 
 met Burp Suite en OWASP ZAP.
 
-Wanneer we de functionaliteiten van deze tools vergelijken, blijkt dat OWASP ZAP over het algemeen het meest bruikbaar is voor 
+Wanneer de functionaliteiten van deze tools werden vergeleken, blijkt dat OWASP ZAP over het algemeen het meest bruikbaar is voor 
 webapplicatietests, tenzij men toegang heeft tot de Burp Suite Professional Edition.
 \subsubsection{\IfLanguageName{dutch}{Resourcegebruik}{Resourcegebruik}}
 \begin{figure}
@@ -204,30 +204,30 @@ beoordeling van de tool.
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_laravel.png}
-    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Laravel applicatie]
-    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Laravel applicatie}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in OWASP zap bij de Laravel applicatie]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in OWASP zap bij de Laravel applicatie}
     \label{fig:waarschuwingen_laravel}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_zonder_plugin.png}
-    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie zonder beveiligingsplugins]
-    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie zonder beveiligingsplugins}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in OWASP zap bij de WordPress applicatie zonder beveiligingsplugins]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in OWASP zap bij de WordPress applicatie zonder beveiligingsplugins}
     \label{fig:waarschuwingen_zonder}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{waarschuwingen_met_plugin.png}
-    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie met beveiligingsplugins]
-    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in owasp zap bij de Wordpress applicatie met beveiligingsplugins}
+    \caption[Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in OWASP zap bij de WordPress applicatie met beveiligingsplugins]
+    {Alle waarschuwingen die gedetecteerd zijn na een actieve scan en ajax spider in OWASP zap bij de WordPress applicatie met beveiligingsplugins}
     \label{fig:waarschuwingen_met}
 \end{figure}
 
 Voor de resultaten van de webomgevingen dieper onderzocht werden, werden de waarschuwingen die gedetecteerd zijn na een actieve scan en AJAX spider in OWASP ZAP 
 geanalyseerd. Deze waarschuwingen geven een eerste inzicht in de kwetsbaarheden van de webapplicaties en helpen bij het identificeren van 
 mogelijke beveiligingsrisico's. De resultaten van de waarschuwingen zijn te zien op de afbeeldingen. Zo is op te merken dat er bij de 
-Laravel applicatie 17 waarschuwingen zijn gedetecteerd op figuur \ref{fig:waarschuwingen_laravel}. Bij de Wordpress applicatie zonder 
-beveiligingsplugins zijn er 15 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_zonder}. Bij de Wordpress 
+Laravel applicatie 17 waarschuwingen zijn gedetecteerd op figuur \ref{fig:waarschuwingen_laravel}. Bij de WordPress applicatie zonder 
+beveiligingsplugins zijn er 15 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_zonder}. Bij de WordPress 
 applicatie met beveiligingsplugins zijn er 18 waarschuwingen gedetecteerd in figuur \ref{fig:waarschuwingen_met}.
 
 Deze lijst geeft een beeld van alle mogelijke kwetsbaarheden binnen de webapplicaties, maar geeft onvoldoende inzicht in de 
@@ -245,13 +245,13 @@ beveiligingsmaatregelen die zijn genomen.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_met_plugin.png}
-    \caption[SQL-injectie aanval op Wordpress applicatie met beveiligingsplugins]{SQL-injectie aanval op Wordpress applicatie met beveiligingsplugins}
+    \caption[SQL-injectie aanval op WordPress applicatie met beveiligingsplugins]{SQL-injectie aanval op WordPress applicatie met beveiligingsplugins}
     \label{fig:injectie_zonder}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{sql_injectie_zonder_plugin.png}
-    \caption[SQL-injectie aanval op Wordpress applicatie zonder beveiligingsplugins]{SQL-injectie aanval op Wordpress applicatie zonder beveiligingsplugins}
+    \caption[SQL-injectie aanval op WordPress applicatie zonder beveiligingsplugins]{SQL-injectie aanval op WordPress applicatie zonder beveiligingsplugins}
     \label{fig:injectie_met}
 \end{figure}
 
@@ -259,7 +259,7 @@ beveiligingsmaatregelen die zijn genomen.
 Een van de meest voorkomende kwetsbaarheden in webapplicaties, op basis van de OWASP top 10, is SQL-injectie. Om de 
 kwetsbaarheid van de webapplicaties 
 te testen, werd een SQL-injectie aanval uitgevoerd op de Laravel applicatie (zie figuur \ref{fig:injectie_laravel}) en de 
-Wordpress applicatie met en zonder beveiligingsplugins (figuur \ref{fig:injectie_zonder}, figuur \ref{fig:injectie_met}). 
+WordPress applicatie met en zonder beveiligingsplugins (figuur \ref{fig:injectie_zonder}, figuur \ref{fig:injectie_met}). 
 
 Wanneer een SQL-script als kwetsbaar wordt beschouwd, werd dit weergegeven in het outputvenster met gereflecteerd ernaast 
 zoals te zien is op bovenstaande foto's. 
@@ -267,7 +267,7 @@ Dit betekent niet dat de SQL-injectie succesvol is uitgevoerd, maar dat er een m
 slagen. 
 
 De resultaten van de SQL-injectie aanval tonen aan dat de Laravel applicatie het minst kwetsbaar is voor SQL-injectie, terwijl 
-de Wordpress applicatie zonder beveiligingsplugins het meest kwetsbaar is. De Wordpress applicatie met beveiligingsplugins 
+de WordPress applicatie zonder beveiligingsplugins het meest kwetsbaar is. De WordPress applicatie met beveiligingsplugins 
 biedt een gemiddelde bescherming tegen SQL-injectie aanvallen, wat aantoont dat de beveiligingsplugins effectief zijn in het 
 voorkomen van de meeste scripts. 
 
@@ -305,16 +305,16 @@ voorkomen van de meeste scripts.
 Een andere veelvoorkomende kwetsbaarheid in webapplicaties is security misconfiguratie. Om deze vulnerability te vergelijken 
 bij de webapplicaties werd er gekeken naar welke melding weergegeven wordt na het ingeven van een foutief wachtwoord
 en correcte gebruikersnaam. De resultaten hiervan zijn te zien in de afbeeldingen. Zo is te zien dat bij de Laravel 
-applicatie een foutmelding werd getoond die door de developer zelf is ingesteld (figuur \ref{fig:sec_mis_laravel}). Bij de Wordpress 
+applicatie een foutmelding werd getoond die door de developer zelf is ingesteld (figuur \ref{fig:sec_mis_laravel}). Bij de WordPress 
 applicatie zonder beveiligingsplugins werd er een foutmelding getoond die aangeeft dat het wachtwoord fout is in combinatie 
-met de opgegeven gebruikersnaam (figuur \ref{fig:sec_mis_zonder}). Bij de Wordpress applicatie met beveiligingsplugins werd er een 
+met de opgegeven gebruikersnaam (figuur \ref{fig:sec_mis_zonder}). Bij de WordPress applicatie met beveiligingsplugins werd er een 
 foutmelding getoond die aangeeft dat de gebruikersnaam of wachtwoord fout is (figuur \ref{fig:sec_mis_met}).
 
 Een andere vorm van security misconfiguratie is het gebruik van verouderde plugins. Dit kan leiden tot kwetsbaarheden in 
-de webapplicatie. Om dit te testen werd er gekeken naar de versie van de plugins die gebruikt werden in de Wordpress 
+de webapplicatie. Om dit te testen werd er gekeken naar de versie van de plugins die gebruikt werden in de WordPress 
 applicatie. De resultaten hiervan zijn te zien in de afbeelding \ref{fig:verouderde_plugins}. Hieruit blijkt dat de wordfence 
-plugin aangeeft welke plugins verouderde versie hebben in tegenstelling tot de Wordpress applicatie zonder beveiligingsplugins. 
-Bij de Wordpress applicatie zonder beveiligingsplugins is het niet duidelijk welke plugins verouderd zijn en kan dit leiden 
+plugin aangeeft welke plugins verouderde versie hebben in tegenstelling tot de WordPress applicatie zonder beveiligingsplugins. 
+Bij de WordPress applicatie zonder beveiligingsplugins is het niet duidelijk welke plugins verouderd zijn en kan dit leiden 
 tot kwetsbaarheden in de webapplicatie.
 
 Hetzelfde geldt voor de Laravel applicatie. Voor de eigenaar van de website is het gewoonlijk niet duidelijk welke versie van 
@@ -334,7 +334,7 @@ Onvoldoende updates uitvoeren kan leiden tot kwetsbaarheden in de webapplicatie.
 \begin{figure}
     \centering
     \includegraphics[height=0.1\textheight]{server_rules_https.png}
-    \caption[Rules op de seerver die ervoor zorgen dat je een website niet via http kan bezoeken]{Rules op de seerver die ervoor zorgen dat je een website niet via http kan bezoeken}
+    \caption[Rules op de server die ervoor zorgen dat een website niet via http kan bezoeken]{Rules op de server die ervoor zorgen dat een website niet via http kan bezoeken}
     \label{fig:server_rules}
 \end{figure}
 Sensitive data exposure is een kwetsbaarheid waarbij gevoelige informatie, zoals wachtwoorden en persoonlijke gegevens, wordt 
@@ -420,13 +420,13 @@ gebruikt om verdachte activiteiten te detecteren.
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{brute_force_met.png}
-    \caption[Brute force aanval op Wordpress applicatie met beveiligingsplugins]{Brute force aanval op Wordpress applicatie met beveiligingsplugins}
+    \caption[Brute force aanval op WordPress applicatie met beveiligingsplugins]{Brute force aanval op WordPress applicatie met beveiligingsplugins}
     \label{fig:brute_force_met}
 \end{figure}
 \begin{figure}
     \centering
     \includegraphics[height=0.2\textheight]{brute_force_zonder.png}
-    \caption[Brute force aanval op Wordpress applicatie zonder beveiligingsplugins]{Brute force aanval op Wordpress applicatie zonder beveiligingsplugins}
+    \caption[Brute force aanval op WordPress applicatie zonder beveiligingsplugins]{Brute force aanval op WordPress applicatie zonder beveiligingsplugins}
     \label{fig:brute_force_zonder}
 \end{figure}
 

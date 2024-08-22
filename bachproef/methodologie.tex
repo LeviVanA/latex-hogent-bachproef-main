@@ -54,7 +54,7 @@ besproken, zodat dit in een latere fase van het onderzoek kan worden uitgevoerd.
 Dit onderzoek is opgesplitst in twee delen waarbij in de initiële fase gefocust werd op de keuze van de meest passende pentesting tool 
 aan de hand van vooropgestelde criteria. Hierop gebaseerd werden drie pentestingtools gekozen die op hun beurt werden vergeleken met elkaar 
 zodat er in de tweede fase van het onderzoek op een solide basis kan worden verder gebouwd. In deze fase werd met één geselecteerde 
-tool zeven pentests afgenomen op de omgevingen waarbij er binnen de testen op een Wordpress CMS nog onderscheid werd gemaakt 
+tool zeven pentests afgenomen op de omgevingen waarbij er binnen de testen op een WordPress CMS nog onderscheid werd gemaakt 
 tussen een versie met en een versie zonder beveiligingsplugin.
 
 \subsection{\IfLanguageName{dutch}{Keuze van pentesttools}{choice of pentesttools}}
@@ -80,7 +80,7 @@ Op basis van de bovenstaande criteria werden de volgende pentest toepassingen we
 \end{itemize}
 
 De daaropvolgende keuze tussen de drie weerhouden pentesttools is gebaseerd op vooraf vastgestelde globale criteria, waarbij de nadruk ligt op welke tool het meest 
-geschikt is voor het testen van de opgezette omgevingen (Wordpress CMS en Laravel applicatie). Deze criteria omvatten:
+geschikt is voor het testen van de opgezette omgevingen (WordPress CMS en Laravel applicatie). Deze criteria omvatten:
 \begin{itemize}
     \item De omvang van het scala aan capaciteiten en functionaliteiten voor het testen van webapplicaties.
     \item Resourcegebruik met name CPU-, geheugen- en netwerkgebruik.
@@ -111,7 +111,7 @@ webapplicaties zijn de onderstaande en bereikbaar via de bijhorende link:
 \begin{itemize}
     \item WordPress-applicatie met beveiligingsplugins: Deze applicatie maakt gebruik van WordPress versie 6.5.5 en wordt 
     beschermd door de Wordfence-plugin. Bijkomende plugins die op de omgeving zijn geïnstalleerd, zijn Elementor 
-    (gebruikt als page builder en theme builder voor WordPress) en Forminator (aanmaken van eenvoudige formulierenwat noodzakelijk is voor de testen).  
+    (gebruikt als page builder en theme builder voor WordPress) en Forminator (aanmaken van eenvoudige formulieren wat noodzakelijk is voor de testen).  
     De website is toegankelijk via: \url{https://testlevi.abako.be/}
     \item WordPress-applicatie zonder beveiligingsplugins: Deze website heeft gelijkaardige instellingen als de bovenstaande, 
     met als enige verschil het ontbreken van de Wordfence-plugin: \url{https://testlevi2.abako.be/}
@@ -125,7 +125,7 @@ kwetsbaarheden binnen de cybersecuritywereld. Niet alle kwetsbaarheden uit deze 
 gekozen pentesting-tool, aangezien deze op serverniveau te testen zijn. Dit heeft geleid tot de volgende uitgevoerde pentests:
 
 \begin{itemize}
-    \item SQL injection aanval
+    \item SQL-injection aanval
     \item Brute force aanval
     \item Sensitive data exposure
     \item Security misconfiguration
@@ -146,7 +146,7 @@ Metasploit, Burp Suite en OWASP ZAP, waarbij hierna wordt toegelicht wat hen bij
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{metasploit_exploit_db.png}
-    \caption[Exploitation database van metasploit]{Exploitation database van metasploit}
+    \caption[Exploitation database van Metasploit]{Exploitation database van Metasploit}
     \label{fig:exploitatie_db}
 \end{figure}
 \subsection{\IfLanguageName{dutch}{Metasploit}{Metasploit}}
@@ -181,7 +181,7 @@ te ontdekken door bijvoorbeeld SQL-commando's in te voegen in velden die normaal
 kunnen ook cookies en headers inspecteren en aanpassen, wat helpt bij het ontdekken van session hijacking of cookie 
 manipulation kwetsbaarheden.
 
-De Repeater stelt testers in staat om specifieke HTTP-verzoeken meerdere keren handmatig te versturen, waarbij elke keer 
+De repeater stelt testers in staat om specifieke HTTP-verzoeken meerdere keren handmatig te versturen, waarbij elke keer 
 kleine wijzigingen kunnen worden aangebracht. Dit is bijzonder nuttig voor het testen van de robuustheid van 
 input-validatiesystemen en het verfijnen van aanvallen zoals Cross-Site Scripting (XSS) of Brute force attack. Door 
 herhaaldelijk verzoeken met variaties te versturen, kunnen testers de reacties van de server analyseren en mogelijke 
@@ -244,7 +244,7 @@ van Sinergio ligt op het ontwikkelen van kwalitatieve maatwerkoplossingen die aa
 \subsection{\IfLanguageName{dutch}{Server}{Server}}
 De tests werden uitgevoerd op een server die wordt gehost door Sinergio. De server draait op Linux distributie CentOS 7, waarbij bepaalde 
 beveiligingsfunctionaliteiten tijdelijk zijn uitgeschakeld om de tests correct te kunnen uitvoeren op de applicaties. Zo is er op de server 
-geen firewall geactiveerd en is ModSecurity ook uitgeschakeld zoals je kan zien op de figuur \ref{fig:centos_server}. Dit is 
+geen firewall geactiveerd en is ModSecurity ook uitgeschakeld zoals te zien is op de figuur \ref{fig:centos_server}. Dit is 
 zo ingesteld om te voorkomen dat het IP-adres van de tester zou worden geblokkeerd tijdens het simuleren van een brute 
 force-aanval op een hoger niveau dan de applicatie zelf.
 
@@ -261,7 +261,7 @@ De CentOs server wordt bij Sinergio gebruikt als development- of test server, wa
 testen van webapplicaties voor ze naar productie worden overgeplaatst. De productieservers daarentegen worden ondersteund 
 door Linux 8.
 
-\subsection{\IfLanguageName{dutch}{Wordpress}{Wordpress}}
+\subsection{\IfLanguageName{dutch}{WordPress}{WordPress}}
 WordPress is een veelzijdig contentmanagementsysteem (CMS) dat wereldwijd wordt gebruikt door miljoenen websites, variërend van 
 eenvoudige blogs tot uitgebreide e-commerceplatforms. De aantrekkingskracht van WordPress ligt in de gebruiksvriendelijke 
 interface en de enorme flexibiliteit die het biedt. Gebruikers kunnen kiezen uit duizenden thema's en plugins om hun site 
@@ -279,7 +279,7 @@ Wordfence gebruikers om hun sites veilig en betrouwbaar te houden. Door de integ
 website-eigenaars zich richten op het creëren van content en het beheren van hun online aanwezigheid, terwijl ze gerust 
 kunnen zijn over de beveiliging van hun website, zoals aangehaald in het hoofdstuk \ref{fig:Webomgevingen}.
 
-In het verdere verloop van deze studie werden de testen zowel uitgevoerd op een Wordpress omgeving met als zonder 
+In het verdere verloop van deze studie werden de testen zowel uitgevoerd op een WordPress omgeving met als zonder 
 beveiligingsplugin.
 
 \subsection{\IfLanguageName{dutch}{Laravel}{Laravel}}

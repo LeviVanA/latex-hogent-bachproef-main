@@ -14,7 +14,7 @@
 % Heeft het onderzoek geleid tot nieuwe vragen die uitnodigen tot verder 
 %onderzoek?
 
-Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen we de initiële onderzoeksvragen beantwoorden in de 
+Op basis van de resultaten in hoofdstuk 4 van deze studie kunnen de initiële onderzoeksvragen beantwoorden in de 
 conclusies van deze proef.
 
 \section{\IfLanguageName{dutch}{Conclusie van pentesttools}{conclusion of pentesttools}}
@@ -43,7 +43,7 @@ conclusies van deze proef.
   gebruikersauthenticatie en versleutelingstechnieken, boden een solide bescherming.
 
   Uit de uitgevoerde tests bleek dat de voornaamste kwetsbaarheden vaak samenhangen met de manier waarop een omgeving is 
-  ingesteld. Bij het opzetten van een omgeving werd er een afweging gemaakt tussen zichtbaarheid en bruikbaarheid op het 
+  ingesteld. Bij het opzetten van een omgeving werd er een afweging gemaakt tussen zichtbaarheid plus bruikbaarheid op het 
   internet en veiligheid. Het is daarom belangrijk om duidelijk te bepalen waarvoor een webomgeving wordt gebruikt en welke 
   gegevens erin worden opgeslagen.
 
@@ -53,9 +53,9 @@ conclusies van deze proef.
 
   De conclusie die hieruit kan werden getrokken, is dat Laravel- en WordPress-applicaties met beveiligingsplugins voor 
   verschillende doeleinden worden gebruikt. Een Laravel-omgeving is bijvoorbeeld geschikt voor op maat gemaakte applicaties, 
-  waarbij de beveiliging in detail kan worden aangepast aan de specifieke behoeften dit wordt door de ontwikkelaar zelf 
-  ingesteld. In tegenstelling tot WordPress, waarbij de beveiliging voornamelijk wordt bepaald door de beveiligingsplugins 
-  die worden geïnstalleerd door de eigenaar van de website.
+  waarbij de beveiliging in detail kan worden aangepast aan de specifieke behoeften. Dit wordt door de ontwikkelaar zelf 
+  ingesteld. Daartegenover staat CMS WordPress, waarbij de beveiliging voornamelijk wordt bepaald door de beveiligingsplugins 
+  die worden geïnstalleerd door de eigenaar of bouwer van de website.
 
   \section{\IfLanguageName{dutch}{Scores van pentests op webomgevingen}{Scores of pentests on web environments}}  
   \begin{figure}
@@ -70,30 +70,30 @@ conclusies van deze proef.
     \begin{enumerate}
       \item Laravel: 0/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
       \item WordPress met beveiligingsplugins: 4/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
-      \item Wordpress zonder beveiligingsplugins: 15/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
+      \item WordPress zonder beveiligingsplugins: 15/15 mogelijke kwetsbaarheden op basis van de gereflecteerde scripts
     \end{enumerate}
     \item Security misconfiguration:
     \begin{enumerate}
       \item Laravel: kwetsbaarheid op vlak van update/upgrade meldingen
       \item WordPress met beveiligingsplugins: geen mogelijke kwetsbaarheden
-      \item Wordpress zonder beveiligingsplugins: kwetsbaarheid op vlak van update/upgrade meldingen \& meldingen bij 
+      \item WordPress zonder beveiligingsplugins: kwetsbaarheid op vlak van update/upgrade meldingen \& meldingen bij 
             foutieve wachtwoord en correcte gerbuikersnaam.
     \end{enumerate}
-    \item Sensitive data exposure: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door de 
-          externe testen in verband met de server en database. De conclusie hierbij is voor elke tool hetzelfde, doordat dit 
-          regels zijn die ingetseld werden op de server.
-    \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerability de optie van een instelling in de 
-          server. De conclusie hierbij is voor elke tool hetzelfde, doordat dit ook op serverniveau ingesteld is, maar bij wordperss omgeving met beveiligingsplugins 
-          zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er aditionele regels zijn ingesteld 
+    \item Sensitive data exposure: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door 
+          externe testen op de server en database. De conclusie hierbij is voor elke tool hetzelfde, doordat dit 
+          regels zijn die ingesteld werden op de server.
+    \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerability gerelateerd aan een instelling in de 
+          server. De conclusie hierbij is voor elke tool dezelfde, doordat dit ook op serverniveau ingesteld is, maar bij WordPerss omgeving met beveiligingsplugins 
+          zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er additionele regels zijn ingesteld 
           via de wordfence plugin \ref{fig:wordfence_regels}.
     \item Onvoldoende logging en monitoring: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door 
-          externe testen op de server. De conclusie hierbij is voor elke tool hetzelfde. Ook hierbij is het door instellingen 
+          externe testen op de server. De conclusie is voor elke tool dezelfde. Ook hierbij is het door instellingen 
           op de server dat deze kwetsbaarheid werd opgelost.
     \item Brute force aanvallen:
     \begin{enumerate}
       \item Laravel: na 4 pogingen wordt de account tijdelijk geblokkeerd
       \item WordPress met beveiligingsplugins: na 5 pogingen wordt de account tijdelijk geblokkeerd
-      \item Wordpress zonder beveiligingsplugins: onbeperkte inlogpogingen
+      \item WordPress zonder beveiligingsplugins: onbeperkte inlogpogingen
     \end{enumerate}
   \end{itemize}
 
