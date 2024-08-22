@@ -6,35 +6,35 @@
 \label{ch:resultaten}
 
 \section{\IfLanguageName{dutch}{Selectie van pentesting-tool}{Selection of pentesting-tool}}
-Na het analyseren van de benodigdheden en het opstellen van een plan van aanpak kunnen de resultaten worden aangekaart. Er is 
-hiervoor reeds besloten welke pentesting-tools met elkaar vergeleken worden. Zo is er gekozen voor Burp Suite, Metasploit en 
+Na het analyseren van de benodigdheden en het opstellen van een plan van aanpak kunnen de resultaten worden aangevat. Er is 
+eerder in dit onderzoek reeds besloten welke pentesting-tools met elkaar vergeleken worden. Zo is er gekozen voor Burp Suite, Metasploit en 
 OWASP ZAP op basis van vooraf opgestelde criteria. Deze pentesting-tools worden eerst vergeleken aan de hand van richtlijnen 
 die voor elke gebruiker belangrijk zijn bij het kiezen van een pentesting-tool.
 
 Nadat deze resultaten zijn onderzocht in verband met de keuze van de de pentesttool, zal er worden overgegaan naar een tweede 
 fase, waarbij de resultaten worden vergeleken met bevindingen van derden. Deze uitgebreidere resultaten zullen worden gebruikt 
-om een pentesting-tool te identificeren die het beste past binnen het kader van deze proef.
+om de pentesting-tool te selecteren die het beste past binnen het kader van deze proef.
 
 \subsection{\IfLanguageName{dutch}{Resultaat volgens eigen criteria}{Result with own criteria}}
 De drie geselecteerde pentesting-tools worden met elkaar vergeleken op het gebied van capaciteiten en functionaliteiten die 
-ze aanbieden. Hierbij worden de tools grondig geëvalueerd, en worden de functionaliteiten van elk afzonderlijk getest. Het 
+ze aanbieden. Hierbij worden de tools grondig geëvalueerd en worden de functionaliteiten van elk van hen afzonderlijk getest. Het 
 resourcegebruik wordt vergeleken op basis van CPU- en geheugengebruik. Ten slotte wordt ook de ondersteuning door de 
 community beoordeeld, waarbij de gemiddelde responstijd op gemelde issues als maatstaf dient.
 
 \subsubsection{\IfLanguageName{dutch}{Scala aan capaciteiten en functionaliteiten}{Scala aan capaciteiten en functionaliteiten}}
 Burp Suite biedt het grootste aantal pentesting mogelijkheden wanneer men beschikt over de Professional Edition. Deze 
 versie bevat geavanceerde functies zoals actieve scanning en geautomatiseerde aanvallen, die niet beschikbaar zijn in de 
-gratis Community Edition. De Community Edition biedt echter wel essentiële tools zoals spidering waarmee alle endpoints 
-en functies binnen een dynamische webapplicatiegedetecteerd kunnen worden, maar zonder ondersteuning 
-voor AJAX (Asynchronous JavaScript and XML) spidering. Met AJAX spidering heb je de mogelijkheid om de content van de pagina 
-te laten zonder de pagina volledig te vernieuwen. De proxyfunctionaliteit van Burp Suite stelt gebruikers in staat om webverkeer te onderscheppen en te 
+gratis Community Edition. Deze Community Edition biedt echter wel essentiële tools zoals spidering waarmee alle endpoints 
+en functies binnen een dynamische webapplicatie gedetecteerd kunnen worden, maar zonder ondersteuning 
+voor AJAX (Asynchronous JavaScript and XML) spidering. Met AJAX spidering is de mogelijkheid er om de content van de pagina 
+te laden zonder de pagina volledig te vernieuwen. De proxyfunctionaliteit van Burp Suite stelt gebruikers in staat om webverkeer te onderscheppen en te 
 analyseren. Dit is vooral handig bij het identificeren van kwetsbaarheden in dynamische webapplicaties. Gebruikers kunnen bij de 
 host die ze willen spideren selecteren via de Target-tab en met een eenvoudige rechtermuisklik kiezen voor "Spider this host."
 
 OWASP ZAP (Zed Attack Proxy) biedt daarentegen het breedste scala aan functionaliteiten in zijn gratis versie, waardoor het 
 een aantrekkelijke keuze is voor organisaties die niet beschikken over een budget voor een commerciële tool. ZAP ondersteunt zowel 
 passieve als actieve scanning, waarbij passieve scanners kwetsbaarheden detecteren door alleen het verkeer te analyseren en 
-actieve scanners proberen potentiële kwetsbaarheden te exploiteren door actief verkeer te genereren. Bovendien biedt ZAP AJAX 
+actieve scanners proberen potentiële kwetsbaarheden te exploiteren door actief zelf verkeer te genereren. Bovendien biedt ZAP AJAX 
 spidering, waarmee inhoud kan worden geladen zonder dat de hele pagina hoeft te worden vernieuwd, wat cruciaal is voor 
 moderne en dynamische webapplicaties.
 
@@ -42,7 +42,7 @@ Metasploit richt zich voornamelijk op netwerkexploitatie en biedt uitgebreide mo
 aanvallen en exploits. Hoewel het minder functies biedt op het gebied van webapplicatietests, zoals spidering en scanning, 
 heeft Metasploit modules zoals http\_directory, http\_link\_scanner en http\_version die nuttig kunnen zijn voor het verzamelen 
 van informatie over webservers en specifieke directories. Het ontbreken van een ingebouwde proxy en geavanceerde 
-webscanningfunctionaliteiten maakt Metasploit echter minder geschikt voor gedetailleerde webapplicatietests in vergelijking 
+webscanning functionaliteiten maakt Metasploit echter minder geschikt voor gedetailleerde webapplicatietests in vergelijking 
 met Burp Suite en OWASP ZAP.
 
 Wanneer we de functionaliteiten van deze tools vergelijken, blijkt dat OWASP ZAP over het algemeen het meest bruikbaar is voor 
@@ -84,13 +84,13 @@ webapplicatietests, tenzij men toegang heeft tot de Burp Suite Professional Edit
     \caption[Resource gebruik van OWASP ZAP tijdens het uitvoeren van een actie]{Resource gebruik van OWASP ZAP tijdens het uitvoeren van een actie}
     \label{fig:owasp_actie}
 \end{figure}
-Om het resourcegebruik van de drie pentesting-tools te vergelijken, wordt zowel het verbruik in rust als het verbruik tijdens het 
-uitvoeren van een actie gemeten. De eerste tool waarvan het resourcegebruik is gemeten is Burp Suite. Hierbij zijn zowel de 
+Om het resourcegebruik van de drie pentesting-tools te vergelijken, werd zowel het verbruik in rust als het verbruik tijdens het 
+uitvoeren van een actie gemeten. De eerste tool waarvan het resourcegebruik werd gemeten is Burp Suite. Hierbij zijn zowel de 
 prestaties in rust als tijdens actieve taken geregistreerd. De resultaten van deze metingen zijn te zien in de afbeeldingen. 
-Dit is in rust \ref{fig:burp_suite_rust} en dit is tijdens het uitvoeren van een actie \ref{fig:burp_suite_actie}. 
+Dit is in rust figuur \ref{fig:burp_suite_rust} en dit is tijdens het uitvoeren van een actie figuur \ref{fig:burp_suite_actie}. 
 
 Voor het vergelijken van het resourcegebruik is ook Metasploit onderworpen aan metingen in zowel rust als tijdens actieve 
-penetratietests. Metasploit wordt uitgevoerd in de terminal, daarom zijn de resource resultaten te zien onder de terminal tab 
+penetratietests. Metasploit wordt uitgevoerd in de terminal, daarom zijn de resource resultaten te zien onder een terminal tab 
 in taakbeheer. Deze metingen geven inzicht in de efficiëntie van Metasploit onder verschillende omstandigheden. De 
 resultaten van het resourcegebruik in rust zijn te vinden in figuur \ref{fig:metasploit_rust}, terwijl het verbruik tijdens 
 actieve testen wordt weergegeven in figuur \ref{fig:metasploit_actie}.
@@ -104,10 +104,10 @@ uitvoeren van acties in figuur \ref{fig:owasp_actie}.
 \begin{figure}
     \centering
     \includegraphics[height=0.3\textheight]{grafiek_respons_resultaten.jpg}
-    \caption[Grafiek van 19 willekeurige issues bij de pentesttools en de tijd hoe lang het duurt om te repliceren]{Grafiek van 19 willekeurige issues bij de pentesttools en de tijd hoe lang het duurt om te repliceren}
+    \caption[Grafiek van 19 willekeurige issues bij de pentesttools en de duurtijd om te repliceren]{Grafiek van 19 willekeurige issues bij de pentesttools en de duurtijd om te repliceren}
     \label{fig:respons_grafiek}
 \end{figure}
-De ondersteuning van de developers of de community is een belangrijke factor bij het kiezen van een pentesting-tool. Om de ondersteuning 
+De ondersteuning van de developers of de community is een belangrijke factor bij het kiezen van een pentesting-tool. Om deze ondersteuning 
 te evalueren, zijn 19 willekeurige issues gemeld bij de drie pentesting-tools. De tijd die nodig is om deze
 vragen te beantwoorden, is vastgelegd en geanalyseerd. De resultaten van deze analyse zijn te zien in de
 grafiek \ref{fig:respons_grafiek}. Hieruit blijkt dat OWASP ZAP de snelste responstijd heeft, gevolgd door Metasploit en
@@ -119,10 +119,10 @@ Burp Suite. Dit zijn de gemiddelde response tijden van de 19 issues die zijn gem
 \end{itemize}
 
 Aangezien OWASP ZAP en Metasploit open-source tools zijn, zijn de issues te vinden op github en is de community actief
-betrokken bij het oplossen van problemen. Burp Suite is een commerciële tool en heeft een eigen support team dat 
+betrokken bij het oplossen van problemen. Burp Suite is een commerciële propierty tool en heeft een eigen supportteam dat 
 verantwoordelijk is voor het oplossen van problemen. In tegenstelling tot Metasploit en OWASP ZAP worden de issues niet 
 op github gepost, maar op een apart platform portswigger. Dit kan de responstijd beïnvloeden, 
-aangezien de issues eerst opgepakt moeten worden door het support team.
+aangezien de issues eerst opgepakt moeten worden door het beperkte supportteam.
 
 \subsubsection{\IfLanguageName{dutch}{Globale resultaten}{Global results}}
 Na het analyseren van de capaciteiten en functionaliteiten, het resourcegebruik en de ondersteuning van de community,
@@ -145,17 +145,17 @@ lijkt OWASP ZAP de beste keuze te zijn voor het uitvoeren van beveiligingstests 
 community edition en Metasploit. 
 
 \subsection{\IfLanguageName{dutch}{Resultaat volgens derden}{Result with third parties}}
-Na de vergelijking van de drie pentesting-tools volgens de eigen criteria, worden de resultaten getoetst aan bevindingen van 
+Volgend op de vergelijking van de drie pentesting-tools volgens de eigen criteria, worden de resultaten getoetst aan bevindingen van 
 derden.
 
-De resultaten van externe gebruikers worden bepaald door drie factoren te analyseren: voordelen, nadelen en een algemene 
-beoordeling van elke tool. Deze factoren trachten inzicht te bieden in de ervaringen van andere gebruikers met de drie pentesting-tools. 
+De resultaten van externe gebruikers worden bepaald door de voordelen, nadelen en een algemene 
+beoordeling van elke tool te analyseren. Deze factoren trachten inzicht te bieden in de ervaringen van andere gebruikers met de drie pentesting-tools. 
 De bevindingen van derden worden gebruikt om de betrouwbaarheid van de eigen resultaten al dan niet te bevestigen en een definitieve conclusie 
 te trekken om één tool te weerhouden voor de tests.
 
-De resultaten van derden zijn gebaseerd op informatie van G2.com en Peerspot. Er is gekozen voor meerdere bronnen om een zo 
-breed mogelijk beeld te krijgen van de gebruikerservaringen met de drie pentesting-tools. De resultaten van derden worden 
-samengevat in de volgende secties. Eerst worden de uitkomsten van G2.com besproken, gevolgd door de resultaten van Peerspot. 
+De resultaten van derden zijn gebaseerd op informatie van G2.com en Peerspot. Er is gekozen voor twee bronnen om een zo 
+breed en objectief mogelijk beeld te krijgen van de gebruikerservaringen met de drie pentesting-tools. De resultaten van derden worden 
+samengevat in de hiernavolgende secties. Eerst worden de uitkomsten van G2.com geëvalueerd, gevolgd door de resultaten van Peerspot. 
 Daarna worden deze resultaten samengevoegd en vergeleken met de eigen bevindingen om een definitieve pentesting-tool te 
 selecteren.
 
@@ -324,6 +324,18 @@ tot kwetsbaarheden in de webapplicatie.
 
 
 \subsection{\IfLanguageName{dutch}{sensitive data exposure}{sensitive data exposure}}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.2\textheight]{saved_password_db.png}
+    \caption[Voorbeeld van geëncrypteerd wachtwoord in de database]{Voorbeeld van geëncrypteerd wachtwoord in de database}
+    \label{fig:saved_password_db}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[height=0.1\textheight]{server_rules_https.png}
+    \caption[Rules op de seerver die ervoor zorgen dat je een website niet via http kan bezoeken]{Rules op de seerver die ervoor zorgen dat je een website niet via http kan bezoeken}
+    \label{fig:server_rules}
+\end{figure}
 Sensitive data exposure is een kwetsbaarheid waarbij gevoelige informatie, zoals wachtwoorden en persoonlijke gegevens, wordt 
 blootgesteld aan ongeautoriseerde gebruikers. Om deze kwetsbaarheid te testen werd onderzocht hoe wachtwoorden worden 
 opgeslagen in de database van de webapplicaties. Ook werd gekeken naar de manier waarop de informatie via het netwerk wordt 
@@ -335,7 +347,7 @@ De wachtwoorden in dit geval zijn opgeslagen aan de hand van een hash en een sal
 wachtwoorden niet in plain text worden opgeslagen en dat de wachtwoorden niet zichtbaar zijn voor ongeautoriseerde gebruikers. 
 De gegevens worden ook versleuteld verzonden via HTTPS, wat betekent dat de gegevens veilig zijn tijdens het transport tussen 
 server en applicatie. Voorbeelden van hoe de wachtwoorden worden opgeslagen en verzonden zijn te zien in de afbeelding 
-......., ook de rules die ingesteld zijn op de server zijn te zien op deze foto ...... .
+\ref{fig:saved_password_db}, ook de rules die ingesteld zijn op de server zijn te zien op deze foto \ref{fig:server_rules}.
 
 
 \subsection{\IfLanguageName{dutch}{Cross site scripting (XSS)}{Cross site scripting (XSS)}}
