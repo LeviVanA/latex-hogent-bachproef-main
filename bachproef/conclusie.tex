@@ -42,7 +42,7 @@ conclusies van deze proef.
   gebruikersauthenticatie en versleutelingstechnieken, boden een solide bescherming.
 
   Uit de uitgevoerde tests bleek dat de voornaamste kwetsbaarheden vaak samenhangen met de manier waarop een omgeving is 
-  ingesteld. Bij het opzetten van een omgeving moet er een afweging worden gemaakt tussen zichtbaarheid en bruikbaarheid op het 
+  ingesteld. Bij het opzetten van een omgeving werd er een afweging gemaakt tussen zichtbaarheid en bruikbaarheid op het 
   internet en veiligheid. Het is daarom belangrijk om duidelijk te bepalen waarvoor een webomgeving wordt gebruikt en welke 
   gegevens erin worden opgeslagen.
 
@@ -50,7 +50,7 @@ conclusies van deze proef.
   zichtbaarheid op het web belangrijk is. Het is hierbij essentieel om de juiste beveiligingsplugins te installeren en de 
   omgeving zorgvuldig te configureren.
 
-  De conclusie die hieruit kan worden getrokken, is dat Laravel- en WordPress-applicaties met beveiligingsplugins voor 
+  De conclusie die hieruit kan werden getrokken, is dat Laravel- en WordPress-applicaties met beveiligingsplugins voor 
   verschillende doeleinden worden gebruikt. Een Laravel-omgeving is bijvoorbeeld geschikt voor op maat gemaakte applicaties, 
   waarbij de beveiliging in detail kan worden aangepast aan de specifieke behoeften dit wordt door de ontwikkelaar zelf 
   ingesteld. In tegenstelling tot WordPress, waarbij de beveiliging voornamelijk wordt bepaald door de beveiligingsplugins 
@@ -80,14 +80,14 @@ conclusies van deze proef.
     \end{enumerate}
     \item Sensitive data exposure: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door de 
           externe testen in verband met de server en database. De conclusie hierbij is voor elke tool hetzelfde, doordat dit 
-          regels zijn die ingetseld kunnen worden op de server.
+          regels zijn die ingetseld werden op de server.
     \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerability de optie van een instelling in de 
           server. De conclusie hierbij is voor elke tool hetzelfde, maar bij wordperss omgeving met beveiligingsplugins 
           zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er aditionele regels zijn ingesteld 
           via de wordfence plugin \ref{fig:wordfence_regels}.
     \item Onvoldoende logging en monitoring: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door 
           externe testen op de server. De conclusie hierbij is voor elke tool hetzelfde. Ook hierbij is het door instellingen 
-          op de server dat deze kwetsbaarheid kan worden opgelost.
+          op de server dat deze kwetsbaarheid werd opgelost.
     \item Brute force aanvallen:
     \begin{enumerate}
       \item Laravel: na 4 pogingen wordt de account tijdelijk geblokkeerd
