@@ -79,13 +79,15 @@ conclusies van deze proef.
             foutieve wachtwoord en correcte gerbuikersnaam.
     \end{enumerate}
     \item Sensitive data exposure: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door de 
-          externe testen in verband met de server en database. De conclusie hierbij is voor elke tool hetzelfde.
+          externe testen in verband met de server en database. De conclusie hierbij is voor elke tool hetzelfde, doordat dit 
+          regels zijn die ingetseld kunnen worden op de server.
     \item Cross-site scripting (XSS): Hierbij is de gedetecteerde vulnerability de optie van een instelling in de 
           server. De conclusie hierbij is voor elke tool hetzelfde, maar bij wordperss omgeving met beveiligingsplugins 
-          zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er aditionele regels zij n ingesteld 
+          zijn er minder mogelijkheden om deze kwetsbaarheid te exploiteren aangezien er aditionele regels zijn ingesteld 
           via de wordfence plugin \ref{fig:wordfence_regels}.
     \item Onvoldoende logging en monitoring: Dit is een kwetsbaarheid die niet werd gedetecteerd door de tools, maar door 
-          externe testen op de server. De conclusie hierbij is voor elke tool hetzelfde.
+          externe testen op de server. De conclusie hierbij is voor elke tool hetzelfde. Ook hierbij is het door instellingen 
+          op de server dat deze kwetsbaarheid kan worden opgelost.
     \item Brute force aanvallen:
     \begin{enumerate}
       \item Laravel: na 4 pogingen wordt de account tijdelijk geblokkeerd
